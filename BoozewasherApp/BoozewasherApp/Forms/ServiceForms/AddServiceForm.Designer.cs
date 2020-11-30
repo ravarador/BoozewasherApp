@@ -35,6 +35,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtboxExpense = new System.Windows.Forms.TextBox();
+            this.dgvService = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvService)).BeginInit();
             this.SuspendLayout();
             // 
             // txtboxType
@@ -95,11 +97,27 @@
             this.txtboxExpense.Size = new System.Drawing.Size(275, 20);
             this.txtboxExpense.TabIndex = 6;
             // 
+            // dgvService
+            // 
+            this.dgvService.AllowUserToAddRows = false;
+            this.dgvService.AllowUserToDeleteRows = false;
+            this.dgvService.AllowUserToResizeColumns = false;
+            this.dgvService.AllowUserToResizeRows = false;
+            this.dgvService.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvService.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvService.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvService.Location = new System.Drawing.Point(0, 166);
+            this.dgvService.Name = "dgvService";
+            this.dgvService.Size = new System.Drawing.Size(461, 259);
+            this.dgvService.TabIndex = 7;
+            // 
             // AddServiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 190);
+            this.ClientSize = new System.Drawing.Size(461, 425);
+            this.Controls.Add(this.dgvService);
             this.Controls.Add(this.txtboxDescription);
             this.Controls.Add(this.txtboxType);
             this.Controls.Add(this.txtboxExpense);
@@ -110,6 +128,8 @@
             this.Name = "AddServiceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Service";
+            this.Load += new System.EventHandler(this.AddServiceForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvService)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +144,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtboxExpense;
+        private System.Windows.Forms.DataGridView dgvService;
     }
 }

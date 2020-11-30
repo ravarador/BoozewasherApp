@@ -25,5 +25,13 @@ namespace BoozewasherApp
             addServiceForm.Show();
             addServiceForm.MdiParent = this;
         }
+
+        private void updateServiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateServiceForm updateServiceForm = new UpdateServiceForm();
+
+            updateServiceForm.Show();
+            updateServiceForm.MdiParent = this;
+        }
     }
 }

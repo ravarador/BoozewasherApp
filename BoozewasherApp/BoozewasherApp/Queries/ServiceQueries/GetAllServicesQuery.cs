@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace BoozewasherApp.Queries.ServiceQueries
 {
-    public class GetAllServiceQuery
+    public class GetAllServicesQuery
     {
         private DatabaseContext context = new DatabaseContext();
-        public List<Service> GetAllService()
+        public List<Service> GetAllServices()
         {
             var service = context.Services.ToList();
 

@@ -69,6 +69,12 @@
     <Compile Include="Forms\ServiceForms\AddServiceForm.Designer.cs">
       <DependentUpon>AddServiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ServiceForms\UpdateServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceForms\UpdateServiceForm.Designer.cs">
+      <DependentUpon>UpdateServiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.cs" />
     <Compile Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.designer.cs">
       <DependentUpon>202011301018204_CreateTables_ServiceSummaryTransactionVehicle.cs</DependentUpon>
@@ -82,13 +88,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\ServiceQueries\AddServiceQuery.cs" />
     <Compile Include="Queries\ServiceQueries\DeleteServiceQuery.cs" />
-    <Compile Include="Queries\ServiceQueries\GetAllServiceQuery.cs" />
+    <Compile Include="Queries\ServiceQueries\GetAllServicesQuery.cs" />
+    <Compile Include="Queries\ServiceQueries\GetServiceByIdQuery.cs" />
     <Compile Include="Queries\ServiceQueries\UpdateServiceQuery.cs" />
     <EmbeddedResource Include="Forms\ParentForm.resx">
       <DependentUpon>ParentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceForms\AddServiceForm.resx">
       <DependentUpon>AddServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceForms\UpdateServiceForm.resx">
+      <DependentUpon>UpdateServiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.resx">
       <DependentUpon>202011301018204_CreateTables_ServiceSummaryTransactionVehicle.cs</DependentUpon>

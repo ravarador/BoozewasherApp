@@ -63,6 +63,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ContextModels\Service.cs" />
     <Compile Include="Models\ContextModels\Summary.cs" />
     <Compile Include="Models\ContextModels\Transaction.cs" />

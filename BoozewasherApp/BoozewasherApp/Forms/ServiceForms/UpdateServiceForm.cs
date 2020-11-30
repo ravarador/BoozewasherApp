@@ -1,4 +1,5 @@
-﻿using BoozewasherApp.Queries.ServiceQueries;
+﻿using BoozewasherApp.Models.ContextModels;
+using BoozewasherApp.Queries.ServiceQueries;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +25,19 @@ namespace BoozewasherApp.Forms.ServiceForms
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            var service = new Service()
+            {
+                Id = SelectedServiceId,
+                Type = txtboxType.Text,
+                Description = txtboxDescription.Text,
+                Expense = decimal.Parse(txtboxExpense.Text)
+            };
 
+            var updateService = new UpdateServiceQuery();
+
+            updateService.UpdateService(service);
+
+            LoadDgvService();
         }
         private void dgvService_CellClick(object sender, DataGridViewCellEventArgs e)
         {

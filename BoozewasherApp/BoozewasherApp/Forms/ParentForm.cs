@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BoozewasherApp
 {
-    public partial class Form1 : Form
+    public partial class ParentForm : Form
     {
-        public Form1()
+        public ParentForm()
         {
             InitializeComponent();
         }

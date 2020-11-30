@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoozewasherApp.Forms.ServiceForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace BoozewasherApp
         public ParentForm()
         {
             InitializeComponent();
+        }
+
+        private void addServiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddServiceForm addServiceForm = new AddServiceForm();
+
+            addServiceForm.Show();
+            addServiceForm.MdiParent = this;
         }
     }
 }

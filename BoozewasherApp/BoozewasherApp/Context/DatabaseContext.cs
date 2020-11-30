@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,5 +25,6 @@ namespace BoozewasherApp.Context
         public DbSet<Summary> Summaries { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
+
     }
 }

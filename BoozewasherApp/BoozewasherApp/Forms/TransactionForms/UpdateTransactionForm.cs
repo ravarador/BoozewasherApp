@@ -17,14 +17,15 @@ using System.Windows.Forms;
 
 namespace BoozewasherApp.Forms.TransactionForms
 {
-    public partial class AddTransactionForm : Form
+    public partial class UpdateTransactionForm : Form
     {
-        public AddTransactionForm()
+        private int SelectedTransactionId { get; set; }
+        public UpdateTransactionForm()
         {
             InitializeComponent();
         }
 
-        private void AddTransactionForm_Load(object sender, EventArgs e)
+        private void UpdateTransactionForm_Load(object sender, EventArgs e)
         {
             comboServiceType.DataSource = GetServiceTypes();
             comboVehicleType.DataSource = GetVehicleTypes();
@@ -32,11 +33,11 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         private void btnServiceLookup_Click(object sender, EventArgs e) => OpenServiceLookupForm();
         private void btnVehicleLookup_Click(object sender, EventArgs e) => OpenVehicleLookupForm();
-        private void btnAdd_Click(object sender, EventArgs e) => AddTransaction();
-        private void AddTransaction()
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             var transaction = new Transaction()
             {
+                Id = SelectedTransactionId,
                 DateTime = datepickerDateTime.Value,
                 ServiceId = int.Parse(comboServiceType.SelectedItem.ToString()),
                 VehicleId = int.Parse(comboVehicleType.SelectedItem.ToString()),
@@ -44,11 +45,55 @@ namespace BoozewasherApp.Forms.TransactionForms
                 Cost = decimal.Parse(txtboxCost.Text)
             };
 
-            var addTransaction = new AddTransactionQuery();
+            var updateTransaction = new UpdateTransactionQuery();
 
-            addTransaction.AddTransaction(transaction);
+            updateTransaction.UpdateTransaction(transaction);
 
             LoadDgvTransaction();
+        }
+        private void dgvTransaction_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SelectedTransactionId = (int)dgvTransaction.SelectedRows[0].Cells[0].Value;
+
+            var transactionById = new GetTransactionByIdQuery();
+
+            var transaction = transactionById.GetTransactionById(SelectedTransactionId);
+
+            datepickerDateTime.Value = transaction.DateTime;
+            comboServiceType.SelectedItem = transaction.ServiceId;
+            comboVehicleType.SelectedItem = transaction.VehicleId;
+            txtboxPlateNumber.Text = transaction.PlateNumber;
+            txtboxCost.Text = transaction.Cost.ToString();
+        }
+
+        private void LoadDgvTransaction()
+        {
+            var getTransaction = new GetAllTransactionsQuery();
+
+            dgvTransaction.DataSource = getTransaction.GetAllTransactions()
+                                                      .Select(a => new TransactionDto
+                                                      {
+                                                          Id = a.Id,
+                                                          DateTime = a.DateTime,
+                                                          PlateNumber = a.PlateNumber,
+                                                          ServiceType = a.Service.Type,
+                                                          ServiceId = a.ServiceId,
+                                                          VehicleType = a.Vehicle.Type,
+                                                          VehicleId = a.VehicleId,
+                                                          Cost = a.Cost
+                                                      }).ToList();
+        }
+        private void OpenServiceLookupForm()
+        {
+            var serviceLookupForm = new ServiceLookupForm();
+            serviceLookupForm.ShowDialog();
+            comboServiceType.SelectedItem = serviceLookupForm.SelectedServiceIdForLookup;
+        }
+        private void OpenVehicleLookupForm()
+        {
+            var vehicleLookupForm = new VehicleLookupForm();
+            vehicleLookupForm.ShowDialog();
+            comboVehicleType.SelectedItem = vehicleLookupForm.SelectedVehicleIdForLookup;
         }
         private List<int> GetServiceTypes()
         {
@@ -63,37 +108,5 @@ namespace BoozewasherApp.Forms.TransactionForms
 
             return getVehicles.GetAllVehicles().Select(a => a.Id).ToList();
         }
-        private void LoadDgvTransaction()
-        {
-            var getTransaction = new GetAllTransactionsQuery();
-
-            dgvTransaction.DataSource = getTransaction.GetAllTransactions()
-                                                      .Select(a => new TransactionDto 
-                                                      {
-                                                          Id = a.Id,
-                                                          DateTime = a.DateTime,
-                                                          PlateNumber = a.PlateNumber,
-                                                          ServiceType = a.Service.Type,
-                                                          ServiceId = a.ServiceId,
-                                                          VehicleType = a.Vehicle.Type,
-                                                          VehicleId = a.VehicleId,
-                                                          Cost = a.Cost
-                                                      }).ToList();
-        }
-
-        private void OpenServiceLookupForm()
-        {
-            var serviceLookupForm = new ServiceLookupForm();
-            serviceLookupForm.ShowDialog();
-            comboServiceType.SelectedItem = serviceLookupForm.SelectedServiceIdForLookup;
-        }
-        private void OpenVehicleLookupForm()
-        {
-            var vehicleLookupForm = new VehicleLookupForm();
-            vehicleLookupForm.ShowDialog();
-            comboVehicleType.SelectedItem = vehicleLookupForm.SelectedVehicleIdForLookup;
-        }
-
-        
     }
 }

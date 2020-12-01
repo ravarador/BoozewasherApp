@@ -75,5 +75,21 @@ namespace BoozewasherApp
             addTransactionForm.Show();
             addTransactionForm.MdiParent = this;
         }
+
+        private void updateTransactionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateTransactionForm updateTransactionForm = new UpdateTransactionForm();
+
+            updateTransactionForm.Show();
+            updateTransactionForm.MdiParent = this;
+        }
+
+        private void deleteTransactionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteTransactionForm deleteTransactionForm = new DeleteTransactionForm();
+
+            deleteTransactionForm.Show();
+            deleteTransactionForm.MdiParent = this;
+        }
     }
 }

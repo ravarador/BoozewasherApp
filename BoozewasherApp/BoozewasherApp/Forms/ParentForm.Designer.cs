@@ -145,12 +145,14 @@
             this.updateTransactionToolStripMenuItem.Name = "updateTransactionToolStripMenuItem";
             this.updateTransactionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateTransactionToolStripMenuItem.Text = "Update Transaction";
+            this.updateTransactionToolStripMenuItem.Click += new System.EventHandler(this.updateTransactionToolStripMenuItem_Click);
             // 
             // deleteTransactionToolStripMenuItem
             // 
             this.deleteTransactionToolStripMenuItem.Name = "deleteTransactionToolStripMenuItem";
             this.deleteTransactionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteTransactionToolStripMenuItem.Text = "Delete Transaction";
+            this.deleteTransactionToolStripMenuItem.Click += new System.EventHandler(this.deleteTransactionToolStripMenuItem_Click);
             // 
             // summaryToolStripMenuItem
             // 

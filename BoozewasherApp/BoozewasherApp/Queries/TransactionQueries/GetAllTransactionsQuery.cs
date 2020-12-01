@@ -13,7 +13,9 @@ namespace BoozewasherApp.Queries.TransactionQueries
         private DatabaseContext context = new DatabaseContext();
         public List<Transaction> GetAllTransactions()
         {
-            var transactions = context.Transactions.ToList();
+            var transactions = context.Transactions.Include("Service")
+                                                   .Include("Vehicle")
+                                                   .ToList();
 
             return transactions;
         }

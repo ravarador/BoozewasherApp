@@ -134,6 +134,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvService);
             this.Name = "DeleteServiceForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Delete Service";
             this.Load += new System.EventHandler(this.DeleteServiceForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).EndInit();

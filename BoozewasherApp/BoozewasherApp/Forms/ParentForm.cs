@@ -1,4 +1,5 @@
 ﻿using BoozewasherApp.Forms.ServiceForms;
+using BoozewasherApp.Forms.VehicleForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,6 +41,14 @@ namespace BoozewasherApp
 
             deleteServiceForm.Show();
             deleteServiceForm.MdiParent = this;
+        }
+
+        private void addVehicleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddVehicleForm addVehicleForm = new AddVehicleForm();
+
+            addVehicleForm.Show();
+            addVehicleForm.MdiParent = this;
         }
     }
 }

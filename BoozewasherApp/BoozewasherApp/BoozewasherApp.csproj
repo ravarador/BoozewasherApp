@@ -69,6 +69,12 @@
     <Compile Include="Forms\ServiceForms\AddServiceForm.Designer.cs">
       <DependentUpon>AddServiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ServiceForms\DeleteServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceForms\DeleteServiceForm.Designer.cs">
+      <DependentUpon>DeleteServiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ServiceForms\UpdateServiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceForms\AddServiceForm.resx">
       <DependentUpon>AddServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceForms\DeleteServiceForm.resx">
+      <DependentUpon>DeleteServiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceForms\UpdateServiceForm.resx">
       <DependentUpon>UpdateServiceForm.cs</DependentUpon>

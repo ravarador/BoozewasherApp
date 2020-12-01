@@ -21,11 +21,11 @@ namespace BoozewasherApp_Web.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        DbSet<Service> Services { get; set; }
-        DbSet<Summary> Summaries { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<Summary> Summaries { get; set; }
 
-        DbSet<Transaction> Transactions { get; set; }
-        DbSet<Vehicle> Vehicles { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Vehicle> Vehicles { get; set; }
 
         public ApplicationDbContext()
             : base(@"Data Source=localhost\SQLEXPRESS; Initial Catalog=BoozewasherAppDb;Trusted_Connection=True;", throwIfV1Schema: false)

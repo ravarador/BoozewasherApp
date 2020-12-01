@@ -50,5 +50,13 @@ namespace BoozewasherApp
             addVehicleForm.Show();
             addVehicleForm.MdiParent = this;
         }
+
+        private void deleteVehicleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteVehicleForm deleteVehicleForm = new DeleteVehicleForm();
+
+            deleteVehicleForm.Show();
+            deleteVehicleForm.MdiParent = this;
+        }
     }
 }

@@ -47,9 +47,9 @@ namespace BoozewasherApp.Forms.ServiceForms
         }
         private void LoadDgvService()
         {
-            var updateService = new GetAllServicesQuery();
+            var getServices = new GetAllServicesQuery();
 
-            dgvService.DataSource = updateService.GetAllServices();
+            dgvService.DataSource = getServices.GetAllServices();
         }
 
         private void SetLabelsToEmpty()

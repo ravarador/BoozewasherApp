@@ -120,6 +120,7 @@
             this.deleteVehicleToolStripMenuItem.Name = "deleteVehicleToolStripMenuItem";
             this.deleteVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteVehicleToolStripMenuItem.Text = "Delete Vehicle";
+            this.deleteVehicleToolStripMenuItem.Click += new System.EventHandler(this.deleteVehicleToolStripMenuItem_Click);
             // 
             // transactionToolStripMenuItem
             // 

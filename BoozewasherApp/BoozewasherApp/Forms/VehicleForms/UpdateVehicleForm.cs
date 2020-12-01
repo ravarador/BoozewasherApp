@@ -1,4 +1,5 @@
-﻿using BoozewasherApp.Queries.VehicleQueries;
+﻿using BoozewasherApp.Models.ContextModels;
+using BoozewasherApp.Queries.VehicleQueries;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,27 +12,34 @@ using System.Windows.Forms;
 
 namespace BoozewasherApp.Forms.VehicleForms
 {
-    public partial class DeleteVehicleForm : Form
+    public partial class UpdateVehicleForm : Form
     {
         private int SelectedVehicleId { get; set; }
-        public DeleteVehicleForm()
+        public UpdateVehicleForm()
         {
             InitializeComponent();
         }
 
-        private void DeleteVehicleForm_Load(object sender, EventArgs e)
+        private void UpdateVehicleForm_Load(object sender, EventArgs e)
         {
-            SetLabelsToEmpty();
             LoadDgvVehicle();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            var deleteVehicleById = new DeleteVehicleQuery();
+            var vehicle = new Vehicle()
+            {
+                Id = SelectedVehicleId,
+                Type = txtboxType.Text,
+                Brand = txtboxBrand.Text,
+                Model = txtboxModel.Text,
+                Description = txtboxDescription.Text
+            };
 
-            deleteVehicleById.DeleteVehicle(SelectedVehicleId);
+            var updateVehicle = new UpdateVehicleQuery();
 
-            SetLabelsToEmpty();
+            updateVehicle.UpdateVehicle(vehicle);
+
             LoadDgvVehicle();
         }
 
@@ -43,25 +51,16 @@ namespace BoozewasherApp.Forms.VehicleForms
 
             var vehicle = vehicleById.GetVehicleById(SelectedVehicleId);
 
-            lblType.Text = vehicle.Type;
-            lblBrand.Text = vehicle.Brand;
-            lblModel.Text = vehicle.Model;
-            lblDescription.Text = vehicle.Description;
+            txtboxType.Text = vehicle.Type;
+            txtboxBrand.Text = vehicle.Brand;
+            txtboxModel.Text = vehicle.Model;
+            txtboxDescription.Text = vehicle.Description;
         }
-
         private void LoadDgvVehicle()
         {
             var getVehicles = new GetAllVehiclesQuery();
 
             dgvVehicle.DataSource = getVehicles.GetAllVehicles();
-        }
-
-        private void SetLabelsToEmpty()
-        {
-            lblType.Text = null;
-            lblBrand.Text = null;
-            lblModel.Text = null;
-            lblDescription.Text = null;
         }
     }
 }

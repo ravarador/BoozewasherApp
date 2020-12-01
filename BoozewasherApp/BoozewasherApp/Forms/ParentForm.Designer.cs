@@ -114,6 +114,7 @@
             this.updateVehicleToolStripMenuItem.Name = "updateVehicleToolStripMenuItem";
             this.updateVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateVehicleToolStripMenuItem.Text = "Update Vehicle";
+            this.updateVehicleToolStripMenuItem.Click += new System.EventHandler(this.updateVehicleToolStripMenuItem_Click);
             // 
             // deleteVehicleToolStripMenuItem
             // 

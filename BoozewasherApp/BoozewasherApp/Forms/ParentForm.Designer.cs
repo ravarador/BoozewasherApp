@@ -105,21 +105,21 @@
             // addVehicleToolStripMenuItem
             // 
             this.addVehicleToolStripMenuItem.Name = "addVehicleToolStripMenuItem";
-            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addVehicleToolStripMenuItem.Text = "Add Vehicle";
             this.addVehicleToolStripMenuItem.Click += new System.EventHandler(this.addVehicleToolStripMenuItem_Click);
             // 
             // updateVehicleToolStripMenuItem
             // 
             this.updateVehicleToolStripMenuItem.Name = "updateVehicleToolStripMenuItem";
-            this.updateVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateVehicleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.updateVehicleToolStripMenuItem.Text = "Update Vehicle";
             this.updateVehicleToolStripMenuItem.Click += new System.EventHandler(this.updateVehicleToolStripMenuItem_Click);
             // 
             // deleteVehicleToolStripMenuItem
             // 
             this.deleteVehicleToolStripMenuItem.Name = "deleteVehicleToolStripMenuItem";
-            this.deleteVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteVehicleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.deleteVehicleToolStripMenuItem.Text = "Delete Vehicle";
             this.deleteVehicleToolStripMenuItem.Click += new System.EventHandler(this.deleteVehicleToolStripMenuItem_Click);
             // 
@@ -136,19 +136,20 @@
             // addTransactionToolStripMenuItem
             // 
             this.addTransactionToolStripMenuItem.Name = "addTransactionToolStripMenuItem";
-            this.addTransactionToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.addTransactionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addTransactionToolStripMenuItem.Text = "Add Transaction";
+            this.addTransactionToolStripMenuItem.Click += new System.EventHandler(this.addTransactionToolStripMenuItem_Click);
             // 
             // updateTransactionToolStripMenuItem
             // 
             this.updateTransactionToolStripMenuItem.Name = "updateTransactionToolStripMenuItem";
-            this.updateTransactionToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.updateTransactionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateTransactionToolStripMenuItem.Text = "Update Transaction";
             // 
             // deleteTransactionToolStripMenuItem
             // 
             this.deleteTransactionToolStripMenuItem.Name = "deleteTransactionToolStripMenuItem";
-            this.deleteTransactionToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.deleteTransactionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteTransactionToolStripMenuItem.Text = "Delete Transaction";
             // 
             // summaryToolStripMenuItem

@@ -1,4 +1,5 @@
 ﻿using BoozewasherApp.Forms.ServiceForms;
+using BoozewasherApp.Forms.TransactionForms;
 using BoozewasherApp.Forms.VehicleForms;
 using System;
 using System.Collections.Generic;
@@ -65,6 +66,14 @@ namespace BoozewasherApp
 
             updateVehicleForm.Show();
             updateVehicleForm.MdiParent = this;
+        }
+
+        private void addTransactionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddTransactionForm addTransactionForm = new AddTransactionForm();
+
+            addTransactionForm.Show();
+            addTransactionForm.MdiParent = this;
         }
     }
 }

@@ -75,11 +75,23 @@
     <Compile Include="Forms\ServiceForms\DeleteServiceForm.Designer.cs">
       <DependentUpon>DeleteServiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ServiceForms\ServiceLookupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceForms\ServiceLookupForm.Designer.cs">
+      <DependentUpon>ServiceLookupForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ServiceForms\UpdateServiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ServiceForms\UpdateServiceForm.Designer.cs">
       <DependentUpon>UpdateServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\AddTransactionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\AddTransactionForm.Designer.cs">
+      <DependentUpon>AddTransactionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\VehicleForms\AddVehicleForm.cs">
       <SubType>Form</SubType>
@@ -98,6 +110,12 @@
     </Compile>
     <Compile Include="Forms\VehicleForms\UpdateVehicleForm.Designer.cs">
       <DependentUpon>UpdateVehicleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VehicleForms\VehicleLookupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VehicleForms\VehicleLookupForm.Designer.cs">
+      <DependentUpon>VehicleLookupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.cs" />
     <Compile Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.designer.cs">
@@ -134,8 +152,14 @@
     <EmbeddedResource Include="Forms\ServiceForms\DeleteServiceForm.resx">
       <DependentUpon>DeleteServiceForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceForms\ServiceLookupForm.resx">
+      <DependentUpon>ServiceLookupForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceForms\UpdateServiceForm.resx">
       <DependentUpon>UpdateServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TransactionForms\AddTransactionForm.resx">
+      <DependentUpon>AddTransactionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleForms\AddVehicleForm.resx">
       <DependentUpon>AddVehicleForm.cs</DependentUpon>
@@ -145,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleForms\UpdateVehicleForm.resx">
       <DependentUpon>UpdateVehicleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VehicleForms\VehicleLookupForm.resx">
+      <DependentUpon>VehicleLookupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.resx">
       <DependentUpon>202011301018204_CreateTables_ServiceSummaryTransactionVehicle.cs</DependentUpon>

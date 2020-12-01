@@ -65,7 +65,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             txtboxPlateNumber.Text = transaction.PlateNumber;
             txtboxCost.Text = transaction.Cost.ToString();
         }
-
+        #region Private Methods
         private void LoadDgvTransaction()
         {
             var getTransaction = new GetAllTransactionsQuery();
@@ -108,5 +108,6 @@ namespace BoozewasherApp.Forms.TransactionForms
 
             return getVehicles.GetAllVehicles().Select(a => a.Id).ToList();
         }
+        #endregion
     }
 }

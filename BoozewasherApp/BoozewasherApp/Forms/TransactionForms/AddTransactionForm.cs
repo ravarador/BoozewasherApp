@@ -33,6 +33,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         private void btnServiceLookup_Click(object sender, EventArgs e) => OpenServiceLookupForm();
         private void btnVehicleLookup_Click(object sender, EventArgs e) => OpenVehicleLookupForm();
         private void btnAdd_Click(object sender, EventArgs e) => AddTransaction();
+        #region Private Methods
         private void AddTransaction()
         {
             var transaction = new Transaction()
@@ -93,7 +94,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             vehicleLookupForm.ShowDialog();
             comboVehicleType.SelectedItem = vehicleLookupForm.SelectedVehicleIdForLookup;
         }
+        #endregion
 
-        
     }
 }

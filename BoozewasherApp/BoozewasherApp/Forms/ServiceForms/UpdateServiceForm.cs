@@ -51,11 +51,13 @@ namespace BoozewasherApp.Forms.ServiceForms
             txtboxType.Text = service.Type;
             txtboxExpense.Text = service.Expense.ToString();
         }
+        #region Private Methods
         private void LoadDgvService()
         {
             var updateService = new GetAllServicesQuery();
 
             dgvService.DataSource = updateService.GetAllServices();
         }
+        #endregion
     }
 }

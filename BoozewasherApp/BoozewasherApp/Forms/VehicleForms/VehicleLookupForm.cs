@@ -30,11 +30,13 @@ namespace BoozewasherApp.Forms.VehicleForms
 
             this.Close();
         }
+        #region Private Methods
         private void LoadDgvVehicle()
         {
             var getVehicle = new GetAllVehiclesQuery();
 
             dgvVehicle.DataSource = getVehicle.GetAllVehicles();
         }
+        #endregion
     }
 }

@@ -56,11 +56,13 @@ namespace BoozewasherApp.Forms.VehicleForms
             txtboxModel.Text = vehicle.Model;
             txtboxDescription.Text = vehicle.Description;
         }
+        #region Private Methods
         private void LoadDgvVehicle()
         {
             var getVehicles = new GetAllVehiclesQuery();
 
             dgvVehicle.DataSource = getVehicles.GetAllVehicles();
         }
+        #endregion
     }
 }

@@ -50,6 +50,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             lblPlateNumber.Text = transaction.PlateNumber;
             lblCost.Text = transaction.Cost.ToString();
         }
+        #region Private Methods
         private void LoadDgvTransaction()
         {
             var getTransaction = new GetAllTransactionsQuery();
@@ -75,5 +76,6 @@ namespace BoozewasherApp.Forms.TransactionForms
             lblServiceId.Text = null;
             lblVehicleId.Text = null;
         }
+        #endregion
     }
 }

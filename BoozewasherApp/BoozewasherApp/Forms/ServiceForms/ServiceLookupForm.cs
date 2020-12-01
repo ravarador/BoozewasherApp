@@ -30,11 +30,13 @@ namespace BoozewasherApp.Forms.ServiceForms
 
             this.Close();
         }
+        #region Private Methods
         private void LoadDgvService()
         {
             var getService = new GetAllServicesQuery();
 
             dgvService.DataSource = getService.GetAllServices();
         }
+        #endregion
     }
 }

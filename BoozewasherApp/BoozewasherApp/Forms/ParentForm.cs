@@ -1,4 +1,5 @@
 ﻿using BoozewasherApp.Forms.ServiceForms;
+using BoozewasherApp.Forms.SummaryForms;
 using BoozewasherApp.Forms.TransactionForms;
 using BoozewasherApp.Forms.VehicleForms;
 using System;
@@ -90,6 +91,14 @@ namespace BoozewasherApp
 
             deleteTransactionForm.Show();
             deleteTransactionForm.MdiParent = this;
+        }
+
+        private void generateReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SummaryReportSelector summaryReportSelector = new SummaryReportSelector();
+
+            summaryReportSelector.Show();
+            summaryReportSelector.MdiParent = this;
         }
     }
 }

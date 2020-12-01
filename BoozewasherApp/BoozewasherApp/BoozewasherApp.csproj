@@ -115,6 +115,11 @@
     <Compile Include="Queries\ServiceQueries\GetAllServicesQuery.cs" />
     <Compile Include="Queries\ServiceQueries\GetServiceByIdQuery.cs" />
     <Compile Include="Queries\ServiceQueries\UpdateServiceQuery.cs" />
+    <Compile Include="Queries\TransactionQueries\AddTransactionQuery.cs" />
+    <Compile Include="Queries\TransactionQueries\DeleteTransactionQuery.cs" />
+    <Compile Include="Queries\TransactionQueries\GetAllTransactionsQuery.cs" />
+    <Compile Include="Queries\TransactionQueries\GetTransactionByIdQuery.cs" />
+    <Compile Include="Queries\TransactionQueries\UpdateTransactionQuery.cs" />
     <Compile Include="Queries\VehicleQueries\AddVehicleQuery.cs" />
     <Compile Include="Queries\VehicleQueries\DeleteVehicleQuery.cs" />
     <Compile Include="Queries\VehicleQueries\GetAllVehiclesQuery.cs" />

@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using BoozewasherApp_Web.Models.ContextModel;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -20,6 +21,12 @@ namespace BoozewasherApp_Web.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        DbSet<Service> Services { get; set; }
+        DbSet<Summary> Summaries { get; set; }
+
+        DbSet<Transaction> Transactions { get; set; }
+        DbSet<Vehicle> Vehicles { get; set; }
+
         public ApplicationDbContext()
             : base(@"Data Source=localhost\SQLEXPRESS; Initial Catalog=BoozewasherAppDb;Trusted_Connection=True;", throwIfV1Schema: false)
         {

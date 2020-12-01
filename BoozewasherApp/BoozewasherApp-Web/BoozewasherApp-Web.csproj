@@ -177,8 +177,16 @@
     <Compile Include="Migrations\202012010347094_InitialMigration.Designer.cs">
       <DependentUpon>202012010347094_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012010608040_AddDatabaseUsingAPI.cs" />
+    <Compile Include="Migrations\202012010608040_AddDatabaseUsingAPI.Designer.cs">
+      <DependentUpon>202012010608040_AddDatabaseUsingAPI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ContextModel\Service.cs" />
+    <Compile Include="Models\ContextModel\Summary.cs" />
+    <Compile Include="Models\ContextModel\Transaction.cs" />
+    <Compile Include="Models\ContextModel\Vehicle.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -260,6 +268,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202012010347094_InitialMigration.resx">
       <DependentUpon>202012010347094_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012010608040_AddDatabaseUsingAPI.resx">
+      <DependentUpon>202012010608040_AddDatabaseUsingAPI.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

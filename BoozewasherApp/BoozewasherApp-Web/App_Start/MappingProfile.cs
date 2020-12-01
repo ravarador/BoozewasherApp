@@ -8,7 +8,7 @@ using System.Web;
 
 namespace BoozewasherApp_Web.App_Start
 {
-    public class MappingProfile
+    public class MappingProfile : Profile
     {
         public MappingProfile()
         {

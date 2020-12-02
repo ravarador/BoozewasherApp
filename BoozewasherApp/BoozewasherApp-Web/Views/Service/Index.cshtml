@@ -6,7 +6,7 @@
 <p></p>
 <h1>Services</h1>
 <p></p>
-@Html.ActionLink("New Service", "New", "Service", new { @class = "btn btn-primary " })
+@Html.ActionLink("New Service", "New", "Service", new { @class = "btn btn-outline-primary" })
 @if (!Model.Any())
 {
     <p>No services available.</p>
@@ -32,4 +32,4 @@
             </tr>
         }
     </tbody>
-    </table>
+</table>

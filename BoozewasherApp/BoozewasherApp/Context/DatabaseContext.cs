@@ -20,7 +20,6 @@ namespace BoozewasherApp.Context
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
-
         public DbSet<Service> Services { get; set; }
         public DbSet<Summary> Summaries { get; set; }
         public DbSet<Transaction> Transactions { get; set; }

@@ -66,6 +66,7 @@
             // 
             // txtboxType
             // 
+            this.txtboxType.Enabled = false;
             this.txtboxType.Location = new System.Drawing.Point(114, 49);
             this.txtboxType.Name = "txtboxType";
             this.txtboxType.Size = new System.Drawing.Size(275, 20);

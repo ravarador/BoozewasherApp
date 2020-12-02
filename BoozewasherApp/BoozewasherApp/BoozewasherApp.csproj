@@ -162,6 +162,10 @@
     <Compile Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.designer.cs">
       <DependentUpon>202011301018204_CreateTables_ServiceSummaryTransactionVehicle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012020935419_SeedServicesTable.cs" />
+    <Compile Include="Migrations\202012020935419_SeedServicesTable.designer.cs">
+      <DependentUpon>202012020935419_SeedServicesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ContextModels\Service.cs" />
     <Compile Include="Models\ContextModels\Summary.cs" />
@@ -236,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.resx">
       <DependentUpon>202011301018204_CreateTables_ServiceSummaryTransactionVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012020935419_SeedServicesTable.resx">
+      <DependentUpon>202012020935419_SeedServicesTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

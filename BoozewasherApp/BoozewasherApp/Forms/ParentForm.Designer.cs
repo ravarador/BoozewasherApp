@@ -30,9 +30,7 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.serviceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vehicleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addVehicleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateVehicleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,33 +60,17 @@
             // serviceToolStripMenuItem
             // 
             this.serviceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addServiceToolStripMenuItem,
-            this.updateServiceToolStripMenuItem,
-            this.deleteServiceToolStripMenuItem});
+            this.updateServiceToolStripMenuItem});
             this.serviceToolStripMenuItem.Name = "serviceToolStripMenuItem";
             this.serviceToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.serviceToolStripMenuItem.Text = "Service";
             // 
-            // addServiceToolStripMenuItem
-            // 
-            this.addServiceToolStripMenuItem.Name = "addServiceToolStripMenuItem";
-            this.addServiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addServiceToolStripMenuItem.Text = "Add Service";
-            this.addServiceToolStripMenuItem.Click += new System.EventHandler(this.addServiceToolStripMenuItem_Click);
-            // 
             // updateServiceToolStripMenuItem
             // 
             this.updateServiceToolStripMenuItem.Name = "updateServiceToolStripMenuItem";
-            this.updateServiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.updateServiceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateServiceToolStripMenuItem.Text = "Update Service";
             this.updateServiceToolStripMenuItem.Click += new System.EventHandler(this.updateServiceToolStripMenuItem_Click);
-            // 
-            // deleteServiceToolStripMenuItem
-            // 
-            this.deleteServiceToolStripMenuItem.Name = "deleteServiceToolStripMenuItem";
-            this.deleteServiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.deleteServiceToolStripMenuItem.Text = "Delete Service";
-            this.deleteServiceToolStripMenuItem.Click += new System.EventHandler(this.deleteServiceToolStripMenuItem_Click);
             // 
             // vehicleToolStripMenuItem
             // 
@@ -163,7 +145,7 @@
             // generateReportToolStripMenuItem
             // 
             this.generateReportToolStripMenuItem.Name = "generateReportToolStripMenuItem";
-            this.generateReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.generateReportToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.generateReportToolStripMenuItem.Text = "Generate Report";
             this.generateReportToolStripMenuItem.Click += new System.EventHandler(this.generateReportToolStripMenuItem_Click);
             // 
@@ -191,9 +173,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem serviceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addServiceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateServiceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteServiceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transactionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addTransactionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateTransactionToolStripMenuItem;

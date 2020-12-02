@@ -48,7 +48,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             lblModel.Text = vehicle.Model;
             lblDescription.Text = vehicle.Description;
         }
-
+        #region Private Methods
         private void LoadDgvVehicle()
         {
             var getVehicles = new GetAllVehiclesQuery();
@@ -63,5 +63,6 @@ namespace BoozewasherApp.Forms.VehicleForms
             lblModel.Text = null;
             lblDescription.Text = null;
         }
+        #endregion
     }
 }

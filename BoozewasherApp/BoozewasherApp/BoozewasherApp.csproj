@@ -36,6 +36,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.ReportSource.1.0.0\lib\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -45,6 +52,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,6 +66,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\DatabaseContext.cs" />
+    <Compile Include="DataSets\SummaryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SummaryDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ParentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,11 +89,47 @@
     <Compile Include="Forms\ServiceForms\DeleteServiceForm.Designer.cs">
       <DependentUpon>DeleteServiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ServiceForms\ServiceLookupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceForms\ServiceLookupForm.Designer.cs">
+      <DependentUpon>ServiceLookupForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ServiceForms\UpdateServiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ServiceForms\UpdateServiceForm.Designer.cs">
       <DependentUpon>UpdateServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SummaryForms\SummaryCrystalReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SummaryForms\SummaryCrystalReportForm.Designer.cs">
+      <DependentUpon>SummaryCrystalReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SummaryForms\SummaryReportSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SummaryForms\SummaryReportSelector.Designer.cs">
+      <DependentUpon>SummaryReportSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\AddTransactionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\AddTransactionForm.Designer.cs">
+      <DependentUpon>AddTransactionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\DeleteTransactionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\DeleteTransactionForm.Designer.cs">
+      <DependentUpon>DeleteTransactionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\UpdateTransactionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\UpdateTransactionForm.Designer.cs">
+      <DependentUpon>UpdateTransactionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\VehicleForms\AddVehicleForm.cs">
       <SubType>Form</SubType>
@@ -99,6 +149,13 @@
     <Compile Include="Forms\VehicleForms\UpdateVehicleForm.Designer.cs">
       <DependentUpon>UpdateVehicleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\VehicleForms\VehicleLookupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VehicleForms\VehicleLookupForm.Designer.cs">
+      <DependentUpon>VehicleLookupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ListExtensions.cs" />
     <Compile Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.cs" />
     <Compile Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.designer.cs">
       <DependentUpon>202011301018204_CreateTables_ServiceSummaryTransactionVehicle.cs</DependentUpon>
@@ -108,6 +165,8 @@
     <Compile Include="Models\ContextModels\Summary.cs" />
     <Compile Include="Models\ContextModels\Transaction.cs" />
     <Compile Include="Models\ContextModels\Vehicle.cs" />
+    <Compile Include="Models\Dtos\SummaryDto.cs" />
+    <Compile Include="Models\Dtos\TransactionDto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\ServiceQueries\AddServiceQuery.cs" />
@@ -115,11 +174,22 @@
     <Compile Include="Queries\ServiceQueries\GetAllServicesQuery.cs" />
     <Compile Include="Queries\ServiceQueries\GetServiceByIdQuery.cs" />
     <Compile Include="Queries\ServiceQueries\UpdateServiceQuery.cs" />
+    <Compile Include="Queries\TransactionQueries\AddTransactionQuery.cs" />
+    <Compile Include="Queries\TransactionQueries\DeleteTransactionQuery.cs" />
+    <Compile Include="Queries\TransactionQueries\GetAllTransactionsQuery.cs" />
+    <Compile Include="Queries\TransactionQueries\GetTransactionByIdQuery.cs" />
+    <Compile Include="Queries\TransactionQueries\UpdateTransactionQuery.cs" />
     <Compile Include="Queries\VehicleQueries\AddVehicleQuery.cs" />
     <Compile Include="Queries\VehicleQueries\DeleteVehicleQuery.cs" />
     <Compile Include="Queries\VehicleQueries\GetAllVehiclesQuery.cs" />
     <Compile Include="Queries\VehicleQueries\GetVehicleByIdQuery.cs" />
     <Compile Include="Queries\VehicleQueries\UpdateVehicleQuery.cs" />
+    <Compile Include="Reports\SummaryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SummaryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Forms\ParentForm.resx">
       <DependentUpon>ParentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,8 +199,26 @@
     <EmbeddedResource Include="Forms\ServiceForms\DeleteServiceForm.resx">
       <DependentUpon>DeleteServiceForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceForms\ServiceLookupForm.resx">
+      <DependentUpon>ServiceLookupForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceForms\UpdateServiceForm.resx">
       <DependentUpon>UpdateServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SummaryForms\SummaryCrystalReportForm.resx">
+      <DependentUpon>SummaryCrystalReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SummaryForms\SummaryReportSelector.resx">
+      <DependentUpon>SummaryReportSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TransactionForms\AddTransactionForm.resx">
+      <DependentUpon>AddTransactionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TransactionForms\DeleteTransactionForm.resx">
+      <DependentUpon>DeleteTransactionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TransactionForms\UpdateTransactionForm.resx">
+      <DependentUpon>UpdateTransactionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleForms\AddVehicleForm.resx">
       <DependentUpon>AddVehicleForm.cs</DependentUpon>
@@ -140,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleForms\UpdateVehicleForm.resx">
       <DependentUpon>UpdateVehicleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VehicleForms\VehicleLookupForm.resx">
+      <DependentUpon>VehicleLookupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.resx">
       <DependentUpon>202011301018204_CreateTables_ServiceSummaryTransactionVehicle.cs</DependentUpon>
@@ -153,6 +244,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\SummaryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SummaryReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DataSets\SummaryDataSet.xsc">
+      <DependentUpon>SummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\SummaryDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SummaryDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\SummaryDataSet.xss">
+      <DependentUpon>SummaryDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -167,7 +273,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

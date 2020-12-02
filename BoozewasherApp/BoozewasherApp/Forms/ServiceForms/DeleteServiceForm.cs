@@ -45,6 +45,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             lblType.Text = service.Type;
             lblExpense.Text = service.Expense.ToString();
         }
+        #region Private Methods
         private void LoadDgvService()
         {
             var getServices = new GetAllServicesQuery();
@@ -58,5 +59,6 @@ namespace BoozewasherApp.Forms.ServiceForms
             lblExpense.Text = null;
             lblType.Text = null;
         }
+        #endregion
     }
 }

@@ -297,6 +297,40 @@ namespace BoozewasherApp.DataSets {
             
             private global::System.Data.DataColumn columnPlateNumber;
             
+            private global::System.Data.DataColumn columnCarwashCount;
+            
+            private global::System.Data.DataColumn columnDetailingCount;
+            
+            private global::System.Data.DataColumn columnPaintjobCount;
+            
+            private global::System.Data.DataColumn columnBackToZeroCount;
+            
+            private global::System.Data.DataColumn columnOverallTotalCount;
+            
+            private global::System.Data.DataColumn columnCarwashTotalCost;
+            
+            private global::System.Data.DataColumn columnDetailingTotalCost;
+            
+            private global::System.Data.DataColumn columnPaintjobTotalCost;
+            
+            private global::System.Data.DataColumn columnBackToZeroTotalCost;
+            
+            private global::System.Data.DataColumn columnOverallTotalCost;
+            
+            private global::System.Data.DataColumn columnCarwashTotalExpense;
+            
+            private global::System.Data.DataColumn columnDetailingTotalExpense;
+            
+            private global::System.Data.DataColumn columnPaintjobTotalExpense;
+            
+            private global::System.Data.DataColumn columnBackToZeroTotalExpense;
+            
+            private global::System.Data.DataColumn columnOverallTotalExpense;
+            
+            private global::System.Data.DataColumn columnGrossProfit;
+            
+            private global::System.Data.DataColumn columnNetProfit;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public SummaryDataTableDataTable() {
@@ -404,6 +438,142 @@ namespace BoozewasherApp.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CarwashCountColumn {
+                get {
+                    return this.columnCarwashCount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DetailingCountColumn {
+                get {
+                    return this.columnDetailingCount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PaintjobCountColumn {
+                get {
+                    return this.columnPaintjobCount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BackToZeroCountColumn {
+                get {
+                    return this.columnBackToZeroCount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OverallTotalCountColumn {
+                get {
+                    return this.columnOverallTotalCount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CarwashTotalCostColumn {
+                get {
+                    return this.columnCarwashTotalCost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DetailingTotalCostColumn {
+                get {
+                    return this.columnDetailingTotalCost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PaintjobTotalCostColumn {
+                get {
+                    return this.columnPaintjobTotalCost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BackToZeroTotalCostColumn {
+                get {
+                    return this.columnBackToZeroTotalCost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OverallTotalCostColumn {
+                get {
+                    return this.columnOverallTotalCost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CarwashTotalExpenseColumn {
+                get {
+                    return this.columnCarwashTotalExpense;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DetailingTotalExpenseColumn {
+                get {
+                    return this.columnDetailingTotalExpense;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PaintjobTotalExpenseColumn {
+                get {
+                    return this.columnPaintjobTotalExpense;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BackToZeroTotalExpenseColumn {
+                get {
+                    return this.columnBackToZeroTotalExpense;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OverallTotalExpenseColumn {
+                get {
+                    return this.columnOverallTotalExpense;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn GrossProfitColumn {
+                get {
+                    return this.columnGrossProfit;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NetProfitColumn {
+                get {
+                    return this.columnNetProfit;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -439,7 +609,33 @@ namespace BoozewasherApp.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SummaryDataTableRow AddSummaryDataTableRow(int Id, System.DateTime DateTime, string ServiceType, decimal Expense, string VehicleType, string Brand, string Model, decimal Cost, string PlateNumber) {
+            public SummaryDataTableRow AddSummaryDataTableRow(
+                        int Id, 
+                        System.DateTime DateTime, 
+                        string ServiceType, 
+                        decimal Expense, 
+                        string VehicleType, 
+                        string Brand, 
+                        string Model, 
+                        decimal Cost, 
+                        string PlateNumber, 
+                        int CarwashCount, 
+                        int DetailingCount, 
+                        int PaintjobCount, 
+                        int BackToZeroCount, 
+                        int OverallTotalCount, 
+                        decimal CarwashTotalCost, 
+                        decimal DetailingTotalCost, 
+                        decimal PaintjobTotalCost, 
+                        decimal BackToZeroTotalCost, 
+                        decimal OverallTotalCost, 
+                        decimal CarwashTotalExpense, 
+                        decimal DetailingTotalExpense, 
+                        decimal PaintjobTotalExpense, 
+                        decimal BackToZeroTotalExpense, 
+                        decimal OverallTotalExpense, 
+                        decimal GrossProfit, 
+                        decimal NetProfit) {
                 SummaryDataTableRow rowSummaryDataTableRow = ((SummaryDataTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
@@ -450,7 +646,24 @@ namespace BoozewasherApp.DataSets {
                         Brand,
                         Model,
                         Cost,
-                        PlateNumber};
+                        PlateNumber,
+                        CarwashCount,
+                        DetailingCount,
+                        PaintjobCount,
+                        BackToZeroCount,
+                        OverallTotalCount,
+                        CarwashTotalCost,
+                        DetailingTotalCost,
+                        PaintjobTotalCost,
+                        BackToZeroTotalCost,
+                        OverallTotalCost,
+                        CarwashTotalExpense,
+                        DetailingTotalExpense,
+                        PaintjobTotalExpense,
+                        BackToZeroTotalExpense,
+                        OverallTotalExpense,
+                        GrossProfit,
+                        NetProfit};
                 rowSummaryDataTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSummaryDataTableRow);
                 return rowSummaryDataTableRow;
@@ -482,6 +695,23 @@ namespace BoozewasherApp.DataSets {
                 this.columnModel = base.Columns["Model"];
                 this.columnCost = base.Columns["Cost"];
                 this.columnPlateNumber = base.Columns["PlateNumber"];
+                this.columnCarwashCount = base.Columns["CarwashCount"];
+                this.columnDetailingCount = base.Columns["DetailingCount"];
+                this.columnPaintjobCount = base.Columns["PaintjobCount"];
+                this.columnBackToZeroCount = base.Columns["BackToZeroCount"];
+                this.columnOverallTotalCount = base.Columns["OverallTotalCount"];
+                this.columnCarwashTotalCost = base.Columns["CarwashTotalCost"];
+                this.columnDetailingTotalCost = base.Columns["DetailingTotalCost"];
+                this.columnPaintjobTotalCost = base.Columns["PaintjobTotalCost"];
+                this.columnBackToZeroTotalCost = base.Columns["BackToZeroTotalCost"];
+                this.columnOverallTotalCost = base.Columns["OverallTotalCost"];
+                this.columnCarwashTotalExpense = base.Columns["CarwashTotalExpense"];
+                this.columnDetailingTotalExpense = base.Columns["DetailingTotalExpense"];
+                this.columnPaintjobTotalExpense = base.Columns["PaintjobTotalExpense"];
+                this.columnBackToZeroTotalExpense = base.Columns["BackToZeroTotalExpense"];
+                this.columnOverallTotalExpense = base.Columns["OverallTotalExpense"];
+                this.columnGrossProfit = base.Columns["GrossProfit"];
+                this.columnNetProfit = base.Columns["NetProfit"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -505,6 +735,40 @@ namespace BoozewasherApp.DataSets {
                 base.Columns.Add(this.columnCost);
                 this.columnPlateNumber = new global::System.Data.DataColumn("PlateNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPlateNumber);
+                this.columnCarwashCount = new global::System.Data.DataColumn("CarwashCount", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCarwashCount);
+                this.columnDetailingCount = new global::System.Data.DataColumn("DetailingCount", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDetailingCount);
+                this.columnPaintjobCount = new global::System.Data.DataColumn("PaintjobCount", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPaintjobCount);
+                this.columnBackToZeroCount = new global::System.Data.DataColumn("BackToZeroCount", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBackToZeroCount);
+                this.columnOverallTotalCount = new global::System.Data.DataColumn("OverallTotalCount", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOverallTotalCount);
+                this.columnCarwashTotalCost = new global::System.Data.DataColumn("CarwashTotalCost", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCarwashTotalCost);
+                this.columnDetailingTotalCost = new global::System.Data.DataColumn("DetailingTotalCost", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDetailingTotalCost);
+                this.columnPaintjobTotalCost = new global::System.Data.DataColumn("PaintjobTotalCost", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPaintjobTotalCost);
+                this.columnBackToZeroTotalCost = new global::System.Data.DataColumn("BackToZeroTotalCost", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBackToZeroTotalCost);
+                this.columnOverallTotalCost = new global::System.Data.DataColumn("OverallTotalCost", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOverallTotalCost);
+                this.columnCarwashTotalExpense = new global::System.Data.DataColumn("CarwashTotalExpense", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCarwashTotalExpense);
+                this.columnDetailingTotalExpense = new global::System.Data.DataColumn("DetailingTotalExpense", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDetailingTotalExpense);
+                this.columnPaintjobTotalExpense = new global::System.Data.DataColumn("PaintjobTotalExpense", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPaintjobTotalExpense);
+                this.columnBackToZeroTotalExpense = new global::System.Data.DataColumn("BackToZeroTotalExpense", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBackToZeroTotalExpense);
+                this.columnOverallTotalExpense = new global::System.Data.DataColumn("OverallTotalExpense", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOverallTotalExpense);
+                this.columnGrossProfit = new global::System.Data.DataColumn("GrossProfit", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGrossProfit);
+                this.columnNetProfit = new global::System.Data.DataColumn("NetProfit", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNetProfit);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -791,6 +1055,284 @@ namespace BoozewasherApp.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int CarwashCount {
+                get {
+                    try {
+                        return ((int)(this[this.tableSummaryDataTable.CarwashCountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CarwashCount\' in table \'SummaryDataTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.CarwashCountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int DetailingCount {
+                get {
+                    try {
+                        return ((int)(this[this.tableSummaryDataTable.DetailingCountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DetailingCount\' in table \'SummaryDataTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.DetailingCountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int PaintjobCount {
+                get {
+                    try {
+                        return ((int)(this[this.tableSummaryDataTable.PaintjobCountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PaintjobCount\' in table \'SummaryDataTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.PaintjobCountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BackToZeroCount {
+                get {
+                    try {
+                        return ((int)(this[this.tableSummaryDataTable.BackToZeroCountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BackToZeroCount\' in table \'SummaryDataTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.BackToZeroCountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int OverallTotalCount {
+                get {
+                    try {
+                        return ((int)(this[this.tableSummaryDataTable.OverallTotalCountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OverallTotalCount\' in table \'SummaryDataTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.OverallTotalCountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal CarwashTotalCost {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSummaryDataTable.CarwashTotalCostColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CarwashTotalCost\' in table \'SummaryDataTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.CarwashTotalCostColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal DetailingTotalCost {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSummaryDataTable.DetailingTotalCostColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DetailingTotalCost\' in table \'SummaryDataTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.DetailingTotalCostColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal PaintjobTotalCost {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSummaryDataTable.PaintjobTotalCostColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PaintjobTotalCost\' in table \'SummaryDataTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.PaintjobTotalCostColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal BackToZeroTotalCost {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSummaryDataTable.BackToZeroTotalCostColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BackToZeroTotalCost\' in table \'SummaryDataTable\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.BackToZeroTotalCostColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal OverallTotalCost {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSummaryDataTable.OverallTotalCostColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OverallTotalCost\' in table \'SummaryDataTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.OverallTotalCostColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal CarwashTotalExpense {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSummaryDataTable.CarwashTotalExpenseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CarwashTotalExpense\' in table \'SummaryDataTable\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.CarwashTotalExpenseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal DetailingTotalExpense {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSummaryDataTable.DetailingTotalExpenseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DetailingTotalExpense\' in table \'SummaryDataTable\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.DetailingTotalExpenseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal PaintjobTotalExpense {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSummaryDataTable.PaintjobTotalExpenseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PaintjobTotalExpense\' in table \'SummaryDataTable\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.PaintjobTotalExpenseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal BackToZeroTotalExpense {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSummaryDataTable.BackToZeroTotalExpenseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BackToZeroTotalExpense\' in table \'SummaryDataTable\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.BackToZeroTotalExpenseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal OverallTotalExpense {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSummaryDataTable.OverallTotalExpenseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OverallTotalExpense\' in table \'SummaryDataTable\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.OverallTotalExpenseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal GrossProfit {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSummaryDataTable.GrossProfitColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GrossProfit\' in table \'SummaryDataTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.GrossProfitColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal NetProfit {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSummaryDataTable.NetProfitColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NetProfit\' in table \'SummaryDataTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDataTable.NetProfitColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsIdNull() {
                 return this.IsNull(this.tableSummaryDataTable.IdColumn);
             }
@@ -895,6 +1437,210 @@ namespace BoozewasherApp.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPlateNumberNull() {
                 this[this.tableSummaryDataTable.PlateNumberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCarwashCountNull() {
+                return this.IsNull(this.tableSummaryDataTable.CarwashCountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCarwashCountNull() {
+                this[this.tableSummaryDataTable.CarwashCountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDetailingCountNull() {
+                return this.IsNull(this.tableSummaryDataTable.DetailingCountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDetailingCountNull() {
+                this[this.tableSummaryDataTable.DetailingCountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPaintjobCountNull() {
+                return this.IsNull(this.tableSummaryDataTable.PaintjobCountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPaintjobCountNull() {
+                this[this.tableSummaryDataTable.PaintjobCountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBackToZeroCountNull() {
+                return this.IsNull(this.tableSummaryDataTable.BackToZeroCountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBackToZeroCountNull() {
+                this[this.tableSummaryDataTable.BackToZeroCountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOverallTotalCountNull() {
+                return this.IsNull(this.tableSummaryDataTable.OverallTotalCountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOverallTotalCountNull() {
+                this[this.tableSummaryDataTable.OverallTotalCountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCarwashTotalCostNull() {
+                return this.IsNull(this.tableSummaryDataTable.CarwashTotalCostColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCarwashTotalCostNull() {
+                this[this.tableSummaryDataTable.CarwashTotalCostColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDetailingTotalCostNull() {
+                return this.IsNull(this.tableSummaryDataTable.DetailingTotalCostColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDetailingTotalCostNull() {
+                this[this.tableSummaryDataTable.DetailingTotalCostColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPaintjobTotalCostNull() {
+                return this.IsNull(this.tableSummaryDataTable.PaintjobTotalCostColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPaintjobTotalCostNull() {
+                this[this.tableSummaryDataTable.PaintjobTotalCostColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBackToZeroTotalCostNull() {
+                return this.IsNull(this.tableSummaryDataTable.BackToZeroTotalCostColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBackToZeroTotalCostNull() {
+                this[this.tableSummaryDataTable.BackToZeroTotalCostColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOverallTotalCostNull() {
+                return this.IsNull(this.tableSummaryDataTable.OverallTotalCostColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOverallTotalCostNull() {
+                this[this.tableSummaryDataTable.OverallTotalCostColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCarwashTotalExpenseNull() {
+                return this.IsNull(this.tableSummaryDataTable.CarwashTotalExpenseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCarwashTotalExpenseNull() {
+                this[this.tableSummaryDataTable.CarwashTotalExpenseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDetailingTotalExpenseNull() {
+                return this.IsNull(this.tableSummaryDataTable.DetailingTotalExpenseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDetailingTotalExpenseNull() {
+                this[this.tableSummaryDataTable.DetailingTotalExpenseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPaintjobTotalExpenseNull() {
+                return this.IsNull(this.tableSummaryDataTable.PaintjobTotalExpenseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPaintjobTotalExpenseNull() {
+                this[this.tableSummaryDataTable.PaintjobTotalExpenseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBackToZeroTotalExpenseNull() {
+                return this.IsNull(this.tableSummaryDataTable.BackToZeroTotalExpenseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBackToZeroTotalExpenseNull() {
+                this[this.tableSummaryDataTable.BackToZeroTotalExpenseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOverallTotalExpenseNull() {
+                return this.IsNull(this.tableSummaryDataTable.OverallTotalExpenseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOverallTotalExpenseNull() {
+                this[this.tableSummaryDataTable.OverallTotalExpenseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsGrossProfitNull() {
+                return this.IsNull(this.tableSummaryDataTable.GrossProfitColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetGrossProfitNull() {
+                this[this.tableSummaryDataTable.GrossProfitColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNetProfitNull() {
+                return this.IsNull(this.tableSummaryDataTable.NetProfitColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNetProfitNull() {
+                this[this.tableSummaryDataTable.NetProfitColumn] = global::System.Convert.DBNull;
             }
         }
         

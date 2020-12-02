@@ -17,5 +17,30 @@ namespace BoozewasherApp.Models.Dtos
         public string Model { get; set; }
         public string PlateNumber { get; set; }
         public decimal Cost { get; set; }
+
+        //SUMMARY COUNT
+        public int CarwashCount { get; set; }
+        public int DetailingCount { get; set; }
+        public int PaintjobCount { get; set; }
+        public int BackToZeroCount { get; set; }
+        public int OverallTotalCount { get; set; }
+
+        //SUMMARY COST
+        public decimal CarwashTotalCost { get; set; }
+        public decimal DetailingTotalCost { get; set; }
+        public decimal PaintjobTotalCost { get; set; }
+        public decimal BackToZeroTotalCost { get; set; }
+        public decimal OverallTotalCost { get; set; }
+
+        //SUMMARY EXPENSE
+        public decimal CarwashTotalExpense { get; set; }
+        public decimal DetailingTotalExpense { get; set; }
+        public decimal PaintjobTotalExpense { get; set; }
+        public decimal BackToZeroTotalExpense { get; set; }
+        public decimal OverallTotalExpense { get; set; }
+
+
+        public decimal GrossProfit { get; set; }
+        public decimal NetProfit { get; set; }
     }
 }

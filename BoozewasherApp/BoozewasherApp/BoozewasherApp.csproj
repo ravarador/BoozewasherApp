@@ -71,6 +71,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SummaryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Enums\ServiceTypeConstants.cs" />
+    <Compile Include="Enums\TaxConstants.cs" />
     <Compile Include="Forms\ParentForm.cs">
       <SubType>Form</SubType>
     </Compile>

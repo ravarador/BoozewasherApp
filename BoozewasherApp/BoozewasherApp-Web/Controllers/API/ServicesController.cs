@@ -12,23 +12,23 @@ using System.Web.ModelBinding;
 
 namespace BoozewasherApp_Web.Controllers.API
 {
-    public class ServiceController : ApiController
+    public class ServicesController : ApiController
     {
         private ApplicationDbContext _context;
 
-        public ServiceController()
+        public ServicesController()
         {
             _context = new ApplicationDbContext();
         }
 
-        //GET /API/Service
+        //GET /API/Services
 
         public IEnumerable<ServiceDto> GetServices()
         {
             return _context.Services.ToList().Select(Mapper.Map<Service, ServiceDto>);
         } 
 
-        //GET /API/Service/1
+        //GET /API/Services/1
         public IHttpActionResult GetService (int id)
         {
             var service = _context.Services.SingleOrDefault(s => s.Id == id);
@@ -39,7 +39,7 @@ namespace BoozewasherApp_Web.Controllers.API
             return Ok(Mapper.Map<Service, ServiceDto>(service));
         }
 
-        //POST /API/Service
+        //POST /API/Services
         [HttpPost]
         public IHttpActionResult CreateService(ServiceDto serviceDto)
         {
@@ -55,7 +55,7 @@ namespace BoozewasherApp_Web.Controllers.API
             return Created(new Uri(Request.RequestUri + "/" + service.Id), serviceDto);
         }
 
-        //PUT /API/Service/1
+        //PUT /API/Services/1
         [HttpPut]
         public void UpdateService(int id, ServiceDto serviceDto)
         {
@@ -72,7 +72,7 @@ namespace BoozewasherApp_Web.Controllers.API
             _context.SaveChanges();
         }
 
-        //DELETE /API/Service/1
+        //DELETE /API/Services/1
         public void DeleteService (int id)
         {
             if (!ModelState.IsValid)

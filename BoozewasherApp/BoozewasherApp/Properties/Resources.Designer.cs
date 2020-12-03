@@ -61,7 +61,7 @@ namespace BoozewasherApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;https://localhost:44382/&quot;.
+        ///   Looks up a localized string similar to https://localhost:44382/.
         /// </summary>
         internal static string ConnectionString {
             get {

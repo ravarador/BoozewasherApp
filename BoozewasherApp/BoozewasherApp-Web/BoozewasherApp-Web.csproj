@@ -187,6 +187,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Controllers\VehicleController.cs" />
     <Compile Include="Dtos\ServiceDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -215,6 +216,8 @@
     <Compile Include="Startup.cs" />
     <Compile Include="View_Models\Services\ServiceFormViewModel.cs" />
     <Compile Include="View_Models\Services\ServicesViewModel.cs" />
+    <Compile Include="View_Models\Vehicles\VehicleFormViewModel.cs" />
+    <Compile Include="View_Models\Vehicles\VehicleViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-simplex.css" />
@@ -275,6 +278,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Service\Index.cshtml" />
     <Content Include="Views\Service\ServiceForm.cshtml" />
+    <Content Include="Views\Vehicle\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

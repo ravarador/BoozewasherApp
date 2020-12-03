@@ -1,5 +1,7 @@
 ﻿using BoozewasherApp.Context;
 using BoozewasherApp.Models.ContextModels;
+using Newtonsoft.Json;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +12,18 @@ namespace BoozewasherApp.Queries.ServiceQueries
 {
     public class GetAllServicesQuery
     {
-        private DatabaseContext context = new DatabaseContext();
         public List<Service> GetAllServices()
         {
-            var service = context.Services.ToList();
+            var client = new RestClient("https://localhost:44382/");
+            var request = new RestRequest("/api/services/", Method.GET);
+            request.RequestFormat = DataFormat.Json;
+            var response = client.Execute(request);
 
-            return service;
+            var dataList = JsonConvert.DeserializeObject<List<Service>>(response.Content);
+
+            return dataList;
         }
+
+
     }
 }

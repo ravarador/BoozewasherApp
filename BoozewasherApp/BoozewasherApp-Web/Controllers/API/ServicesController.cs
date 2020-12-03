@@ -29,7 +29,7 @@ namespace BoozewasherApp_Web.Controllers.API
         } 
 
         //GET /API/Services/1
-        public IHttpActionResult GetService (int id)
+        public IHttpActionResult GetService(int id)
         {
             var service = _context.Services.SingleOrDefault(s => s.Id == id);
 
@@ -57,12 +57,12 @@ namespace BoozewasherApp_Web.Controllers.API
 
         //PUT /API/Services/1
         [HttpPut]
-        public void UpdateService(int id, ServiceDto serviceDto)
+        public void UpdateService(ServiceDto serviceDto)
         {
             if (!ModelState.IsValid)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
 
-            var serviceInDb = _context.Services.SingleOrDefault(s => s.Id == id);
+            var serviceInDb = _context.Services.SingleOrDefault(s => s.Id == serviceDto.Id);
 
             if (serviceInDb == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);

@@ -51,6 +51,11 @@ namespace BoozewasherApp_Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Save(Service service)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("ServiceForm");
+            }
+
             if (service.Id == 0)
                 _context.Services.Add(service);
             else

@@ -10,8 +10,11 @@ namespace BoozewasherApp_Web.Models.ContextModel
     {
         public int Id { get; set; }
 
+        [Required]
         [Display(Name = "Service Type")]
         public string Type { get; set; }
+
+        [Required]
         public string Description { get; set; }
         public decimal? Expense { get; set; }
     }

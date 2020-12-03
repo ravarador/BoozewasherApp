@@ -1,0 +1,44 @@
+﻿@model BoozewasherApp_Web.View_Models.Vehicles.VehicleFormViewModel
+@{
+    ViewBag.Title = "VehicleForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<p></p>
+<h2>New Vehicle</h2>
+
+@using (Html.BeginForm("Save", "Vehicle"))
+{
+    @Html.ValidationSummary(true, "Please fill up requirements");
+    <div class="form-group">
+        @Html.LabelFor(v => v.Type)
+        @Html.TextBoxFor(v => v.Type, new { @class = "form-control" })
+        @Html.ValidationMessageFor(v => v.Type)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(v => v.Description)
+        @Html.TextBoxFor(v => v.Description, new { @class = "form-control" })
+        @Html.ValidationMessageFor(v => v.Description)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(v => v.Brand)
+        @Html.TextBoxFor(v => v.Brand, new { @class = "form-control" })
+        @Html.ValidationMessageFor(v => v.Brand)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(v => v.Model)
+        @Html.TextBoxFor(v => v.Model, new { @class = "form-control" })
+        @Html.ValidationMessageFor(v => v.Model)
+    </div>
+
+    <p></p>
+    @Html.HiddenFor(v => v.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary"> Save </button>
+}
+@section	scripts	{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

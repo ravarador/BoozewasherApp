@@ -14,6 +14,14 @@ namespace BoozewasherApp_Web.View_Models.Vehicles
         public string Brand { get; set; }
         public string Model { get; set; }
 
+        public string Title
+        {
+            get
+            {
+                return Id != 0 ? "Edit Vehicle" : "New Vehicle";
+            }
+        }
+
         public VehicleFormViewModel()
         {
             Id = 0;

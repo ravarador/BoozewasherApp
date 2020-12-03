@@ -14,7 +14,7 @@ namespace BoozewasherApp_Web.Models.ContextModel
         [Display(Name = "Service Type")]
         public string Type { get; set; }
 
-        [Required]
+       
         public string Description { get; set; }
         public decimal? Expense { get; set; }
     }

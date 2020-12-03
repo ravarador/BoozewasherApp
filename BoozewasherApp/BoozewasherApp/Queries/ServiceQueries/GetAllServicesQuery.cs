@@ -1,5 +1,6 @@
 ﻿using BoozewasherApp.Context;
 using BoozewasherApp.Models.ContextModels;
+using BoozewasherApp.Properties;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
@@ -14,7 +15,7 @@ namespace BoozewasherApp.Queries.ServiceQueries
     {
         public List<Service> GetAllServices()
         {
-            var client = new RestClient("https://localhost:44382/");
+            var client = new RestClient(Resources.ConnectionString);
             var request = new RestRequest("/api/services/", Method.GET);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);

@@ -1,4 +1,5 @@
 ﻿using BoozewasherApp_Web.Models;
+using BoozewasherApp_Web.Models.ContextModel;
 using BoozewasherApp_Web.View_Models.Vehicles;
 using System;
 using System.Collections.Generic;
@@ -43,6 +44,31 @@ namespace BoozewasherApp_Web.Controllers
 
             };
             return View("VehicleForm", viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Save(Vehicle vehicle)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("VehicleForm");
+            }
+
+            if (vehicle.Id == 0)
+                _context.Vehicles.Add(vehicle);
+            else
+            {
+                var vehicleInDb = _context.Vehicles.Single(s => s.Id == vehicle.Id);
+
+                vehicleInDb.Type = vehicle.Type;
+                vehicleInDb.Description = vehicle.Description;
+                vehicleInDb.Brand = vehicle.Brand;
+                vehicleInDb.Model = vehicle.Model;
+            }
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Vehicle");
         }
 
     }

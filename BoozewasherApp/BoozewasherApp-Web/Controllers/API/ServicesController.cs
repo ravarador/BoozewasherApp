@@ -62,7 +62,7 @@ namespace BoozewasherApp_Web.Controllers.API
             if (!ModelState.IsValid)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
 
-            var serviceInDb = _context.Services.SingleOrDefault(s => s.Id == id);
+            var serviceInDb = _context.Services.SingleOrDefault(s => s.Id == serviceDto.Id);
 
             if (serviceInDb == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);

@@ -195,11 +195,6 @@
     <Compile Include="Models\Dtos\TransactionDto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Queries\ServiceQueries\AddServiceQuery.cs" />
-    <Compile Include="Queries\ServiceQueries\DeleteServiceQuery.cs" />
-    <Compile Include="Queries\ServiceQueries\GetAllServicesQuery.cs" />
-    <Compile Include="Queries\ServiceQueries\GetServiceByIdQuery.cs" />
-    <Compile Include="Queries\ServiceQueries\UpdateServiceQuery.cs" />
     <Compile Include="Queries\TransactionQueries\AddTransactionQuery.cs" />
     <Compile Include="Queries\TransactionQueries\DeleteTransactionQuery.cs" />
     <Compile Include="Queries\TransactionQueries\GetAllTransactionsQuery.cs" />

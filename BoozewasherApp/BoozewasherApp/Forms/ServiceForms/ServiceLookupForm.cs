@@ -1,4 +1,4 @@
-﻿using BoozewasherApp.Queries.ServiceQueries;
+﻿using BoozewasherApp.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +13,12 @@ namespace BoozewasherApp.Forms.ServiceForms
 {
     public partial class ServiceLookupForm : Form
     {
+        private IServiceRepository ServiceRepository { get; set; }
         public int SelectedServiceIdForLookup { get; set; }
-        public ServiceLookupForm()
+        public ServiceLookupForm(IServiceRepository serviceRepository)
         {
             InitializeComponent();
+            ServiceRepository = serviceRepository;
         }
 
         private void ServiceLookupForm_Load(object sender, EventArgs e)
@@ -33,9 +35,7 @@ namespace BoozewasherApp.Forms.ServiceForms
         #region Private Methods
         private void LoadDgvService()
         {
-            var getService = new GetAllServicesQuery();
-
-            dgvService.DataSource = getService.GetAllServices();
+            dgvService.DataSource = ServiceRepository.GetAllServices();
         }
         #endregion
     }

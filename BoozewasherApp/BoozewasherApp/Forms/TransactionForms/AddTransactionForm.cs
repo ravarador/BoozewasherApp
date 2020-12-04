@@ -3,7 +3,6 @@ using BoozewasherApp.Forms.VehicleForms;
 using BoozewasherApp.IRepositories;
 using BoozewasherApp.Models.ContextModels;
 using BoozewasherApp.Models.Dtos;
-using BoozewasherApp.Queries.ServiceQueries;
 using BoozewasherApp.Queries.TransactionQueries;
 using System;
 using System.Collections.Generic;
@@ -19,10 +18,13 @@ namespace BoozewasherApp.Forms.TransactionForms
 {
     public partial class AddTransactionForm : Form
     {
+        private IServiceRepository ServiceRepository { get; set; }
         private IVehicleRepository VehicleRepository { get; set; }
-        public AddTransactionForm(IVehicleRepository vehicleRepository)
+        public AddTransactionForm(IServiceRepository serviceRepository, 
+                                  IVehicleRepository vehicleRepository)
         {
             InitializeComponent();
+            ServiceRepository = serviceRepository;
             VehicleRepository = vehicleRepository;
         }
 
@@ -55,9 +57,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         private List<int> GetServiceTypes()
         {
-            var getServices = new GetAllServicesQuery();
-
-            return getServices.GetAllServices().Select(a => a.Id).ToList();
+            return ServiceRepository.GetAllServices().Select(a => a.Id).ToList();
         }
 
         private List<int> GetVehicleTypes()
@@ -84,7 +84,7 @@ namespace BoozewasherApp.Forms.TransactionForms
 
         private void OpenServiceLookupForm()
         {
-            var serviceLookupForm = new ServiceLookupForm();
+            var serviceLookupForm = new ServiceLookupForm(ServiceRepository);
             serviceLookupForm.ShowDialog();
             comboServiceType.SelectedItem = serviceLookupForm.SelectedServiceIdForLookup;
         }

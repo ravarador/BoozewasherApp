@@ -1,4 +1,4 @@
-﻿using BoozewasherApp.Queries.ServiceQueries;
+﻿using BoozewasherApp.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +13,12 @@ namespace BoozewasherApp.Forms.ServiceForms
 {
     public partial class DeleteServiceForm : Form
     {
+        private IServiceRepository ServiceRepository { get; set; }
         private int SelectedServiceId { get; set; }
-        public DeleteServiceForm()
+        public DeleteServiceForm(IServiceRepository serviceRepository)
         {
             InitializeComponent();
+            ServiceRepository = serviceRepository;
         }
 
         private void DeleteServiceForm_Load(object sender, EventArgs e)
@@ -26,9 +28,7 @@ namespace BoozewasherApp.Forms.ServiceForms
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var deleteServiceById = new DeleteServiceQuery();
-
-            deleteServiceById.DeleteService(SelectedServiceId);
+            ServiceRepository.DeleteService(SelectedServiceId);
 
             SetLabelsToEmpty();
             LoadDgvService();
@@ -37,20 +37,14 @@ namespace BoozewasherApp.Forms.ServiceForms
         {
             SelectedServiceId = (int)dgvService.SelectedRows[0].Cells[0].Value;
 
-            var serviceById = new GetServiceByIdQuery();
-
-            var service = serviceById.GetServiceById(SelectedServiceId);
-
-            lblDescription.Text = service.Description;
-            lblType.Text = service.Type;
-            lblExpense.Text = service.Expense.ToString();
+            lblType.Text = dgvService.SelectedRows[0].Cells[1].Value.ToString();
+            lblDescription.Text = dgvService.SelectedRows[0].Cells[2].Value.ToString();
+            lblExpense.Text = dgvService.SelectedRows[0].Cells[3].Value.ToString();
         }
         #region Private Methods
         private void LoadDgvService()
         {
-            var getServices = new GetAllServicesQuery();
-
-            dgvService.DataSource = getServices.GetAllServices();
+            dgvService.DataSource = ServiceRepository.GetAllServices();
         }
 
         private void SetLabelsToEmpty()

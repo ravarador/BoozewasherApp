@@ -30,7 +30,7 @@ namespace BoozewasherApp
 
         private void addServiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddServiceForm addServiceForm = new AddServiceForm();
+            AddServiceForm addServiceForm = new AddServiceForm(ServiceRepository);
 
             addServiceForm.Show();
             addServiceForm.MdiParent = this;
@@ -46,7 +46,7 @@ namespace BoozewasherApp
 
         private void deleteServiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DeleteServiceForm deleteServiceForm = new DeleteServiceForm();
+            DeleteServiceForm deleteServiceForm = new DeleteServiceForm(ServiceRepository);
 
             deleteServiceForm.Show();
             deleteServiceForm.MdiParent = this;
@@ -78,7 +78,7 @@ namespace BoozewasherApp
 
         private void addTransactionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddTransactionForm addTransactionForm = new AddTransactionForm(VehicleRepository);
+            AddTransactionForm addTransactionForm = new AddTransactionForm(ServiceRepository, VehicleRepository);
 
             addTransactionForm.Show();
             addTransactionForm.MdiParent = this;
@@ -86,7 +86,7 @@ namespace BoozewasherApp
 
         private void updateTransactionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UpdateTransactionForm updateTransactionForm = new UpdateTransactionForm(VehicleRepository);
+            UpdateTransactionForm updateTransactionForm = new UpdateTransactionForm(ServiceRepository, VehicleRepository);
 
             updateTransactionForm.Show();
             updateTransactionForm.MdiParent = this;

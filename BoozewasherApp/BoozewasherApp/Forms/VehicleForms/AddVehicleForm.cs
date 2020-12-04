@@ -1,6 +1,5 @@
 ﻿using BoozewasherApp.IRepositories;
 using BoozewasherApp.Models.ContextModels;
-using BoozewasherApp.Queries.ServiceQueries;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

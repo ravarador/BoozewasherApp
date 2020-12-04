@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using BoozewasherApp_Web.Interfaces;
 using BoozewasherApp_Web.Models.ContextModel;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -19,7 +20,7 @@ namespace BoozewasherApp_Web.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IDatabaseContext
     {
         public DbSet<Service> Services { get; set; }
         public DbSet<Summary> Summaries { get; set; }
@@ -35,6 +36,10 @@ namespace BoozewasherApp_Web.Models
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
+        }
+        public override int SaveChanges()
+        {
+            return base.SaveChanges();
         }
     }
 }

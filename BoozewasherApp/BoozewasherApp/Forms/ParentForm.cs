@@ -78,7 +78,7 @@ namespace BoozewasherApp
 
         private void addTransactionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddTransactionForm addTransactionForm = new AddTransactionForm();
+            AddTransactionForm addTransactionForm = new AddTransactionForm(VehicleRepository);
 
             addTransactionForm.Show();
             addTransactionForm.MdiParent = this;
@@ -86,7 +86,7 @@ namespace BoozewasherApp
 
         private void updateTransactionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UpdateTransactionForm updateTransactionForm = new UpdateTransactionForm();
+            UpdateTransactionForm updateTransactionForm = new UpdateTransactionForm(VehicleRepository);
 
             updateTransactionForm.Show();
             updateTransactionForm.MdiParent = this;

@@ -1,4 +1,5 @@
-﻿using BoozewasherApp.Queries.VehicleQueries;
+﻿using BoozewasherApp.IRepositories;
+using BoozewasherApp.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,12 @@ namespace BoozewasherApp.Forms.VehicleForms
 {
     public partial class VehicleLookupForm : Form
     {
+        private IVehicleRepository VehicleRepository { get; set; }
         public int SelectedVehicleIdForLookup { get; set; }
-        public VehicleLookupForm()
+        public VehicleLookupForm(IVehicleRepository vehicleRepository)
         {
             InitializeComponent();
+            VehicleRepository = vehicleRepository;
         }
 
         private void VehicleLookupForm_Load(object sender, EventArgs e)
@@ -33,9 +36,7 @@ namespace BoozewasherApp.Forms.VehicleForms
         #region Private Methods
         private void LoadDgvVehicle()
         {
-            var getVehicle = new GetAllVehiclesQuery();
-
-            dgvVehicle.DataSource = getVehicle.GetAllVehicles();
+            dgvVehicle.DataSource = VehicleRepository.GetAllVehicles();
         }
         #endregion
     }

@@ -149,6 +149,7 @@
             this.Name = "AddVehicleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Vehicle";
+            this.Load += new System.EventHandler(this.AddVehicleForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

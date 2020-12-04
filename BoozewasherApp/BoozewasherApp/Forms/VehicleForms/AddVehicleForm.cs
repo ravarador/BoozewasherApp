@@ -1,7 +1,6 @@
 ﻿using BoozewasherApp.IRepositories;
 using BoozewasherApp.Models.ContextModels;
 using BoozewasherApp.Queries.ServiceQueries;
-using BoozewasherApp.Queries.VehicleQueries;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +20,9 @@ namespace BoozewasherApp.Forms.VehicleForms
         {
             InitializeComponent();
             VehicleRepository = vehicleRepository;
+        }
+        private void AddVehicleForm_Load(object sender, EventArgs e)
+        {
             LoadDgvVehicle();
         }
 
@@ -49,5 +51,7 @@ namespace BoozewasherApp.Forms.VehicleForms
         }
 
         #endregion
+
+        
     }
 }

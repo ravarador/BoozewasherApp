@@ -1,10 +1,10 @@
 ﻿using BoozewasherApp.Forms.ServiceForms;
 using BoozewasherApp.Forms.VehicleForms;
+using BoozewasherApp.IRepositories;
 using BoozewasherApp.Models.ContextModels;
 using BoozewasherApp.Models.Dtos;
 using BoozewasherApp.Queries.ServiceQueries;
 using BoozewasherApp.Queries.TransactionQueries;
-using BoozewasherApp.Queries.VehicleQueries;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,10 +19,12 @@ namespace BoozewasherApp.Forms.TransactionForms
 {
     public partial class UpdateTransactionForm : Form
     {
+        private IVehicleRepository VehicleRepository { get; set; }
         private int SelectedTransactionId { get; set; }
-        public UpdateTransactionForm()
+        public UpdateTransactionForm(IVehicleRepository vehicleRepository)
         {
             InitializeComponent();
+            VehicleRepository = vehicleRepository;
         }
 
         private void UpdateTransactionForm_Load(object sender, EventArgs e)
@@ -91,7 +93,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         private void OpenVehicleLookupForm()
         {
-            var vehicleLookupForm = new VehicleLookupForm();
+            var vehicleLookupForm = new VehicleLookupForm(VehicleRepository);
             vehicleLookupForm.ShowDialog();
             comboVehicleType.SelectedItem = vehicleLookupForm.SelectedVehicleIdForLookup;
         }
@@ -104,9 +106,7 @@ namespace BoozewasherApp.Forms.TransactionForms
 
         private List<int> GetVehicleTypes()
         {
-            var getVehicles = new GetAllVehiclesQuery();
-
-            return getVehicles.GetAllVehicles().Select(a => a.Id).ToList();
+            return VehicleRepository.GetAllVehicles().Select(a => a.Id).ToList();
         }
         #endregion
     }

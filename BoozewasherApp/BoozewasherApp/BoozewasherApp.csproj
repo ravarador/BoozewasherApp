@@ -205,11 +205,6 @@
     <Compile Include="Queries\TransactionQueries\GetAllTransactionsQuery.cs" />
     <Compile Include="Queries\TransactionQueries\GetTransactionByIdQuery.cs" />
     <Compile Include="Queries\TransactionQueries\UpdateTransactionQuery.cs" />
-    <Compile Include="Queries\VehicleQueries\AddVehicleQuery.cs" />
-    <Compile Include="Queries\VehicleQueries\DeleteVehicleQuery.cs" />
-    <Compile Include="Queries\VehicleQueries\GetAllVehiclesQuery.cs" />
-    <Compile Include="Queries\VehicleQueries\GetVehicleByIdQuery.cs" />
-    <Compile Include="Queries\VehicleQueries\UpdateVehicleQuery.cs" />
     <Compile Include="Reports\SummaryReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

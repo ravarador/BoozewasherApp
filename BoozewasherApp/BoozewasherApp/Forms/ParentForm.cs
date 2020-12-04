@@ -18,11 +18,14 @@ namespace BoozewasherApp
     public partial class ParentForm : Form
     {
         public IServiceRepository ServiceRepository { get; private set; }
-        public ParentForm(IServiceRepository serviceRepository)
+        public IVehicleRepository VehicleRepository { get; private set; }
+        public ParentForm(IServiceRepository serviceRepository,
+                          IVehicleRepository vehicleRepository)
         {
             InitializeComponent();
 
             ServiceRepository = serviceRepository;
+            VehicleRepository = vehicleRepository;
         }
 
         private void addServiceToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,7 +54,7 @@ namespace BoozewasherApp
 
         private void addVehicleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddVehicleForm addVehicleForm = new AddVehicleForm();
+            AddVehicleForm addVehicleForm = new AddVehicleForm(VehicleRepository);
 
             addVehicleForm.Show();
             addVehicleForm.MdiParent = this;
@@ -59,7 +62,7 @@ namespace BoozewasherApp
 
         private void deleteVehicleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DeleteVehicleForm deleteVehicleForm = new DeleteVehicleForm();
+            DeleteVehicleForm deleteVehicleForm = new DeleteVehicleForm(VehicleRepository);
 
             deleteVehicleForm.Show();
             deleteVehicleForm.MdiParent = this;
@@ -67,7 +70,7 @@ namespace BoozewasherApp
 
         private void updateVehicleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UpdateVehicleForm updateVehicleForm = new UpdateVehicleForm();
+            UpdateVehicleForm updateVehicleForm = new UpdateVehicleForm(VehicleRepository);
 
             updateVehicleForm.Show();
             updateVehicleForm.MdiParent = this;

@@ -1,4 +1,5 @@
-﻿using BoozewasherApp.Models.ContextModels;
+﻿using BoozewasherApp.IRepositories;
+using BoozewasherApp.Models.ContextModels;
 using BoozewasherApp.Properties;
 using Newtonsoft.Json;
 using RestSharp;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BoozewasherApp.Repositories
 {
-    public class VehicleRepository
+    public class VehicleRepository : IVehicleRepository
     {
         public void AddVehicle(Vehicle vehicle)
         {

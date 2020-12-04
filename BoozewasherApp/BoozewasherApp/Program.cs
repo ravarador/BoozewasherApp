@@ -1,6 +1,7 @@
 ﻿using BoozewasherApp.IRepositories;
 using BoozewasherApp.Repositories;
 using SimpleInjector;
+using SimpleInjector.Lifestyles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace BoozewasherApp
         {
             container = new Container();
             container.Register<IServiceRepository, ServiceRepository>(Lifestyle.Singleton);
+            container.Register<IVehicleRepository, VehicleRepository>(Lifestyle.Singleton);
             container.Register<ParentForm>(Lifestyle.Singleton);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

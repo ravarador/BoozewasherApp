@@ -1,4 +1,5 @@
-﻿using BoozewasherApp.Models.ContextModels;
+﻿using BoozewasherApp.IRepositories;
+using BoozewasherApp.Models.ContextModels;
 using BoozewasherApp.Queries.ServiceQueries;
 using BoozewasherApp.Queries.VehicleQueries;
 using System;
@@ -15,9 +16,11 @@ namespace BoozewasherApp.Forms.VehicleForms
 {
     public partial class AddVehicleForm : Form
     {
-        public AddVehicleForm()
+        private IVehicleRepository VehicleRepository { get; set; }
+        public AddVehicleForm(IVehicleRepository vehicleRepository)
         {
             InitializeComponent();
+            VehicleRepository = vehicleRepository;
             LoadDgvVehicle();
         }
 
@@ -35,18 +38,14 @@ namespace BoozewasherApp.Forms.VehicleForms
                 Description = txtboxDescription.Text
             };
 
-            var addVehicle = new AddVehicleQuery();
-
-            addVehicle.AddVehicle(vehicle);
+            VehicleRepository.AddVehicle(vehicle);
 
             LoadDgvVehicle();
         }
 
         private void LoadDgvVehicle()
         {
-            var updateVehicle = new GetAllVehiclesQuery();
-
-            dgvVehicle.DataSource = updateVehicle.GetAllVehicles();
+            dgvVehicle.DataSource = VehicleRepository.GetAllVehicles();
         }
 
         #endregion

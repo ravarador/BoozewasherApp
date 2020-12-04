@@ -1,4 +1,5 @@
-﻿using BoozewasherApp.Queries.VehicleQueries;
+﻿using BoozewasherApp.IRepositories;
+using BoozewasherApp.Queries.VehicleQueries;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,12 @@ namespace BoozewasherApp.Forms.VehicleForms
 {
     public partial class DeleteVehicleForm : Form
     {
+        private IVehicleRepository VehicleRepository { get; set; }
         private int SelectedVehicleId { get; set; }
-        public DeleteVehicleForm()
+        public DeleteVehicleForm(IVehicleRepository vehicleRepository)
         {
             InitializeComponent();
+            VehicleRepository = vehicleRepository;
         }
 
         private void DeleteVehicleForm_Load(object sender, EventArgs e)
@@ -27,9 +30,7 @@ namespace BoozewasherApp.Forms.VehicleForms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var deleteVehicleById = new DeleteVehicleQuery();
-
-            deleteVehicleById.DeleteVehicle(SelectedVehicleId);
+            VehicleRepository.DeleteVehicle(SelectedVehicleId);
 
             SetLabelsToEmpty();
             LoadDgvVehicle();
@@ -39,21 +40,16 @@ namespace BoozewasherApp.Forms.VehicleForms
         {
             SelectedVehicleId = (int)dgvVehicle.SelectedRows[0].Cells[0].Value;
 
-            var vehicleById = new GetVehicleByIdQuery();
-
-            var vehicle = vehicleById.GetVehicleById(SelectedVehicleId);
-
-            lblType.Text = vehicle.Type;
-            lblBrand.Text = vehicle.Brand;
-            lblModel.Text = vehicle.Model;
-            lblDescription.Text = vehicle.Description;
+            lblType.Text = dgvVehicle.SelectedRows[0].Cells[1].Value.ToString();
+            lblDescription.Text = dgvVehicle.SelectedRows[0].Cells[2].Value.ToString();
+            lblBrand.Text = dgvVehicle.SelectedRows[0].Cells[3].Value.ToString();
+            lblModel.Text = dgvVehicle.SelectedRows[0].Cells[4].Value.ToString();
+            
         }
         #region Private Methods
         private void LoadDgvVehicle()
         {
-            var getVehicles = new GetAllVehiclesQuery();
-
-            dgvVehicle.DataSource = getVehicles.GetAllVehicles();
+            dgvVehicle.DataSource = VehicleRepository.GetAllVehicles();
         }
 
         private void SetLabelsToEmpty()

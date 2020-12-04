@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BoozewasherApp_Web.Interfaces;
 using BoozewasherApp_Web.Models;
 using BoozewasherApp_Web.Models.ContextModel;
 using BoozewasherApp_Web.Models.Dtos;
@@ -13,7 +14,7 @@ namespace BoozewasherApp_Web.Controllers.API
 {
     public class VehiclesController : ApiController
     {
-        private ApplicationDbContext _context;
+        private IDatabaseContext _context;
         public VehiclesController()
         {
             _context = new ApplicationDbContext();

@@ -1,4 +1,5 @@
-﻿using BoozewasherApp.Models.ContextModels;
+﻿using BoozewasherApp.IRepositories;
+using BoozewasherApp.Models.ContextModels;
 using BoozewasherApp.Queries.VehicleQueries;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,12 @@ namespace BoozewasherApp.Forms.VehicleForms
 {
     public partial class UpdateVehicleForm : Form
     {
+        private IVehicleRepository VehicleRepository { get; set; }
         private int SelectedVehicleId { get; set; }
-        public UpdateVehicleForm()
+        public UpdateVehicleForm(IVehicleRepository vehicleRepository)
         {
             InitializeComponent();
+            VehicleRepository = vehicleRepository;
         }
 
         private void UpdateVehicleForm_Load(object sender, EventArgs e)
@@ -36,9 +39,7 @@ namespace BoozewasherApp.Forms.VehicleForms
                 Description = txtboxDescription.Text
             };
 
-            var updateVehicle = new UpdateVehicleQuery();
-
-            updateVehicle.UpdateVehicle(vehicle);
+            VehicleRepository.UpdateVehicle(vehicle);
 
             LoadDgvVehicle();
         }
@@ -47,21 +48,16 @@ namespace BoozewasherApp.Forms.VehicleForms
         {
             SelectedVehicleId = (int)dgvVehicle.SelectedRows[0].Cells[0].Value;
 
-            var vehicleById = new GetVehicleByIdQuery();
+            txtboxType.Text = dgvVehicle.SelectedRows[0].Cells[1].Value.ToString();
+            txtboxDescription.Text = dgvVehicle.SelectedRows[0].Cells[2].Value.ToString();
+            txtboxBrand.Text = dgvVehicle.SelectedRows[0].Cells[3].Value.ToString();
+            txtboxModel.Text = dgvVehicle.SelectedRows[0].Cells[4].Value.ToString();
 
-            var vehicle = vehicleById.GetVehicleById(SelectedVehicleId);
-
-            txtboxType.Text = vehicle.Type;
-            txtboxBrand.Text = vehicle.Brand;
-            txtboxModel.Text = vehicle.Model;
-            txtboxDescription.Text = vehicle.Description;
         }
         #region Private Methods
         private void LoadDgvVehicle()
         {
-            var getVehicles = new GetAllVehiclesQuery();
-
-            dgvVehicle.DataSource = getVehicles.GetAllVehicles();
+            dgvVehicle.DataSource = VehicleRepository.GetAllVehicles();
         }
         #endregion
     }

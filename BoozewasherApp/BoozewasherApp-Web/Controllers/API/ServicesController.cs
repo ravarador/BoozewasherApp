@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BoozewasherApp_Web.Dtos;
+using BoozewasherApp_Web.Interfaces;
 using BoozewasherApp_Web.Models;
 using BoozewasherApp_Web.Models.ContextModel;
 using System;
@@ -14,7 +15,7 @@ namespace BoozewasherApp_Web.Controllers.API
 {
     public class ServicesController : ApiController
     {
-        private ApplicationDbContext _context;
+        private IDatabaseContext _context;
 
         public ServicesController()
         {

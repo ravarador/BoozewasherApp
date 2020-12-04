@@ -1,5 +1,8 @@
 ﻿using BoozewasherApp.Context;
 using BoozewasherApp.Models.ContextModels;
+using BoozewasherApp.Properties;
+using Newtonsoft.Json;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,17 +13,15 @@ namespace BoozewasherApp.Queries.ServiceQueries
 {
     public class UpdateServiceQuery
     {
-        private DatabaseContext context = new DatabaseContext();
 
         public void UpdateService(Service service)
         {
-            var serviceToUpdate = context.Services.Where(a => a.Id == service.Id).FirstOrDefault();
+            var client = new RestClient(Resources.ConnectionString);
+            var request = new RestRequest("/api/services/" + service.Id, Method.PUT);
+            request.RequestFormat = DataFormat.Json;
+            request.AddJsonBody(service);
+            var response = client.Execute(request);
 
-            serviceToUpdate.Type = service.Type;
-            serviceToUpdate.Description = service.Description;
-            serviceToUpdate.Expense = service.Expense;
-
-            context.SaveChanges();
         }
     }
 }

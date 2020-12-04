@@ -189,7 +189,8 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\VehicleController.cs" />
-    <Compile Include="Dtos\ServiceDto.cs" />
+    <Compile Include="Interfaces\IDatabaseContext.cs" />
+    <Compile Include="Models\Dtos\ServiceDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -224,10 +225,10 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="View_Models\Services\ServiceFormViewModel.cs" />
-    <Compile Include="View_Models\Services\ServicesViewModel.cs" />
-    <Compile Include="View_Models\Vehicles\VehicleFormViewModel.cs" />
-    <Compile Include="View_Models\Vehicles\VehicleViewModel.cs" />
+    <Compile Include="Models\ViewModels\Services\ServiceFormViewModel.cs" />
+    <Compile Include="Models\ViewModels\Services\ServicesViewModel.cs" />
+    <Compile Include="Models\ViewModels\Vehicles\VehicleFormViewModel.cs" />
+    <Compile Include="Models\ViewModels\Vehicles\VehicleViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-simplex.css" />
@@ -236,7 +237,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
@@ -296,10 +297,10 @@
     <Folder Include="Views\AddService\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />

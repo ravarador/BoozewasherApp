@@ -43,13 +43,9 @@ namespace BoozewasherApp.Forms.ServiceForms
         {
             SelectedServiceId = (int)dgvService.SelectedRows[0].Cells[0].Value;
 
-            var serviceById = new GetServiceByIdQuery();
-
-            var service = serviceById.GetServiceById(SelectedServiceId);
-
-            txtboxDescription.Text = service.Description;
-            txtboxType.Text = service.Type;
-            txtboxExpense.Text = service.Expense.ToString();
+            txtboxType.Text = dgvService.SelectedRows[0].Cells[1].Value.ToString();
+            txtboxDescription.Text = dgvService.SelectedRows[0].Cells[2].Value.ToString();
+            txtboxExpense.Text = dgvService.SelectedRows[0].Cells[3].Value.ToString();
         }
         #region Private Methods
         private void LoadDgvService()

@@ -177,6 +177,7 @@
     </Compile>
     <Compile Include="Helpers\ListExtensions.cs" />
     <Compile Include="IRepositories\IServiceRepository.cs" />
+    <Compile Include="IRepositories\IVehicleRepository.cs" />
     <Compile Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.cs" />
     <Compile Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.designer.cs">
       <DependentUpon>202011301018204_CreateTables_ServiceSummaryTransactionVehicle.cs</DependentUpon>
@@ -216,6 +217,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Repositories\ServiceRepository.cs" />
+    <Compile Include="Repositories\VehicleRepository.cs" />
     <Compile Include="Settings.cs" />
     <EmbeddedResource Include="Forms\ParentForm.resx">
       <DependentUpon>ParentForm.cs</DependentUpon>

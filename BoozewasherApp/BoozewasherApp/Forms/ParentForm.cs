@@ -2,6 +2,7 @@
 using BoozewasherApp.Forms.SummaryForms;
 using BoozewasherApp.Forms.TransactionForms;
 using BoozewasherApp.Forms.VehicleForms;
+using BoozewasherApp.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,9 +17,12 @@ namespace BoozewasherApp
 {
     public partial class ParentForm : Form
     {
-        public ParentForm()
+        public IServiceRepository ServiceRepository { get; private set; }
+        public ParentForm(IServiceRepository serviceRepository)
         {
             InitializeComponent();
+
+            ServiceRepository = serviceRepository;
         }
 
         private void addServiceToolStripMenuItem_Click(object sender, EventArgs e)
@@ -31,7 +35,7 @@ namespace BoozewasherApp
 
         private void updateServiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UpdateServiceForm updateServiceForm = new UpdateServiceForm();
+            UpdateServiceForm updateServiceForm = new UpdateServiceForm(ServiceRepository);
 
             updateServiceForm.Show();
             updateServiceForm.MdiParent = this;

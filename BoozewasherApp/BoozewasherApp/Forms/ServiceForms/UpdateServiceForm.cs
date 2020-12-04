@@ -1,4 +1,5 @@
-﻿using BoozewasherApp.Models.ContextModels;
+﻿using BoozewasherApp.IRepositories;
+using BoozewasherApp.Models.ContextModels;
 using BoozewasherApp.Queries.ServiceQueries;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,12 @@ namespace BoozewasherApp.Forms.ServiceForms
 {
     public partial class UpdateServiceForm : Form
     {
+        private IServiceRepository ServiceRepository { get; set; }
         private int SelectedServiceId { get; set; }
-        public UpdateServiceForm()
+        public UpdateServiceForm(IServiceRepository serviceRepository)
         {
             InitializeComponent();
+            ServiceRepository = serviceRepository;
         }
         private void UpdateServiceForm_Load(object sender, EventArgs e)
         {
@@ -33,9 +36,7 @@ namespace BoozewasherApp.Forms.ServiceForms
                 Expense = decimal.Parse(txtboxExpense.Text)
             };
 
-            var updateService = new UpdateServiceQuery();
-
-            updateService.UpdateService(service);
+            ServiceRepository.UpdateService(service);
 
             LoadDgvService();
         }
@@ -50,9 +51,7 @@ namespace BoozewasherApp.Forms.ServiceForms
         #region Private Methods
         private void LoadDgvService()
         {
-            var updateService = new GetAllServicesQuery();
-
-            dgvService.DataSource = updateService.GetAllServices();
+            dgvService.DataSource = ServiceRepository.GetAllServices();
         }
         #endregion
     }

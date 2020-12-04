@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BoozewasherApp_Web.Dtos;
 using BoozewasherApp_Web.Models.ContextModel;
+using BoozewasherApp_Web.Models.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,9 @@ namespace BoozewasherApp_Web.App_Start
         {
             Mapper.CreateMap<Service, ServiceDto>();
             Mapper.CreateMap<ServiceDto, Service>();
+
+            Mapper.CreateMap<Vehicle, VehicleDto>();
+            Mapper.CreateMap<VehicleDto, Vehicle>();
         }
     }
 }

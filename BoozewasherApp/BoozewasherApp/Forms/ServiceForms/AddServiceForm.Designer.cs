@@ -44,14 +44,14 @@
             this.txtboxType.Location = new System.Drawing.Point(116, 43);
             this.txtboxType.Name = "txtboxType";
             this.txtboxType.Size = new System.Drawing.Size(275, 20);
-            this.txtboxType.TabIndex = 0;
+            this.txtboxType.TabIndex = 1;
             // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(291, 121);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 23);
-            this.btnAdd.TabIndex = 1;
+            this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -61,7 +61,7 @@
             this.txtboxDescription.Location = new System.Drawing.Point(116, 95);
             this.txtboxDescription.Name = "txtboxDescription";
             this.txtboxDescription.Size = new System.Drawing.Size(275, 20);
-            this.txtboxDescription.TabIndex = 2;
+            this.txtboxDescription.TabIndex = 3;
             // 
             // label1
             // 
@@ -95,7 +95,7 @@
             this.txtboxExpense.Location = new System.Drawing.Point(116, 69);
             this.txtboxExpense.Name = "txtboxExpense";
             this.txtboxExpense.Size = new System.Drawing.Size(275, 20);
-            this.txtboxExpense.TabIndex = 6;
+            this.txtboxExpense.TabIndex = 2;
             // 
             // dgvService
             // 
@@ -111,7 +111,7 @@
             this.dgvService.Name = "dgvService";
             this.dgvService.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvService.Size = new System.Drawing.Size(461, 259);
-            this.dgvService.TabIndex = 7;
+            this.dgvService.TabIndex = 5;
             // 
             // AddServiceForm
             // 

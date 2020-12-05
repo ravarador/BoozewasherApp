@@ -54,7 +54,7 @@
             this.dgvService.ReadOnly = true;
             this.dgvService.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvService.Size = new System.Drawing.Size(396, 259);
-            this.dgvService.TabIndex = 16;
+            this.dgvService.TabIndex = 2;
             this.dgvService.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvService_CellClick);
             // 
             // label3
@@ -115,7 +115,7 @@
             this.btnDelete.Location = new System.Drawing.Point(284, 162);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 23);
-            this.btnDelete.TabIndex = 23;
+            this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);

@@ -59,7 +59,7 @@
             this.dgvTransaction.Name = "dgvTransaction";
             this.dgvTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTransaction.Size = new System.Drawing.Size(521, 247);
-            this.dgvTransaction.TabIndex = 27;
+            this.dgvTransaction.TabIndex = 9;
             this.dgvTransaction.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellClick);
             // 
             // btnUpdate
@@ -67,7 +67,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(294, 144);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 26;
+            this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -78,7 +78,7 @@
             this.btnVehicleLookup.Location = new System.Drawing.Point(375, 63);
             this.btnVehicleLookup.Name = "btnVehicleLookup";
             this.btnVehicleLookup.Size = new System.Drawing.Size(127, 23);
-            this.btnVehicleLookup.TabIndex = 25;
+            this.btnVehicleLookup.TabIndex = 5;
             this.btnVehicleLookup.Text = "Vehicle Lookup";
             this.btnVehicleLookup.UseVisualStyleBackColor = true;
             this.btnVehicleLookup.Click += new System.EventHandler(this.btnVehicleLookup_Click);
@@ -89,7 +89,7 @@
             this.btnServiceLookup.Location = new System.Drawing.Point(375, 36);
             this.btnServiceLookup.Name = "btnServiceLookup";
             this.btnServiceLookup.Size = new System.Drawing.Size(127, 23);
-            this.btnServiceLookup.TabIndex = 24;
+            this.btnServiceLookup.TabIndex = 3;
             this.btnServiceLookup.Text = "Service Lookup";
             this.btnServiceLookup.UseVisualStyleBackColor = true;
             this.btnServiceLookup.Click += new System.EventHandler(this.btnServiceLookup_Click);
@@ -99,14 +99,14 @@
             this.txtboxCost.Location = new System.Drawing.Point(169, 118);
             this.txtboxCost.Name = "txtboxCost";
             this.txtboxCost.Size = new System.Drawing.Size(200, 20);
-            this.txtboxCost.TabIndex = 23;
+            this.txtboxCost.TabIndex = 7;
             // 
             // txtboxPlateNumber
             // 
             this.txtboxPlateNumber.Location = new System.Drawing.Point(169, 92);
             this.txtboxPlateNumber.Name = "txtboxPlateNumber";
             this.txtboxPlateNumber.Size = new System.Drawing.Size(200, 20);
-            this.txtboxPlateNumber.TabIndex = 22;
+            this.txtboxPlateNumber.TabIndex = 6;
             // 
             // label5
             // 
@@ -133,7 +133,7 @@
             this.comboVehicleType.Location = new System.Drawing.Point(169, 65);
             this.comboVehicleType.Name = "comboVehicleType";
             this.comboVehicleType.Size = new System.Drawing.Size(200, 21);
-            this.comboVehicleType.TabIndex = 19;
+            this.comboVehicleType.TabIndex = 4;
             // 
             // label3
             // 
@@ -151,7 +151,7 @@
             this.comboServiceType.Location = new System.Drawing.Point(169, 38);
             this.comboServiceType.Name = "comboServiceType";
             this.comboServiceType.Size = new System.Drawing.Size(200, 21);
-            this.comboServiceType.TabIndex = 17;
+            this.comboServiceType.TabIndex = 2;
             // 
             // label2
             // 
@@ -167,7 +167,7 @@
             this.datepickerDateTime.Location = new System.Drawing.Point(169, 12);
             this.datepickerDateTime.Name = "datepickerDateTime";
             this.datepickerDateTime.Size = new System.Drawing.Size(200, 20);
-            this.datepickerDateTime.TabIndex = 15;
+            this.datepickerDateTime.TabIndex = 1;
             // 
             // label1
             // 

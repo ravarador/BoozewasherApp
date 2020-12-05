@@ -82,7 +82,7 @@
             this.comboServiceType.Location = new System.Drawing.Point(169, 50);
             this.comboServiceType.Name = "comboServiceType";
             this.comboServiceType.Size = new System.Drawing.Size(200, 21);
-            this.comboServiceType.TabIndex = 3;
+            this.comboServiceType.TabIndex = 2;
             // 
             // label3
             // 
@@ -100,7 +100,7 @@
             this.comboVehicleType.Location = new System.Drawing.Point(169, 77);
             this.comboVehicleType.Name = "comboVehicleType";
             this.comboVehicleType.Size = new System.Drawing.Size(200, 21);
-            this.comboVehicleType.TabIndex = 5;
+            this.comboVehicleType.TabIndex = 4;
             // 
             // label4
             // 
@@ -125,14 +125,14 @@
             this.txtboxPlateNumber.Location = new System.Drawing.Point(169, 104);
             this.txtboxPlateNumber.Name = "txtboxPlateNumber";
             this.txtboxPlateNumber.Size = new System.Drawing.Size(200, 20);
-            this.txtboxPlateNumber.TabIndex = 8;
+            this.txtboxPlateNumber.TabIndex = 6;
             // 
             // txtboxCost
             // 
             this.txtboxCost.Location = new System.Drawing.Point(169, 130);
             this.txtboxCost.Name = "txtboxCost";
             this.txtboxCost.Size = new System.Drawing.Size(200, 20);
-            this.txtboxCost.TabIndex = 9;
+            this.txtboxCost.TabIndex = 7;
             // 
             // btnServiceLookup
             // 
@@ -140,7 +140,7 @@
             this.btnServiceLookup.Location = new System.Drawing.Point(375, 48);
             this.btnServiceLookup.Name = "btnServiceLookup";
             this.btnServiceLookup.Size = new System.Drawing.Size(127, 23);
-            this.btnServiceLookup.TabIndex = 10;
+            this.btnServiceLookup.TabIndex = 3;
             this.btnServiceLookup.Text = "Service Lookup";
             this.btnServiceLookup.UseVisualStyleBackColor = true;
             this.btnServiceLookup.Click += new System.EventHandler(this.btnServiceLookup_Click);
@@ -151,7 +151,7 @@
             this.btnVehicleLookup.Location = new System.Drawing.Point(375, 75);
             this.btnVehicleLookup.Name = "btnVehicleLookup";
             this.btnVehicleLookup.Size = new System.Drawing.Size(127, 23);
-            this.btnVehicleLookup.TabIndex = 11;
+            this.btnVehicleLookup.TabIndex = 5;
             this.btnVehicleLookup.Text = "Vehicle Lookup";
             this.btnVehicleLookup.UseVisualStyleBackColor = true;
             this.btnVehicleLookup.Click += new System.EventHandler(this.btnVehicleLookup_Click);
@@ -161,7 +161,7 @@
             this.btnAdd.Location = new System.Drawing.Point(294, 156);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 12;
+            this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -180,7 +180,7 @@
             this.dgvTransaction.Name = "dgvTransaction";
             this.dgvTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTransaction.Size = new System.Drawing.Size(533, 247);
-            this.dgvTransaction.TabIndex = 13;
+            this.dgvTransaction.TabIndex = 9;
             // 
             // AddTransactionForm
             // 

@@ -178,15 +178,6 @@
     <Compile Include="Helpers\ListExtensions.cs" />
     <Compile Include="IRepositories\IServiceRepository.cs" />
     <Compile Include="IRepositories\IVehicleRepository.cs" />
-    <Compile Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.cs" />
-    <Compile Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.designer.cs">
-      <DependentUpon>202011301018204_CreateTables_ServiceSummaryTransactionVehicle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012020935419_SeedServicesTable.cs" />
-    <Compile Include="Migrations\202012020935419_SeedServicesTable.designer.cs">
-      <DependentUpon>202012020935419_SeedServicesTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ContextModels\Service.cs" />
     <Compile Include="Models\ContextModels\Summary.cs" />
     <Compile Include="Models\ContextModels\Transaction.cs" />
@@ -251,12 +242,6 @@
     <EmbeddedResource Include="Forms\VehicleForms\VehicleLookupForm.resx">
       <DependentUpon>VehicleLookupForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011301018204_CreateTables_ServiceSummaryTransactionVehicle.resx">
-      <DependentUpon>202011301018204_CreateTables_ServiceSummaryTransactionVehicle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012020935419_SeedServicesTable.resx">
-      <DependentUpon>202012020935419_SeedServicesTable.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -300,6 +285,7 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Migrations\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

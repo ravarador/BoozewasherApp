@@ -46,21 +46,21 @@
             this.txtboxDescription.Location = new System.Drawing.Point(137, 107);
             this.txtboxDescription.Name = "txtboxDescription";
             this.txtboxDescription.Size = new System.Drawing.Size(275, 20);
-            this.txtboxDescription.TabIndex = 9;
+            this.txtboxDescription.TabIndex = 4;
             // 
             // txtboxBrand
             // 
             this.txtboxBrand.Location = new System.Drawing.Point(137, 55);
             this.txtboxBrand.Name = "txtboxBrand";
             this.txtboxBrand.Size = new System.Drawing.Size(275, 20);
-            this.txtboxBrand.TabIndex = 7;
+            this.txtboxBrand.TabIndex = 2;
             // 
             // txtboxModel
             // 
             this.txtboxModel.Location = new System.Drawing.Point(137, 81);
             this.txtboxModel.Name = "txtboxModel";
             this.txtboxModel.Size = new System.Drawing.Size(275, 20);
-            this.txtboxModel.TabIndex = 13;
+            this.txtboxModel.TabIndex = 3;
             // 
             // label3
             // 
@@ -94,7 +94,7 @@
             this.btnAdd.Location = new System.Drawing.Point(312, 133);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 23);
-            this.btnAdd.TabIndex = 8;
+            this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -104,7 +104,7 @@
             this.txtboxType.Location = new System.Drawing.Point(137, 29);
             this.txtboxType.Name = "txtboxType";
             this.txtboxType.Size = new System.Drawing.Size(275, 20);
-            this.txtboxType.TabIndex = 14;
+            this.txtboxType.TabIndex = 1;
             // 
             // label4
             // 
@@ -129,7 +129,7 @@
             this.dgvVehicle.Name = "dgvVehicle";
             this.dgvVehicle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVehicle.Size = new System.Drawing.Size(517, 259);
-            this.dgvVehicle.TabIndex = 16;
+            this.dgvVehicle.TabIndex = 6;
             // 
             // AddVehicleForm
             // 

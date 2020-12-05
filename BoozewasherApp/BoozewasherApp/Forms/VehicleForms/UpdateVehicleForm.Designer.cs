@@ -55,7 +55,7 @@
             this.dgvVehicle.Name = "dgvVehicle";
             this.dgvVehicle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVehicle.Size = new System.Drawing.Size(472, 259);
-            this.dgvVehicle.TabIndex = 26;
+            this.dgvVehicle.TabIndex = 6;
             this.dgvVehicle.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehicle_CellClick);
             // 
             // txtboxType
@@ -63,7 +63,7 @@
             this.txtboxType.Location = new System.Drawing.Point(137, 33);
             this.txtboxType.Name = "txtboxType";
             this.txtboxType.Size = new System.Drawing.Size(275, 20);
-            this.txtboxType.TabIndex = 24;
+            this.txtboxType.TabIndex = 1;
             // 
             // label4
             // 
@@ -79,21 +79,21 @@
             this.txtboxDescription.Location = new System.Drawing.Point(137, 111);
             this.txtboxDescription.Name = "txtboxDescription";
             this.txtboxDescription.Size = new System.Drawing.Size(275, 20);
-            this.txtboxDescription.TabIndex = 19;
+            this.txtboxDescription.TabIndex = 4;
             // 
             // txtboxBrand
             // 
             this.txtboxBrand.Location = new System.Drawing.Point(137, 59);
             this.txtboxBrand.Name = "txtboxBrand";
             this.txtboxBrand.Size = new System.Drawing.Size(275, 20);
-            this.txtboxBrand.TabIndex = 17;
+            this.txtboxBrand.TabIndex = 2;
             // 
             // txtboxModel
             // 
             this.txtboxModel.Location = new System.Drawing.Point(137, 85);
             this.txtboxModel.Name = "txtboxModel";
             this.txtboxModel.Size = new System.Drawing.Size(275, 20);
-            this.txtboxModel.TabIndex = 23;
+            this.txtboxModel.TabIndex = 3;
             // 
             // label3
             // 
@@ -127,7 +127,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(312, 137);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 23);
-            this.btnUpdate.TabIndex = 18;
+            this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);

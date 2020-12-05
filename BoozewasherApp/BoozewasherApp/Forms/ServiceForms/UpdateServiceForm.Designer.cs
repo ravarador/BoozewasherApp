@@ -54,7 +54,7 @@
             this.dgvService.ReadOnly = true;
             this.dgvService.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvService.Size = new System.Drawing.Size(437, 259);
-            this.dgvService.TabIndex = 15;
+            this.dgvService.TabIndex = 5;
             this.dgvService.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvService_CellClick);
             // 
             // txtboxDescription
@@ -62,7 +62,7 @@
             this.txtboxDescription.Location = new System.Drawing.Point(114, 101);
             this.txtboxDescription.Name = "txtboxDescription";
             this.txtboxDescription.Size = new System.Drawing.Size(275, 20);
-            this.txtboxDescription.TabIndex = 10;
+            this.txtboxDescription.TabIndex = 3;
             // 
             // txtboxType
             // 
@@ -70,14 +70,14 @@
             this.txtboxType.Location = new System.Drawing.Point(114, 49);
             this.txtboxType.Name = "txtboxType";
             this.txtboxType.Size = new System.Drawing.Size(275, 20);
-            this.txtboxType.TabIndex = 8;
+            this.txtboxType.TabIndex = 1;
             // 
             // txtboxExpense
             // 
             this.txtboxExpense.Location = new System.Drawing.Point(114, 75);
             this.txtboxExpense.Name = "txtboxExpense";
             this.txtboxExpense.Size = new System.Drawing.Size(275, 20);
-            this.txtboxExpense.TabIndex = 14;
+            this.txtboxExpense.TabIndex = 2;
             // 
             // label3
             // 
@@ -111,7 +111,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(289, 127);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 23);
-            this.btnUpdate.TabIndex = 9;
+            this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);

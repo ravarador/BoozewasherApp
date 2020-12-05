@@ -32,7 +32,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         {
             comboServiceType.DataSource = GetServiceTypes();
             comboVehicleType.DataSource = GetVehicleTypes();
-            LoadDgvTransaction();
+            //LoadDgvTransaction();
         }
         private void btnServiceLookup_Click(object sender, EventArgs e) => OpenServiceLookupForm();
         private void btnVehicleLookup_Click(object sender, EventArgs e) => OpenVehicleLookupForm();

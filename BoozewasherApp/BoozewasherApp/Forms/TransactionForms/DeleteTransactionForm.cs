@@ -23,7 +23,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         private void DeleteTransactionForm_Load(object sender, EventArgs e)
         {
             SetLabelsToEmpty();
-            LoadDgvTransaction();
+            //LoadDgvTransaction();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             deleteTransactionById.DeleteTransaction(SelectedTransactionId);
 
             SetLabelsToEmpty();
-            LoadDgvTransaction();
+            //LoadDgvTransaction();
         }
 
         private void dgvTransaction_CellClick(object sender, DataGridViewCellEventArgs e)

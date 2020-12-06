@@ -32,6 +32,23 @@ namespace BoozewasherApp_Web.Controllers.API
                                         .ToList();
         }
 
+        //GET /API/Transactions
+        public IList<Transaction> GetTransactionsByDateRange(DateTime dateTimeFrom, DateTime dateTimeTo)
+        {
+            return _context.Transactions.Include("Service")
+                                        .Include("Vehicle")
+                                        .Where(a => a.DateTime.Date.CompareTo(dateTimeFrom.Date) >= 0 && a.DateTime.Date.CompareTo(dateTimeTo.Date) <= 0)
+                                        .ToList();
+        }
+
+        public IList<Transaction> GetTransactionsByDate(DateTime dateTime)
+        {
+            return _context.Transactions.Include("Service")
+                                        .Include("Vehicle")
+                                        .Where(a => a.DateTime.Date == dateTime.Date)
+                                        .ToList();
+        }
+
         //GET /API/Transactions/1
         public IHttpActionResult GetTransaction(int id)
         {

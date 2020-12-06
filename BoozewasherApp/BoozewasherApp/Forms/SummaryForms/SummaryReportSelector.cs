@@ -1,4 +1,5 @@
-﻿using BoozewasherApp.Models.Dtos;
+﻿using BoozewasherApp.IRepositories;
+using BoozewasherApp.Models.Dtos;
 using BoozewasherApp.Queries.TransactionQueries;
 using System;
 using System.Collections.Generic;
@@ -14,15 +15,16 @@ namespace BoozewasherApp.Forms.SummaryForms
 {
     public partial class SummaryReportSelector : Form
     {
-        public SummaryReportSelector()
+        private ITransactionRepository TransactionRepository { get; set; }
+        public SummaryReportSelector(ITransactionRepository transactionRepository)
         {
             InitializeComponent();
+            TransactionRepository = transactionRepository;
         }
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
-            var transaction = new GetAllTransactionsQuery();
-            var transactionList = transaction.GetAllTransactions()
+            var transactionList = TransactionRepository.GetAllTransactions()
                                                       .Select(a => new SummaryDto
                                                       {
                                                           Id = a.Id,

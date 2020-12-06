@@ -20,20 +20,23 @@ namespace BoozewasherApp.Forms.TransactionForms
     {
         private IServiceRepository ServiceRepository { get; set; }
         private IVehicleRepository VehicleRepository { get; set; }
+        private ITransactionRepository TransactionRepository { get; set; }
         private int SelectedTransactionId { get; set; }
         public UpdateTransactionForm(IServiceRepository serviceRepository,
-                                     IVehicleRepository vehicleRepository)
+                                     IVehicleRepository vehicleRepository,
+                                     ITransactionRepository transactionRepository)
         {
             InitializeComponent();
             ServiceRepository = serviceRepository;
             VehicleRepository = vehicleRepository;
+            TransactionRepository = transactionRepository;
         }
 
         private void UpdateTransactionForm_Load(object sender, EventArgs e)
         {
             comboServiceType.DataSource = GetServiceTypes();
             comboVehicleType.DataSource = GetVehicleTypes();
-            //LoadDgvTransaction();
+            LoadDgvTransaction();
         }
         private void btnServiceLookup_Click(object sender, EventArgs e) => OpenServiceLookupForm();
         private void btnVehicleLookup_Click(object sender, EventArgs e) => OpenVehicleLookupForm();
@@ -49,32 +52,24 @@ namespace BoozewasherApp.Forms.TransactionForms
                 Cost = decimal.Parse(txtboxCost.Text)
             };
 
-            var updateTransaction = new UpdateTransactionQuery();
+            TransactionRepository.UpdateTransaction(transaction);
 
-            updateTransaction.UpdateTransaction(transaction);
-
-            //LoadDgvTransaction();
+            LoadDgvTransaction();
         }
         private void dgvTransaction_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             SelectedTransactionId = (int)dgvTransaction.SelectedRows[0].Cells[0].Value;
 
-            var transactionById = new GetTransactionByIdQuery();
-
-            var transaction = transactionById.GetTransactionById(SelectedTransactionId);
-
-            datepickerDateTime.Value = transaction.DateTime;
-            comboServiceType.SelectedItem = transaction.ServiceId;
-            comboVehicleType.SelectedItem = transaction.VehicleId;
-            txtboxPlateNumber.Text = transaction.PlateNumber;
-            txtboxCost.Text = transaction.Cost.ToString();
+            datepickerDateTime.Value = DateTime.Parse(dgvTransaction.SelectedRows[0].Cells[1].Value.ToString());
+            txtboxPlateNumber.Text = dgvTransaction.SelectedRows[0].Cells[2].Value.ToString();
+            comboServiceType.SelectedItem = dgvTransaction.SelectedRows[0].Cells[3].Value.ToString();
+            comboVehicleType.SelectedItem = dgvTransaction.SelectedRows[0].Cells[4].Value.ToString();
+            txtboxCost.Text = dgvTransaction.SelectedRows[0].Cells[5].Value.ToString();
         }
         #region Private Methods
         private void LoadDgvTransaction()
         {
-            var getTransaction = new GetAllTransactionsQuery();
-
-            dgvTransaction.DataSource = getTransaction.GetAllTransactions()
+            dgvTransaction.DataSource = TransactionRepository.GetAllTransactions()
                                                       .Select(a => new TransactionDto
                                                       {
                                                           Id = a.Id,

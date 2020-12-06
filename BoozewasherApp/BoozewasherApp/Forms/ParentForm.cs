@@ -3,6 +3,7 @@ using BoozewasherApp.Forms.SummaryForms;
 using BoozewasherApp.Forms.TransactionForms;
 using BoozewasherApp.Forms.VehicleForms;
 using BoozewasherApp.IRepositories;
+using BoozewasherApp.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,13 +20,16 @@ namespace BoozewasherApp
     {
         public IServiceRepository ServiceRepository { get; private set; }
         public IVehicleRepository VehicleRepository { get; private set; }
+        public ITransactionRepository TransactionRepository { get; private set; }
         public ParentForm(IServiceRepository serviceRepository,
-                          IVehicleRepository vehicleRepository)
+                          IVehicleRepository vehicleRepository,
+                          ITransactionRepository transactionRepository)
         {
             InitializeComponent();
 
             ServiceRepository = serviceRepository;
             VehicleRepository = vehicleRepository;
+            TransactionRepository = transactionRepository;
         }
 
         private void addServiceToolStripMenuItem_Click(object sender, EventArgs e)
@@ -78,7 +82,9 @@ namespace BoozewasherApp
 
         private void addTransactionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddTransactionForm addTransactionForm = new AddTransactionForm(ServiceRepository, VehicleRepository);
+            AddTransactionForm addTransactionForm = new AddTransactionForm(ServiceRepository, 
+                                                                           VehicleRepository, 
+                                                                           TransactionRepository);
 
             addTransactionForm.Show();
             addTransactionForm.MdiParent = this;
@@ -86,7 +92,9 @@ namespace BoozewasherApp
 
         private void updateTransactionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UpdateTransactionForm updateTransactionForm = new UpdateTransactionForm(ServiceRepository, VehicleRepository);
+            UpdateTransactionForm updateTransactionForm = new UpdateTransactionForm(ServiceRepository, 
+                                                                                    VehicleRepository, 
+                                                                                    TransactionRepository);
 
             updateTransactionForm.Show();
             updateTransactionForm.MdiParent = this;
@@ -94,7 +102,7 @@ namespace BoozewasherApp
 
         private void deleteTransactionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DeleteTransactionForm deleteTransactionForm = new DeleteTransactionForm();
+            DeleteTransactionForm deleteTransactionForm = new DeleteTransactionForm(TransactionRepository);
 
             deleteTransactionForm.Show();
             deleteTransactionForm.MdiParent = this;
@@ -102,7 +110,7 @@ namespace BoozewasherApp
 
         private void generateReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SummaryReportSelector summaryReportSelector = new SummaryReportSelector();
+            SummaryReportSelector summaryReportSelector = new SummaryReportSelector(TransactionRepository);
 
             summaryReportSelector.Show();
             summaryReportSelector.MdiParent = this;

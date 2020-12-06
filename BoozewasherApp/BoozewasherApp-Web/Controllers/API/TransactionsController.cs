@@ -25,9 +25,11 @@ namespace BoozewasherApp_Web.Controllers.API
         }
 
         //GET /API/Transactions
-        public IEnumerable<TransactionDto> GetTransactions()
+        public IList<Transaction> GetTransactions()
         {
-            return _context.Transactions.ToList().Select(Mapper.Map<Transaction, TransactionDto>);
+            return _context.Transactions.Include("Service")
+                                        .Include("Vehicle")
+                                        .ToList();
         }
 
         //GET /API/Transactions/1
@@ -43,18 +45,15 @@ namespace BoozewasherApp_Web.Controllers.API
 
         //POST /API/Transactions
         [HttpPost]
-        public IHttpActionResult CreateTransactions(TransactionDto transactionDto)
+        public IHttpActionResult CreateTransactions(Transaction transaction)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
 
-            var transaction = Mapper.Map<TransactionDto, Transaction>(transactionDto);
             _context.Transactions.Add(transaction);
             _context.SaveChanges();
 
-            transactionDto.Id = transaction.Id;
-
-            return Created(new Uri(Request.RequestUri + "/" + transaction.Id), transactionDto);
+            return Created(new Uri(Request.RequestUri + "/" + transaction.Id), transaction);
         }
 
         //PUT /API/Transaction/1

@@ -177,6 +177,7 @@
     </Compile>
     <Compile Include="Helpers\ListExtensions.cs" />
     <Compile Include="IRepositories\IServiceRepository.cs" />
+    <Compile Include="IRepositories\ITransactionRepository.cs" />
     <Compile Include="IRepositories\IVehicleRepository.cs" />
     <Compile Include="Models\ContextModels\Service.cs" />
     <Compile Include="Models\ContextModels\Summary.cs" />
@@ -198,6 +199,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Repositories\ServiceRepository.cs" />
+    <Compile Include="Repositories\TransactionRepository.cs" />
     <Compile Include="Repositories\VehicleRepository.cs" />
     <Compile Include="Settings.cs" />
     <EmbeddedResource Include="Forms\ParentForm.resx">

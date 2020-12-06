@@ -20,19 +20,22 @@ namespace BoozewasherApp.Forms.TransactionForms
     {
         private IServiceRepository ServiceRepository { get; set; }
         private IVehicleRepository VehicleRepository { get; set; }
+        private ITransactionRepository TransactionRepository { get; set; }
         public AddTransactionForm(IServiceRepository serviceRepository, 
-                                  IVehicleRepository vehicleRepository)
+                                  IVehicleRepository vehicleRepository,
+                                  ITransactionRepository transactionRepository)
         {
             InitializeComponent();
             ServiceRepository = serviceRepository;
             VehicleRepository = vehicleRepository;
+            TransactionRepository = transactionRepository;
         }
 
         private void AddTransactionForm_Load(object sender, EventArgs e)
         {
             comboServiceType.DataSource = GetServiceTypes();
             comboVehicleType.DataSource = GetVehicleTypes();
-            //LoadDgvTransaction();
+            LoadDgvTransaction();
         }
         private void btnServiceLookup_Click(object sender, EventArgs e) => OpenServiceLookupForm();
         private void btnVehicleLookup_Click(object sender, EventArgs e) => OpenVehicleLookupForm();
@@ -49,9 +52,7 @@ namespace BoozewasherApp.Forms.TransactionForms
                 Cost = decimal.Parse(txtboxCost.Text)
             };
 
-            var addTransaction = new AddTransactionQuery();
-
-            addTransaction.AddTransaction(transaction);
+            TransactionRepository.AddTransaction(transaction);
 
             LoadDgvTransaction();
         }
@@ -66,9 +67,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         private void LoadDgvTransaction()
         {
-            var getTransaction = new GetAllTransactionsQuery();
-
-            dgvTransaction.DataSource = getTransaction.GetAllTransactions()
+            dgvTransaction.DataSource = TransactionRepository.GetAllTransactions()
                                                       .Select(a => new TransactionDto 
                                                       {
                                                           Id = a.Id,

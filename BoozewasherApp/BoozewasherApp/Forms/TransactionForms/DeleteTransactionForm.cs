@@ -1,4 +1,5 @@
-﻿using BoozewasherApp.Models.Dtos;
+﻿using BoozewasherApp.IRepositories;
+using BoozewasherApp.Models.Dtos;
 using BoozewasherApp.Queries.TransactionQueries;
 using System;
 using System.Collections.Generic;
@@ -14,48 +15,42 @@ namespace BoozewasherApp.Forms.TransactionForms
 {
     public partial class DeleteTransactionForm : Form
     {
+        private ITransactionRepository TransactionRepository { get; set; }
         private int SelectedTransactionId { get; set; }
-        public DeleteTransactionForm()
+        public DeleteTransactionForm(ITransactionRepository transactionRepository)
         {
             InitializeComponent();
+            TransactionRepository = transactionRepository;
         }
 
         private void DeleteTransactionForm_Load(object sender, EventArgs e)
         {
             SetLabelsToEmpty();
-            //LoadDgvTransaction();
+            LoadDgvTransaction();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var deleteTransactionById = new DeleteTransactionQuery();
-
-            deleteTransactionById.DeleteTransaction(SelectedTransactionId);
+            TransactionRepository.DeleteTransaction(SelectedTransactionId);
 
             SetLabelsToEmpty();
-            //LoadDgvTransaction();
+            LoadDgvTransaction();
         }
 
         private void dgvTransaction_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             SelectedTransactionId = (int)dgvTransaction.SelectedRows[0].Cells[0].Value;
 
-            var transactionById = new GetTransactionByIdQuery();
-
-            var transaction = transactionById.GetTransactionById(SelectedTransactionId);
-
-            lblDateTime.Text = transaction.DateTime.ToLongDateString();
-            lblServiceId.Text = transaction.ServiceId.ToString();
-            lblVehicleId.Text = transaction.VehicleId.ToString();
-            lblPlateNumber.Text = transaction.PlateNumber;
-            lblCost.Text = transaction.Cost.ToString();
+            lblDateTime.Text = dgvTransaction.SelectedRows[0].Cells[1].Value.ToString();
+            lblPlateNumber.Text = dgvTransaction.SelectedRows[0].Cells[2].Value.ToString();
+            lblServiceId.Text = dgvTransaction.SelectedRows[0].Cells[3].Value.ToString();
+            lblVehicleId.Text = dgvTransaction.SelectedRows[0].Cells[4].Value.ToString();
+            lblCost.Text = dgvTransaction.SelectedRows[0].Cells[5].Value.ToString();
         }
         #region Private Methods
         private void LoadDgvTransaction()
         {
-            var getTransaction = new GetAllTransactionsQuery();
-
-            dgvTransaction.DataSource = getTransaction.GetAllTransactions()
+            dgvTransaction.DataSource = TransactionRepository.GetAllTransactions()
                                                       .Select(a => new TransactionDto
                                                       {
                                                           Id = a.Id,

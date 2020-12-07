@@ -32,7 +32,6 @@ namespace BoozewasherApp_Web.Controllers.API
                                         .ToList();
         }
 
-        [Route("bydaterange")]
         [HttpPost]
         //GET /API/Transactions
         public IList<Transaction> GetTransactionsByDateRange(TransactionDto transactionDto)
@@ -43,7 +42,6 @@ namespace BoozewasherApp_Web.Controllers.API
                                         .ToList();
         }
 
-        [Route("bydate")]
         [HttpPost]
         public IList<Transaction> GetTransactionsByDate(TransactionDto transactionDto)
         {

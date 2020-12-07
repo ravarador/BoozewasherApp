@@ -1,20 +1,15 @@
-﻿using System;
+﻿using BoozewasherApp_Web.Models.ContextModel;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace BoozewasherApp_Web.Models.ContextModel
+namespace BoozewasherApp_Web.Models.ViewModels.Transactions
 {
-    public class Transaction
+    public class TransactionViewModel
     {
         public int Id { get; set; }
-
-        [Required]
         public DateTime DateTime { get; set; }
-
-        [Required]
-        [Display(Name = "Plate Number")]
         public string PlateNumber { get; set; }
 
         public Service Service { get; set; }
@@ -23,7 +18,6 @@ namespace BoozewasherApp_Web.Models.ContextModel
         public Vehicle Vehicle { get; set; }
         public int VehicleId { get; set; }
 
-        [Required]
         public decimal Cost { get; set; }
     }
 }

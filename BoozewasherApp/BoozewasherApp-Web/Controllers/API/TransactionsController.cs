@@ -64,7 +64,7 @@ namespace BoozewasherApp_Web.Controllers.API
 
         //POST /API/Transactions
         [HttpPost]
-        public IHttpActionResult CreateTransactions(Transaction transaction)
+        public IHttpActionResult CreateTransaction(Transaction transaction)
         {
             if (!ModelState.IsValid)
                 return BadRequest();

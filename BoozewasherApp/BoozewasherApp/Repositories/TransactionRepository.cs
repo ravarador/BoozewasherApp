@@ -17,7 +17,7 @@ namespace BoozewasherApp.Repositories
         public void AddTransaction(Transaction transaction)
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/transactions/", Method.POST);
+            var request = new RestRequest("/api/transactions/createtransaction/", Method.POST);
             request.AddJsonBody(transaction);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);
@@ -26,7 +26,7 @@ namespace BoozewasherApp.Repositories
         public void DeleteTransaction(int id)
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/transactions/" + id, Method.DELETE);
+            var request = new RestRequest("/api/transactions/deletetransaction/" + id, Method.DELETE);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);
         }
@@ -34,7 +34,7 @@ namespace BoozewasherApp.Repositories
         public List<Transaction> GetAllTransactions()
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/transactions/", Method.GET);
+            var request = new RestRequest("/api/transactions/gettransactions/", Method.GET);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);
 
@@ -46,7 +46,7 @@ namespace BoozewasherApp.Repositories
         public List<Transaction> GetTransactionsByDateRange(TransactionDto transactionDto)
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/transactions/", Method.GET);
+            var request = new RestRequest("/api/transactions/gettransactionsbydaterange/", Method.GET);
             var jsonObj = JsonConvert.SerializeObject(transactionDto);
             request.AddJsonBody(jsonObj);
             request.RequestFormat = DataFormat.Json;
@@ -60,7 +60,7 @@ namespace BoozewasherApp.Repositories
         public List<Transaction> GetTransactionsByDate(TransactionDto transactionDto)
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/transactions/", Method.GET);
+            var request = new RestRequest("/api/transactions/gettransactionsbydate/", Method.GET);
             var jsonObj = JsonConvert.SerializeObject(transactionDto);
             request.AddJsonBody(jsonObj);
             request.RequestFormat = DataFormat.Json;
@@ -81,7 +81,7 @@ namespace BoozewasherApp.Repositories
         public void UpdateTransaction(Transaction transaction)
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/transactions/" + transaction.Id, Method.PUT);
+            var request = new RestRequest("/api/transactions/updatetransaction/" + transaction.Id, Method.PUT);
             request.RequestFormat = DataFormat.Json;
             request.AddJsonBody(transaction);
             var response = client.Execute(request);

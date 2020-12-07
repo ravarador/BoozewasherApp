@@ -16,7 +16,7 @@ namespace BoozewasherApp.Repositories
         public void AddVehicle(Vehicle vehicle)
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/vehicles/", Method.POST);
+            var request = new RestRequest("/api/vehicles/createvehicle/", Method.POST);
             request.AddJsonBody(vehicle);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);
@@ -25,7 +25,7 @@ namespace BoozewasherApp.Repositories
         public void DeleteVehicle(int id)
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/vehicles/" + id, Method.DELETE);
+            var request = new RestRequest("/api/vehicles/deletevehicle/" + id, Method.DELETE);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);
         }
@@ -33,7 +33,7 @@ namespace BoozewasherApp.Repositories
         public List<Vehicle> GetAllVehicles()
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/vehicles/", Method.GET);
+            var request = new RestRequest("/api/vehicles/getvehicles/", Method.GET);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);
 
@@ -52,7 +52,7 @@ namespace BoozewasherApp.Repositories
         public void UpdateVehicle(Vehicle vehicle)
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/vehicles/" + vehicle.Id, Method.PUT);
+            var request = new RestRequest("/api/vehicles/updatevehicle/" + vehicle.Id, Method.PUT);
             request.RequestFormat = DataFormat.Json;
             request.AddJsonBody(vehicle);
             var response = client.Execute(request);

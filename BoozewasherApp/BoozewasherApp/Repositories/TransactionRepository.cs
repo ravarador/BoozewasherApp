@@ -1,5 +1,6 @@
 ﻿using BoozewasherApp.IRepositories;
 using BoozewasherApp.Models.ContextModels;
+using BoozewasherApp.Models.Dtos;
 using BoozewasherApp.Properties;
 using Newtonsoft.Json;
 using RestSharp;
@@ -34,6 +35,34 @@ namespace BoozewasherApp.Repositories
         {
             var client = new RestClient(Resources.ConnectionString);
             var request = new RestRequest("/api/transactions/", Method.GET);
+            request.RequestFormat = DataFormat.Json;
+            var response = client.Execute(request);
+
+            var dataList = JsonConvert.DeserializeObject<List<Transaction>>(response.Content);
+
+            return dataList;
+        }
+
+        public List<Transaction> GetTransactionsByDateRange(TransactionDto transactionDto)
+        {
+            var client = new RestClient(Resources.ConnectionString);
+            var request = new RestRequest("/api/transactions/", Method.GET);
+            var jsonObj = JsonConvert.SerializeObject(transactionDto);
+            request.AddJsonBody(jsonObj);
+            request.RequestFormat = DataFormat.Json;
+            var response = client.Execute(request);
+
+            var dataList = JsonConvert.DeserializeObject<List<Transaction>>(response.Content);
+
+            return dataList;
+        }
+
+        public List<Transaction> GetTransactionsByDate(TransactionDto transactionDto)
+        {
+            var client = new RestClient(Resources.ConnectionString);
+            var request = new RestRequest("/api/transactions/", Method.GET);
+            var jsonObj = JsonConvert.SerializeObject(transactionDto);
+            request.AddJsonBody(jsonObj);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);
 

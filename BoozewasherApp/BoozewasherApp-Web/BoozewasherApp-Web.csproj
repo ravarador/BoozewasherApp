@@ -192,6 +192,10 @@
     <Compile Include="Controllers\TransactionController.cs" />
     <Compile Include="Controllers\VehicleController.cs" />
     <Compile Include="Interfaces\IDatabaseContext.cs" />
+    <Compile Include="Migrations\202012071538430_AddedDataAnnotationsToPlateNumberColumnInTransaction.cs" />
+    <Compile Include="Migrations\202012071538430_AddedDataAnnotationsToPlateNumberColumnInTransaction.designer.cs">
+      <DependentUpon>202012071538430_AddedDataAnnotationsToPlateNumberColumnInTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Dtos\ServiceDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -330,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012031226334_RemoveDataAnnotationDescriptionServices.resx">
       <DependentUpon>202012031226334_RemoveDataAnnotationDescriptionServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012071538430_AddedDataAnnotationsToPlateNumberColumnInTransaction.resx">
+      <DependentUpon>202012071538430_AddedDataAnnotationsToPlateNumberColumnInTransaction.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

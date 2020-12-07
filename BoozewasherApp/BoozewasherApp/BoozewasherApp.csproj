@@ -179,10 +179,6 @@
     <Compile Include="IRepositories\IServiceRepository.cs" />
     <Compile Include="IRepositories\ITransactionRepository.cs" />
     <Compile Include="IRepositories\IVehicleRepository.cs" />
-    <Compile Include="Migrations\202012071326341_AddedDataAnnotationsForTransaction.cs" />
-    <Compile Include="Migrations\202012071326341_AddedDataAnnotationsForTransaction.designer.cs">
-      <DependentUpon>202012071326341_AddedDataAnnotationsForTransaction.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ContextModels\Service.cs" />
     <Compile Include="Models\ContextModels\Summary.cs" />
@@ -192,11 +188,6 @@
     <Compile Include="Models\Dtos\TransactionDto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Queries\TransactionQueries\AddTransactionQuery.cs" />
-    <Compile Include="Queries\TransactionQueries\DeleteTransactionQuery.cs" />
-    <Compile Include="Queries\TransactionQueries\GetAllTransactionsQuery.cs" />
-    <Compile Include="Queries\TransactionQueries\GetTransactionByIdQuery.cs" />
-    <Compile Include="Queries\TransactionQueries\UpdateTransactionQuery.cs" />
     <Compile Include="Reports\SummaryReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -248,9 +239,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleForms\VehicleLookupForm.resx">
       <DependentUpon>VehicleLookupForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012071326341_AddedDataAnnotationsForTransaction.resx">
-      <DependentUpon>202012071326341_AddedDataAnnotationsForTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

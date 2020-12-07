@@ -3,7 +3,6 @@ using BoozewasherApp.Forms.VehicleForms;
 using BoozewasherApp.IRepositories;
 using BoozewasherApp.Models.ContextModels;
 using BoozewasherApp.Models.Dtos;
-using BoozewasherApp.Queries.TransactionQueries;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

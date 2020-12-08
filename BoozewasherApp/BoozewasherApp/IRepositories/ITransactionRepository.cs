@@ -14,8 +14,8 @@ namespace BoozewasherApp.IRepositories
         void DeleteTransaction(int id);
         List<Transaction> GetAllTransactions();
         void UpdateTransaction(Transaction transaction);
-        List<Transaction> GetTransactionsByDateRange(TransactionDto transactionDto);
-        List<Transaction> GetTransactionsByDate(TransactionDto transactionDto);
+        List<Transaction> GetTransactionsByDateRange(SummaryDateAndDateRangeDto dateAndDateRangeDto);
+        List<Transaction> GetTransactionsByDate(SummaryDateAndDateRangeDto dateAndDateRangeDto);
 
     }
 }

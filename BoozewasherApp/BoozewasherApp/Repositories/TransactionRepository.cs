@@ -43,11 +43,11 @@ namespace BoozewasherApp.Repositories
             return dataList;
         }
 
-        public List<Transaction> GetTransactionsByDateRange(TransactionDto transactionDto)
+        public List<Transaction> GetTransactionsByDateRange(SummaryDateAndDateRangeDto dateAndDateRangeDto)
         {
             var client = new RestClient(Resources.ConnectionString);
             var request = new RestRequest("/api/transactions/gettransactionsbydaterange/", Method.POST);
-            var jsonObj = JsonConvert.SerializeObject(transactionDto);
+            var jsonObj = JsonConvert.SerializeObject(dateAndDateRangeDto);
             request.AddJsonBody(jsonObj);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);
@@ -57,11 +57,11 @@ namespace BoozewasherApp.Repositories
             return dataList;
         }
 
-        public List<Transaction> GetTransactionsByDate(TransactionDto transactionDto)
+        public List<Transaction> GetTransactionsByDate(SummaryDateAndDateRangeDto dateAndDateRangeDto)
         {
             var client = new RestClient(Resources.ConnectionString);
             var request = new RestRequest("/api/transactions/gettransactionsbydate/", Method.POST);
-            var jsonObj = JsonConvert.SerializeObject(transactionDto);
+            var jsonObj = JsonConvert.SerializeObject(dateAndDateRangeDto);
             request.AddJsonBody(jsonObj);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);

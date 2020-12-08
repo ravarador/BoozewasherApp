@@ -24,13 +24,13 @@ namespace BoozewasherApp.Forms.SummaryForms
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
-            TransactionDto transactionDto = new TransactionDto();
+            SummaryDateAndDateRangeDto dateAndDateRangeDto = new SummaryDateAndDateRangeDto();
 
             if(radSelectDate.Checked)
             {
-                transactionDto.DateTime = datePickerSelectDate.Value.Date;
+                dateAndDateRangeDto.DateTime = datePickerSelectDate.Value.Date;
 
-                SummaryList = TransactionRepository.GetTransactionsByDate(transactionDto)
+                SummaryList = TransactionRepository.GetTransactionsByDate(dateAndDateRangeDto)
                                                       .Select(a => new SummaryDto
                                                       {
                                                           Id = a.Id,
@@ -46,10 +46,10 @@ namespace BoozewasherApp.Forms.SummaryForms
             }
             else
             {
-                transactionDto.DateTimeFrom = datePickerDateFromRange.Value.Date;
-                transactionDto.DateTimeTo = datePickerDateToRange.Value.Date;
+                dateAndDateRangeDto.DateTimeFrom = datePickerDateFromRange.Value.Date;
+                dateAndDateRangeDto.DateTimeTo = datePickerDateToRange.Value.Date;
 
-                SummaryList = TransactionRepository.GetTransactionsByDateRange(transactionDto)
+                SummaryList = TransactionRepository.GetTransactionsByDateRange(dateAndDateRangeDto)
                                                       .Select(a => new SummaryDto
                                                       {
                                                           Id = a.Id,

@@ -59,12 +59,12 @@ namespace BoozewasherApp_Web.Controllers
                 _context.Vehicles.Add(vehicle);
             else
             {
-                var vehicleInDb = _context.Vehicles.Single(s => s.Id == vehicle.Id);
+                var vehicleInDB = _context.Vehicles.Single(s => s.Id == vehicle.Id);
 
-                vehicleInDb.Type = vehicle.Type;
-                vehicleInDb.Description = vehicle.Description;
-                vehicleInDb.Brand = vehicle.Brand;
-                vehicleInDb.Model = vehicle.Model;
+                vehicleInDB.Type = vehicle.Type;
+                vehicleInDB.Description = vehicle.Description;
+                vehicleInDB.Brand = vehicle.Brand;
+                vehicleInDB.Model = vehicle.Model;
             }
             _context.SaveChanges();
 

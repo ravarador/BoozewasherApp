@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BoozewasherApp_Web.Models.ContextModel.Transaction>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<p></p>
+<h2>Transactions</h2>
+<p></p>
+
+@if (!Model.Any())
+{
+    <p>No transactions available.</p>
+}
+<p></p>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Vehicle Type</th>
+            <th>Vehicle Brand</th>
+            <th>Vehicle Model</th>
+            <th>Service</th>
+            <th>Plate Number</th>
+            <th>Cost</th>
+            <th>Date and Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var transaction in Model)
+        {
+        <tr>
+            <td>@transaction.Vehicle.Type</td>
+            <td>@transaction.Vehicle.Brand</td>
+            <td>@transaction.Vehicle.Model</td>
+            <td>@transaction.Service.Type</td>
+            <td>@Html.ActionLink(transaction.PlateNumber, "Edit" , "Transaction" , new { id=transaction.Id }, null)</td>
+            <td>@transaction.Cost</td>
+            <td>@transaction.DateTime</td>
+        </tr>
+        }
+    </tbody>
+</table>

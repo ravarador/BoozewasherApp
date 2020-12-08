@@ -301,11 +301,12 @@
     <Content Include="Views\Service\ServiceForm.cshtml" />
     <Content Include="Views\Vehicle\Index.cshtml" />
     <Content Include="Views\Vehicle\VehicleForm.cshtml" />
+    <Content Include="Views\Transaction\Index.cshtml" />
+    <Content Include="Views\Transaction\TransactionForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\AddService\" />
-    <Folder Include="Views\Transaction\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />

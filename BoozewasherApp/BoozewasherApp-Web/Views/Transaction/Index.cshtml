@@ -22,6 +22,7 @@
             <th>Plate Number</th>
             <th>Cost</th>
             <th>Date and Time</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -32,9 +33,10 @@
             <td>@transaction.Vehicle.Brand</td>
             <td>@transaction.Vehicle.Model</td>
             <td>@transaction.Service.Type</td>
-            <td>@Html.ActionLink(transaction.PlateNumber, "Edit" , "Transaction" , new { id=transaction.Id }, null)</td>
+            <td>@Html.ActionLink(transaction.PlateNumber, "Edit", "Transaction", new { id = transaction.Id }, null)</td>
             <td>@transaction.Cost</td>
             <td>@transaction.DateTime</td>
+            <td>@Html.ActionLink("Delete", "Delete", "Transaction", new { id = transaction.Id }, null)</td>
         </tr>
         }
     </tbody>

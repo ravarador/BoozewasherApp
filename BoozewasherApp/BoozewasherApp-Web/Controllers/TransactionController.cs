@@ -86,6 +86,18 @@ namespace BoozewasherApp_Web.Controllers
 
             return RedirectToAction("Index", "Transaction");
         }
+        public ActionResult Delete(int id)
+        {
+            var transaction = _context.Transactions.SingleOrDefault(s => s.Id == id);
+
+            if (transaction == null)
+                return HttpNotFound();
+
+            _context.Transactions.Remove(transaction);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Transaction");
+        }
     }
 }
 

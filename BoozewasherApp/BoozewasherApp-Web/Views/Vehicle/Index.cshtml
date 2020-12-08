@@ -6,7 +6,7 @@
 <p></p>
 <h1>Vehicles</h1>
 <p></p>
-
+@Html.ActionLink("New Vehicle", "New", "Vehicle", new { @class = "btn btn-outline-primary" })
 @if (!Model.Any())
 {
     <p>No vehicles available.</p>
@@ -25,13 +25,13 @@
     <tbody>
         @foreach (var vehicles in Model)
         {
-        <tr>
-            <td>@Html.ActionLink(vehicles.Type, "Edit", "Vehicle", new { id = vehicles.Id }, null)</td>
-            <td>@vehicles.Description</td>
-            <td>@vehicles.Brand</td>
-            <td>@vehicles.Model</td>
-            <td>@Html.ActionLink("Delete", "Delete", "Vehicle", new { id = vehicles.Id }, null)</td>
-        </tr>
+            <tr>
+                <td>@Html.ActionLink(vehicles.Type, "Edit", "Vehicle", new { id = vehicles.Id }, null)</td>
+                <td>@vehicles.Description</td>
+                <td>@vehicles.Brand</td>
+                <td>@vehicles.Model</td>
+                <td>@Html.ActionLink("Delete", "Delete", "Vehicle", new { id = vehicles.Id }, null)</td>
+            </tr>
         }
     </tbody>
 </table>

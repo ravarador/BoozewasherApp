@@ -17,7 +17,5 @@ namespace BoozewasherApp.Models.Dtos
         public int VehicleId { get; set; }
 
         public decimal Cost { get; set; }
-        public DateTime DateTimeFrom { get; set; }
-        public DateTime DateTimeTo { get; set; }
     }
 }

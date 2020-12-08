@@ -226,6 +226,7 @@
     <Compile Include="Models\ContextModel\Summary.cs" />
     <Compile Include="Models\ContextModel\Transaction.cs" />
     <Compile Include="Models\ContextModel\Vehicle.cs" />
+    <Compile Include="Models\Dtos\SummaryDateAndDateRangeDto.cs" />
     <Compile Include="Models\Dtos\TransactionDto.cs" />
     <Compile Include="Models\Dtos\VehicleDto.cs" />
     <Compile Include="Models\IdentityModels.cs" />

@@ -182,6 +182,7 @@
     <Compile Include="Models\ContextModels\Summary.cs" />
     <Compile Include="Models\ContextModels\Transaction.cs" />
     <Compile Include="Models\ContextModels\Vehicle.cs" />
+    <Compile Include="Models\Dtos\SummaryDateAndDateRangeDto.cs" />
     <Compile Include="Models\Dtos\SummaryDto.cs" />
     <Compile Include="Models\Dtos\TransactionDto.cs" />
     <Compile Include="Program.cs" />

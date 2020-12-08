@@ -38,7 +38,12 @@ namespace BoozewasherApp_Web.Controllers.API
         {
             return _context.Transactions.Include("Service")
                                         .Include("Vehicle")
-                                        .Where(a => a.DateTime.Date >= transactionDto.DateTimeFrom.Date && a.DateTime.Date <= transactionDto.DateTimeTo.Date)
+                                        .Where(a => a.DateTime.Year >= transactionDto.DateTimeFrom.Year &&
+                                                    a.DateTime.Month >= transactionDto.DateTimeFrom.Month &&
+                                                    a.DateTime.Day >= transactionDto.DateTimeFrom.Day &&
+                                                    a.DateTime.Year <= transactionDto.DateTimeTo.Year &&
+                                                    a.DateTime.Month <= transactionDto.DateTimeTo.Month &&
+                                                    a.DateTime.Day <= transactionDto.DateTimeTo.Day)
                                         .ToList();
         }
 
@@ -47,7 +52,9 @@ namespace BoozewasherApp_Web.Controllers.API
         {
             return _context.Transactions.Include("Service")
                                         .Include("Vehicle")
-                                        .Where(a => a.DateTime.Date == transactionDto.DateTime.Date)
+                                        .Where(a => a.DateTime.Year == transactionDto.DateTime.Year &&
+                                                    a.DateTime.Month == transactionDto.DateTime.Month &&
+                                                    a.DateTime.Day == transactionDto.DateTime.Day)
                                         .ToList();
         }
 

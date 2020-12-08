@@ -28,56 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.datePickerDateFromRange = new System.Windows.Forms.DateTimePicker();
-            this.datePickerDateToRange = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
+            this.grpboxDateRange = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.datePickerDateToRange = new System.Windows.Forms.DateTimePicker();
+            this.datePickerDateFromRange = new System.Windows.Forms.DateTimePicker();
             this.radSelectDate = new System.Windows.Forms.RadioButton();
             this.radSelectDateRange = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grpboxDate = new System.Windows.Forms.GroupBox();
             this.datePickerSelectDate = new System.Windows.Forms.DateTimePicker();
             this.btnPreview = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grpboxDateRange.SuspendLayout();
+            this.grpboxDate.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grpboxDateRange
             // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.datePickerDateToRange);
-            this.groupBox1.Controls.Add(this.datePickerDateFromRange);
-            this.groupBox1.Location = new System.Drawing.Point(30, 124);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(223, 153);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Date Range";
-            // 
-            // datePickerDateFromRange
-            // 
-            this.datePickerDateFromRange.Location = new System.Drawing.Point(9, 41);
-            this.datePickerDateFromRange.Name = "datePickerDateFromRange";
-            this.datePickerDateFromRange.Size = new System.Drawing.Size(200, 20);
-            this.datePickerDateFromRange.TabIndex = 0;
-            // 
-            // datePickerDateToRange
-            // 
-            this.datePickerDateToRange.Location = new System.Drawing.Point(9, 109);
-            this.datePickerDateToRange.Name = "datePickerDateToRange";
-            this.datePickerDateToRange.Size = new System.Drawing.Size(200, 20);
-            this.datePickerDateToRange.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Date From:";
+            this.grpboxDateRange.Controls.Add(this.label2);
+            this.grpboxDateRange.Controls.Add(this.label1);
+            this.grpboxDateRange.Controls.Add(this.datePickerDateToRange);
+            this.grpboxDateRange.Controls.Add(this.datePickerDateFromRange);
+            this.grpboxDateRange.Enabled = false;
+            this.grpboxDateRange.Location = new System.Drawing.Point(30, 110);
+            this.grpboxDateRange.Name = "grpboxDateRange";
+            this.grpboxDateRange.Size = new System.Drawing.Size(223, 153);
+            this.grpboxDateRange.TabIndex = 0;
+            this.grpboxDateRange.TabStop = false;
+            this.grpboxDateRange.Text = "Date Range";
             // 
             // label2
             // 
@@ -88,9 +66,33 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Date To:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Date From:";
+            // 
+            // datePickerDateToRange
+            // 
+            this.datePickerDateToRange.Location = new System.Drawing.Point(9, 109);
+            this.datePickerDateToRange.Name = "datePickerDateToRange";
+            this.datePickerDateToRange.Size = new System.Drawing.Size(200, 20);
+            this.datePickerDateToRange.TabIndex = 1;
+            // 
+            // datePickerDateFromRange
+            // 
+            this.datePickerDateFromRange.Location = new System.Drawing.Point(9, 41);
+            this.datePickerDateFromRange.Name = "datePickerDateFromRange";
+            this.datePickerDateFromRange.Size = new System.Drawing.Size(200, 20);
+            this.datePickerDateFromRange.TabIndex = 0;
+            // 
             // radSelectDate
             // 
             this.radSelectDate.AutoSize = true;
+            this.radSelectDate.Checked = true;
             this.radSelectDate.Location = new System.Drawing.Point(30, 12);
             this.radSelectDate.Name = "radSelectDate";
             this.radSelectDate.Size = new System.Drawing.Size(81, 17);
@@ -98,6 +100,7 @@
             this.radSelectDate.TabStop = true;
             this.radSelectDate.Text = "Select Date";
             this.radSelectDate.UseVisualStyleBackColor = true;
+            this.radSelectDate.Click += new System.EventHandler(this.radSelectDateRange_Click);
             // 
             // radSelectDateRange
             // 
@@ -106,19 +109,19 @@
             this.radSelectDateRange.Name = "radSelectDateRange";
             this.radSelectDateRange.Size = new System.Drawing.Size(116, 17);
             this.radSelectDateRange.TabIndex = 2;
-            this.radSelectDateRange.TabStop = true;
             this.radSelectDateRange.Text = "Select Date Range";
             this.radSelectDateRange.UseVisualStyleBackColor = true;
+            this.radSelectDateRange.Click += new System.EventHandler(this.radSelectDateRange_Click);
             // 
-            // groupBox2
+            // grpboxDate
             // 
-            this.groupBox2.Controls.Add(this.datePickerSelectDate);
-            this.groupBox2.Location = new System.Drawing.Point(30, 55);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(223, 54);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Select Date";
+            this.grpboxDate.Controls.Add(this.datePickerSelectDate);
+            this.grpboxDate.Location = new System.Drawing.Point(30, 41);
+            this.grpboxDate.Name = "grpboxDate";
+            this.grpboxDate.Size = new System.Drawing.Size(223, 54);
+            this.grpboxDate.TabIndex = 3;
+            this.grpboxDate.TabStop = false;
+            this.grpboxDate.Text = "Select Date";
             // 
             // datePickerSelectDate
             // 
@@ -153,15 +156,15 @@
             this.ClientSize = new System.Drawing.Size(400, 312);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnPreview);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.grpboxDate);
             this.Controls.Add(this.radSelectDateRange);
             this.Controls.Add(this.radSelectDate);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpboxDateRange);
             this.Name = "SummaryReportSelector";
             this.Text = "Summary Report Selector";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.grpboxDateRange.ResumeLayout(false);
+            this.grpboxDateRange.PerformLayout();
+            this.grpboxDate.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,14 +172,14 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpboxDateRange;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker datePickerDateToRange;
         private System.Windows.Forms.DateTimePicker datePickerDateFromRange;
         private System.Windows.Forms.RadioButton radSelectDate;
         private System.Windows.Forms.RadioButton radSelectDateRange;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpboxDate;
         private System.Windows.Forms.DateTimePicker datePickerSelectDate;
         private System.Windows.Forms.Button btnPreview;
         private System.Windows.Forms.Button btnPrint;

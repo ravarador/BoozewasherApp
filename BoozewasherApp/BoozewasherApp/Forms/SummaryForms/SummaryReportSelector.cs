@@ -15,6 +15,7 @@ namespace BoozewasherApp.Forms.SummaryForms
     public partial class SummaryReportSelector : Form
     {
         private ITransactionRepository TransactionRepository { get; set; }
+        private List<SummaryDto> SummaryList { get; set; }
         public SummaryReportSelector(ITransactionRepository transactionRepository)
         {
             InitializeComponent();
@@ -23,7 +24,13 @@ namespace BoozewasherApp.Forms.SummaryForms
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
-            var transactionList = TransactionRepository.GetAllTransactions()
+            TransactionDto transactionDto = new TransactionDto();
+
+            if(radSelectDate.Checked)
+            {
+                transactionDto.DateTime = datePickerSelectDate.Value.Date;
+
+                SummaryList = TransactionRepository.GetTransactionsByDate(transactionDto)
                                                       .Select(a => new SummaryDto
                                                       {
                                                           Id = a.Id,
@@ -36,9 +43,43 @@ namespace BoozewasherApp.Forms.SummaryForms
                                                           Model = a.Vehicle.Model,
                                                           Cost = a.Cost
                                                       }).ToList();
+            }
+            else
+            {
+                transactionDto.DateTimeFrom = datePickerDateFromRange.Value.Date;
+                transactionDto.DateTimeTo = datePickerDateToRange.Value.Date;
 
-            var summaryCrystalReportForm = new SummaryCrystalReportForm(transactionList);
+                SummaryList = TransactionRepository.GetTransactionsByDateRange(transactionDto)
+                                                      .Select(a => new SummaryDto
+                                                      {
+                                                          Id = a.Id,
+                                                          DateTime = a.DateTime,
+                                                          PlateNumber = a.PlateNumber,
+                                                          ServiceType = a.Service.Type,
+                                                          Expense = a.Service.Expense.Value,
+                                                          VehicleType = a.Vehicle.Type,
+                                                          Brand = a.Vehicle.Brand,
+                                                          Model = a.Vehicle.Model,
+                                                          Cost = a.Cost
+                                                      }).ToList();
+            }
+
+            var summaryCrystalReportForm = new SummaryCrystalReportForm(SummaryList);
             summaryCrystalReportForm.ShowDialog();
+        }
+
+        private void radSelectDateRange_Click(object sender, EventArgs e)
+        {
+            if (radSelectDate.Checked)
+            {
+                grpboxDate.Enabled = true;
+                grpboxDateRange.Enabled = false;
+            }
+            else if (radSelectDateRange.Checked)
+            {
+                grpboxDate.Enabled = false;
+                grpboxDateRange.Enabled = true;
+            }
         }
     }
 }

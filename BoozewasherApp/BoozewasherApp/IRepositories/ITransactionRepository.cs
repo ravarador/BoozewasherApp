@@ -1,4 +1,5 @@
 ﻿using BoozewasherApp.Models.ContextModels;
+using BoozewasherApp.Models.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace BoozewasherApp.IRepositories
         void DeleteTransaction(int id);
         List<Transaction> GetAllTransactions();
         void UpdateTransaction(Transaction transaction);
+        List<Transaction> GetTransactionsByDateRange(TransactionDto transactionDto);
+        List<Transaction> GetTransactionsByDate(TransactionDto transactionDto);
 
     }
 }

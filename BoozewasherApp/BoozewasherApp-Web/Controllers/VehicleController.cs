@@ -70,6 +70,18 @@ namespace BoozewasherApp_Web.Controllers
 
             return RedirectToAction("Index", "Vehicle");
         }
+        public ActionResult Delete(int id)
+        {
+            var vehicle = _context.Vehicles.SingleOrDefault(s => s.Id == id);
+
+            if (vehicle == null)
+                return HttpNotFound();
+
+            _context.Vehicles.Remove(vehicle);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Vehicle");
+        }
 
     }
 }

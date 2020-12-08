@@ -34,27 +34,27 @@ namespace BoozewasherApp_Web.Controllers.API
 
         [HttpPost]
         //GET /API/Transactions
-        public IList<Transaction> GetTransactionsByDateRange(TransactionDto transactionDto)
+        public IList<Transaction> GetTransactionsByDateRange(SummaryDateAndDateRangeDto dateAndDateRangeDto)
         {
             return _context.Transactions.Include("Service")
                                         .Include("Vehicle")
-                                        .Where(a => a.DateTime.Year >= transactionDto.DateTimeFrom.Year &&
-                                                    a.DateTime.Month >= transactionDto.DateTimeFrom.Month &&
-                                                    a.DateTime.Day >= transactionDto.DateTimeFrom.Day &&
-                                                    a.DateTime.Year <= transactionDto.DateTimeTo.Year &&
-                                                    a.DateTime.Month <= transactionDto.DateTimeTo.Month &&
-                                                    a.DateTime.Day <= transactionDto.DateTimeTo.Day)
+                                        .Where(a => a.DateTime.Year >= dateAndDateRangeDto.DateTimeFrom.Year &&
+                                                    a.DateTime.Month >= dateAndDateRangeDto.DateTimeFrom.Month &&
+                                                    a.DateTime.Day >= dateAndDateRangeDto.DateTimeFrom.Day &&
+                                                    a.DateTime.Year <= dateAndDateRangeDto.DateTimeTo.Year &&
+                                                    a.DateTime.Month <= dateAndDateRangeDto.DateTimeTo.Month &&
+                                                    a.DateTime.Day <= dateAndDateRangeDto.DateTimeTo.Day)
                                         .ToList();
         }
 
         [HttpPost]
-        public IList<Transaction> GetTransactionsByDate(TransactionDto transactionDto)
+        public IList<Transaction> GetTransactionsByDate(SummaryDateAndDateRangeDto dateAndDateRangeDto)
         {
             return _context.Transactions.Include("Service")
                                         .Include("Vehicle")
-                                        .Where(a => a.DateTime.Year == transactionDto.DateTime.Year &&
-                                                    a.DateTime.Month == transactionDto.DateTime.Month &&
-                                                    a.DateTime.Day == transactionDto.DateTime.Day)
+                                        .Where(a => a.DateTime.Year == dateAndDateRangeDto.DateTime.Year &&
+                                                    a.DateTime.Month == dateAndDateRangeDto.DateTime.Month &&
+                                                    a.DateTime.Day == dateAndDateRangeDto.DateTime.Day)
                                         .ToList();
         }
 

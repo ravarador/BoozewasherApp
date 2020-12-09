@@ -1,14 +1,14 @@
 ﻿@model BoozewasherApp_Web.Models.ViewModels.Transactions.TransactionFormViewModel
 @{
-    ViewBag.Title = "TransactionForm";
+    ViewBag.Title = Model.Title;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <p></p>
-<h2>New Transaction</h2>
+<h2>@Model.Title</h2>
 
 @using (Html.BeginForm("Save", "Transaction"))
 {
-    @Html.ValidationSummary(true, "Please fill up requirements")
+    @Html.ValidationSummary(true, "Please fill up requirements");
 
     <div class="form-group">
         @Html.Label("Vehicle Type")

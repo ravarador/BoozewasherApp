@@ -1,11 +1,10 @@
-﻿@model BoozewasherApp_Web.View_Models.Services.ServiceFormViewModel
+﻿@model BoozewasherApp_Web.Models.ViewModels.Services.ServiceFormViewModel
 @{
     ViewBag.Title = "ServiceForm";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<p></p>
-<h2>New Service</h2>
 
+<h2>ServiceForm</h2>
 @using (Html.BeginForm("Save", "Service"))
 {
     @Html.ValidationSummary(true, "Please fill up requirements");
@@ -34,3 +33,4 @@
 @section	scripts	{
     @Scripts.Render("~/bundles/jqueryval")
 }
+

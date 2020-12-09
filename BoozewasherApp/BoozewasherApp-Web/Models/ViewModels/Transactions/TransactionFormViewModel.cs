@@ -25,6 +25,14 @@ namespace BoozewasherApp_Web.Models.ViewModels.Transactions
 
         public decimal Cost { get; set; }
 
+        public string Title
+        {
+            get
+            {
+                return Id != 0 ? "Edit Transaction" : "New Transaction";
+            }
+        }
+
         public TransactionFormViewModel()
         {
             Id = 0;

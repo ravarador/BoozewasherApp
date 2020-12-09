@@ -1,6 +1,6 @@
 ﻿using BoozewasherApp_Web.Models;
 using BoozewasherApp_Web.Models.ContextModel;
-using BoozewasherApp_Web.View_Models.Services;
+using BoozewasherApp_Web.Models.ViewModels.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;

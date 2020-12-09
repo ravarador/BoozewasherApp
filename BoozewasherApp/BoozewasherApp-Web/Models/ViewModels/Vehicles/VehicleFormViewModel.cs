@@ -1,17 +1,25 @@
-﻿using System;
+﻿using BoozewasherApp_Web.Models.ContextModel;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using BoozewasherApp_Web.Models.ContextModel;
 
-namespace BoozewasherApp_Web.View_Models.Vehicles
+namespace BoozewasherApp_Web.Models.ViewModels.Vehicles
 {
     public class VehicleFormViewModel
     {
         public int Id { get; set; }
+
+        [Required]
+        [Display(Name = "Vehicle Type")]
         public string Type { get; set; }
         public string Description { get; set; }
+
+        [Required]
         public string Brand { get; set; }
+
+        [Required]
         public string Model { get; set; }
 
         public string Title

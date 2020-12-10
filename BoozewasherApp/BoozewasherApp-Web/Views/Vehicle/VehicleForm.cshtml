@@ -9,6 +9,7 @@
 @using (Html.BeginForm("Save", "Vehicle"))
 {
     @Html.ValidationSummary(true, "Please fill up requirements");
+
     <div class="form-group">
         @Html.LabelFor(v => v.Type)
         @Html.TextBoxFor(v => v.Type, new { @class = "form-control" })

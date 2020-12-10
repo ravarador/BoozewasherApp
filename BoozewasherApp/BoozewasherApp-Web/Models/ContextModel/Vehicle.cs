@@ -12,11 +12,10 @@ namespace BoozewasherApp_Web.Models.ContextModel
 
         [Required]
         public string Type { get; set; }
+        
         public string Description { get; set; }
-
         [Required]
         public string Brand { get; set; }
-
         [Required]
         public string Model { get; set; }
     }

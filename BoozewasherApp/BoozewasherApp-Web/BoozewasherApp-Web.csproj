@@ -196,6 +196,14 @@
     <Compile Include="Migrations\202012071538430_AddedDataAnnotationsToPlateNumberColumnInTransaction.designer.cs">
       <DependentUpon>202012071538430_AddedDataAnnotationsToPlateNumberColumnInTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012101341097_AddedDataAnnotationsForServiceAndVehicles.cs" />
+    <Compile Include="Migrations\202012101341097_AddedDataAnnotationsForServiceAndVehicles.designer.cs">
+      <DependentUpon>202012101341097_AddedDataAnnotationsForServiceAndVehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012101346119_RemovedDataAnnotationsForServiceAndVehicles.cs" />
+    <Compile Include="Migrations\202012101346119_RemovedDataAnnotationsForServiceAndVehicles.designer.cs">
+      <DependentUpon>202012101346119_RemovedDataAnnotationsForServiceAndVehicles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Dtos\ServiceDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -339,6 +347,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012071538430_AddedDataAnnotationsToPlateNumberColumnInTransaction.resx">
       <DependentUpon>202012071538430_AddedDataAnnotationsToPlateNumberColumnInTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012101341097_AddedDataAnnotationsForServiceAndVehicles.resx">
+      <DependentUpon>202012101341097_AddedDataAnnotationsForServiceAndVehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012101346119_RemovedDataAnnotationsForServiceAndVehicles.resx">
+      <DependentUpon>202012101346119_RemovedDataAnnotationsForServiceAndVehicles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

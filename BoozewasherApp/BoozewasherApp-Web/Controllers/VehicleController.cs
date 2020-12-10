@@ -54,7 +54,6 @@ namespace BoozewasherApp_Web.Controllers
             {
                 return View("VehicleForm");
             }
-
             if (vehicle.Id == 0)
                 _context.Vehicles.Add(vehicle);
             else

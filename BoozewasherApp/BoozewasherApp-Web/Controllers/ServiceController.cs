@@ -53,7 +53,7 @@ namespace BoozewasherApp_Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View("ServiceForm");
+                return View("VehicleForm");
             }
 
             if (service.Id == 0)

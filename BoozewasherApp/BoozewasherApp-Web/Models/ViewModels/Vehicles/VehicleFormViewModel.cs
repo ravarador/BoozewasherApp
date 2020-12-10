@@ -11,15 +11,13 @@ namespace BoozewasherApp_Web.Models.ViewModels.Vehicles
     {
         public int Id { get; set; }
 
-        [Required]
+      
         [Display(Name = "Vehicle Type")]
         public string Type { get; set; }
         public string Description { get; set; }
-
-        [Required]
+        
         public string Brand { get; set; }
-
-        [Required]
+        
         public string Model { get; set; }
 
         public string Title

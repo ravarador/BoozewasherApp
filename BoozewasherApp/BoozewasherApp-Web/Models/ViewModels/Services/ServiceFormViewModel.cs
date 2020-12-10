@@ -11,7 +11,7 @@ namespace BoozewasherApp_Web.Models.ViewModels.Services
     {
         public int Id { get; set; }
 
-        [Required]
+       
         [Display(Name = "Service Type")]
         public string Type { get; set; }
         public string Description { get; set; }

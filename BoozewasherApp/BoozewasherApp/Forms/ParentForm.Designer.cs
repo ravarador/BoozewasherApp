@@ -41,6 +41,7 @@
             this.deleteTransactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.summaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generateChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +69,7 @@
             // updateServiceToolStripMenuItem
             // 
             this.updateServiceToolStripMenuItem.Name = "updateServiceToolStripMenuItem";
-            this.updateServiceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateServiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.updateServiceToolStripMenuItem.Text = "Update Service";
             this.updateServiceToolStripMenuItem.Click += new System.EventHandler(this.updateServiceToolStripMenuItem_Click);
             // 
@@ -137,7 +138,8 @@
             // summaryToolStripMenuItem
             // 
             this.summaryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generateReportToolStripMenuItem});
+            this.generateReportToolStripMenuItem,
+            this.generateChartToolStripMenuItem});
             this.summaryToolStripMenuItem.Name = "summaryToolStripMenuItem";
             this.summaryToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.summaryToolStripMenuItem.Text = "Summary";
@@ -145,9 +147,16 @@
             // generateReportToolStripMenuItem
             // 
             this.generateReportToolStripMenuItem.Name = "generateReportToolStripMenuItem";
-            this.generateReportToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.generateReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.generateReportToolStripMenuItem.Text = "Generate Report";
             this.generateReportToolStripMenuItem.Click += new System.EventHandler(this.generateReportToolStripMenuItem_Click);
+            // 
+            // generateChartToolStripMenuItem
+            // 
+            this.generateChartToolStripMenuItem.Name = "generateChartToolStripMenuItem";
+            this.generateChartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.generateChartToolStripMenuItem.Text = "Generate Chart";
+            this.generateChartToolStripMenuItem.Click += new System.EventHandler(this.generateChartToolStripMenuItem_Click);
             // 
             // ParentForm
             // 
@@ -184,6 +193,7 @@
         private System.Windows.Forms.ToolStripMenuItem deleteVehicleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem summaryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generateReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem generateChartToolStripMenuItem;
     }
 }
 

@@ -44,7 +44,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         {
             var transaction = new Transaction()
             {
-                DateTime = datepickerDateTime.Value,
+                DateTime = DateTime.Now,
                 ServiceId = int.Parse(comboServiceType.SelectedItem.ToString()),
                 VehicleId = int.Parse(comboVehicleType.SelectedItem.ToString()),
                 PlateNumber = txtboxPlateNumber.Text,

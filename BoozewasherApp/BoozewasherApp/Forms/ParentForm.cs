@@ -115,5 +115,13 @@ namespace BoozewasherApp
             summaryReportSelector.Show();
             summaryReportSelector.MdiParent = this;
         }
+
+        private void generateChartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SummaryChart summaryChartReportSelector = new SummaryChart(TransactionRepository);
+
+            summaryChartReportSelector.Show();
+            summaryChartReportSelector.MdiParent = this;
+        }
     }
 }

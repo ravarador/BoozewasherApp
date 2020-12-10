@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BoozewasherApp.IRepositories;
+using BoozewasherApp.Models.Dtos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,12 @@ namespace BoozewasherApp.Forms.SummaryForms
 {
     public partial class SummaryChart : Form
     {
-        public SummaryChart()
+        private ITransactionRepository TransactionRepository { get; set; }
+        private List<SummaryDto> SummaryList { get; set; }
+        public SummaryChart(ITransactionRepository transactionRepository)
         {
             InitializeComponent();
+            TransactionRepository = transactionRepository;
         }
 
         private void radSelectDate_Click(object sender, EventArgs e)
@@ -29,6 +34,51 @@ namespace BoozewasherApp.Forms.SummaryForms
                 grpboxDate.Enabled = false;
                 grpboxDateRange.Enabled = true;
             }
+        }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            SummaryDateAndDateRangeDto dateAndDateRangeDto = new SummaryDateAndDateRangeDto();
+
+            if (radSelectDate.Checked)
+            {
+                dateAndDateRangeDto.DateTime = datePickerSelectDate.Value.Date;
+
+                SummaryList = TransactionRepository.GetTransactionsByDate(dateAndDateRangeDto)
+                                                      .Select(a => new SummaryDto
+                                                      {
+                                                          Id = a.Id,
+                                                          DateTime = a.DateTime,
+                                                          PlateNumber = a.PlateNumber,
+                                                          ServiceType = a.Service.Type,
+                                                          Expense = a.Service.Expense.Value,
+                                                          VehicleType = a.Vehicle.Type,
+                                                          Brand = a.Vehicle.Brand,
+                                                          Model = a.Vehicle.Model,
+                                                          Cost = a.Cost
+                                                      }).ToList();
+            }
+            else
+            {
+                dateAndDateRangeDto.DateTimeFrom = datePickerDateFromRange.Value.Date;
+                dateAndDateRangeDto.DateTimeTo = datePickerDateToRange.Value.Date;
+
+                SummaryList = TransactionRepository.GetTransactionsByDateRange(dateAndDateRangeDto)
+                                                      .Select(a => new SummaryDto
+                                                      {
+                                                          Id = a.Id,
+                                                          DateTime = a.DateTime,
+                                                          PlateNumber = a.PlateNumber,
+                                                          ServiceType = a.Service.Type,
+                                                          Expense = a.Service.Expense.Value,
+                                                          VehicleType = a.Vehicle.Type,
+                                                          Brand = a.Vehicle.Brand,
+                                                          Model = a.Vehicle.Model,
+                                                          Cost = a.Cost
+                                                      }).ToList();
+            }
+
+            
         }
     }
 }

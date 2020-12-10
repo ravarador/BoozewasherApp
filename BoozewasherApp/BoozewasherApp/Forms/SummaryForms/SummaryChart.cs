@@ -1,6 +1,7 @@
 ﻿using BoozewasherApp.Enums;
 using BoozewasherApp.IRepositories;
 using BoozewasherApp.Models.Dtos;
+using ScottPlot;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,7 +42,15 @@ namespace BoozewasherApp.Forms.SummaryForms
         {
             LoadData();
             DataComputations();
-            
+
+            if (SummaryList.Any())
+            {
+                DrawGraph();
+            }
+            else
+            {
+                MessageBox.Show("No transaction/s at selected date/s");
+            }
         }
 
         private void LoadData()
@@ -139,6 +148,35 @@ namespace BoozewasherApp.Forms.SummaryForms
 
             SummaryList.ForEach(a => a.GrossProfit = grossProfit);
             SummaryList.ForEach(a => a.NetProfit = netProfit);
+        }
+
+        private void DrawGraph()
+        {
+            if (radSelectDate.Checked)
+            {
+                //SummaryList = SummaryList.Select(e => e.DateTime).Distinct().ToList();
+                var plt = new ScottPlot.Plot(600, 400);
+
+                // generate random data to plot
+                string[] groupNames = SummaryList.Select(a => a.DateTime.ToString("HH:mm")).ToArray();
+                string[] seriesNames = { ServiceTypeConstants.Carwash, ServiceTypeConstants.BackToZero, ServiceTypeConstants.Detailing, ServiceTypeConstants.PaintJob };
+                int groupCount = groupNames.Length;
+
+                double[] ys1 = SummaryList.Select(a => decimal.ToDouble(a.CarwashTotalCost)).ToArray();
+                double[] ys2 = SummaryList.Select(a => decimal.ToDouble(a.BackToZeroTotalCost)).ToArray();
+                double[] ys3 = SummaryList.Select(a => decimal.ToDouble(a.DetailingTotalCost)).ToArray();
+                double[] ys4 = SummaryList.Select(a => decimal.ToDouble(a.PaintjobTotalCost)).ToArray();
+
+                formsPlot1.plt.PlotBarGroups(
+                    groupLabels: groupNames,
+                    seriesLabels: seriesNames,
+                    ys: new double[][] { ys1, ys2, ys3, ys4 });
+
+                // customize the plot to make it look nicer
+                formsPlot1.plt.Grid(enableVertical: false, lineStyle: LineStyle.Dot);
+                formsPlot1.plt.Legend(location: legendLocation.upperRight);
+                formsPlot1.Render();
+            }
         }
     }
 }

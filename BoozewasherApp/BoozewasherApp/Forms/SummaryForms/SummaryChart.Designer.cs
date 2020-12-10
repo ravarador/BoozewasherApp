@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.formsPlot1 = new ScottPlot.FormsPlot();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.grpboxDate = new System.Windows.Forms.GroupBox();
             this.datePickerSelectDate = new System.Windows.Forms.DateTimePicker();
             this.radSelectDateRange = new System.Windows.Forms.RadioButton();
@@ -44,7 +40,6 @@
             this.datePickerDateToRange = new System.Windows.Forms.DateTimePicker();
             this.datePickerDateFromRange = new System.Windows.Forms.DateTimePicker();
             this.btnGenerate = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
             this.grpboxDate.SuspendLayout();
             this.grpboxDateRange.SuspendLayout();
             this.SuspendLayout();
@@ -55,50 +50,6 @@
             this.formsPlot1.Name = "formsPlot1";
             this.formsPlot1.Size = new System.Drawing.Size(710, 502);
             this.formsPlot1.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 271);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(223, 98);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(58, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(90, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Gross Income";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(58, 42);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(71, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Expenses";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(58, 65);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(97, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Services Count";
-            this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // grpboxDate
             // 
@@ -189,7 +140,7 @@
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(160, 375);
+            this.btnGenerate.Location = new System.Drawing.Point(160, 283);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(75, 23);
             this.btnGenerate.TabIndex = 10;
@@ -207,12 +158,9 @@
             this.Controls.Add(this.radSelectDateRange);
             this.Controls.Add(this.radSelectDate);
             this.Controls.Add(this.grpboxDateRange);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.formsPlot1);
             this.Name = "SummaryChart";
             this.Text = "Summary Chart";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.grpboxDate.ResumeLayout(false);
             this.grpboxDateRange.ResumeLayout(false);
             this.grpboxDateRange.PerformLayout();
@@ -224,10 +172,6 @@
         #endregion
 
         private ScottPlot.FormsPlot formsPlot1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.GroupBox grpboxDate;
         private System.Windows.Forms.DateTimePicker datePickerSelectDate;
         private System.Windows.Forms.RadioButton radSelectDateRange;

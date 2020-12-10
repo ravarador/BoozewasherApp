@@ -61,10 +61,12 @@
             // 
             // datepickerDateTime
             // 
+            this.datepickerDateTime.Enabled = false;
             this.datepickerDateTime.Location = new System.Drawing.Point(169, 24);
             this.datepickerDateTime.Name = "datepickerDateTime";
             this.datepickerDateTime.Size = new System.Drawing.Size(200, 20);
             this.datepickerDateTime.TabIndex = 1;
+            this.datepickerDateTime.Value = new System.DateTime(2020, 12, 10, 11, 3, 52, 0);
             // 
             // label2
             // 

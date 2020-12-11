@@ -159,22 +159,40 @@ namespace BoozewasherApp.Forms.SummaryForms
 
                 // generate random data to plot
                 string[] groupNames = SummaryList.Select(a => a.DateTime.ToString("HH:mm")).ToArray();
-                string[] seriesNames = { ServiceTypeConstants.Carwash, ServiceTypeConstants.BackToZero, ServiceTypeConstants.Detailing, ServiceTypeConstants.PaintJob };
+                
                 int groupCount = groupNames.Length;
 
-                double[] ys1 = SummaryList.Select(a => decimal.ToDouble(a.CarwashTotalCost)).ToArray();
-                double[] ys2 = SummaryList.Select(a => decimal.ToDouble(a.BackToZeroTotalCost)).ToArray();
-                double[] ys3 = SummaryList.Select(a => decimal.ToDouble(a.DetailingTotalCost)).ToArray();
-                double[] ys4 = SummaryList.Select(a => decimal.ToDouble(a.PaintjobTotalCost)).ToArray();
+                var ys1 = SummaryList.Where(a => a.DateTime.Year == datePickerSelectDate.Value.Year &&
+                                                      a.DateTime.Month == datePickerSelectDate.Value.Month &&
+                                                      a.DateTime.Day == datePickerSelectDate.Value.Day)
+                                          .Select(a => decimal.ToDouble(a.CarwashTotalCost))
+                                          .FirstOrDefault();
 
-                formsPlot1.plt.PlotBarGroups(
-                    groupLabels: groupNames,
-                    seriesLabels: seriesNames,
-                    ys: new double[][] { ys1, ys2, ys3, ys4 });
+                var ys2 = SummaryList.Where(a => a.DateTime.Year == datePickerSelectDate.Value.Year &&
+                                                      a.DateTime.Month == datePickerSelectDate.Value.Month &&
+                                                      a.DateTime.Day == datePickerSelectDate.Value.Day)
+                                          .Select(a => decimal.ToDouble(a.BackToZeroTotalCost))
+                                          .FirstOrDefault();
 
-                // customize the plot to make it look nicer
-                formsPlot1.plt.Grid(enableVertical: false, lineStyle: LineStyle.Dot);
-                formsPlot1.plt.Legend(location: legendLocation.upperRight);
+                var ys3 = SummaryList.Where(a => a.DateTime.Year == datePickerSelectDate.Value.Year &&
+                                                      a.DateTime.Month == datePickerSelectDate.Value.Month &&
+                                                      a.DateTime.Day == datePickerSelectDate.Value.Day)
+                                          .Select(a => decimal.ToDouble(a.DetailingTotalCost))
+                                          .FirstOrDefault();
+
+                var ys4 = SummaryList.Where(a => a.DateTime.Year == datePickerSelectDate.Value.Year &&
+                                                      a.DateTime.Month == datePickerSelectDate.Value.Month &&
+                                                      a.DateTime.Day == datePickerSelectDate.Value.Day)
+                                          .Select(a => decimal.ToDouble(a.PaintjobTotalCost))
+                                          .FirstOrDefault();
+
+                double[] values = { ys1, ys2, ys3, ys4 };
+                string[] seriesNames = { ServiceTypeConstants.Carwash, ServiceTypeConstants.BackToZero, ServiceTypeConstants.Detailing, ServiceTypeConstants.PaintJob };
+
+                formsPlot1.plt.PlotPie(values, seriesNames, showPercentages: true, showValues: true, showLabels: true);
+                formsPlot1.plt.Legend();
+
+
                 formsPlot1.Render();
             }
         }

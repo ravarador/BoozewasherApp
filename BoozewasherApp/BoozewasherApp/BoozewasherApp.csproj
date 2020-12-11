@@ -189,6 +189,7 @@
     <Compile Include="Forms\VehicleForms\VehicleLookupForm.Designer.cs">
       <DependentUpon>VehicleLookupForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\EncryptionHelper.cs" />
     <Compile Include="Helpers\ListExtensions.cs" />
     <Compile Include="IRepositories\IServiceRepository.cs" />
     <Compile Include="IRepositories\ITransactionRepository.cs" />

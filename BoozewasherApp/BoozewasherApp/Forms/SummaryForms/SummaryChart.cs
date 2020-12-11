@@ -157,6 +157,7 @@ namespace BoozewasherApp.Forms.SummaryForms
                 //SummaryList = SummaryList.Select(e => e.DateTime).Distinct().ToList();
                 var plt = new ScottPlot.Plot(600, 400);
 
+
                 // generate random data to plot
                 string[] groupNames = SummaryList.Select(a => a.DateTime.ToString("HH:mm")).ToArray();
                 
@@ -165,31 +166,27 @@ namespace BoozewasherApp.Forms.SummaryForms
                 var ys1 = SummaryList.Where(a => a.DateTime.Year == datePickerSelectDate.Value.Year &&
                                                       a.DateTime.Month == datePickerSelectDate.Value.Month &&
                                                       a.DateTime.Day == datePickerSelectDate.Value.Day)
-                                          .Select(a => decimal.ToDouble(a.CarwashTotalCost))
-                                          .FirstOrDefault();
+                                          .Select(a => decimal.ToDouble(a.CarwashTotalCost));
 
                 var ys2 = SummaryList.Where(a => a.DateTime.Year == datePickerSelectDate.Value.Year &&
                                                       a.DateTime.Month == datePickerSelectDate.Value.Month &&
                                                       a.DateTime.Day == datePickerSelectDate.Value.Day)
-                                          .Select(a => decimal.ToDouble(a.BackToZeroTotalCost))
-                                          .FirstOrDefault();
+                                          .Select(a => decimal.ToDouble(a.BackToZeroTotalCost));
 
                 var ys3 = SummaryList.Where(a => a.DateTime.Year == datePickerSelectDate.Value.Year &&
                                                       a.DateTime.Month == datePickerSelectDate.Value.Month &&
                                                       a.DateTime.Day == datePickerSelectDate.Value.Day)
-                                          .Select(a => decimal.ToDouble(a.DetailingTotalCost))
-                                          .FirstOrDefault();
+                                          .Select(a => decimal.ToDouble(a.DetailingTotalCost));
 
                 var ys4 = SummaryList.Where(a => a.DateTime.Year == datePickerSelectDate.Value.Year &&
                                                       a.DateTime.Month == datePickerSelectDate.Value.Month &&
                                                       a.DateTime.Day == datePickerSelectDate.Value.Day)
-                                          .Select(a => decimal.ToDouble(a.PaintjobTotalCost))
-                                          .FirstOrDefault();
+                                          .Select(a => decimal.ToDouble(a.PaintjobTotalCost));
 
-                double[] values = { ys1, ys2, ys3, ys4 };
+                double[] values = { ys1.FirstOrDefault(), ys2.FirstOrDefault(), ys3.FirstOrDefault(), ys4.FirstOrDefault() };
                 string[] seriesNames = { ServiceTypeConstants.Carwash, ServiceTypeConstants.BackToZero, ServiceTypeConstants.Detailing, ServiceTypeConstants.PaintJob };
 
-                formsPlot1.plt.PlotPie(values, seriesNames, showPercentages: true, showValues: true, showLabels: true);
+                formsPlot1.plt.PlotPie(values, seriesNames, showPercentages: true, showValues: true, showLabels: true, label: "Total Cost Pie Graph");
                 formsPlot1.plt.Legend();
 
 

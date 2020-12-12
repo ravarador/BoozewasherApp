@@ -11,7 +11,6 @@ namespace BoozewasherApp_Web.Interfaces
     {
         DbSet<Service> Services { get; set; }
         DbSet<Summary> Summaries { get; set; }
-        //test push
         DbSet<Transaction> Transactions { get; set; }
         DbSet<Vehicle> Vehicles { get; set; }
         int SaveChanges();

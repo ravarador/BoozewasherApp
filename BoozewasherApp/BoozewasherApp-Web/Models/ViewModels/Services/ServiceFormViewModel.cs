@@ -9,30 +9,19 @@ namespace BoozewasherApp_Web.Models.ViewModels.Services
 {
     public class ServiceFormViewModel
     {
-        public int Id { get; set; }
-
-       
-        [Display(Name = "Service Type")]
-        public string Type { get; set; }
-        public string Description { get; set; }
-        public decimal? Expense { get; set; }
+        public Service Service { get; set; }
 
         public string Title
         {
             get
             {
-                return Id == 0 ? "New Service" : "Edit Service";
+                if (Service != null && Service.Id != 0)
+                    return "Edit Service";
+
+                return "New Service";
             }
         }
-        public ServiceFormViewModel()
-        {
-            Id = 0;
-        }
-        public ServiceFormViewModel(Service service)
-        {
-            Type = service.Type;
-            Description = service.Description;
-            Expense = service.Expense;
-        }
+       
+        
     }
 }

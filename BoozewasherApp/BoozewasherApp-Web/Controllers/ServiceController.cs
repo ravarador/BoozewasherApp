@@ -39,9 +39,9 @@ namespace BoozewasherApp_Web.Controllers
             if (service == null)
                 return HttpNotFound();
 
-            var viewModel = new ServiceFormViewModel(service)
+            var viewModel = new ServiceFormViewModel()
             {
-               
+               Service = service
             };
 
             return View("ServiceForm", viewModel);

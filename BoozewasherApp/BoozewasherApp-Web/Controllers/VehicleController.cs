@@ -30,7 +30,10 @@ namespace BoozewasherApp_Web.Controllers
 
         public ActionResult New()
         {
-           
+            var viewModel = new VehicleFormViewModel()
+            {
+                Vehicle = new Vehicle()
+            };
             return View("VehicleForm", viewModel);
         }
 

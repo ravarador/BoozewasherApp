@@ -29,6 +29,10 @@ namespace BoozewasherApp_Web.Controllers
 
         public ActionResult New()
         {
+            var viewModel = new ServiceFormViewModel
+            {
+                Service = new Service()
+            };
             return View ("ServiceForm");
         }
 

@@ -11,14 +11,12 @@ namespace BoozewasherApp_Web.Models.ViewModels.Services
     {
         public Service Service { get; set; }
 
+        
         public string Title
         {
             get
             {
-                if (Service != null && Service.Id != 0)
-                    return "Edit Service";
-
-                return "New Service";
+                return Service.Id != 0 ? "Edit Service" : "New Service";
             }
         }
        

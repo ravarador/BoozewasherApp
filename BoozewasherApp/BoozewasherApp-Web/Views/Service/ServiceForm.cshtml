@@ -1,32 +1,32 @@
 ﻿@model BoozewasherApp_Web.Models.ViewModels.Services.ServiceFormViewModel
 @{
-    ViewBag.Title = "ServiceForm";
+    ViewBag.Title = Model.Title;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>ServiceForm</h2>
+<p></p>
+<h2>@Model.Title</h2>
 @using (Html.BeginForm("Save", "Service"))
 {
     @Html.ValidationSummary(true, "Please fill up requirements");
     <div class="form-group">
-        @Html.LabelFor(s => s.Type)
-        @Html.TextBoxFor(s => s.Type, new { @class = "form-control" })
-        @Html.ValidationMessageFor(s => s.Type)
+        @Html.LabelFor(s => s.Service.Type)
+        @Html.TextBoxFor(s => s.Service.Type, new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.Service.Type)
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(s => s.Description)
-        @Html.TextBoxFor(s => s.Description, new { @class = "form-control" })
-        @Html.ValidationMessageFor(s => s.Description)
+        @Html.LabelFor(s => s.Service.Description)
+        @Html.TextBoxFor(s => s.Service.Description, new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.Service.Description)
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(s => s.Expense)
-        @Html.TextBoxFor(s => s.Expense, new { @class = "form-control" })
-        @Html.ValidationMessageFor(s => s.Expense)
+        @Html.LabelFor(s => s.Service.Expense)
+        @Html.TextBoxFor(s => s.Service.Expense, new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.Service.Expense)
     </div>
     <p></p>
-    @Html.HiddenFor(s => s.Id)
+    @Html.HiddenFor(s => s.Service.Id)
     @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary"> Save </button>
 }

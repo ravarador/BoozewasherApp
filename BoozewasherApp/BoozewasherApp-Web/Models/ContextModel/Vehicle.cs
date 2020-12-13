@@ -10,13 +10,20 @@ namespace BoozewasherApp_Web.Models.ContextModel
     {
         public int Id { get; set; }
 
+        [Display(Name = "Vehicle Type")]
         [Required]
+        [StringLength(255)]
         public string Type { get; set; }
-        
+
         public string Description { get; set; }
+
+        [Display(Name = "Vehicle Brand")]
         [Required]
         public string Brand { get; set; }
+
         [Required]
+        [Display(Name = "Vehicle Model")]
         public string Model { get; set; }
+
     }
 }

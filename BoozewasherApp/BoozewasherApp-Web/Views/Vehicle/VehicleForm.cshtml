@@ -4,38 +4,38 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>VehicleForm</h2>
+<h2>Vehicle</h2>
 <p></p>
 @using (Html.BeginForm("Save", "Vehicle"))
 {
     @Html.ValidationSummary(true, "Please fill up requirements");
 
     <div class="form-group">
-        @Html.LabelFor(v => v.Type)
-        @Html.TextBoxFor(v => v.Type, new { @class = "form-control" })
-        @Html.ValidationMessageFor(v => v.Type)
+        @Html.LabelFor(v => v.Vehicle.Type)
+        @Html.TextBoxFor(v => v.Vehicle.Type, new { @class = "form-control" })
+        @Html.ValidationMessageFor(v => v.Vehicle.Type)
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(v => v.Description)
-        @Html.TextBoxFor(v => v.Description, new { @class = "form-control" })
-        @Html.ValidationMessageFor(v => v.Description)
+        @Html.LabelFor(v => v.Vehicle.Description)
+        @Html.TextBoxFor(v => v.Vehicle.Description, new { @class = "form-control" })
+        @Html.ValidationMessageFor(v => v.Vehicle.Description)
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(v => v.Brand)
-        @Html.TextBoxFor(v => v.Brand, new { @class = "form-control" })
-        @Html.ValidationMessageFor(v => v.Brand)
+        @Html.LabelFor(v => v.Vehicle.Brand)
+        @Html.TextBoxFor(v => v.Vehicle.Brand, new { @class = "form-control" })
+        @Html.ValidationMessageFor(v => v.Vehicle.Brand)
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(v => v.Model)
-        @Html.TextBoxFor(v => v.Model, new { @class = "form-control" })
-        @Html.ValidationMessageFor(v => v.Model)
+        @Html.LabelFor(v => v.Vehicle.Model)
+        @Html.TextBoxFor(v => v.Vehicle.Model, new { @class = "form-control" })
+        @Html.ValidationMessageFor(v => v.Vehicle.Model)
     </div>
 
     <p></p>
-    @Html.HiddenFor(v => v.Id)
+    @Html.HiddenFor(v => v.Vehicle.Id)
     @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary"> Save </button>
 

@@ -29,6 +29,10 @@ namespace BoozewasherApp_Web.Controllers
 
         public ActionResult New()
         {
+            var viewModel = new ServiceFormViewModel
+            {
+                Service = new Service()
+            };
             return View ("ServiceForm");
         }
 
@@ -39,9 +43,9 @@ namespace BoozewasherApp_Web.Controllers
             if (service == null)
                 return HttpNotFound();
 
-            var viewModel = new ServiceFormViewModel(service)
+            var viewModel = new ServiceFormViewModel()
             {
-               
+               Service = service
             };
 
             return View("ServiceForm", viewModel);
@@ -51,9 +55,9 @@ namespace BoozewasherApp_Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Save(Service service)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return View("VehicleForm");
+                return View("ServiceForm");
             }
 
             if (service.Id == 0)

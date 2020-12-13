@@ -30,6 +30,10 @@ namespace BoozewasherApp_Web.Controllers
 
         public ActionResult New()
         {
+            var viewModel = new VehicleFormViewModel()
+            {
+                Vehicle = new Vehicle()
+            };
             return View("VehicleForm");
         }
 
@@ -39,9 +43,10 @@ namespace BoozewasherApp_Web.Controllers
 
             if (vehicle == null)
                 return HttpNotFound();
-            var viewModel = new VehicleFormViewModel(vehicle)
-            {
 
+            var viewModel = new VehicleFormViewModel()
+            {
+                Vehicle = vehicle
             };
             return View("VehicleForm", viewModel);
         }
@@ -52,7 +57,12 @@ namespace BoozewasherApp_Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View("VehicleForm");
+                var viewModel = new VehicleFormViewModel
+                {
+                    Vehicle = new Vehicle()
+                };
+
+                return View("VehicleForm", viewModel);
             }
             if (vehicle.Id == 0)
                 _context.Vehicles.Add(vehicle);

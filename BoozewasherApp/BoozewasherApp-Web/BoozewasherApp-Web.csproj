@@ -192,6 +192,10 @@
     <Compile Include="Controllers\TransactionController.cs" />
     <Compile Include="Controllers\VehicleController.cs" />
     <Compile Include="Interfaces\IDatabaseContext.cs" />
+    <Compile Include="Migrations\202012140138095_AddedDataAnnotationsToServicesTransactionsVehiclesModel.cs" />
+    <Compile Include="Migrations\202012140138095_AddedDataAnnotationsToServicesTransactionsVehiclesModel.designer.cs">
+      <DependentUpon>202012140138095_AddedDataAnnotationsToServicesTransactionsVehiclesModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Dtos\ServiceDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -318,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012030144593_SeedServicesTable.resx">
       <DependentUpon>202012030144593_SeedServicesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012140138095_AddedDataAnnotationsToServicesTransactionsVehiclesModel.resx">
+      <DependentUpon>202012140138095_AddedDataAnnotationsToServicesTransactionsVehiclesModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

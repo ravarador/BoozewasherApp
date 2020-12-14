@@ -12,7 +12,7 @@ namespace BoozewasherApp.Helpers
     {
         private static string ToReturn = "";
         private static readonly string publickey = "pd2@3sox";
-        private static readonly string secretkey = "c0d3_b!z";
+        private static readonly string secretkey = "zSc!#2s0";
         public static string Encrypt(string textToEncrypt)
         {
             try

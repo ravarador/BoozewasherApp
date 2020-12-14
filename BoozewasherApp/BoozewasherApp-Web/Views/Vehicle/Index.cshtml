@@ -12,14 +12,14 @@
     <p>No vehicles available.</p>
 }
 <p></p>
-<table class="table table-bordered table-hover">
+<table id="vehicles" class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th>Type</th>
-            <th>Description</th>
-            <th>Brand</th>
-            <th>Model</th>
-            <th>Delete</th>
+            <th class="text-center">Type</th>
+            <th class="text-center">Description</th>
+            <th class="text-center">Brand</th>
+            <th class="text-center">Model</th>
+            <th class="text-center">Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -30,8 +30,29 @@
                 <td>@vehicles.Description</td>
                 <td>@vehicles.Brand</td>
                 <td>@vehicles.Model</td>
-                <td>@Html.ActionLink("Delete", "Delete", "Vehicle", new { id = vehicles.Id }, null)</td>
+                <td align="center"><button data-vehicle-id="@vehicles.Id" class="btn btn-outline-primary js-delete"> Delete </button></td>
             </tr>
         }
     </tbody>
 </table>
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#vehicles .js-delete").click(function () { var button = this
+
+                bootbox.confirm("Would you like to delete this vehicle?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "API/Vehicles/DeleteVehicle/" + button.attr("data-vehicle-id"),
+                            method: "DELETE",
+                            success: function () {
+                                button.parents("tr").remove();
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+}

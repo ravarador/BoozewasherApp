@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoozewasherApp-Web", "..\BoozewasherApp\BoozewasherApp-Web\BoozewasherApp-Web.csproj", "{0E957DFE-1744-443A-819E-6C34F144CD07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoozewasherAPI", "..\BoozewasherApp\BoozewasherApp-Web\BoozewasherAPI.csproj", "{0E957DFE-1744-443A-819E-6C34F144CD07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

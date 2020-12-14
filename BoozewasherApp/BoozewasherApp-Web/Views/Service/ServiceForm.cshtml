@@ -1,10 +1,10 @@
 ﻿@model BoozewasherApp_Web.Models.ViewModels.Services.ServiceFormViewModel
 @{
-    ViewBag.Title = Model.Title;
+    ViewBag.Title = "ServiceForm";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <p></p>
-<h2>@Model.Title</h2>
+<h2>Service Form</h2>
 @using (Html.BeginForm("Save", "Service"))
 {
     @Html.ValidationSummary(true, "Please fill up requirements");

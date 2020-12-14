@@ -12,13 +12,13 @@
     <p>No services available.</p>
 }
 <p></p>
-<table class="table table-bordered table-hover">
+<table id="services" class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th>Service Type</th>
-            <th>Description</th>
-            <th>Expense</th>
-            <th>Delete</th>
+            <th class="text-center">Service Type</th>
+            <th class="text-center">Description</th>
+            <th class="text-center">Expense</th>
+            <th class="text-center">Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -28,8 +28,29 @@
                 <td>@Html.ActionLink(services.Type, "Edit", "Service", new { id = services.Id }, null)</td>
                 <td>@services.Description</td>
                 <td>@services.Expense</td>
-                <td>@Html.ActionLink("Delete", "Delete", "Service", new { id = services.Id }, null)</td>
+                <td align="center"><button data-service-id="@services.Id" class="btn btn-outline-primary js-delete"> Delete </button></td>
             </tr>
         }
     </tbody>
 </table>
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#services .js-delete").click(function () { var button = this 
+              
+                bootbox.confirm("Would you like to delete this service?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "API/Services/DeleteService/" + button.attr("data-service-id"),
+                            method: "DELETE",
+                            success: function () {
+                                button.parents("tr").remove();
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+}

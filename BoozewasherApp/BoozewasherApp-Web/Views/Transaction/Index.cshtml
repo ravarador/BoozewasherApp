@@ -12,17 +12,17 @@
     <p>No transactions available.</p>
 }
 <p></p>
-<table class="table table-bordered table-hover">
+<table id="transactions" class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th>Vehicle Type</th>
-            <th>Vehicle Brand</th>
-            <th>Vehicle Model</th>
-            <th>Service</th>
-            <th>Plate Number</th>
-            <th>Cost</th>
-            <th>Date and Time</th>
-            <th>Delete</th>
+            <th class="text-center">Vehicle Type</th>
+            <th class="text-center">Vehicle Brand</th>
+            <th class="text-center">Vehicle Model</th>
+            <th class="text-center">Service</th>
+            <th class="text-center">Plate Number</th>
+            <th class="text-center">Cost</th>
+            <th class="text-center">Date and Time</th>
+            <th class="text-center">Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -36,8 +36,29 @@
                 <td>@Html.ActionLink(transaction.PlateNumber, "Edit", "Transaction", new { id = transaction.Id }, null)</td>
                 <td>@transaction.Cost</td>
                 <td>@transaction.DateTime</td>
-                <td>@Html.ActionLink("Delete", "Delete", "Transaction", new { id = transaction.Id }, null)</td>
+                <td align="center"> <button data-transaction-id="@transaction.Id" class="btn btn-outline-primary js-delete"> Delete </button></td>
             </tr>
         }
     </tbody>
 </table>
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#transactions .js-delete").click(function () { var button = this
+
+                bootbox.confirm("Would you like to delete this transactions?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "API/Transactions/DeleteTransaction/" + button.attr("data-transaction-id"),
+                            method: "DELETE",
+                            success: function () {
+                                button.parents("tr").remove();
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+}

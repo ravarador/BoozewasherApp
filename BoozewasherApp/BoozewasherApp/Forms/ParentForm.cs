@@ -2,7 +2,7 @@
 using BoozewasherApp.Forms.SummaryForms;
 using BoozewasherApp.Forms.TransactionForms;
 using BoozewasherApp.Forms.VehicleForms;
-using BoozewasherApp.IRepositories;
+using BoozewasherDomain.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

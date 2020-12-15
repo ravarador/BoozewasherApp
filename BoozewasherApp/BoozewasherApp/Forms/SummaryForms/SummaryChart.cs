@@ -1,6 +1,7 @@
-﻿using BoozewasherApp.Enums;
-using BoozewasherApp.IRepositories;
-using BoozewasherApp.Models.Dtos;
+﻿
+using BoozewasherDomain.Dtos;
+using BoozewasherDomain.Enums;
+using BoozewasherDomain.IRepositories;
 using ScottPlot;
 using System;
 using System.Collections.Generic;

@@ -1,8 +1,8 @@
 ﻿
-using BoozewasherApp.Enums;
 using BoozewasherApp.Helpers;
-using BoozewasherApp.Models.Dtos;
 using BoozewasherApp.Reports;
+using BoozewasherDomain.Dtos;
+using BoozewasherDomain.Enums;
 using CrystalDecisions.Windows.Forms;
 using System;
 using System.Collections.Generic;

@@ -1,5 +1,6 @@
-﻿using BoozewasherApp.IRepositories;
-using BoozewasherApp.Repositories;
+﻿
+using BoozewasherDomain.IRepositories;
+using BoozewasherInfrastructure.Repositories;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
 using System;

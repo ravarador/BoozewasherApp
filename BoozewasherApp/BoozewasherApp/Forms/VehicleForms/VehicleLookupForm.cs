@@ -1,5 +1,4 @@
 ﻿using BoozewasherApp.IRepositories;
-using BoozewasherApp.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

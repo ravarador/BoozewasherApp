@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D7C46104-0A4B-4E5A-A224-44F8F4B794F2}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>BoozewasherDomain</RootNamespace>
     <AssemblyName>BoozewasherDomain</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -32,8 +32,25 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Service.cs" />
+    <Compile Include="Entities\Summary.cs" />
+    <Compile Include="Entities\Transaction.cs" />
+    <Compile Include="Entities\Vehicle.cs" />
+    <Compile Include="Dtos\SummaryDateAndDateRangeDto.cs" />
+    <Compile Include="Dtos\SummaryDto.cs" />
+    <Compile Include="Dtos\TransactionDto.cs" />
+    <Compile Include="Enums\ServiceTypeConstants.cs" />
+    <Compile Include="Enums\TaxConstants.cs" />
+    <Compile Include="IRepositories\IServiceRepository.cs" />
+    <Compile Include="IRepositories\ITransactionRepository.cs" />
+    <Compile Include="IRepositories\IVehicleRepository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

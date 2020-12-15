@@ -97,8 +97,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SummaryDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Enums\ServiceTypeConstants.cs" />
-    <Compile Include="Enums\TaxConstants.cs" />
     <Compile Include="Forms\ParentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,16 +189,6 @@
     </Compile>
     <Compile Include="Helpers\EncryptionHelper.cs" />
     <Compile Include="Helpers\ListExtensions.cs" />
-    <Compile Include="IRepositories\IServiceRepository.cs" />
-    <Compile Include="IRepositories\ITransactionRepository.cs" />
-    <Compile Include="IRepositories\IVehicleRepository.cs" />
-    <Compile Include="Models\ContextModels\Service.cs" />
-    <Compile Include="Models\ContextModels\Summary.cs" />
-    <Compile Include="Models\ContextModels\Transaction.cs" />
-    <Compile Include="Models\ContextModels\Vehicle.cs" />
-    <Compile Include="Models\Dtos\SummaryDateAndDateRangeDto.cs" />
-    <Compile Include="Models\Dtos\SummaryDto.cs" />
-    <Compile Include="Models\Dtos\TransactionDto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\SummaryReport.cs">
@@ -209,9 +197,6 @@
       <DependentUpon>SummaryReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Repositories\ServiceRepository.cs" />
-    <Compile Include="Repositories\TransactionRepository.cs" />
-    <Compile Include="Repositories\VehicleRepository.cs" />
     <Compile Include="Settings.cs" />
     <EmbeddedResource Include="Forms\ParentForm.resx">
       <DependentUpon>ParentForm.cs</DependentUpon>
@@ -301,8 +286,17 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Context\" />
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BoozewasherDomain\BoozewasherDomain.csproj">
+      <Project>{D7C46104-0A4B-4E5A-A224-44F8F4B794F2}</Project>
+      <Name>BoozewasherDomain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BoozewasherInfrastructure\BoozewasherInfrastructure.csproj">
+      <Project>{DF72938F-6140-416E-87BA-95C191EE866D}</Project>
+      <Name>BoozewasherInfrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

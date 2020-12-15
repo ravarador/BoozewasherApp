@@ -1,7 +1,7 @@
 ﻿using BoozewasherApp.IRepositories;
 using BoozewasherApp.Models.ContextModels;
 using BoozewasherApp.Models.Dtos;
-using BoozewasherApp.Properties;
+using BoozewasherInfrastructure.Properties;
 using Newtonsoft.Json;
 using RestSharp;
 using System;

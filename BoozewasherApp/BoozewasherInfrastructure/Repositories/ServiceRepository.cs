@@ -1,6 +1,6 @@
 ﻿using BoozewasherApp.IRepositories;
 using BoozewasherApp.Models.ContextModels;
-using BoozewasherApp.Properties;
+using BoozewasherInfrastructure.Properties;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
@@ -11,33 +11,33 @@ using System.Threading.Tasks;
 
 namespace BoozewasherApp.Repositories
 {
-    public class VehicleRepository : IVehicleRepository
+    public class ServiceRepository : IServiceRepository
     {
-        public void AddVehicle(Vehicle vehicle)
+        public void AddService(Service service)
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/vehicles/createvehicle/", Method.POST);
-            request.AddJsonBody(vehicle);
+            var request = new RestRequest("/api/services/createservice/", Method.POST);
+            request.AddJsonBody(service);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);
         }
 
-        public void DeleteVehicle(int id)
+        public void DeleteService(int id)
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/vehicles/deletevehicle/" + id, Method.DELETE);
+            var request = new RestRequest("/api/services/deleteservice/" + id, Method.DELETE);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);
         }
 
-        public List<Vehicle> GetAllVehicles()
+        public List<Service> GetAllServices()
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/vehicles/getvehicles/", Method.GET);
+            var request = new RestRequest("/api/services/getservices/", Method.GET);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);
 
-            var dataList = JsonConvert.DeserializeObject<List<Vehicle>>(response.Content);
+            var dataList = JsonConvert.DeserializeObject<List<Service>>(response.Content);
 
             return dataList;
         }
@@ -49,12 +49,12 @@ namespace BoozewasherApp.Repositories
         //    return serviceById;
         //}
 
-        public void UpdateVehicle(Vehicle vehicle)
+        public void UpdateService(Service service)
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/vehicles/updatevehicle/" + vehicle.Id, Method.PUT);
+            var request = new RestRequest("/api/services/updateservice/" + service.Id, Method.PUT);
             request.RequestFormat = DataFormat.Json;
-            request.AddJsonBody(vehicle);
+            request.AddJsonBody(service);
             var response = client.Execute(request);
 
         }

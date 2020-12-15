@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BoozewasherApp.Enums
+namespace BoozewasherDomain.Enums
 {
     public static class TaxConstants
     {

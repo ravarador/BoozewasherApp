@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BoozewasherApp.Models.Dtos
+namespace BoozewasherDomain.Dtos
 {
     public class SummaryDateAndDateRangeDto
     {

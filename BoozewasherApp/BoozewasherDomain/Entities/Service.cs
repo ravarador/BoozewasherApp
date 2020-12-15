@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BoozewasherApp.Models.ContextModels
+namespace BoozewasherDomain.Entities
 {
     public class Service
     {

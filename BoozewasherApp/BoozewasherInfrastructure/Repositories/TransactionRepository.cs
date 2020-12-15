@@ -1,6 +1,7 @@
-﻿using BoozewasherApp.IRepositories;
-using BoozewasherApp.Models.ContextModels;
-using BoozewasherApp.Models.Dtos;
+﻿
+using BoozewasherDomain.Dtos;
+using BoozewasherDomain.Entities;
+using BoozewasherDomain.IRepositories;
 using BoozewasherInfrastructure.Properties;
 using Newtonsoft.Json;
 using RestSharp;
@@ -10,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BoozewasherApp.Repositories
+namespace BoozewasherInfrastructure.Repositories
 {
     public class TransactionRepository : ITransactionRepository
     {

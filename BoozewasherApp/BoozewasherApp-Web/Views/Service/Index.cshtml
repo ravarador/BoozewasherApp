@@ -15,9 +15,9 @@
 <table id="services" class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th class="text-center">Service Type</th>
-            <th class="text-center">Description</th>
-            <th class="text-center">Expense</th>
+            <th>Service Type</th>
+            <th>Description</th>
+            <th>Expense</th>
             <th class="text-center">Delete</th>
         </tr>
     </thead>
@@ -37,8 +37,11 @@
 {
     <script>
         $(document).ready(function () {
-            $("#services .js-delete").click(function () { var button = this 
-              
+            $("#services").DataTable
+
+            $("#services").on("click", ".js-delete", function () {
+                var button = $(this);
+
                 bootbox.confirm("Would you like to delete this service?", function (result) {
                     if (result) {
                         $.ajax({

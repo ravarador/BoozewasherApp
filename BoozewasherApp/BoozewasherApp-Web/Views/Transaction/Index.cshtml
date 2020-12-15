@@ -15,13 +15,13 @@
 <table id="transactions" class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th class="text-center">Vehicle Type</th>
-            <th class="text-center">Vehicle Brand</th>
-            <th class="text-center">Vehicle Model</th>
-            <th class="text-center">Service</th>
-            <th class="text-center">Plate Number</th>
-            <th class="text-center">Cost</th>
-            <th class="text-center">Date and Time</th>
+            <th>Vehicle Type</th>
+            <th>Vehicle Brand</th>
+            <th>Vehicle Model</th>
+            <th>Service</th>
+            <th>Plate Number</th>
+            <th>Cost</th>
+            <th>Date and Time</th>
             <th class="text-center">Delete</th>
         </tr>
     </thead>
@@ -45,7 +45,10 @@
 {
     <script>
         $(document).ready(function () {
-            $("#transactions .js-delete").click(function () { var button = this
+            $("#transactions").DataTable();
+
+            $("#transactions").on("click", ".js-delete", function () {
+                var button = $(this);
 
                 bootbox.confirm("Would you like to delete this transactions?", function (result) {
                     if (result) {

@@ -11,15 +11,5 @@ namespace BoozewasherApp_Web.Models.ViewModels.Services
     {
         public Service Service { get; set; }
 
-        
-        public string Title
-        {
-            get
-            {
-                return Service.Id != 0 ? "Edit Service" : "New Service";
-            }
-        }
-       
-        
     }
 }

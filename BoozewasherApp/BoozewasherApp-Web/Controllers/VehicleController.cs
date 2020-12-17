@@ -24,8 +24,11 @@ namespace BoozewasherApp_Web.Controllers
         }
         public ActionResult Index()
         {
-            var vehicles = _context.Vehicles.ToList();
-            return View(vehicles);
+           
+
+           
+
+            return View("Index");
         }
 
         public ActionResult New()

@@ -7,10 +7,7 @@
 <h1>Vehicles</h1>
 <p></p>
 @Html.ActionLink("New Vehicle", "New", "Vehicle", new { @class = "btn btn-outline-primary" })
-@if (!Model.Any())
-{
-    <p>No vehicles available.</p>
-}
+
 <p></p>
 <table id="vehicles" class="table table-bordered table-hover">
     <thead>
@@ -23,23 +20,44 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var vehicles in Model)
-        {
-            <tr>
-                <td>@Html.ActionLink(vehicles.Type, "Edit", "Vehicle", new { id = vehicles.Id }, null)</td>
-                <td>@vehicles.Description</td>
-                <td>@vehicles.Brand</td>
-                <td>@vehicles.Model</td>
-                <td align="center"><button data-vehicle-id="@vehicles.Id" class="btn btn-outline-primary js-delete"> Delete </button></td>
-            </tr>
-        }
     </tbody>
 </table>
 @section scripts
 {
     <script>
         $(document).ready(function () {
-            $("#vehicles").DataTable();
+            $("#vehicles").DataTable({
+                ajax: {
+                    url: "API/Vehicles/GetVehicles",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "Type",
+                        render: function (data, type, Vehicle) {
+                            return "<a href='/Vehicle/Edit/" + Vehicle.Id + "'>" + Vehicle.Type + "</a>";
+                        }
+                    },
+                    {
+                        data: "Description"
+                    },
+                    {
+                        data: "Brand"
+                    },
+                    {
+                        data: "Model"
+                    },
+                    {
+                        data: "Id",
+                        render: function (data) {
+                            return "<button class=' btn btn-outline-primary js-delete' data-movie-id=" + data + ">Delete</button>";
+                        }
+                    }
+                ]
+            });
+
+            
+        });
 
             $("#vehicles").on("click", ".js-delete",function () {
                 var button = $(this);
@@ -56,6 +74,6 @@
                     }
                 });
             });
-        });
+       
     </script>
 }

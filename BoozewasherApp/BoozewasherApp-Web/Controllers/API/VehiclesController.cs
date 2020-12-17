@@ -21,9 +21,12 @@ namespace BoozewasherApp_Web.Controllers.API
         }
 
         //GET /API/Vehicles
-        public IEnumerable<VehicleDto> GetVehicles()
+        public IHttpActionResult GetVehicles()
         {
-            return _context.Vehicles.ToList().Select(Mapper.Map<Vehicle, VehicleDto>);
+            var vehiclesDto = _context.Vehicles.ToList()
+                                                .Select(Mapper.Map<Vehicle, VehicleDto>);
+
+            return Ok(vehiclesDto);
         }
 
         //GET /API/Vehicles/1

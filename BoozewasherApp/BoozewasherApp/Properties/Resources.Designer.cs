@@ -61,6 +61,16 @@ namespace BoozewasherApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap booze_logo {
+            get {
+                object obj = ResourceManager.GetObject("booze_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://localhost:44382/.
         /// </summary>
         internal static string ConnectionString {

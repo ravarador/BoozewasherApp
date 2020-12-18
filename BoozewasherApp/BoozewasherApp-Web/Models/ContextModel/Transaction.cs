@@ -25,5 +25,6 @@ namespace BoozewasherApp_Web.Models.ContextModel
 
         [Required]
         public decimal Cost { get; set; }
+        public List<Item> ItemsList { get; set; }
     }
 }

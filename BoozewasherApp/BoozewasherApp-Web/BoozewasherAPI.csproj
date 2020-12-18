@@ -206,6 +206,10 @@
     <Compile Include="Migrations\202012181253147_AddItemsTable.designer.cs">
       <DependentUpon>202012181253147_AddItemsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012181309432_AddItemsListToTransaction.cs" />
+    <Compile Include="Migrations\202012181309432_AddItemsListToTransaction.designer.cs">
+      <DependentUpon>202012181309432_AddItemsListToTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ContextModel\Item.cs" />
     <Compile Include="Models\Dtos\ServiceDto.cs" />
     <Compile Include="Global.asax.cs">
@@ -615,6 +619,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012181253147_AddItemsTable.resx">
       <DependentUpon>202012181253147_AddItemsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012181309432_AddItemsListToTransaction.resx">
+      <DependentUpon>202012181309432_AddItemsListToTransaction.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

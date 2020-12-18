@@ -202,6 +202,7 @@
     <Compile Include="Migrations\202012171247277_SeedUsers.designer.cs">
       <DependentUpon>202012171247277_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ContextModel\Item.cs" />
     <Compile Include="Models\Dtos\ServiceDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

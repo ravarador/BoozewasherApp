@@ -48,6 +48,7 @@
     <Compile Include="Dtos\SummaryDto.cs" />
     <Compile Include="Dtos\TransactionDto.cs" />
     <Compile Include="Enums\ServiceTypeConstants.cs" />
+    <Compile Include="Enums\TabControlEnums.cs" />
     <Compile Include="Enums\TaxConstants.cs" />
     <Compile Include="IRepositories\IServiceRepository.cs" />
     <Compile Include="IRepositories\ITransactionRepository.cs" />

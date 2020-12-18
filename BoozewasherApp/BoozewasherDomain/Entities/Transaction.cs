@@ -19,6 +19,6 @@ namespace BoozewasherDomain.Entities
         public int VehicleId { get; set; }
 
         public decimal Cost { get; set; }
-        public List<Item> Items { get; set; }
+        public List<Item> ItemsList { get; set; }
     }
 }

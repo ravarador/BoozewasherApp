@@ -44,7 +44,7 @@ namespace BoozewasherDomain.Dtos
         public decimal GrossProfit { get; set; }
         public decimal NetProfit { get; set; }
 
-        public List<Item> Items { get; set; }
+        public List<Item> ItemsList { get; set; }
 
     }
 }

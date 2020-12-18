@@ -1,4 +1,5 @@
-﻿using BoozewasherDomain.Enums;
+﻿using BoozewasherApp.Helpers;
+using BoozewasherDomain.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,6 +52,16 @@ namespace BoozewasherApp.Forms
         {
             tabControl1.SelectedIndex = (int)TabControlEnums.Settings;
             lblTabTitle.Text = "SETTINGS";
+        }
+
+        private void btnSales_MouseHover(object sender, EventArgs e)
+        {
+            btnSales.HoverBtn();
+        }
+
+        private void btnSales_MouseLeave(object sender, EventArgs e)
+        {
+            btnSales.LeaveBtn();
         }
     }
 }

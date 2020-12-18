@@ -126,13 +126,13 @@
             // 
             // btnInventory
             // 
-            this.btnInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(0)))), ((int)(((byte)(37)))));
+            this.btnInventory.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnInventory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnInventory.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInventory.FlatAppearance.BorderSize = 0;
             this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventory.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventory.ForeColor = System.Drawing.Color.White;
+            this.btnInventory.ForeColor = System.Drawing.Color.Black;
             this.btnInventory.Location = new System.Drawing.Point(0, 87);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(111, 87);
@@ -158,6 +158,8 @@
             this.btnSales.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSales.UseVisualStyleBackColor = false;
             this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
+            this.btnSales.MouseLeave += new System.EventHandler(this.btnSales_MouseLeave);
+            this.btnSales.MouseHover += new System.EventHandler(this.btnSales_MouseHover);
             // 
             // picboxBooze
             // 

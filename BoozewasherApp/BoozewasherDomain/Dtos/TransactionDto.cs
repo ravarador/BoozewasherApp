@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoozewasherDomain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,5 +18,6 @@ namespace BoozewasherDomain.Dtos
         public int VehicleId { get; set; }
 
         public decimal Cost { get; set; }
+        public List<Item> Items { get; set; }
     }
 }

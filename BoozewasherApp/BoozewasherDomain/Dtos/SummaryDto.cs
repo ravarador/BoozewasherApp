@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoozewasherDomain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -42,5 +43,8 @@ namespace BoozewasherDomain.Dtos
 
         public decimal GrossProfit { get; set; }
         public decimal NetProfit { get; set; }
+
+        public List<Item> Items { get; set; }
+
     }
 }

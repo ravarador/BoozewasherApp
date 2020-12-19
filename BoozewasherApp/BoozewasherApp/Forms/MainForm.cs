@@ -53,16 +53,9 @@ namespace BoozewasherApp.Forms
             tabControl1.SelectedIndex = (int)TabControlEnums.Settings;
         }
 
-        private void btnSales_MouseHover(object sender, EventArgs e)
+        private void btnTransactions_Click(object sender, EventArgs e)
         {
-            
+            btnTransactions.ShowHideDropDown(panelTransactions);
         }
-
-        private void btnSales_MouseLeave(object sender, EventArgs e)
-        {
-            
-        }
-
-        
     }
 }

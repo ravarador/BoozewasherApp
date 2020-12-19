@@ -21,5 +21,17 @@ namespace BoozewasherApp.Helpers
             //btn.BackColor = Color.WhiteSmoke;
             btn.ForeColor = Color.Black;
         }
+        internal static void ShowHideDropDown(this Button btn, Panel panel)
+        {
+            if (panel.Visible)
+            {
+                panel.Visible = false;
+            }
+            else
+            {
+                panel.Visible = true;
+            }
+            
+        }
     }
 }

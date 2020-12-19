@@ -57,5 +57,20 @@ namespace BoozewasherApp.Forms
         {
             btnTransactions.ShowHideDropDown(panelTransactions);
         }
+
+        private void btnVehicles_Click(object sender, EventArgs e)
+        {
+            btnVehicles.ShowHideDropDown(panelVehicles);
+        }
+
+        private void btnServices_Click(object sender, EventArgs e)
+        {
+            btnServices.ShowHideDropDown(panelServices);
+        }
+
+        private void btnViewTodaySales_Click(object sender, EventArgs e)
+        {
+            btnViewTodaySales.ShowHideDropDown(panelViewTodaySales);
+        }
     }
 }

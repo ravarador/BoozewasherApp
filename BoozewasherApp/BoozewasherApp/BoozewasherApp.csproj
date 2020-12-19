@@ -311,6 +311,36 @@
   <ItemGroup>
     <Folder Include="Forms\ItemForms\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\directions_car_white_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assessment_black_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\local_car_wash_black_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_black_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_black_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\today_white_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture_as_pdf_black_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library_books_black_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_white_12x12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_white_32x32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

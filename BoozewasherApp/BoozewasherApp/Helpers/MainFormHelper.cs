@@ -12,13 +12,13 @@ namespace BoozewasherApp.Helpers
     {
         internal static void HoverBtn(this Button btn)
         {
-            btn.BackColor = Color.FromArgb(1, 162, 0, 37);
+            //btn.BackColor = Color.FromArgb(1, 162, 0, 37);
             btn.ForeColor = Color.White;
         }
 
         internal static void LeaveBtn(this Button btn)
         {
-            btn.BackColor = Color.WhiteSmoke;
+            //btn.BackColor = Color.WhiteSmoke;
             btn.ForeColor = Color.Black;
         }
     }

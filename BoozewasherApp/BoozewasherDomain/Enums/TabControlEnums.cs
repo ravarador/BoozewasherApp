@@ -8,10 +8,11 @@ namespace BoozewasherDomain.Enums
 {
     public enum TabControlEnums
     {
-        Sales = 0, 
-        Inventory = 1,
-        Reports = 2,
-        Analytics = 3,
-        Settings = 4
+        Home = 0,
+        Sales = 1, 
+        Inventory = 2,
+        Reports = 3,
+        Analytics = 4,
+        Settings = 5
     }
 }

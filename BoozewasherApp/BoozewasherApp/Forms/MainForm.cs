@@ -24,44 +24,45 @@ namespace BoozewasherApp.Forms
 
         }
 
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = (int)TabControlEnums.Home;
+        }
         private void btnSales_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = (int)TabControlEnums.Sales;
-            lblTabTitle.Text = "SALES";
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = (int)TabControlEnums.Inventory;
-            lblTabTitle.Text = "INVENTORY";
         }
 
         private void btnReports_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = (int)TabControlEnums.Reports;
-            lblTabTitle.Text = "REPORTS";
         }
 
         private void btnAnalytics_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = (int)TabControlEnums.Analytics;
-            lblTabTitle.Text = "ANALYTICS";
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = (int)TabControlEnums.Settings;
-            lblTabTitle.Text = "SETTINGS";
         }
 
         private void btnSales_MouseHover(object sender, EventArgs e)
         {
-            btnSales.HoverBtn();
+            
         }
 
         private void btnSales_MouseLeave(object sender, EventArgs e)
         {
-            btnSales.LeaveBtn();
+            
         }
+
+        
     }
 }

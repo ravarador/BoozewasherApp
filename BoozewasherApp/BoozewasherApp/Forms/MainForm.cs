@@ -55,22 +55,26 @@ namespace BoozewasherApp.Forms
 
         private void btnTransactions_Click(object sender, EventArgs e)
         {
-            btnTransactions.ShowHideDropDown(panelTransactions);
+            
+            btnTransactions.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
         }
 
         private void btnVehicles_Click(object sender, EventArgs e)
         {
-            btnVehicles.ShowHideDropDown(panelVehicles);
+            
+            btnVehicles.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
         }
 
         private void btnServices_Click(object sender, EventArgs e)
         {
-            btnServices.ShowHideDropDown(panelServices);
+            
+            btnServices.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
         }
 
         private void btnViewTodaySales_Click(object sender, EventArgs e)
         {
-            btnViewTodaySales.ShowHideDropDown(panelViewTodaySales);
+            
+            btnViewTodaySales.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
         }
     }
 }

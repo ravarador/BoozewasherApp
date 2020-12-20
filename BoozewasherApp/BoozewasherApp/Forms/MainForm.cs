@@ -33,9 +33,9 @@ namespace BoozewasherApp.Forms
             tabControl1.SelectedIndex = (int)TabControlEnums.Sales;
         }
 
-        private void btnInventory_Click(object sender, EventArgs e)
+        private void btnEmployees_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = (int)TabControlEnums.Inventory;
+            tabControl1.SelectedIndex = (int)TabControlEnums.Employees;
         }
 
         private void btnReports_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace BoozewasherApp.Forms
             }
             else
             {
-                btnTransactions.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
+                btnTransactions.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelItems);
             }
             
         }
@@ -74,7 +74,7 @@ namespace BoozewasherApp.Forms
             }
             else
             {
-                btnVehicles.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
+                btnVehicles.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelItems);
             }
             
         }
@@ -87,20 +87,20 @@ namespace BoozewasherApp.Forms
             }
             else
             {
-                btnServices.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
+                btnServices.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelItems);
             }
             
         }
 
-        private void btnViewTodaySales_Click(object sender, EventArgs e)
+        private void btnItems_Click(object sender, EventArgs e)
         {
-            if (panelViewTodaySales.Visible)
+            if (panelItems.Visible)
             {
-                panelViewTodaySales.Visible = false;
+                panelItems.Visible = false;
             }
             else
             {
-                btnViewTodaySales.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
+                btnItems.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelItems);
             }
             
         }

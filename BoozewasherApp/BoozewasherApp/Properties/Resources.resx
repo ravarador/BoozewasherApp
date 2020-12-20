@@ -136,8 +136,8 @@
   <data name="home_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="picture_as_pdf_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\picture_as_pdf_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="directions_car_white_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\directions_car_white_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="library_books_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\library_books_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,13 +145,16 @@
   <data name="ConnectionString" xml:space="preserve">
     <value>https://localhost:44382/</value>
   </data>
+  <data name="close_white_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_white_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="today_white_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\today_white_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="directions_car_white_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\directions_car_white_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="picture_as_pdf_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picture_as_pdf_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close_white_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close_white_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="group_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\group_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -65,7 +65,7 @@ namespace BoozewasherApp.Helpers
                     panel3.Visible = true;
                 }
             }
-            if (btn.Text == "View Today's Sales")
+            if (btn.Text == "Items")
             {
                 if (panel4.Visible)
                 {

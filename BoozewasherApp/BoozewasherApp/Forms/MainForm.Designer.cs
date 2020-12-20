@@ -36,14 +36,14 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnAnalytics = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
-            this.btnInventory = new System.Windows.Forms.Button();
+            this.btnEmployees = new System.Windows.Forms.Button();
             this.btnSales = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.picboxBooze = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageHome = new System.Windows.Forms.TabPage();
             this.tabPageSales = new System.Windows.Forms.TabPage();
-            this.panelViewTodaySales = new System.Windows.Forms.Panel();
+            this.panelItems = new System.Windows.Forms.Panel();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
@@ -63,10 +63,21 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.btnViewTodaySales = new System.Windows.Forms.Button();
+            this.btnItems = new System.Windows.Forms.Button();
             this.btnVehicles = new System.Windows.Forms.Button();
             this.btnServices = new System.Windows.Forms.Button();
             this.btnTransactions = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabPageInventory = new System.Windows.Forms.TabPage();
             this.tabPageReports = new System.Windows.Forms.TabPage();
             this.tabPageAnalytics = new System.Windows.Forms.TabPage();
@@ -76,10 +87,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPageSales.SuspendLayout();
-            this.panelViewTodaySales.SuspendLayout();
+            this.panelItems.SuspendLayout();
             this.panelServices.SuspendLayout();
             this.panelVehicles.SuspendLayout();
             this.panelTransactions.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,7 +137,7 @@
             this.panel2.Controls.Add(this.btnSettings);
             this.panel2.Controls.Add(this.btnAnalytics);
             this.panel2.Controls.Add(this.btnReports);
-            this.panel2.Controls.Add(this.btnInventory);
+            this.panel2.Controls.Add(this.btnEmployees);
             this.panel2.Controls.Add(this.btnSales);
             this.panel2.Controls.Add(this.btnHome);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -199,23 +214,23 @@
             // 
             // btnInventory
             // 
-            this.btnInventory.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnInventory.BackgroundImage = global::BoozewasherApp.Properties.Resources.library_books_black_36x36;
-            this.btnInventory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnInventory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInventory.FlatAppearance.BorderSize = 0;
-            this.btnInventory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventory.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventory.ForeColor = System.Drawing.Color.Black;
-            this.btnInventory.Location = new System.Drawing.Point(0, 174);
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(111, 87);
-            this.btnInventory.TabIndex = 3;
-            this.btnInventory.Text = "INVENTORY";
-            this.btnInventory.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnInventory.UseVisualStyleBackColor = false;
-            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
+            this.btnEmployees.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEmployees.BackgroundImage = global::BoozewasherApp.Properties.Resources.group_black_36x36;
+            this.btnEmployees.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEmployees.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmployees.FlatAppearance.BorderSize = 0;
+            this.btnEmployees.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployees.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployees.ForeColor = System.Drawing.Color.Black;
+            this.btnEmployees.Location = new System.Drawing.Point(0, 174);
+            this.btnEmployees.Name = "btnInventory";
+            this.btnEmployees.Size = new System.Drawing.Size(111, 87);
+            this.btnEmployees.TabIndex = 3;
+            this.btnEmployees.Text = "EMPLOYEES";
+            this.btnEmployees.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEmployees.UseVisualStyleBackColor = false;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
             // btnSales
             // 
@@ -292,14 +307,15 @@
             // tabPageSales
             // 
             this.tabPageSales.BackColor = System.Drawing.Color.White;
-            this.tabPageSales.Controls.Add(this.panelViewTodaySales);
+            this.tabPageSales.Controls.Add(this.panelItems);
             this.tabPageSales.Controls.Add(this.panelServices);
             this.tabPageSales.Controls.Add(this.panelVehicles);
             this.tabPageSales.Controls.Add(this.panelTransactions);
-            this.tabPageSales.Controls.Add(this.btnViewTodaySales);
+            this.tabPageSales.Controls.Add(this.btnItems);
             this.tabPageSales.Controls.Add(this.btnVehicles);
             this.tabPageSales.Controls.Add(this.btnServices);
             this.tabPageSales.Controls.Add(this.btnTransactions);
+            this.tabPageSales.Controls.Add(this.panel3);
             this.tabPageSales.Location = new System.Drawing.Point(4, 23);
             this.tabPageSales.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageSales.Name = "tabPageSales";
@@ -307,18 +323,18 @@
             this.tabPageSales.Size = new System.Drawing.Size(1104, 685);
             this.tabPageSales.TabIndex = 0;
             // 
-            // panelViewTodaySales
+            // panelItems
             // 
-            this.panelViewTodaySales.Controls.Add(this.button16);
-            this.panelViewTodaySales.Controls.Add(this.button17);
-            this.panelViewTodaySales.Controls.Add(this.button18);
-            this.panelViewTodaySales.Controls.Add(this.button19);
-            this.panelViewTodaySales.Location = new System.Drawing.Point(790, 75);
-            this.panelViewTodaySales.Margin = new System.Windows.Forms.Padding(0);
-            this.panelViewTodaySales.Name = "panelViewTodaySales";
-            this.panelViewTodaySales.Size = new System.Drawing.Size(201, 208);
-            this.panelViewTodaySales.TabIndex = 12;
-            this.panelViewTodaySales.Visible = false;
+            this.panelItems.Controls.Add(this.button16);
+            this.panelItems.Controls.Add(this.button17);
+            this.panelItems.Controls.Add(this.button18);
+            this.panelItems.Controls.Add(this.button19);
+            this.panelItems.Location = new System.Drawing.Point(790, 75);
+            this.panelItems.Margin = new System.Windows.Forms.Padding(0);
+            this.panelItems.Name = "panelItems";
+            this.panelItems.Size = new System.Drawing.Size(201, 208);
+            this.panelItems.TabIndex = 12;
+            this.panelItems.Visible = false;
             // 
             // button16
             // 
@@ -615,22 +631,22 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // btnViewTodaySales
+            // btnItems
             // 
-            this.btnViewTodaySales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.btnViewTodaySales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnViewTodaySales.FlatAppearance.BorderSize = 0;
-            this.btnViewTodaySales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewTodaySales.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewTodaySales.ForeColor = System.Drawing.Color.White;
-            this.btnViewTodaySales.Location = new System.Drawing.Point(790, 29);
-            this.btnViewTodaySales.Name = "btnViewTodaySales";
-            this.btnViewTodaySales.Size = new System.Drawing.Size(201, 47);
-            this.btnViewTodaySales.TabIndex = 8;
-            this.btnViewTodaySales.Text = "View Today\'s Sales";
-            this.btnViewTodaySales.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnViewTodaySales.UseVisualStyleBackColor = false;
-            this.btnViewTodaySales.Click += new System.EventHandler(this.btnViewTodaySales_Click);
+            this.btnItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnItems.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnItems.FlatAppearance.BorderSize = 0;
+            this.btnItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnItems.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItems.ForeColor = System.Drawing.Color.White;
+            this.btnItems.Location = new System.Drawing.Point(790, 29);
+            this.btnItems.Name = "btnItems";
+            this.btnItems.Size = new System.Drawing.Size(201, 47);
+            this.btnItems.TabIndex = 8;
+            this.btnItems.Text = "Items";
+            this.btnItems.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnItems.UseVisualStyleBackColor = false;
+            this.btnItems.Click += new System.EventHandler(this.btnItems_Click);
             // 
             // btnVehicles
             // 
@@ -681,6 +697,117 @@
             this.btnTransactions.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTransactions.UseVisualStyleBackColor = false;
             this.btnTransactions.Click += new System.EventHandler(this.btnTransactions_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Location = new System.Drawing.Point(9, 83);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(982, 594);
+            this.panel3.TabIndex = 13;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.label10);
+            this.panel6.Location = new System.Drawing.Point(654, 14);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(315, 183);
+            this.panel6.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(27, 38);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(29, 31);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "3";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(29, 74);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(177, 22);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Employees Working";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.label6);
+            this.panel5.Location = new System.Drawing.Point(333, 14);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(315, 183);
+            this.panel5.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(37, 101);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 16);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Feels like 10";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(34, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 31);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "19°";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(36, 75);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(151, 22);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Current Weather";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Location = new System.Drawing.Point(12, 14);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(315, 183);
+            this.panel4.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(24, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 31);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "20";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(26, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 22);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Total Cars";
             // 
             // tabPageInventory
             // 
@@ -742,10 +869,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPageSales.ResumeLayout(false);
-            this.panelViewTodaySales.ResumeLayout(false);
+            this.panelItems.ResumeLayout(false);
             this.panelServices.ResumeLayout(false);
             this.panelVehicles.ResumeLayout(false);
             this.panelTransactions.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -756,7 +890,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSales;
         private System.Windows.Forms.Button btnReports;
-        private System.Windows.Forms.Button btnInventory;
+        private System.Windows.Forms.Button btnEmployees;
         private System.Windows.Forms.PictureBox picboxBooze;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnAnalytics;
@@ -774,13 +908,13 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button btnViewTodaySales;
+        private System.Windows.Forms.Button btnItems;
         private System.Windows.Forms.Button btnVehicles;
         private System.Windows.Forms.Button btnServices;
         private System.Windows.Forms.Button btnTransactions;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panelViewTodaySales;
+        private System.Windows.Forms.Panel panelItems;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
@@ -795,5 +929,16 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

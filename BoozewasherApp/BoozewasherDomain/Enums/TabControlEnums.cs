@@ -10,7 +10,7 @@ namespace BoozewasherDomain.Enums
     {
         Home = 0,
         Sales = 1, 
-        Inventory = 2,
+        Employees = 2,
         Reports = 3,
         Analytics = 4,
         Settings = 5

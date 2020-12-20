@@ -52,29 +52,58 @@ namespace BoozewasherApp.Forms
         {
             tabControl1.SelectedIndex = (int)TabControlEnums.Settings;
         }
-
+        #region DropDownMenu SALES
         private void btnTransactions_Click(object sender, EventArgs e)
         {
+            if (panelTransactions.Visible)
+            {
+                panelTransactions.Visible = false;
+            }
+            else
+            {
+                btnTransactions.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
+            }
             
-            btnTransactions.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
         }
 
         private void btnVehicles_Click(object sender, EventArgs e)
         {
+            if (panelVehicles.Visible)
+            {
+                panelVehicles.Visible = false;
+            }
+            else
+            {
+                btnVehicles.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
+            }
             
-            btnVehicles.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
         }
 
         private void btnServices_Click(object sender, EventArgs e)
         {
+            if (panelServices.Visible)
+            {
+                panelServices.Visible = false;
+            }
+            else
+            {
+                btnServices.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
+            }
             
-            btnServices.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
         }
 
         private void btnViewTodaySales_Click(object sender, EventArgs e)
         {
+            if (panelViewTodaySales.Visible)
+            {
+                panelViewTodaySales.Visible = false;
+            }
+            else
+            {
+                btnViewTodaySales.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
+            }
             
-            btnViewTodaySales.ShowHideDropDown(panelTransactions, panelVehicles, panelServices, panelViewTodaySales);
         }
+        #endregion
     }
 }

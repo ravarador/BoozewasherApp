@@ -43,6 +43,21 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageHome = new System.Windows.Forms.TabPage();
             this.tabPageSales = new System.Windows.Forms.TabPage();
+            this.panelViewTodaySales = new System.Windows.Forms.Panel();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.panelServices = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.panelVehicles = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.panelTransactions = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -56,30 +71,15 @@
             this.tabPageReports = new System.Windows.Forms.TabPage();
             this.tabPageAnalytics = new System.Windows.Forms.TabPage();
             this.tabPageSettings = new System.Windows.Forms.TabPage();
-            this.panelVehicles = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.panelServices = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.panelViewTodaySales = new System.Windows.Forms.Panel();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPageSales.SuspendLayout();
-            this.panelTransactions.SuspendLayout();
-            this.panelVehicles.SuspendLayout();
-            this.panelServices.SuspendLayout();
             this.panelViewTodaySales.SuspendLayout();
+            this.panelServices.SuspendLayout();
+            this.panelVehicles.SuspendLayout();
+            this.panelTransactions.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -307,6 +307,237 @@
             this.tabPageSales.Size = new System.Drawing.Size(1104, 685);
             this.tabPageSales.TabIndex = 0;
             // 
+            // panelViewTodaySales
+            // 
+            this.panelViewTodaySales.Controls.Add(this.button16);
+            this.panelViewTodaySales.Controls.Add(this.button17);
+            this.panelViewTodaySales.Controls.Add(this.button18);
+            this.panelViewTodaySales.Controls.Add(this.button19);
+            this.panelViewTodaySales.Location = new System.Drawing.Point(790, 75);
+            this.panelViewTodaySales.Margin = new System.Windows.Forms.Padding(0);
+            this.panelViewTodaySales.Name = "panelViewTodaySales";
+            this.panelViewTodaySales.Size = new System.Drawing.Size(201, 208);
+            this.panelViewTodaySales.TabIndex = 12;
+            this.panelViewTodaySales.Visible = false;
+            // 
+            // button16
+            // 
+            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.ForeColor = System.Drawing.Color.White;
+            this.button16.Location = new System.Drawing.Point(0, 141);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(201, 47);
+            this.button16.TabIndex = 4;
+            this.button16.Text = "View";
+            this.button16.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button16.UseVisualStyleBackColor = false;
+            // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.button17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button17.FlatAppearance.BorderSize = 0;
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button17.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.ForeColor = System.Drawing.Color.White;
+            this.button17.Location = new System.Drawing.Point(0, 94);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(201, 47);
+            this.button17.TabIndex = 3;
+            this.button17.Text = "Update";
+            this.button17.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button17.UseVisualStyleBackColor = false;
+            // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.button18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button18.FlatAppearance.BorderSize = 0;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.ForeColor = System.Drawing.Color.White;
+            this.button18.Location = new System.Drawing.Point(0, 47);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(201, 47);
+            this.button18.TabIndex = 2;
+            this.button18.Text = "Delete";
+            this.button18.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button18.UseVisualStyleBackColor = false;
+            // 
+            // button19
+            // 
+            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.button19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button19.FlatAppearance.BorderSize = 0;
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.ForeColor = System.Drawing.Color.White;
+            this.button19.Location = new System.Drawing.Point(0, 0);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(201, 47);
+            this.button19.TabIndex = 1;
+            this.button19.Text = "Add";
+            this.button19.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button19.UseVisualStyleBackColor = false;
+            // 
+            // panelServices
+            // 
+            this.panelServices.Controls.Add(this.button12);
+            this.panelServices.Controls.Add(this.button13);
+            this.panelServices.Controls.Add(this.button14);
+            this.panelServices.Controls.Add(this.button15);
+            this.panelServices.Location = new System.Drawing.Point(583, 76);
+            this.panelServices.Margin = new System.Windows.Forms.Padding(0);
+            this.panelServices.Name = "panelServices";
+            this.panelServices.Size = new System.Drawing.Size(201, 208);
+            this.panelServices.TabIndex = 11;
+            this.panelServices.Visible = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.Location = new System.Drawing.Point(0, 141);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(201, 47);
+            this.button12.TabIndex = 4;
+            this.button12.Text = "View";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.Color.White;
+            this.button13.Location = new System.Drawing.Point(0, 94);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(201, 47);
+            this.button13.TabIndex = 3;
+            this.button13.Text = "Update";
+            this.button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ForeColor = System.Drawing.Color.White;
+            this.button14.Location = new System.Drawing.Point(0, 47);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(201, 47);
+            this.button14.TabIndex = 2;
+            this.button14.Text = "Delete";
+            this.button14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.Color.White;
+            this.button15.Location = new System.Drawing.Point(0, 0);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(201, 47);
+            this.button15.TabIndex = 1;
+            this.button15.Text = "Add";
+            this.button15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button15.UseVisualStyleBackColor = false;
+            // 
+            // panelVehicles
+            // 
+            this.panelVehicles.Controls.Add(this.button1);
+            this.panelVehicles.Controls.Add(this.button9);
+            this.panelVehicles.Controls.Add(this.button10);
+            this.panelVehicles.Controls.Add(this.button11);
+            this.panelVehicles.Location = new System.Drawing.Point(376, 76);
+            this.panelVehicles.Margin = new System.Windows.Forms.Padding(0);
+            this.panelVehicles.Name = "panelVehicles";
+            this.panelVehicles.Size = new System.Drawing.Size(201, 208);
+            this.panelVehicles.TabIndex = 10;
+            this.panelVehicles.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 141);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(201, 47);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "View";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(0, 94);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(201, 47);
+            this.button9.TabIndex = 3;
+            this.button9.Text = "Update";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
+            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(0, 47);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(201, 47);
+            this.button10.TabIndex = 2;
+            this.button10.Text = "Delete";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
+            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Location = new System.Drawing.Point(0, 0);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(201, 47);
+            this.button11.TabIndex = 1;
+            this.button11.Text = "Add";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button11.UseVisualStyleBackColor = false;
+            // 
             // panelTransactions
             // 
             this.panelTransactions.Controls.Add(this.button8);
@@ -489,237 +720,6 @@
             this.tabPageSettings.Size = new System.Drawing.Size(1104, 685);
             this.tabPageSettings.TabIndex = 4;
             // 
-            // panelVehicles
-            // 
-            this.panelVehicles.Controls.Add(this.button1);
-            this.panelVehicles.Controls.Add(this.button9);
-            this.panelVehicles.Controls.Add(this.button10);
-            this.panelVehicles.Controls.Add(this.button11);
-            this.panelVehicles.Location = new System.Drawing.Point(376, 76);
-            this.panelVehicles.Margin = new System.Windows.Forms.Padding(0);
-            this.panelVehicles.Name = "panelVehicles";
-            this.panelVehicles.Size = new System.Drawing.Size(201, 208);
-            this.panelVehicles.TabIndex = 10;
-            this.panelVehicles.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 141);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 47);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "View";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(0, 94);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(201, 47);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "Update";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(0, 47);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(201, 47);
-            this.button10.TabIndex = 2;
-            this.button10.Text = "Delete";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(0, 0);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(201, 47);
-            this.button11.TabIndex = 1;
-            this.button11.Text = "Add";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // panelServices
-            // 
-            this.panelServices.Controls.Add(this.button12);
-            this.panelServices.Controls.Add(this.button13);
-            this.panelServices.Controls.Add(this.button14);
-            this.panelServices.Controls.Add(this.button15);
-            this.panelServices.Location = new System.Drawing.Point(583, 76);
-            this.panelServices.Margin = new System.Windows.Forms.Padding(0);
-            this.panelServices.Name = "panelServices";
-            this.panelServices.Size = new System.Drawing.Size(201, 208);
-            this.panelServices.TabIndex = 11;
-            this.panelServices.Visible = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(0, 141);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(201, 47);
-            this.button12.TabIndex = 4;
-            this.button12.Text = "View";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(0, 94);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(201, 47);
-            this.button13.TabIndex = 3;
-            this.button13.Text = "Update";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(0, 47);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(201, 47);
-            this.button14.TabIndex = 2;
-            this.button14.Text = "Delete";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(0, 0);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(201, 47);
-            this.button15.TabIndex = 1;
-            this.button15.Text = "Add";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button15.UseVisualStyleBackColor = false;
-            // 
-            // panelViewTodaySales
-            // 
-            this.panelViewTodaySales.Controls.Add(this.button16);
-            this.panelViewTodaySales.Controls.Add(this.button17);
-            this.panelViewTodaySales.Controls.Add(this.button18);
-            this.panelViewTodaySales.Controls.Add(this.button19);
-            this.panelViewTodaySales.Location = new System.Drawing.Point(790, 75);
-            this.panelViewTodaySales.Margin = new System.Windows.Forms.Padding(0);
-            this.panelViewTodaySales.Name = "panelViewTodaySales";
-            this.panelViewTodaySales.Size = new System.Drawing.Size(201, 208);
-            this.panelViewTodaySales.TabIndex = 12;
-            this.panelViewTodaySales.Visible = false;
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Location = new System.Drawing.Point(0, 141);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(201, 47);
-            this.button16.TabIndex = 4;
-            this.button16.Text = "View";
-            this.button16.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button16.UseVisualStyleBackColor = false;
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.button17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button17.FlatAppearance.BorderSize = 0;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(0, 94);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(201, 47);
-            this.button17.TabIndex = 3;
-            this.button17.Text = "Update";
-            this.button17.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button17.UseVisualStyleBackColor = false;
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.button18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(0, 47);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(201, 47);
-            this.button18.TabIndex = 2;
-            this.button18.Text = "Delete";
-            this.button18.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button18.UseVisualStyleBackColor = false;
-            // 
-            // button19
-            // 
-            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.button19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(0, 0);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(201, 47);
-            this.button19.TabIndex = 1;
-            this.button19.Text = "Add";
-            this.button19.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button19.UseVisualStyleBackColor = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -742,10 +742,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPageSales.ResumeLayout(false);
-            this.panelTransactions.ResumeLayout(false);
-            this.panelVehicles.ResumeLayout(false);
-            this.panelServices.ResumeLayout(false);
             this.panelViewTodaySales.ResumeLayout(false);
+            this.panelServices.ResumeLayout(false);
+            this.panelVehicles.ResumeLayout(false);
+            this.panelTransactions.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -50,6 +50,7 @@
     <Compile Include="Enums\ServiceTypeConstants.cs" />
     <Compile Include="Enums\TabControlEnums.cs" />
     <Compile Include="Enums\TaxConstants.cs" />
+    <Compile Include="IRepositories\IItemRepository.cs" />
     <Compile Include="IRepositories\IServiceRepository.cs" />
     <Compile Include="IRepositories\ITransactionRepository.cs" />
     <Compile Include="IRepositories\IVehicleRepository.cs" />

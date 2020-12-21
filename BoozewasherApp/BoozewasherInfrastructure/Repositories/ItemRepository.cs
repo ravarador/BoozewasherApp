@@ -1,4 +1,5 @@
 ﻿using BoozewasherDomain.Entities;
+using BoozewasherDomain.IRepositories;
 using BoozewasherInfrastructure.Properties;
 using Newtonsoft.Json;
 using RestSharp;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BoozewasherInfrastructure.Repositories
 {
-    public class ItemRepository
+    public class ItemRepository : IItemRepository
     {
         public void AddItem(Item item)
         {

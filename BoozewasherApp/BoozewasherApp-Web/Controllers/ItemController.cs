@@ -34,10 +34,10 @@ namespace BoozewasherApp_Web.Controllers
         {
             var viewModel = new ItemsFormViewModel
             {
-                Items = new Item()
+                Item = new Item()
             };
 
-            return View("ItemForm");
+            return View("ItemForm", viewModel);
         }
 
         public ActionResult Edit(int id)
@@ -49,7 +49,7 @@ namespace BoozewasherApp_Web.Controllers
 
             var viewModel = new ItemsFormViewModel
             {
-                Items = item
+                Item = item
             };
 
             return View("ItemForm", viewModel);

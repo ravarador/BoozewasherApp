@@ -54,6 +54,9 @@ namespace BoozewasherApp_Web.Controllers
 
             return View("ItemForm", viewModel);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save (Item item)
         {
             if (!ModelState.IsValid)

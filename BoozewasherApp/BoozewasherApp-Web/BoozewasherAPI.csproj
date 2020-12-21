@@ -189,6 +189,7 @@
     <Compile Include="Controllers\API\TransactionsController.cs" />
     <Compile Include="Controllers\API\VehiclesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\TransactionController.cs" />
@@ -238,6 +239,8 @@
     <Compile Include="Models\Dtos\VehicleDto.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ViewModels\Items\ItemsFormViewModel.cs" />
+    <Compile Include="Models\ViewModels\Items\ItemViewModel.cs" />
     <Compile Include="Models\ViewModels\Services\ServiceFormViewModel.cs" />
     <Compile Include="Models\ViewModels\Services\ServiceViewModel.cs" />
     <Compile Include="Models\ViewModels\Transactions\TransactionFormViewModel.cs" />
@@ -591,6 +594,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\AddService\" />
+    <Folder Include="Views\Item\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />

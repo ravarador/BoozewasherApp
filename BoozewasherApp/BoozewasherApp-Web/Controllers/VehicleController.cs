@@ -24,10 +24,6 @@ namespace BoozewasherApp_Web.Controllers
         }
         public ActionResult Index()
         {
-           
-
-           
-
             return View("Index");
         }
 

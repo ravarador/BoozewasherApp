@@ -18,6 +18,9 @@ namespace BoozewasherApp_Web.App_Start
 
             Mapper.CreateMap<Vehicle, VehicleDto>();
             Mapper.CreateMap<VehicleDto, Vehicle>();
+
+            Mapper.CreateMap<Item, ItemDto>();
+            Mapper.CreateMap<ItemDto, Item>();
         }
     }
 }

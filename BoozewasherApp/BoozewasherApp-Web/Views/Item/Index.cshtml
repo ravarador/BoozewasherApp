@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BoozewasherApp_Web.Models.ContextModel.Item>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<p></p>
+<h1>Items</h1>
+<p></p>
+
+@if (!Model.Any())
+{
+    <p>No items available.</p>
+}
+<p></p>
+<table id="services" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Barcode</th>
+            <th>IsEmpty</th>
+            <th>UsageCount</th>
+            <th>Expense</th>
+        </tr>
+    </thead>
+        <tbody>
+            @foreach (var items in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(items.Name, "Edit", "Item", new { id = items.Id }, null)</td>
+                    <td>@items.Description</td>
+                    <td>@items.Barcode</td>
+                    <td>@items.IsEmpty</td>
+                    <td>@items.UsageCount</td>
+                    <td>@items.Expense</td>
+                </tr>
+            }
+        </tbody>
+</table>

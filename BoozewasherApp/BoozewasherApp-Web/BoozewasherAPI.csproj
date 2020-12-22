@@ -190,6 +190,7 @@
     <Compile Include="Controllers\API\TransactionsController.cs" />
     <Compile Include="Controllers\API\VehiclesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\TransactionController.cs" />
@@ -211,7 +212,12 @@
     <Compile Include="Migrations\202012181309432_AddItemsListToTransaction.designer.cs">
       <DependentUpon>202012181309432_AddItemsListToTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012211211122_AddedDataAnnotationsForItems.cs" />
+    <Compile Include="Migrations\202012211211122_AddedDataAnnotationsForItems.designer.cs">
+      <DependentUpon>202012211211122_AddedDataAnnotationsForItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ContextModel\Item.cs" />
+    <Compile Include="Models\Dtos\ItemDto.cs" />
     <Compile Include="Models\Dtos\ServiceDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -239,6 +245,8 @@
     <Compile Include="Models\Dtos\VehicleDto.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ViewModels\Items\ItemsFormViewModel.cs" />
+    <Compile Include="Models\ViewModels\Items\ItemViewModel.cs" />
     <Compile Include="Models\ViewModels\Services\ServiceFormViewModel.cs" />
     <Compile Include="Models\ViewModels\Services\ServiceViewModel.cs" />
     <Compile Include="Models\ViewModels\Transactions\TransactionFormViewModel.cs" />
@@ -588,6 +596,8 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Item\Index.cshtml" />
+    <Content Include="Views\Item\ItemForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -623,6 +633,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012181309432_AddItemsListToTransaction.resx">
       <DependentUpon>202012181309432_AddItemsListToTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012211211122_AddedDataAnnotationsForItems.resx">
+      <DependentUpon>202012211211122_AddedDataAnnotationsForItems.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

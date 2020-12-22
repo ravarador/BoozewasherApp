@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace BoozewasherApp_Web.Models.ContextModel
+namespace BoozewasherApp_Web.Models.ViewModels.Items
 {
-    public class Item
+    public class ItemViewModel
     {
         public int Id { get; set; }
 
@@ -15,12 +15,10 @@ namespace BoozewasherApp_Web.Models.ContextModel
         public string Description { get; set; }
 
         [Required]
-        [Display(Name = "Item Barcode")]
         public string Barcode { get; set; }
         public bool IsEmpty { get; set; }
 
         [Required]
-        [Display (Name = "Usage Count")]
         public int UsageCount { get; set; }
         [Required]
         public decimal Expense { get; set; }

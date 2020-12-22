@@ -1,0 +1,56 @@
+﻿@model BoozewasherApp_Web.Models.ViewModels.Items.ItemsFormViewModel
+@{
+    ViewBag.Title = "ItemForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<p></p>
+<h2>Item Form</h2>
+@using (Html.BeginForm("Save", "Item"))
+{
+    @Html.ValidationSummary(true, "Please fill up requirements");
+
+    <div class="form-group">
+        @Html.LabelFor(i => i.Item.Name)
+        @Html.TextBoxFor(i => i.Item.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(i => i.Item.Name)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(i => i.Item.Description)
+        @Html.TextBoxFor(i => i.Item.Description, new { @class = "form-control" })
+        @Html.ValidationMessageFor(i => i.Item.Description)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(i => i.Item.Barcode)
+        @Html.TextBoxFor(i => i.Item.Barcode, new { @class = "form-control" })
+        @Html.ValidationMessageFor(i => i.Item.Barcode)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(i => i.Item.UsageCount)
+        @Html.TextBoxFor(i => i.Item.UsageCount, new { @class = "form-control" })
+        @Html.ValidationMessageFor(i => i.Item.UsageCount)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(i => i.Item.Expense)
+        @Html.TextBoxFor(i => i.Item.Expense, new { @class = "form-control" })
+        @Html.ValidationMessageFor(i => i.Item.Expense)
+    </div>
+
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(i => i.Item.IsEmpty) Is Empty
+        </label>
+    </div>
+
+    <p></p>
+    @Html.HiddenFor(i => i.Item.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary"> Save </button>
+
+}
+@section	scripts	{
+    @Scripts.Render("~/bundles/jqueryval")
+}

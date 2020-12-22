@@ -12,7 +12,7 @@
     <p>No items available.</p>
 }
 <p></p>
-<table id="services" class="table table-bordered table-hover">
+<table id="items" class="table table-bordered table-hover">
     <thead>
         <tr>
             <th>Name</th>
@@ -21,6 +21,7 @@
             <th>IsEmpty</th>
             <th>UsageCount</th>
             <th>Expense</th>
+            <th>Delete</th>
         </tr>
     </thead>
         <tbody>
@@ -33,7 +34,32 @@
                     <td>@items.IsEmpty</td>
                     <td>@items.UsageCount</td>
                     <td>@items.Expense</td>
+                    <td align="center"><button data-items-id="@items.Id" class="btn btn-outline-primary js-delete"> Delete </button></td>
                 </tr>
             }
         </tbody>
 </table>
+@section scripts {
+
+  <script>
+      $(document).ready(function () {
+          $("#items").DataTable();
+
+          $("#items").on("click", ".js-delete", function () {
+              var button = $(this);
+
+              bootbox.confirm("Would you like to delete this item?", function (result) {
+                  if (result) {
+                      $.ajax({
+                          url: "API/Items/DeleteItem/" + button.attr("data-items-id"),
+                          method: "DELETE",
+                          success: function () {
+                              button.parents("tr").remove();
+                          }
+                      });
+                  }
+              });
+          });
+      });
+  </script>
+}

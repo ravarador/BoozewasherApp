@@ -13,6 +13,7 @@ namespace BoozewasherApp_Web.Interfaces
         DbSet<Summary> Summaries { get; set; }
         DbSet<Transaction> Transactions { get; set; }
         DbSet<Vehicle> Vehicles { get; set; }
+        DbSet<Item> Items { get; set; }
         int SaveChanges();
     }
 }

@@ -6,7 +6,7 @@
 <p></p>
 <h1>Items</h1>
 <p></p>
-
+@Html.ActionLink("New Item", "New", "Item", new { @class = "btn btn-outline-primary" })
 @if (!Model.Any())
 {
     <p>No items available.</p>
@@ -24,42 +24,42 @@
             <th>Delete</th>
         </tr>
     </thead>
-        <tbody>
-            @foreach (var items in Model)
-            {
-                <tr>
-                    <td>@Html.ActionLink(items.Name, "Edit", "Item", new { id = items.Id }, null)</td>
-                    <td>@items.Description</td>
-                    <td>@items.Barcode</td>
-                    <td>@items.IsEmpty</td>
-                    <td>@items.UsageCount</td>
-                    <td>@items.Expense</td>
-                    <td align="center"><button data-items-id="@items.Id" class="btn btn-outline-primary js-delete"> Delete </button></td>
-                </tr>
-            }
-        </tbody>
+    <tbody>
+        @foreach (var items in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(items.Name, "Edit", "Item", new { id = items.Id }, null)</td>
+                <td>@items.Description</td>
+                <td>@items.Barcode</td>
+                <td>@items.IsEmpty</td>
+                <td>@items.UsageCount</td>
+                <td>@items.Expense</td>
+                <td align="center"><button data-items-id="@items.Id" class="btn btn-outline-primary js-delete"> Delete </button></td>
+            </tr>
+        }
+    </tbody>
 </table>
 @section scripts {
 
-  <script>
-      $(document).ready(function () {
-          $("#items").DataTable();
+    <script>
+        $(document).ready(function () {
+            $("#items").DataTable();
 
-          $("#items").on("click", ".js-delete", function () {
-              var button = $(this);
+            $("#items").on("click", ".js-delete", function () {
+                var button = $(this);
 
-              bootbox.confirm("Would you like to delete this item?", function (result) {
-                  if (result) {
-                      $.ajax({
-                          url: "API/Items/DeleteItem/" + button.attr("data-items-id"),
-                          method: "DELETE",
-                          success: function () {
-                              button.parents("tr").remove();
-                          }
-                      });
-                  }
-              });
-          });
-      });
-  </script>
+                bootbox.confirm("Would you like to delete this item?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "API/Items/DeleteItem/" + button.attr("data-items-id"),
+                            method: "DELETE",
+                            success: function () {
+                                button.parents("tr").remove();
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 }

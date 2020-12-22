@@ -7,10 +7,7 @@
 <h1>Services</h1>
 <p></p>
 @Html.ActionLink("New Service", "New", "Service", new { @class = "btn btn-outline-primary" })
-@if (!Model.Any())
-{
-    <p>No services available.</p>
-}
+
 <p></p>
 <table id="services" class="table table-bordered table-hover">
     <thead>
@@ -22,22 +19,41 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var services in Model)
-        {
-            <tr>
-                <td>@Html.ActionLink(services.Type, "Edit", "Service", new { id = services.Id }, null)</td>
-                <td>@services.Description</td>
-                <td>@services.Expense</td>
-                <td align="center"><button data-service-id="@services.Id" class="btn btn-outline-primary js-delete"> Delete </button></td>
-            </tr>
-        }
     </tbody>
 </table>
+
 @section scripts
 {
     <script>
+
         $(document).ready(function () {
-            $("#services").DataTable();
+            $("#services").DataTable({
+                ajax: {
+                    url: "API/Services/GetServices",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "Type",
+                        render: function (data, type, Service) {
+                            return "<a href='/Service/Edit/" + Service.Id + "'>" + Service.Type + "</a>";
+                        }
+                    },
+                    {
+                        data: "Description"
+                    },
+                    {
+                        data: "Expense"
+                    },
+                    {
+                        data: "Id",
+                        render: function (data) {
+                            return "<button class=' btn btn-outline-primary js-delete' data-service-id=" + data + ">Delete</button>";
+                        }
+                    }
+                ]
+            });
+        });
 
             $("#services").on("click", ".js-delete", function () {
                 var button = $(this);
@@ -54,6 +70,5 @@
                     }
                 });
             });
-        });
     </script>
 }

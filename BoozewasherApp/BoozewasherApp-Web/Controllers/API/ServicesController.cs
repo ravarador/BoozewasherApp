@@ -24,9 +24,11 @@ namespace BoozewasherApp_Web.Controllers.API
 
         //GET /API/Services
 
-        public IEnumerable<ServiceDto> GetServices()
+        public IHttpActionResult GetServices()
         {
-            return _context.Services.ToList().Select(Mapper.Map<Service, ServiceDto>);
+            var servicesDto = _context.Services.ToList()
+                                               .Select(Mapper.Map<Service, ServiceDto>);
+            return Ok(servicesDto);
         } 
 
         //GET /API/Services/1

@@ -23,8 +23,7 @@ namespace BoozewasherApp_Web.Controllers
 
         public ActionResult Index()
         {
-            var services = _context.Services.ToList();
-            return View(services);
+            return View("Index");
         }
 
         public ActionResult New()

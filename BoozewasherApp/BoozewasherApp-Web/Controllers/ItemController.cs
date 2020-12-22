@@ -26,8 +26,7 @@ namespace BoozewasherApp_Web.Controllers
         // GET: Item
         public ActionResult Index()
         {
-            var items = _context.Items.ToList();
-            return View(items);
+            return View("Index");
         }
 
         public ActionResult New()

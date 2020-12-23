@@ -27,7 +27,6 @@ namespace BoozewasherApp_Web.Controllers
             if (User.IsInRole(RoleName.CanManageVehicles))
                 return View("Index");
 
-            else
                 return View("ReadOnlyIndex");
         }
 

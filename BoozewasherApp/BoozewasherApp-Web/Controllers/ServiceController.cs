@@ -26,7 +26,6 @@ namespace BoozewasherApp_Web.Controllers
             if (User.IsInRole(RoleName.CanManageServices))
                 return View("Index");
 
-            else
                 return View("ReadOnlyIndex");
         }
 

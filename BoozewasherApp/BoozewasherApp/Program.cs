@@ -25,6 +25,7 @@ namespace BoozewasherApp
             container.Register<IServiceRepository, ServiceRepository>(Lifestyle.Singleton);
             container.Register<IVehicleRepository, VehicleRepository>(Lifestyle.Singleton);
             container.Register<ITransactionRepository, TransactionRepository>(Lifestyle.Singleton);
+            container.Register<IItemRepository, ItemRepository>(Lifestyle.Singleton);
             container.Register<ParentForm>(Lifestyle.Singleton);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

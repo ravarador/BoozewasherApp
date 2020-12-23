@@ -10,5 +10,6 @@ namespace BoozewasherApp_Web.Models.ContextModel
         public const string CanManageVehicles = ("CanManageVehicles");
         public const string CanManageServices = ("CanManageServices");
         public const string CanManageItems = ("CanManageItems");
+        public const string CanManageTransactions = ("CanManageTransactions");
     }
 }

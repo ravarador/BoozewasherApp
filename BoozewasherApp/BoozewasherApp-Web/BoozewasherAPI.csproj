@@ -217,6 +217,7 @@
       <DependentUpon>202012211211122_AddedDataAnnotationsForItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ContextModel\Item.cs" />
+    <Compile Include="Models\ContextModel\RoleName.cs" />
     <Compile Include="Models\Dtos\ItemDto.cs" />
     <Compile Include="Models\Dtos\ServiceDto.cs" />
     <Compile Include="Global.asax.cs">
@@ -598,6 +599,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Item\Index.cshtml" />
     <Content Include="Views\Item\ItemForm.cshtml" />
+    <Content Include="Views\Vehicle\ReadOnlyIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

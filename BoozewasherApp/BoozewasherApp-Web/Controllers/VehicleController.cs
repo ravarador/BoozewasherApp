@@ -24,9 +24,14 @@ namespace BoozewasherApp_Web.Controllers
         }
         public ActionResult Index()
         {
-            return View("Index");
+            if (User.IsInRole(RoleName.CanManageVehicles))
+                return View("Index");
+
+            else
+                return View("ReadOnlyIndex");
         }
 
+        [Authorize(Roles = RoleName.CanManageVehicles)]
         public ActionResult New()
         {
             var viewModel = new VehicleFormViewModel()
@@ -36,6 +41,7 @@ namespace BoozewasherApp_Web.Controllers
             return View("VehicleForm", viewModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageVehicles)]
         public ActionResult Edit(int id)
         {
             var vehicle = _context.Vehicles.SingleOrDefault(v => v.Id == id);
@@ -73,6 +79,8 @@ namespace BoozewasherApp_Web.Controllers
 
             return RedirectToAction("Index", "Vehicle");
         }
+
+        [Authorize(Roles = RoleName.CanManageVehicles)]
         public ActionResult Delete(int id)
         {
             var vehicle = _context.Vehicles.SingleOrDefault(s => s.Id == id);

@@ -6,13 +6,10 @@
 <p></p>
 <h1>Items</h1>
 <p></p>
+@Html.ActionLink("New Item", "New", "Item", new { @class = "btn btn-outline-primary" })
 
-@if (!Model.Any())
-{
-    <p>No items available.</p>
-}
 <p></p>
-<table id="services" class="table table-bordered table-hover">
+<table id="items" class="table table-bordered table-hover">
     <thead>
         <tr>
             <th>Name</th>
@@ -21,19 +18,67 @@
             <th>IsEmpty</th>
             <th>UsageCount</th>
             <th>Expense</th>
+            <th>Delete</th>
         </tr>
     </thead>
-        <tbody>
-            @foreach (var items in Model)
-            {
-                <tr>
-                    <td>@Html.ActionLink(items.Name, "Edit", "Item", new { id = items.Id }, null)</td>
-                    <td>@items.Description</td>
-                    <td>@items.Barcode</td>
-                    <td>@items.IsEmpty</td>
-                    <td>@items.UsageCount</td>
-                    <td>@items.Expense</td>
-                </tr>
-            }
-        </tbody>
+    <tbody> 
+   </tbody>
 </table>
+@section scripts {
+
+    <script>
+        $(document).ready(function () {
+            $("#items").DataTable({
+
+                ajax: {
+                    url: "API/Items/GetItems",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "Name",
+                        render: function (data, type, Item) {
+                            return "<a href='/Item/Edit/" + Item.Id + "'>" + Item.Name + "</a>";
+                        }
+                    },
+                    {
+                        data: "Description"
+                    },
+                    {
+                        data: "Barcode"
+                    },
+                    {
+                        data: "IsEmpty"
+                    },
+                    {
+                        data: "UsageCount"
+                    },
+                    {
+                        data: "Expense"
+                    },
+                    {
+                        data: "Id",
+                        render: function (data) {
+                            return "<button class=' btn btn-outline-primary js-delete' data-item-id=" + data + ">Delete</button>";
+                        }
+                    }
+                ]
+            });
+            $("#items").on("click", ".js-delete", function () {
+                var button = $(this);
+
+                bootbox.confirm("Would you like to delete this item?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "API/Items/DeleteItem/" + button.attr("data-items-id"),
+                            method: "DELETE",
+                            success: function () {
+                                button.parents("tr").remove();
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+}

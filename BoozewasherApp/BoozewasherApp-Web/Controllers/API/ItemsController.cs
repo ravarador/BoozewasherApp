@@ -21,12 +21,14 @@ namespace BoozewasherApp_Web.Controllers.API
             _context = new ApplicationDbContext();
         }
 
-        //GET /API/Items
+        //GET /API/Items    
 
-        public IEnumerable<ItemDto> GetItems()
+        public IHttpActionResult GetItems()
         {
-            return _context.Items.ToList()
-                                  .Select(Mapper.Map<Item, ItemDto>);
+            var itemsDto = _context.Items.ToList()
+                                       .Select(Mapper.Map<Item, ItemDto>);
+
+            return Ok(itemsDto);
         }
 
         //GET /API/Items/1

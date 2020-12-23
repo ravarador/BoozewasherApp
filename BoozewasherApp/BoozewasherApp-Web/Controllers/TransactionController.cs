@@ -24,10 +24,7 @@ namespace BoozewasherApp_Web.Controllers
 
         public ActionResult Index()
         {
-            var transaction = _context.Transactions.Include("Service")
-                                                   .Include("Vehicle")
-                                                   .ToList();
-            return View(transaction);
+            return View("Index");
         }
 
         public ActionResult New()

@@ -25,11 +25,12 @@ namespace BoozewasherApp_Web.Controllers.API
         }
 
         //GET /API/Transactions
-        public IList<Transaction> GetTransactions()
+        public IHttpActionResult GetTransactions()
         {
-            return _context.Transactions.Include("Service")
-                                        .Include("Vehicle")
-                                        .ToList();
+            var transactionsDto = _context.Transactions.Include("Service")
+                                                       .Include("Vehicle")
+                                                       .ToList();
+            return Ok(transactionsDto);
         }
 
         [HttpPost]

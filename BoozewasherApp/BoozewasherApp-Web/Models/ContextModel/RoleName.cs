@@ -8,5 +8,6 @@ namespace BoozewasherApp_Web.Models.ContextModel
     public static class RoleName
     {
         public const string CanManageVehicles = ("CanManageVehicles");
+        public const string CanManageServices = ("CanManageServices");
     }
 }

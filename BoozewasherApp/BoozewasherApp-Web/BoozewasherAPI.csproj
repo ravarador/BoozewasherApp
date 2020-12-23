@@ -600,6 +600,7 @@
     <Content Include="Views\Item\Index.cshtml" />
     <Content Include="Views\Item\ItemForm.cshtml" />
     <Content Include="Views\Vehicle\ReadOnlyIndex.cshtml" />
+    <Content Include="Views\Service\ReadOnlyIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

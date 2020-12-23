@@ -21,15 +21,16 @@ namespace BoozewasherApp
         [STAThread]
         static void Main()
         {
-            //container = new Container();
-            //container.Register<IServiceRepository, ServiceRepository>(Lifestyle.Singleton);
-            //container.Register<IVehicleRepository, VehicleRepository>(Lifestyle.Singleton);
-            //container.Register<ITransactionRepository, TransactionRepository>(Lifestyle.Singleton);
-            //container.Register<ParentForm>(Lifestyle.Singleton);
+            container = new Container();
+            container.Register<IServiceRepository, ServiceRepository>(Lifestyle.Singleton);
+            container.Register<IVehicleRepository, VehicleRepository>(Lifestyle.Singleton);
+            container.Register<ITransactionRepository, TransactionRepository>(Lifestyle.Singleton);
+            container.Register<IItemRepository, ItemRepository>(Lifestyle.Singleton);
+            container.Register<ParentForm>(Lifestyle.Singleton);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(container.GetInstance<ParentForm>());
-            Application.Run(new MainForm());
+            Application.Run(container.GetInstance<ParentForm>());
+            //Application.Run(new MainForm());
         }
     }
 }

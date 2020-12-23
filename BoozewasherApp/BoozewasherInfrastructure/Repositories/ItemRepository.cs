@@ -16,7 +16,7 @@ namespace BoozewasherInfrastructure.Repositories
         public void AddItem(Item item)
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/services/createitem/", Method.POST);
+            var request = new RestRequest("/api/items/createitem/", Method.POST);
             request.AddJsonBody(item);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);

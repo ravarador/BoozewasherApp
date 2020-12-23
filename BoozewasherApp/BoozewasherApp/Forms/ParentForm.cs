@@ -1,4 +1,5 @@
-﻿using BoozewasherApp.Forms.ServiceForms;
+﻿using BoozewasherApp.Forms.ItemForms;
+using BoozewasherApp.Forms.ServiceForms;
 using BoozewasherApp.Forms.SummaryForms;
 using BoozewasherApp.Forms.TransactionForms;
 using BoozewasherApp.Forms.VehicleForms;
@@ -20,7 +21,9 @@ namespace BoozewasherApp
         public IServiceRepository ServiceRepository { get; private set; }
         public IVehicleRepository VehicleRepository { get; private set; }
         public ITransactionRepository TransactionRepository { get; private set; }
+        public IItemRepository ItemRepository { get; private set; }
         public ParentForm(IServiceRepository serviceRepository,
+                          IItemRepository itemRepository,
                           IVehicleRepository vehicleRepository,
                           ITransactionRepository transactionRepository)
         {
@@ -29,6 +32,7 @@ namespace BoozewasherApp
             ServiceRepository = serviceRepository;
             VehicleRepository = vehicleRepository;
             TransactionRepository = transactionRepository;
+            ItemRepository = itemRepository;
         }
 
         private void addServiceToolStripMenuItem_Click(object sender, EventArgs e)
@@ -121,6 +125,14 @@ namespace BoozewasherApp
 
             summaryChartReportSelector.Show();
             summaryChartReportSelector.MdiParent = this;
+        }
+
+        private void addItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddItemForm addItemForm = new AddItemForm(ItemRepository);
+
+            addItemForm.Show();
+            addItemForm.MdiParent = this;
         }
     }
 }

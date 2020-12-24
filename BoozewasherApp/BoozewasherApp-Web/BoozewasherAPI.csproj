@@ -216,7 +216,12 @@
     <Compile Include="Migrations\202012211211122_AddedDataAnnotationsForItems.designer.cs">
       <DependentUpon>202012211211122_AddedDataAnnotationsForItems.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012231328269_SeedUsersForAllTables.cs" />
+    <Compile Include="Migrations\202012231328269_SeedUsersForAllTables.designer.cs">
+      <DependentUpon>202012231328269_SeedUsersForAllTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ContextModel\Item.cs" />
+    <Compile Include="Models\ContextModel\RoleName.cs" />
     <Compile Include="Models\Dtos\ItemDto.cs" />
     <Compile Include="Models\Dtos\ServiceDto.cs" />
     <Compile Include="Global.asax.cs">
@@ -598,6 +603,10 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Item\Index.cshtml" />
     <Content Include="Views\Item\ItemForm.cshtml" />
+    <Content Include="Views\Vehicle\ReadOnlyIndex.cshtml" />
+    <Content Include="Views\Service\ReadOnlyIndex.cshtml" />
+    <Content Include="Views\Item\ReadOnlyIndex.cshtml" />
+    <Content Include="Views\Transaction\ReadOnlyIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -636,6 +645,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012211211122_AddedDataAnnotationsForItems.resx">
       <DependentUpon>202012211211122_AddedDataAnnotationsForItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012231328269_SeedUsersForAllTables.resx">
+      <DependentUpon>202012231328269_SeedUsersForAllTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

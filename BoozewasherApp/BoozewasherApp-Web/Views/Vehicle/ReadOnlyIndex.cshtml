@@ -1,0 +1,49 @@
+﻿@model  IEnumerable<BoozewasherApp_Web.Models.ContextModel.Vehicle>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<p></p>
+<h1>Vehicles</h1>
+<p></p>
+
+<table id="vehicles" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Brand</th>
+            <th>Model</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#vehicles").DataTable({
+                ajax: {
+                    url: "API/Vehicles/GetVehicles",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "Type",
+                    },
+                    {
+                        data: "Description"
+                    },
+                    {
+                        data: "Brand"
+                    },
+                    {
+                        data: "Model"
+                    }
+                ]
+            });
+        });
+       
+    </script>
+}

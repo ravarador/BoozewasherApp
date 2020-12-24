@@ -23,9 +23,13 @@ namespace BoozewasherApp_Web.Controllers
 
         public ActionResult Index()
         {
-            return View("Index");
+            if (User.IsInRole(RoleName.CanManageServices))
+                return View("Index");
+
+                return View("ReadOnlyIndex");
         }
 
+        [Authorize(Roles = RoleName.CanManageServices)]
         public ActionResult New()
         {
             var viewModel = new ServiceFormViewModel
@@ -35,6 +39,7 @@ namespace BoozewasherApp_Web.Controllers
             return View ("ServiceForm");
         }
 
+        [Authorize(Roles = RoleName.CanManageServices)]
         public ActionResult Edit(int id)
         {
             var service = _context.Services.SingleOrDefault(s => s.Id == id);
@@ -73,6 +78,8 @@ namespace BoozewasherApp_Web.Controllers
 
             return RedirectToAction("Index", "Service");
         }
+
+        [Authorize(Roles = RoleName.CanManageServices)]
         public ActionResult Delete (int id)
         {
             var service = _context.Services.SingleOrDefault(s => s.Id == id);

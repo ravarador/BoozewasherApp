@@ -24,9 +24,13 @@ namespace BoozewasherApp_Web.Controllers
 
         public ActionResult Index()
         {
+            if (User.IsInRole(RoleName.CanManageTransactions))
             return View("Index");
+
+            return View("ReadOnlyIndex");
         }
 
+        [Authorize(Roles = RoleName.CanManageTransactions)]
         public ActionResult New()
         {
             var services = _context.Services.ToList();
@@ -39,6 +43,7 @@ namespace BoozewasherApp_Web.Controllers
             return View("TransactionForm", viewModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageTransactions)]
         public ActionResult Edit(int id)
         {
             var transaction = _context.Transactions.Include("Service")
@@ -83,6 +88,8 @@ namespace BoozewasherApp_Web.Controllers
 
             return RedirectToAction("Index", "Transaction");
         }
+
+        [Authorize(Roles = RoleName.CanManageTransactions)]
         public ActionResult Delete(int id)
         {
             var transaction = _context.Transactions.SingleOrDefault(s => s.Id == id);

@@ -26,9 +26,13 @@ namespace BoozewasherApp_Web.Controllers
         // GET: Item
         public ActionResult Index()
         {
+            if (User.IsInRole(RoleName.CanManageItems))
             return View("Index");
+
+            return View("ReadOnlyIndex");
         }
 
+        [Authorize(Roles = RoleName.CanManageItems)]
         public ActionResult New()
         {
             var viewModel = new ItemsFormViewModel
@@ -39,6 +43,7 @@ namespace BoozewasherApp_Web.Controllers
             return View("ItemForm", viewModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageItems)]
         public ActionResult Edit(int id)
         {
             var item = _context.Items.SingleOrDefault(i => i.Id == id);
@@ -81,6 +86,7 @@ namespace BoozewasherApp_Web.Controllers
             return RedirectToAction("Index", "Item");
         }
 
+        [Authorize(Roles = RoleName.CanManageItems)]
         public ActionResult Delete(int id)
         {
             var item = _context.Items.SingleOrDefault(i => i.Id == id);

@@ -1,6 +1,7 @@
 ﻿using BoozewasherApp_Web.Models;
 using BoozewasherApp_Web.Models.ContextModel;
 using BoozewasherApp_Web.Models.ViewModels.Transactions;
+using BoozewasherApp_Web.Models.ViewModels.Vehicles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -77,7 +78,7 @@ namespace BoozewasherApp_Web.Controllers
             }
             else
             {
-                var transactionInDB = _context.Transactions.Single(t => t.Id == transaction.Id);
+                var transactionInDB = _context.Transactions.SingleOrDefault(t => t.Id == transaction.Id);
 
                 transactionInDB.VehicleId = transaction.VehicleId;
                 transactionInDB.ServiceId = transaction.ServiceId;
@@ -101,6 +102,27 @@ namespace BoozewasherApp_Web.Controllers
             _context.SaveChanges();
 
             return RedirectToAction("Index", "Transaction");
+        }
+
+        public ActionResult VehicleLookup()
+        {
+            var vehicles = _context.Vehicles.ToList();
+            return View(vehicles);
+        }
+
+        public ActionResult SelectedVehicle(int id)
+        {
+            var vehicle = _context.Vehicles.SingleOrDefault(t => t.Id == id);
+
+            if (vehicle == null)
+                return HttpNotFound();
+
+            var viewModel = new TransactionFormViewModel()
+            {
+               VehicleId = vehicle.Id,
+               Services = _context.Services.ToList()
+            };
+            return View("TransactionForm", viewModel);
         }
     }
 }

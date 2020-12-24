@@ -607,6 +607,7 @@
     <Content Include="Views\Service\ReadOnlyIndex.cshtml" />
     <Content Include="Views\Item\ReadOnlyIndex.cshtml" />
     <Content Include="Views\Transaction\ReadOnlyIndex.cshtml" />
+    <Content Include="Views\Transaction\VehicleLookup.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

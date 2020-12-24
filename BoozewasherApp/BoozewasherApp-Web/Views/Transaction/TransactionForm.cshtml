@@ -10,6 +10,10 @@
 {
     @Html.ValidationSummary(true, "Please fill up requirements");
 
+    <p></p>
+    @Html.ActionLink("Vehicle Lookup", "VehicleLookup", "Transaction", new { @class = "btn btn-outline-primary" })
+    <p></p>
+
     <div class="form-group">
         @Html.Label("Vehicle Type")
         @Html.DropDownListFor(t => t.VehicleId, new SelectList(Model.Vehicles, "Id", "Type"), "Select Vehicle Type", new { @class = "form-control" })

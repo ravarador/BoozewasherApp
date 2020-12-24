@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.itemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vehicleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,8 +44,7 @@
             this.summaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +61,22 @@
             this.menuStrip1.Size = new System.Drawing.Size(973, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // itemToolStripMenuItem
+            // 
+            this.itemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addItemToolStripMenuItem,
+            this.updateItemToolStripMenuItem});
+            this.itemToolStripMenuItem.Name = "itemToolStripMenuItem";
+            this.itemToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.itemToolStripMenuItem.Text = "Item";
+            // 
+            // addItemToolStripMenuItem
+            // 
+            this.addItemToolStripMenuItem.Name = "addItemToolStripMenuItem";
+            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addItemToolStripMenuItem.Text = "Add Item";
+            this.addItemToolStripMenuItem.Click += new System.EventHandler(this.addItemToolStripMenuItem_Click);
             // 
             // serviceToolStripMenuItem
             // 
@@ -89,21 +106,21 @@
             // addVehicleToolStripMenuItem
             // 
             this.addVehicleToolStripMenuItem.Name = "addVehicleToolStripMenuItem";
-            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addVehicleToolStripMenuItem.Text = "Add Vehicle";
             this.addVehicleToolStripMenuItem.Click += new System.EventHandler(this.addVehicleToolStripMenuItem_Click);
             // 
             // updateVehicleToolStripMenuItem
             // 
             this.updateVehicleToolStripMenuItem.Name = "updateVehicleToolStripMenuItem";
-            this.updateVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateVehicleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.updateVehicleToolStripMenuItem.Text = "Update Vehicle";
             this.updateVehicleToolStripMenuItem.Click += new System.EventHandler(this.updateVehicleToolStripMenuItem_Click);
             // 
             // deleteVehicleToolStripMenuItem
             // 
             this.deleteVehicleToolStripMenuItem.Name = "deleteVehicleToolStripMenuItem";
-            this.deleteVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteVehicleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.deleteVehicleToolStripMenuItem.Text = "Delete Vehicle";
             this.deleteVehicleToolStripMenuItem.Click += new System.EventHandler(this.deleteVehicleToolStripMenuItem_Click);
             // 
@@ -120,21 +137,21 @@
             // addTransactionToolStripMenuItem
             // 
             this.addTransactionToolStripMenuItem.Name = "addTransactionToolStripMenuItem";
-            this.addTransactionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addTransactionToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.addTransactionToolStripMenuItem.Text = "Add Transaction";
             this.addTransactionToolStripMenuItem.Click += new System.EventHandler(this.addTransactionToolStripMenuItem_Click);
             // 
             // updateTransactionToolStripMenuItem
             // 
             this.updateTransactionToolStripMenuItem.Name = "updateTransactionToolStripMenuItem";
-            this.updateTransactionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateTransactionToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.updateTransactionToolStripMenuItem.Text = "Update Transaction";
             this.updateTransactionToolStripMenuItem.Click += new System.EventHandler(this.updateTransactionToolStripMenuItem_Click);
             // 
             // deleteTransactionToolStripMenuItem
             // 
             this.deleteTransactionToolStripMenuItem.Name = "deleteTransactionToolStripMenuItem";
-            this.deleteTransactionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteTransactionToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.deleteTransactionToolStripMenuItem.Text = "Delete Transaction";
             this.deleteTransactionToolStripMenuItem.Click += new System.EventHandler(this.deleteTransactionToolStripMenuItem_Click);
             // 
@@ -150,31 +167,23 @@
             // generateReportToolStripMenuItem
             // 
             this.generateReportToolStripMenuItem.Name = "generateReportToolStripMenuItem";
-            this.generateReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.generateReportToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.generateReportToolStripMenuItem.Text = "Generate Report";
             this.generateReportToolStripMenuItem.Click += new System.EventHandler(this.generateReportToolStripMenuItem_Click);
             // 
             // generateChartToolStripMenuItem
             // 
             this.generateChartToolStripMenuItem.Name = "generateChartToolStripMenuItem";
-            this.generateChartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.generateChartToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.generateChartToolStripMenuItem.Text = "Generate Chart";
             this.generateChartToolStripMenuItem.Click += new System.EventHandler(this.generateChartToolStripMenuItem_Click);
             // 
-            // itemToolStripMenuItem
+            // updateItemToolStripMenuItem
             // 
-            this.itemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addItemToolStripMenuItem});
-            this.itemToolStripMenuItem.Name = "itemToolStripMenuItem";
-            this.itemToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.itemToolStripMenuItem.Text = "Item";
-            // 
-            // addItemToolStripMenuItem
-            // 
-            this.addItemToolStripMenuItem.Name = "addItemToolStripMenuItem";
-            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.addItemToolStripMenuItem.Text = "Add Item";
-            this.addItemToolStripMenuItem.Click += new System.EventHandler(this.addItemToolStripMenuItem_Click);
+            this.updateItemToolStripMenuItem.Name = "updateItemToolStripMenuItem";
+            this.updateItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateItemToolStripMenuItem.Text = "Update Item";
+            this.updateItemToolStripMenuItem.Click += new System.EventHandler(this.updateItemToolStripMenuItem_Click);
             // 
             // ParentForm
             // 
@@ -214,6 +223,7 @@
         private System.Windows.Forms.ToolStripMenuItem generateChartToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem itemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addItemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateItemToolStripMenuItem;
     }
 }
 

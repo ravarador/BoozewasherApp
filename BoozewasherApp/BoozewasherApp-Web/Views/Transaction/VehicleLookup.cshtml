@@ -1,0 +1,33 @@
+﻿@model  IEnumerable<BoozewasherApp_Web.Models.ContextModel.Vehicle>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<p></p>
+<h1>Vehicles</h1>
+<p></p>
+@if (!Model.Any())
+{
+    <p>No vehicles available.</p>
+}
+<table id="vehicles" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Brand</th>
+            <th>Model</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var vehicles in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(vehicles.Type, "SelectedVehicle", "Transaction", new { id = vehicles.Id }, null)</td>
+                <td>@vehicles.Description</td>
+                <td>@vehicles.Brand</td>
+                <td>@vehicles.Model</td>
+            </tr>
+        }
+    </tbody>
+</table>

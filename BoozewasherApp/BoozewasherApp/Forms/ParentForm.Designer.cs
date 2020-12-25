@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.itemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vehicleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,7 +45,7 @@
             this.summaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +67,8 @@
             // 
             this.itemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addItemToolStripMenuItem,
-            this.updateItemToolStripMenuItem});
+            this.updateItemToolStripMenuItem,
+            this.deleteItemToolStripMenuItem});
             this.itemToolStripMenuItem.Name = "itemToolStripMenuItem";
             this.itemToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.itemToolStripMenuItem.Text = "Item";
@@ -77,6 +79,13 @@
             this.addItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addItemToolStripMenuItem.Text = "Add Item";
             this.addItemToolStripMenuItem.Click += new System.EventHandler(this.addItemToolStripMenuItem_Click);
+            // 
+            // updateItemToolStripMenuItem
+            // 
+            this.updateItemToolStripMenuItem.Name = "updateItemToolStripMenuItem";
+            this.updateItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateItemToolStripMenuItem.Text = "Update Item";
+            this.updateItemToolStripMenuItem.Click += new System.EventHandler(this.updateItemToolStripMenuItem_Click);
             // 
             // serviceToolStripMenuItem
             // 
@@ -89,7 +98,7 @@
             // updateServiceToolStripMenuItem
             // 
             this.updateServiceToolStripMenuItem.Name = "updateServiceToolStripMenuItem";
-            this.updateServiceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateServiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.updateServiceToolStripMenuItem.Text = "Update Service";
             this.updateServiceToolStripMenuItem.Click += new System.EventHandler(this.updateServiceToolStripMenuItem_Click);
             // 
@@ -178,12 +187,12 @@
             this.generateChartToolStripMenuItem.Text = "Generate Chart";
             this.generateChartToolStripMenuItem.Click += new System.EventHandler(this.generateChartToolStripMenuItem_Click);
             // 
-            // updateItemToolStripMenuItem
+            // deleteItemToolStripMenuItem
             // 
-            this.updateItemToolStripMenuItem.Name = "updateItemToolStripMenuItem";
-            this.updateItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.updateItemToolStripMenuItem.Text = "Update Item";
-            this.updateItemToolStripMenuItem.Click += new System.EventHandler(this.updateItemToolStripMenuItem_Click);
+            this.deleteItemToolStripMenuItem.Name = "deleteItemToolStripMenuItem";
+            this.deleteItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteItemToolStripMenuItem.Text = "Delete Item";
+            this.deleteItemToolStripMenuItem.Click += new System.EventHandler(this.deleteItemToolStripMenuItem_Click);
             // 
             // ParentForm
             // 
@@ -224,6 +233,7 @@
         private System.Windows.Forms.ToolStripMenuItem itemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addItemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateItemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteItemToolStripMenuItem;
     }
 }
 

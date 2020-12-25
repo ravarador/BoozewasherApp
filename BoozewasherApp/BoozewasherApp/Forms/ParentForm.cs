@@ -142,5 +142,13 @@ namespace BoozewasherApp
             updateItemForm.Show();
             updateItemForm.MdiParent = this;
         }
+
+        private void deleteItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteItemForm deleteItemForm = new DeleteItemForm(ItemRepository);
+
+            deleteItemForm.Show();
+            deleteItemForm.MdiParent = this;
+        }
     }
 }

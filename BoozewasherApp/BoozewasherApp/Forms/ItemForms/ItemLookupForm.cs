@@ -14,7 +14,7 @@ namespace BoozewasherApp.Forms.ItemForms
     public partial class ItemLookupForm : Form
     {
         private IItemRepository ItemRepository { get; set; }
-        private int SelectedItemId { get; set; }
+        public int SelectedItemIdForLookup { get; set; }
         public ItemLookupForm(IItemRepository itemRepository)
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace BoozewasherApp.Forms.ItemForms
 
         private void dgvItem_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            SelectedItemId = (int)dgvItem.SelectedRows[0].Cells[0].Value;
+            SelectedItemIdForLookup = (int)dgvItem.SelectedRows[0].Cells[0].Value;
 
             this.Close();
         }

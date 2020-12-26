@@ -109,6 +109,12 @@
     <Compile Include="Forms\ItemForms\DeleteItemForm.Designer.cs">
       <DependentUpon>DeleteItemForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ItemForms\ItemLookupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemForms\ItemLookupForm.Designer.cs">
+      <DependentUpon>ItemLookupForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ItemForms\UpdateItemForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemForms\DeleteItemForm.resx">
       <DependentUpon>DeleteItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ItemForms\ItemLookupForm.resx">
+      <DependentUpon>ItemLookupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemForms\UpdateItemForm.resx">
       <DependentUpon>UpdateItemForm.cs</DependentUpon>

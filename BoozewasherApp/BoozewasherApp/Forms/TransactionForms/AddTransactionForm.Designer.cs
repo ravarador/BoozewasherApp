@@ -47,7 +47,7 @@
             this.dgvTransaction = new System.Windows.Forms.DataGridView();
             this.btnItemLookup = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.listViewItems = new System.Windows.Forms.ListView();
+            this.listboxItems = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
@@ -163,7 +163,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(294, 322);
+            this.btnAdd.Location = new System.Drawing.Point(294, 325);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 8;
@@ -207,21 +207,20 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Item List..........";
             // 
-            // listViewItems
+            // listboxItems
             // 
-            this.listViewItems.HideSelection = false;
-            this.listViewItems.Location = new System.Drawing.Point(169, 159);
-            this.listViewItems.Name = "listViewItems";
-            this.listViewItems.Size = new System.Drawing.Size(200, 157);
-            this.listViewItems.TabIndex = 13;
-            this.listViewItems.UseCompatibleStateImageBehavior = false;
+            this.listboxItems.FormattingEnabled = true;
+            this.listboxItems.Location = new System.Drawing.Point(169, 159);
+            this.listboxItems.Name = "listboxItems";
+            this.listboxItems.Size = new System.Drawing.Size(200, 160);
+            this.listboxItems.TabIndex = 13;
             // 
             // AddTransactionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 592);
-            this.Controls.Add(this.listViewItems);
+            this.Controls.Add(this.listboxItems);
             this.Controls.Add(this.btnItemLookup);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvTransaction);
@@ -269,6 +268,6 @@
         private System.Windows.Forms.DataGridView dgvTransaction;
         private System.Windows.Forms.Button btnItemLookup;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListView listViewItems;
+        private System.Windows.Forms.ListBox listboxItems;
     }
 }

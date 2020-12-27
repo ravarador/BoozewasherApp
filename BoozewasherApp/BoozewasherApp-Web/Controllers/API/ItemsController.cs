@@ -31,7 +31,7 @@ namespace BoozewasherApp_Web.Controllers.API
             return Ok(itemsDto);
         }
 
-        //GET /API/Items/1
+        //GET /API/Items/GetItem
         public IHttpActionResult GetItem(int id)
         {
             var item = _context.Items.SingleOrDefault(s => s.Id == id);
@@ -42,7 +42,7 @@ namespace BoozewasherApp_Web.Controllers.API
             return Ok(Mapper.Map<Item, ItemDto>(item));
         }
 
-        //POST /API/Items
+        //POST /API/Items/CreateItem
         [HttpPost]
         public IHttpActionResult CreateItem(ItemDto itemDto)
         {

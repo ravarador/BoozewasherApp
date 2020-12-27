@@ -42,12 +42,17 @@ namespace BoozewasherInfrastructure.Repositories
             return dataList;
         }
 
-        //public Service GetServiceById(int id)
-        //{
-        //    var serviceById = context.Services.Where(a => a.Id == id).FirstOrDefault();
+        public Item GetItemById(int id)
+        {
+            var client = new RestClient(Resources.ConnectionString);
+            var request = new RestRequest("/api/items/getitem/" + id, Method.GET);
 
-        //    return serviceById;
-        //}
+            var response = client.Execute(request);
+
+            var dataList = JsonConvert.DeserializeObject<Item>(response.Content);
+
+            return dataList;
+        }
 
         public void UpdateItem(Item item)
         {

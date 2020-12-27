@@ -13,6 +13,6 @@ namespace BoozewasherDomain.IRepositories
         void DeleteItem(int id);
         List<Item> GetAllItems();
         void UpdateItem(Item item);
-
+        Item GetItemById(int id);
     }
 }

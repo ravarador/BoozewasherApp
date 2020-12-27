@@ -87,7 +87,8 @@ namespace BoozewasherApp
         {
             AddTransactionForm addTransactionForm = new AddTransactionForm(ServiceRepository, 
                                                                            VehicleRepository, 
-                                                                           TransactionRepository);
+                                                                           TransactionRepository,
+                                                                           ItemRepository);
 
             addTransactionForm.Show();
             addTransactionForm.MdiParent = this;

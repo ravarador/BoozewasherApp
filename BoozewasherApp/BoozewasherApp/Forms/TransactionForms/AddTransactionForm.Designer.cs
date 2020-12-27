@@ -45,6 +45,9 @@
             this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvTransaction = new System.Windows.Forms.DataGridView();
+            this.btnItemLookup = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.listViewItems = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
@@ -160,7 +163,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(294, 156);
+            this.btnAdd.Location = new System.Drawing.Point(294, 322);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 8;
@@ -178,17 +181,49 @@
             this.dgvTransaction.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTransaction.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvTransaction.Location = new System.Drawing.Point(0, 203);
+            this.dgvTransaction.Location = new System.Drawing.Point(0, 351);
             this.dgvTransaction.Name = "dgvTransaction";
             this.dgvTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTransaction.Size = new System.Drawing.Size(533, 247);
+            this.dgvTransaction.Size = new System.Drawing.Size(533, 241);
             this.dgvTransaction.TabIndex = 9;
+            // 
+            // btnItemLookup
+            // 
+            this.btnItemLookup.FlatAppearance.BorderSize = 0;
+            this.btnItemLookup.Location = new System.Drawing.Point(375, 159);
+            this.btnItemLookup.Name = "btnItemLookup";
+            this.btnItemLookup.Size = new System.Drawing.Size(127, 23);
+            this.btnItemLookup.TabIndex = 12;
+            this.btnItemLookup.Text = "Item Lookup";
+            this.btnItemLookup.UseVisualStyleBackColor = true;
+            this.btnItemLookup.Click += new System.EventHandler(this.btnItemLookup_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(62, 159);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Item List..........";
+            // 
+            // listViewItems
+            // 
+            this.listViewItems.HideSelection = false;
+            this.listViewItems.Location = new System.Drawing.Point(169, 159);
+            this.listViewItems.Name = "listViewItems";
+            this.listViewItems.Size = new System.Drawing.Size(200, 157);
+            this.listViewItems.TabIndex = 13;
+            this.listViewItems.UseCompatibleStateImageBehavior = false;
             // 
             // AddTransactionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 450);
+            this.ClientSize = new System.Drawing.Size(533, 592);
+            this.Controls.Add(this.listViewItems);
+            this.Controls.Add(this.btnItemLookup);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvTransaction);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnVehicleLookup);
@@ -232,5 +267,8 @@
         private System.Windows.Forms.Button btnVehicleLookup;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvTransaction;
+        private System.Windows.Forms.Button btnItemLookup;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ListView listViewItems;
     }
 }

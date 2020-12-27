@@ -1,4 +1,5 @@
-﻿using BoozewasherApp.Forms.ServiceForms;
+﻿using BoozewasherApp.Forms.ItemForms;
+using BoozewasherApp.Forms.ServiceForms;
 using BoozewasherApp.Forms.VehicleForms;
 using BoozewasherDomain.Dtos;
 using BoozewasherDomain.Entities;
@@ -20,14 +21,19 @@ namespace BoozewasherApp.Forms.TransactionForms
         private IServiceRepository ServiceRepository { get; set; }
         private IVehicleRepository VehicleRepository { get; set; }
         private ITransactionRepository TransactionRepository { get; set; }
+        private IItemRepository ItemRepository { get; set; }
+        private List<Item> ItemsList { get; set; }
         public AddTransactionForm(IServiceRepository serviceRepository, 
                                   IVehicleRepository vehicleRepository,
-                                  ITransactionRepository transactionRepository)
+                                  ITransactionRepository transactionRepository,
+                                  IItemRepository itemRepository)
         {
             InitializeComponent();
+            ItemsList = null;
             ServiceRepository = serviceRepository;
             VehicleRepository = vehicleRepository;
             TransactionRepository = transactionRepository;
+            ItemRepository = itemRepository;
         }
 
         private void AddTransactionForm_Load(object sender, EventArgs e)
@@ -94,5 +100,12 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         #endregion
 
+        private void btnItemLookup_Click(object sender, EventArgs e)
+        {
+            var itemLookupForm = new ItemLookupForm(ItemRepository);
+            itemLookupForm.ShowDialog();
+            
+            //ItemsList.Add(ItemRepository.)
+        }
     }
 }

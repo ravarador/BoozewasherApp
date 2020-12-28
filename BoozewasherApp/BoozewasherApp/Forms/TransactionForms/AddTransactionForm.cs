@@ -22,7 +22,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         private IVehicleRepository VehicleRepository { get; set; }
         private ITransactionRepository TransactionRepository { get; set; }
         private IItemRepository ItemRepository { get; set; }
-        private List<Item> ItemsList = new List<Item>();
+        private List<Item> ItemsListInForm = new List<Item>();
         public AddTransactionForm(IServiceRepository serviceRepository, 
                                   IVehicleRepository vehicleRepository,
                                   ITransactionRepository transactionRepository,
@@ -54,7 +54,9 @@ namespace BoozewasherApp.Forms.TransactionForms
                 ServiceId = int.Parse(comboServiceType.SelectedItem.ToString()),
                 VehicleId = int.Parse(comboVehicleType.SelectedItem.ToString()),
                 PlateNumber = txtboxPlateNumber.Text,
-                Cost = decimal.Parse(txtboxCost.Text)
+                Cost = decimal.Parse(txtboxCost.Text),
+                ItemsList = ItemsListInForm
+                
             };
 
             TransactionRepository.AddTransaction(transaction);
@@ -105,7 +107,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             var itemLookupForm = new ItemLookupForm(ItemRepository);
             itemLookupForm.ShowDialog();
 
-            ItemsList.Add(ItemRepository.GetItemById(itemLookupForm.SelectedItemIdForLookup));
+            ItemsListInForm.Add(ItemRepository.GetItemById(itemLookupForm.SelectedItemIdForLookup));
 
             listboxItems.Items.Add(ItemRepository.GetItemById(itemLookupForm.SelectedItemIdForLookup).Name);
             

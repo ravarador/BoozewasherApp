@@ -15,6 +15,7 @@ namespace BoozewasherApp_Web.Models.Dtos
         public int VehicleId { get; set; }
 
         public decimal Cost { get; set; }
-        
+        public string ItemsList { get; set; }
+
     }
 }

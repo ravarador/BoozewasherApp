@@ -22,6 +22,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         private ITransactionRepository TransactionRepository { get; set; }
         private IItemRepository ItemRepository { get; set; }
         private int SelectedTransactionId { get; set; }
+        private string ItemsListInForm;
         public UpdateTransactionForm(IServiceRepository serviceRepository,
                                      IVehicleRepository vehicleRepository,
                                      ITransactionRepository transactionRepository,
@@ -51,7 +52,8 @@ namespace BoozewasherApp.Forms.TransactionForms
                 ServiceId = int.Parse(comboServiceType.SelectedItem.ToString()),
                 VehicleId = int.Parse(comboVehicleType.SelectedItem.ToString()),
                 PlateNumber = txtboxPlateNumber.Text,
-                Cost = decimal.Parse(txtboxCost.Text)
+                Cost = decimal.Parse(txtboxCost.Text),
+                ItemsList = ItemsListInForm
             };
 
             TransactionRepository.UpdateTransaction(transaction);
@@ -60,6 +62,8 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         private void dgvTransaction_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            ResetListAndListbox();
+
             SelectedTransactionId = (int)dgvTransaction.SelectedRows[0].Cells[0].Value;
 
             datepickerDateTime.Value = DateTime.Parse(dgvTransaction.SelectedRows[0].Cells[1].Value.ToString());
@@ -67,6 +71,19 @@ namespace BoozewasherApp.Forms.TransactionForms
             comboServiceType.SelectedItem = dgvTransaction.SelectedRows[0].Cells[3].Value.ToString();
             comboVehicleType.SelectedItem = dgvTransaction.SelectedRows[0].Cells[4].Value.ToString();
             txtboxCost.Text = dgvTransaction.SelectedRows[0].Cells[5].Value.ToString();
+
+            ItemsListInForm = dgvTransaction.SelectedRows[0].Cells[8].Value.ToString();
+
+            if (!string.IsNullOrEmpty(ItemsListInForm))
+            {
+                var itemsArray = ItemsListInForm.Split(',');
+
+                foreach(var itemFromArray in itemsArray)
+                {
+                    var itemById = ItemRepository.GetItemById(int.Parse(itemFromArray)).Name;
+                    listboxItems.Items.Add(itemById);
+                }
+            }
         }
         #region Private Methods
         private void LoadDgvTransaction()
@@ -107,6 +124,12 @@ namespace BoozewasherApp.Forms.TransactionForms
         private List<int> GetVehicleTypes()
         {
             return VehicleRepository.GetAllVehicles().Select(a => a.Id).ToList();
+        }
+
+        private void ResetListAndListbox()
+        {
+            listboxItems.Items.Clear();
+            ItemsListInForm = string.Empty;
         }
         #endregion
     }

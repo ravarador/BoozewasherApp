@@ -90,7 +90,7 @@ namespace BoozewasherApp_Web.Controllers.API
             if (!ModelState.IsValid)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
 
-            var transactionInDb = _context.Transactions.Single(v => v.Id == transactionDto.Id);
+            var transactionInDb = _context.Transactions.SingleOrDefault(v => v.Id == transactionDto.Id);
 
             if (transactionInDb == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);

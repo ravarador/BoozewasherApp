@@ -22,7 +22,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         private IVehicleRepository VehicleRepository { get; set; }
         private ITransactionRepository TransactionRepository { get; set; }
         private IItemRepository ItemRepository { get; set; }
-        private string ItemsListInForm = "";
+        private string ItemsListInForm;
         public AddTransactionForm(IServiceRepository serviceRepository, 
                                   IVehicleRepository vehicleRepository,
                                   ITransactionRepository transactionRepository,

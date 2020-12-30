@@ -18,6 +18,6 @@ namespace BoozewasherDomain.Dtos
         public int VehicleId { get; set; }
 
         public decimal Cost { get; set; }
-        public List<Item> ItemsList { get; set; }
+        public string ItemsList { get; set; }
     }
 }

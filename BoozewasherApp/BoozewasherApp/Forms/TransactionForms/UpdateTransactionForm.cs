@@ -71,7 +71,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         #region Private Methods
         private void LoadDgvTransaction()
         {
-            dgvTransaction.DataSource = TransactionRepository.GetAllTransactions()
+            var transaction = = TransactionRepository.GetAllTransactions()
                                                       .Select(a => new TransactionDto
                                                       {
                                                           Id = a.Id,
@@ -81,8 +81,11 @@ namespace BoozewasherApp.Forms.TransactionForms
                                                           ServiceId = a.ServiceId,
                                                           VehicleType = a.Vehicle.Type,
                                                           VehicleId = a.VehicleId,
-                                                          Cost = a.Cost
+                                                          Cost = a.Cost,
+                                                          ItemsList = a.ItemsList
                                                       }).ToList();
+
+            dgvTransaction.DataSource = transaction;
         }
         private void OpenServiceLookupForm()
         {

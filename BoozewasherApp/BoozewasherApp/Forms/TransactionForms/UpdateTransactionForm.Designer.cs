@@ -42,6 +42,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.datepickerDateTime = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.listboxItems = new System.Windows.Forms.ListBox();
+            this.btnItemLookup = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +58,7 @@
             this.dgvTransaction.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTransaction.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvTransaction.Location = new System.Drawing.Point(0, 203);
+            this.dgvTransaction.Location = new System.Drawing.Point(0, 341);
             this.dgvTransaction.Name = "dgvTransaction";
             this.dgvTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTransaction.Size = new System.Drawing.Size(521, 247);
@@ -64,7 +67,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(294, 144);
+            this.btnUpdate.Location = new System.Drawing.Point(294, 310);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 8;
@@ -178,11 +181,41 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Date and Time........";
             // 
+            // listboxItems
+            // 
+            this.listboxItems.FormattingEnabled = true;
+            this.listboxItems.Location = new System.Drawing.Point(169, 144);
+            this.listboxItems.Name = "listboxItems";
+            this.listboxItems.Size = new System.Drawing.Size(200, 160);
+            this.listboxItems.TabIndex = 24;
+            // 
+            // btnItemLookup
+            // 
+            this.btnItemLookup.FlatAppearance.BorderSize = 0;
+            this.btnItemLookup.Location = new System.Drawing.Point(375, 144);
+            this.btnItemLookup.Name = "btnItemLookup";
+            this.btnItemLookup.Size = new System.Drawing.Size(127, 23);
+            this.btnItemLookup.TabIndex = 23;
+            this.btnItemLookup.Text = "Item Lookup";
+            this.btnItemLookup.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(62, 144);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Item List..........";
+            // 
             // UpdateTransactionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 450);
+            this.ClientSize = new System.Drawing.Size(521, 588);
+            this.Controls.Add(this.listboxItems);
+            this.Controls.Add(this.btnItemLookup);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvTransaction);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnVehicleLookup);
@@ -223,5 +256,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker datepickerDateTime;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox listboxItems;
+        private System.Windows.Forms.Button btnItemLookup;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -20,15 +20,18 @@ namespace BoozewasherApp.Forms.TransactionForms
         private IServiceRepository ServiceRepository { get; set; }
         private IVehicleRepository VehicleRepository { get; set; }
         private ITransactionRepository TransactionRepository { get; set; }
+        private IItemRepository ItemRepository { get; set; }
         private int SelectedTransactionId { get; set; }
         public UpdateTransactionForm(IServiceRepository serviceRepository,
                                      IVehicleRepository vehicleRepository,
-                                     ITransactionRepository transactionRepository)
+                                     ITransactionRepository transactionRepository,
+                                     IItemRepository itemRepository)
         {
             InitializeComponent();
             ServiceRepository = serviceRepository;
             VehicleRepository = vehicleRepository;
             TransactionRepository = transactionRepository;
+            ItemRepository = itemRepository;
         }
 
         private void UpdateTransactionForm_Load(object sender, EventArgs e)

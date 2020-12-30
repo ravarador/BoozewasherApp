@@ -198,6 +198,7 @@
             this.btnItemLookup.TabIndex = 23;
             this.btnItemLookup.Text = "Item Lookup";
             this.btnItemLookup.UseVisualStyleBackColor = true;
+            this.btnItemLookup.Click += new System.EventHandler(this.btnItemLookup_Click);
             // 
             // label6
             // 

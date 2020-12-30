@@ -1,4 +1,5 @@
-﻿using BoozewasherApp.Forms.ServiceForms;
+﻿using BoozewasherApp.Forms.ItemForms;
+using BoozewasherApp.Forms.ServiceForms;
 using BoozewasherApp.Forms.VehicleForms;
 using BoozewasherDomain.Dtos;
 using BoozewasherDomain.Entities;
@@ -132,5 +133,22 @@ namespace BoozewasherApp.Forms.TransactionForms
             ItemsListInForm = string.Empty;
         }
         #endregion
+
+        private void btnItemLookup_Click(object sender, EventArgs e)
+        {
+            var itemLookupForm = new ItemLookupForm(ItemRepository);
+            itemLookupForm.ShowDialog();
+
+            if (string.IsNullOrEmpty(ItemsListInForm))
+            {
+                ItemsListInForm += itemLookupForm.SelectedItemIdForLookup.ToString();
+            }
+            else
+            {
+                ItemsListInForm += "," + itemLookupForm.SelectedItemIdForLookup.ToString();
+            }
+
+            listboxItems.Items.Add(ItemRepository.GetItemById(itemLookupForm.SelectedItemIdForLookup).Name);
+        }
     }
 }

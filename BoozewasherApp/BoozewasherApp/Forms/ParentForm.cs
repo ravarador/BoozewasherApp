@@ -98,7 +98,8 @@ namespace BoozewasherApp
         {
             UpdateTransactionForm updateTransactionForm = new UpdateTransactionForm(ServiceRepository, 
                                                                                     VehicleRepository, 
-                                                                                    TransactionRepository);
+                                                                                    TransactionRepository,
+                                                                                    ItemRepository);
 
             updateTransactionForm.Show();
             updateTransactionForm.MdiParent = this;

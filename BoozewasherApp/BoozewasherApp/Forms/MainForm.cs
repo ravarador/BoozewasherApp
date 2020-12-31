@@ -23,7 +23,7 @@ namespace BoozewasherApp.Forms
         {
 
         }
-
+        #region TAB CONTROL
         private void btnHome_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = (int)TabControlEnums.Home;
@@ -52,6 +52,7 @@ namespace BoozewasherApp.Forms
         {
             tabControl1.SelectedIndex = (int)TabControlEnums.Settings;
         }
+        #endregion
         #region DropDownMenu SALES
         private void btnTransactions_Click(object sender, EventArgs e)
         {

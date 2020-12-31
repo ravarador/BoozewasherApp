@@ -122,10 +122,14 @@ namespace BoozewasherApp.Forms
 
         private void btnItemsAdd_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
+
+            dgvItems.DataSource = ItemRepository.GetAllItems();
+
             panelSalesHome.Visible = false;
             panelForAddItem.Visible = true;
 
-            dgvItems.DataSource = ItemRepository.GetAllItems();
+            this.Cursor = Cursors.Default;
         }
     }
 }

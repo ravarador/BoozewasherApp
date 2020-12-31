@@ -1,5 +1,6 @@
 ﻿using BoozewasherApp.Helpers;
 using BoozewasherDomain.Enums;
+using BoozewasherDomain.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,21 @@ namespace BoozewasherApp.Forms
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        public IServiceRepository ServiceRepository { get; private set; }
+        public IVehicleRepository VehicleRepository { get; private set; }
+        public ITransactionRepository TransactionRepository { get; private set; }
+        public IItemRepository ItemRepository { get; private set; }
+        public MainForm(IServiceRepository serviceRepository,
+                        IItemRepository itemRepository,
+                        IVehicleRepository vehicleRepository,
+                        ITransactionRepository transactionRepository)
         {
             InitializeComponent();
+
+            ServiceRepository = serviceRepository;
+            VehicleRepository = vehicleRepository;
+            TransactionRepository = transactionRepository;
+            ItemRepository = itemRepository;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -111,6 +124,8 @@ namespace BoozewasherApp.Forms
         {
             panelSalesHome.Visible = false;
             panelForAddItem.Visible = true;
+
+            dgvItems.DataSource = ItemRepository.GetAllItems();
         }
     }
 }

@@ -889,14 +889,18 @@
             this.dgvItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvItems.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dgvItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvItems.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvItems.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvItems.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvItems.Location = new System.Drawing.Point(0, 303);
+            this.dgvItems.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvItems.Location = new System.Drawing.Point(0, 314);
             this.dgvItems.MultiSelect = false;
             this.dgvItems.Name = "dgvItems";
+            this.dgvItems.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvItems.RowHeadersVisible = false;
             this.dgvItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvItems.Size = new System.Drawing.Size(983, 299);
+            this.dgvItems.Size = new System.Drawing.Size(983, 288);
             this.dgvItems.TabIndex = 0;
             // 
             // txtboxExpense

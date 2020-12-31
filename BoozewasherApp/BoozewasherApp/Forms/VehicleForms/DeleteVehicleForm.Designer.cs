@@ -48,11 +48,12 @@
             this.dgvVehicle.AllowUserToResizeColumns = false;
             this.dgvVehicle.AllowUserToResizeRows = false;
             this.dgvVehicle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvVehicle.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvVehicle.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dgvVehicle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVehicle.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvVehicle.Location = new System.Drawing.Point(0, 191);
             this.dgvVehicle.Name = "dgvVehicle";
+            this.dgvVehicle.RowHeadersVisible = false;
             this.dgvVehicle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVehicle.Size = new System.Drawing.Size(454, 259);
             this.dgvVehicle.TabIndex = 2;

@@ -47,7 +47,7 @@
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
+            this.btnItemsAdd = new System.Windows.Forms.Button();
             this.panelServices = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
@@ -67,7 +67,7 @@
             this.btnVehicles = new System.Windows.Forms.Button();
             this.btnServices = new System.Windows.Forms.Button();
             this.btnTransactions = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelSalesHome = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -82,6 +82,23 @@
             this.tabPageReports = new System.Windows.Forms.TabPage();
             this.tabPageAnalytics = new System.Windows.Forms.TabPage();
             this.tabPageSettings = new System.Windows.Forms.TabPage();
+            this.panelForAddItem = new System.Windows.Forms.Panel();
+            this.dgvItems = new System.Windows.Forms.DataGridView();
+            this.txtboxExpense = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtboxUsageCount = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboIsEmpty = new System.Windows.Forms.ComboBox();
+            this.lblIsEmpty = new System.Windows.Forms.Label();
+            this.txtboxDescription = new System.Windows.Forms.TextBox();
+            this.txtboxName = new System.Windows.Forms.TextBox();
+            this.txtboxBarcode = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).BeginInit();
@@ -91,10 +108,13 @@
             this.panelServices.SuspendLayout();
             this.panelVehicles.SuspendLayout();
             this.panelTransactions.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panelSalesHome.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panelForAddItem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -212,7 +232,7 @@
             this.btnReports.UseVisualStyleBackColor = false;
             this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
-            // btnInventory
+            // btnEmployees
             // 
             this.btnEmployees.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnEmployees.BackgroundImage = global::BoozewasherApp.Properties.Resources.group_black_36x36;
@@ -224,7 +244,7 @@
             this.btnEmployees.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmployees.ForeColor = System.Drawing.Color.Black;
             this.btnEmployees.Location = new System.Drawing.Point(0, 174);
-            this.btnEmployees.Name = "btnInventory";
+            this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.Size = new System.Drawing.Size(111, 87);
             this.btnEmployees.TabIndex = 3;
             this.btnEmployees.Text = "EMPLOYEES";
@@ -307,6 +327,7 @@
             // tabPageSales
             // 
             this.tabPageSales.BackColor = System.Drawing.Color.White;
+            this.tabPageSales.Controls.Add(this.panelForAddItem);
             this.tabPageSales.Controls.Add(this.panelItems);
             this.tabPageSales.Controls.Add(this.panelServices);
             this.tabPageSales.Controls.Add(this.panelVehicles);
@@ -315,7 +336,7 @@
             this.tabPageSales.Controls.Add(this.btnVehicles);
             this.tabPageSales.Controls.Add(this.btnServices);
             this.tabPageSales.Controls.Add(this.btnTransactions);
-            this.tabPageSales.Controls.Add(this.panel3);
+            this.tabPageSales.Controls.Add(this.panelSalesHome);
             this.tabPageSales.Location = new System.Drawing.Point(4, 23);
             this.tabPageSales.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageSales.Name = "tabPageSales";
@@ -328,7 +349,7 @@
             this.panelItems.Controls.Add(this.button16);
             this.panelItems.Controls.Add(this.button17);
             this.panelItems.Controls.Add(this.button18);
-            this.panelItems.Controls.Add(this.button19);
+            this.panelItems.Controls.Add(this.btnItemsAdd);
             this.panelItems.Location = new System.Drawing.Point(790, 75);
             this.panelItems.Margin = new System.Windows.Forms.Padding(0);
             this.panelItems.Name = "panelItems";
@@ -384,21 +405,22 @@
             this.button18.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button18.UseVisualStyleBackColor = false;
             // 
-            // button19
+            // btnItemsAdd
             // 
-            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.button19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(0, 0);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(201, 47);
-            this.button19.TabIndex = 1;
-            this.button19.Text = "Add";
-            this.button19.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button19.UseVisualStyleBackColor = false;
+            this.btnItemsAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnItemsAdd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnItemsAdd.FlatAppearance.BorderSize = 0;
+            this.btnItemsAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnItemsAdd.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItemsAdd.ForeColor = System.Drawing.Color.White;
+            this.btnItemsAdd.Location = new System.Drawing.Point(0, 0);
+            this.btnItemsAdd.Name = "btnItemsAdd";
+            this.btnItemsAdd.Size = new System.Drawing.Size(201, 47);
+            this.btnItemsAdd.TabIndex = 1;
+            this.btnItemsAdd.Text = "Add";
+            this.btnItemsAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnItemsAdd.UseVisualStyleBackColor = false;
+            this.btnItemsAdd.Click += new System.EventHandler(this.btnItemsAdd_Click);
             // 
             // panelServices
             // 
@@ -698,15 +720,15 @@
             this.btnTransactions.UseVisualStyleBackColor = false;
             this.btnTransactions.Click += new System.EventHandler(this.btnTransactions_Click);
             // 
-            // panel3
+            // panelSalesHome
             // 
-            this.panel3.Controls.Add(this.panel6);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(9, 83);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(982, 594);
-            this.panel3.TabIndex = 13;
+            this.panelSalesHome.Controls.Add(this.panel6);
+            this.panelSalesHome.Controls.Add(this.panel5);
+            this.panelSalesHome.Controls.Add(this.panel4);
+            this.panelSalesHome.Location = new System.Drawing.Point(9, 83);
+            this.panelSalesHome.Name = "panelSalesHome";
+            this.panelSalesHome.Size = new System.Drawing.Size(982, 594);
+            this.panelSalesHome.TabIndex = 13;
             // 
             // panel6
             // 
@@ -847,6 +869,218 @@
             this.tabPageSettings.Size = new System.Drawing.Size(1104, 685);
             this.tabPageSettings.TabIndex = 4;
             // 
+            // panelForAddItem
+            // 
+            this.panelForAddItem.Controls.Add(this.label15);
+            this.panelForAddItem.Controls.Add(this.panel7);
+            this.panelForAddItem.Controls.Add(this.dgvItems);
+            this.panelForAddItem.Location = new System.Drawing.Point(8, 75);
+            this.panelForAddItem.Name = "panelForAddItem";
+            this.panelForAddItem.Size = new System.Drawing.Size(983, 602);
+            this.panelForAddItem.TabIndex = 3;
+            this.panelForAddItem.Visible = false;
+            // 
+            // dgvItems
+            // 
+            this.dgvItems.AllowUserToAddRows = false;
+            this.dgvItems.AllowUserToDeleteRows = false;
+            this.dgvItems.AllowUserToResizeColumns = false;
+            this.dgvItems.AllowUserToResizeRows = false;
+            this.dgvItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvItems.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dgvItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvItems.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvItems.Location = new System.Drawing.Point(0, 303);
+            this.dgvItems.MultiSelect = false;
+            this.dgvItems.Name = "dgvItems";
+            this.dgvItems.RowHeadersVisible = false;
+            this.dgvItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvItems.Size = new System.Drawing.Size(983, 299);
+            this.dgvItems.TabIndex = 0;
+            // 
+            // txtboxExpense
+            // 
+            this.txtboxExpense.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtboxExpense.BackColor = System.Drawing.Color.White;
+            this.txtboxExpense.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxExpense.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxExpense.Location = new System.Drawing.Point(398, 140);
+            this.txtboxExpense.Name = "txtboxExpense";
+            this.txtboxExpense.Size = new System.Drawing.Size(275, 18);
+            this.txtboxExpense.TabIndex = 37;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(336, 140);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 16);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Expense";
+            // 
+            // txtboxUsageCount
+            // 
+            this.txtboxUsageCount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtboxUsageCount.BackColor = System.Drawing.Color.White;
+            this.txtboxUsageCount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxUsageCount.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxUsageCount.Location = new System.Drawing.Point(398, 116);
+            this.txtboxUsageCount.Name = "txtboxUsageCount";
+            this.txtboxUsageCount.Size = new System.Drawing.Size(275, 18);
+            this.txtboxUsageCount.TabIndex = 35;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(309, 116);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 16);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Usage Count";
+            // 
+            // comboIsEmpty
+            // 
+            this.comboIsEmpty.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboIsEmpty.BackColor = System.Drawing.Color.White;
+            this.comboIsEmpty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboIsEmpty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboIsEmpty.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboIsEmpty.FormattingEnabled = true;
+            this.comboIsEmpty.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.comboIsEmpty.Location = new System.Drawing.Point(398, 86);
+            this.comboIsEmpty.Name = "comboIsEmpty";
+            this.comboIsEmpty.Size = new System.Drawing.Size(275, 24);
+            this.comboIsEmpty.TabIndex = 34;
+            // 
+            // lblIsEmpty
+            // 
+            this.lblIsEmpty.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblIsEmpty.AutoSize = true;
+            this.lblIsEmpty.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIsEmpty.Location = new System.Drawing.Point(329, 89);
+            this.lblIsEmpty.Name = "lblIsEmpty";
+            this.lblIsEmpty.Size = new System.Drawing.Size(63, 16);
+            this.lblIsEmpty.TabIndex = 33;
+            this.lblIsEmpty.Text = "Is Empty?";
+            // 
+            // txtboxDescription
+            // 
+            this.txtboxDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtboxDescription.BackColor = System.Drawing.Color.White;
+            this.txtboxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxDescription.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxDescription.Location = new System.Drawing.Point(398, 38);
+            this.txtboxDescription.Name = "txtboxDescription";
+            this.txtboxDescription.Size = new System.Drawing.Size(275, 18);
+            this.txtboxDescription.TabIndex = 28;
+            // 
+            // txtboxName
+            // 
+            this.txtboxName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtboxName.BackColor = System.Drawing.Color.White;
+            this.txtboxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxName.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxName.Location = new System.Drawing.Point(398, 14);
+            this.txtboxName.Name = "txtboxName";
+            this.txtboxName.Size = new System.Drawing.Size(275, 18);
+            this.txtboxName.TabIndex = 26;
+            // 
+            // txtboxBarcode
+            // 
+            this.txtboxBarcode.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtboxBarcode.BackColor = System.Drawing.Color.White;
+            this.txtboxBarcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxBarcode.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxBarcode.Location = new System.Drawing.Point(398, 62);
+            this.txtboxBarcode.Name = "txtboxBarcode";
+            this.txtboxBarcode.Size = new System.Drawing.Size(275, 18);
+            this.txtboxBarcode.TabIndex = 27;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(336, 62);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 16);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Barcode";
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(318, 38);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(74, 16);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "Description";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(349, 14);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(43, 16);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "Name";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(573, 164);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(100, 23);
+            this.btnAdd.TabIndex = 31;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel7.Controls.Add(this.txtboxName);
+            this.panel7.Controls.Add(this.txtboxExpense);
+            this.panel7.Controls.Add(this.btnAdd);
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Controls.Add(this.label14);
+            this.panel7.Controls.Add(this.txtboxUsageCount);
+            this.panel7.Controls.Add(this.label13);
+            this.panel7.Controls.Add(this.label11);
+            this.panel7.Controls.Add(this.label12);
+            this.panel7.Controls.Add(this.comboIsEmpty);
+            this.panel7.Controls.Add(this.txtboxBarcode);
+            this.panel7.Controls.Add(this.lblIsEmpty);
+            this.panel7.Controls.Add(this.txtboxDescription);
+            this.panel7.Location = new System.Drawing.Point(0, 111);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(983, 197);
+            this.panel7.TabIndex = 39;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(461, 83);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(113, 25);
+            this.label15.TabIndex = 40;
+            this.label15.Text = "Add Items";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -873,13 +1107,18 @@
             this.panelServices.ResumeLayout(false);
             this.panelVehicles.ResumeLayout(false);
             this.panelTransactions.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.panelSalesHome.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panelForAddItem.ResumeLayout(false);
+            this.panelForAddItem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -918,7 +1157,7 @@
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button btnItemsAdd;
         private System.Windows.Forms.Panel panelServices;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
@@ -929,7 +1168,7 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelSalesHome;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
@@ -940,5 +1179,22 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panelForAddItem;
+        private System.Windows.Forms.DataGridView dgvItems;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox txtboxName;
+        private System.Windows.Forms.TextBox txtboxExpense;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtboxUsageCount;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboIsEmpty;
+        private System.Windows.Forms.TextBox txtboxBarcode;
+        private System.Windows.Forms.Label lblIsEmpty;
+        private System.Windows.Forms.TextBox txtboxDescription;
+        private System.Windows.Forms.Label label15;
     }
 }

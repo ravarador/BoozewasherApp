@@ -105,5 +105,11 @@ namespace BoozewasherApp.Forms
             
         }
         #endregion
+
+        private void btnItemsAdd_Click(object sender, EventArgs e)
+        {
+            panelSalesHome.Visible = false;
+            panelForAddItem.Visible = true;
+        }
     }
 }

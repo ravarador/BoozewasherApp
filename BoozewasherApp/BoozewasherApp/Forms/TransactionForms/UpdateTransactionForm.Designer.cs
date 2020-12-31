@@ -55,11 +55,12 @@
             this.dgvTransaction.AllowUserToResizeColumns = false;
             this.dgvTransaction.AllowUserToResizeRows = false;
             this.dgvTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTransaction.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvTransaction.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTransaction.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvTransaction.Location = new System.Drawing.Point(0, 341);
             this.dgvTransaction.Name = "dgvTransaction";
+            this.dgvTransaction.RowHeadersVisible = false;
             this.dgvTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTransaction.Size = new System.Drawing.Size(521, 247);
             this.dgvTransaction.TabIndex = 9;

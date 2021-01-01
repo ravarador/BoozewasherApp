@@ -67,38 +67,11 @@
             this.btnVehicles = new System.Windows.Forms.Button();
             this.btnServices = new System.Windows.Forms.Button();
             this.btnTransactions = new System.Windows.Forms.Button();
-            this.panelSalesHome = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabPageInventory = new System.Windows.Forms.TabPage();
             this.tabPageReports = new System.Windows.Forms.TabPage();
             this.tabPageAnalytics = new System.Windows.Forms.TabPage();
             this.tabPageSettings = new System.Windows.Forms.TabPage();
-            this.panelForAddItem = new System.Windows.Forms.Panel();
-            this.dgvItems = new System.Windows.Forms.DataGridView();
-            this.txtboxExpense = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtboxUsageCount = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboIsEmpty = new System.Windows.Forms.ComboBox();
-            this.lblIsEmpty = new System.Windows.Forms.Label();
-            this.txtboxDescription = new System.Windows.Forms.TextBox();
-            this.txtboxName = new System.Windows.Forms.TextBox();
-            this.txtboxBarcode = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
+            this.addItemUserControl1 = new BoozewasherApp.Forms.ItemForms.AddItemUserControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).BeginInit();
@@ -108,13 +81,6 @@
             this.panelServices.SuspendLayout();
             this.panelVehicles.SuspendLayout();
             this.panelTransactions.SuspendLayout();
-            this.panelSalesHome.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panelForAddItem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -327,7 +293,6 @@
             // tabPageSales
             // 
             this.tabPageSales.BackColor = System.Drawing.Color.White;
-            this.tabPageSales.Controls.Add(this.panelForAddItem);
             this.tabPageSales.Controls.Add(this.panelItems);
             this.tabPageSales.Controls.Add(this.panelServices);
             this.tabPageSales.Controls.Add(this.panelVehicles);
@@ -336,7 +301,7 @@
             this.tabPageSales.Controls.Add(this.btnVehicles);
             this.tabPageSales.Controls.Add(this.btnServices);
             this.tabPageSales.Controls.Add(this.btnTransactions);
-            this.tabPageSales.Controls.Add(this.panelSalesHome);
+            this.tabPageSales.Controls.Add(this.addItemUserControl1);
             this.tabPageSales.Location = new System.Drawing.Point(4, 23);
             this.tabPageSales.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageSales.Name = "tabPageSales";
@@ -724,117 +689,6 @@
             this.btnTransactions.UseVisualStyleBackColor = false;
             this.btnTransactions.Click += new System.EventHandler(this.btnTransactions_Click);
             // 
-            // panelSalesHome
-            // 
-            this.panelSalesHome.Controls.Add(this.panel6);
-            this.panelSalesHome.Controls.Add(this.panel5);
-            this.panelSalesHome.Controls.Add(this.panel4);
-            this.panelSalesHome.Location = new System.Drawing.Point(9, 83);
-            this.panelSalesHome.Name = "panelSalesHome";
-            this.panelSalesHome.Size = new System.Drawing.Size(982, 594);
-            this.panelSalesHome.TabIndex = 13;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel6.Controls.Add(this.label9);
-            this.panel6.Controls.Add(this.label10);
-            this.panel6.Location = new System.Drawing.Point(654, 14);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(315, 183);
-            this.panel6.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(27, 38);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 31);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "3";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(29, 74);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(177, 22);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Employees Working";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Location = new System.Drawing.Point(333, 14);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(315, 183);
-            this.panel5.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(37, 101);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 16);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Feels like 10";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(34, 39);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 31);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "19°";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(36, 75);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 22);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Current Weather";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(12, 14);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(315, 183);
-            this.panel4.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 42);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 31);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "20";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 22);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Total Cars";
-            // 
             // tabPageInventory
             // 
             this.tabPageInventory.BackColor = System.Drawing.Color.White;
@@ -873,221 +727,14 @@
             this.tabPageSettings.Size = new System.Drawing.Size(1104, 685);
             this.tabPageSettings.TabIndex = 4;
             // 
-            // panelForAddItem
+            // addItemUserControl1
             // 
-            this.panelForAddItem.Controls.Add(this.label15);
-            this.panelForAddItem.Controls.Add(this.panel7);
-            this.panelForAddItem.Controls.Add(this.dgvItems);
-            this.panelForAddItem.Location = new System.Drawing.Point(8, 75);
-            this.panelForAddItem.Name = "panelForAddItem";
-            this.panelForAddItem.Size = new System.Drawing.Size(983, 602);
-            this.panelForAddItem.TabIndex = 3;
-            this.panelForAddItem.Visible = false;
-            // 
-            // dgvItems
-            // 
-            this.dgvItems.AllowUserToAddRows = false;
-            this.dgvItems.AllowUserToDeleteRows = false;
-            this.dgvItems.AllowUserToResizeColumns = false;
-            this.dgvItems.AllowUserToResizeRows = false;
-            this.dgvItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvItems.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.dgvItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvItems.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvItems.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvItems.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvItems.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvItems.Location = new System.Drawing.Point(0, 314);
-            this.dgvItems.MultiSelect = false;
-            this.dgvItems.Name = "dgvItems";
-            this.dgvItems.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvItems.RowHeadersVisible = false;
-            this.dgvItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvItems.Size = new System.Drawing.Size(983, 288);
-            this.dgvItems.TabIndex = 0;
-            // 
-            // txtboxExpense
-            // 
-            this.txtboxExpense.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtboxExpense.BackColor = System.Drawing.Color.White;
-            this.txtboxExpense.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtboxExpense.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxExpense.Location = new System.Drawing.Point(398, 140);
-            this.txtboxExpense.Name = "txtboxExpense";
-            this.txtboxExpense.Size = new System.Drawing.Size(275, 18);
-            this.txtboxExpense.TabIndex = 37;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(336, 140);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 16);
-            this.label8.TabIndex = 38;
-            this.label8.Text = "Expense";
-            // 
-            // txtboxUsageCount
-            // 
-            this.txtboxUsageCount.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtboxUsageCount.BackColor = System.Drawing.Color.White;
-            this.txtboxUsageCount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtboxUsageCount.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxUsageCount.Location = new System.Drawing.Point(398, 116);
-            this.txtboxUsageCount.Name = "txtboxUsageCount";
-            this.txtboxUsageCount.Size = new System.Drawing.Size(275, 18);
-            this.txtboxUsageCount.TabIndex = 35;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(309, 116);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 16);
-            this.label11.TabIndex = 36;
-            this.label11.Text = "Usage Count";
-            // 
-            // comboIsEmpty
-            // 
-            this.comboIsEmpty.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboIsEmpty.BackColor = System.Drawing.Color.White;
-            this.comboIsEmpty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboIsEmpty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboIsEmpty.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboIsEmpty.FormattingEnabled = true;
-            this.comboIsEmpty.Items.AddRange(new object[] {
-            "True",
-            "False"});
-            this.comboIsEmpty.Location = new System.Drawing.Point(398, 86);
-            this.comboIsEmpty.Name = "comboIsEmpty";
-            this.comboIsEmpty.Size = new System.Drawing.Size(275, 24);
-            this.comboIsEmpty.TabIndex = 34;
-            // 
-            // lblIsEmpty
-            // 
-            this.lblIsEmpty.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblIsEmpty.AutoSize = true;
-            this.lblIsEmpty.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIsEmpty.Location = new System.Drawing.Point(329, 89);
-            this.lblIsEmpty.Name = "lblIsEmpty";
-            this.lblIsEmpty.Size = new System.Drawing.Size(63, 16);
-            this.lblIsEmpty.TabIndex = 33;
-            this.lblIsEmpty.Text = "Is Empty?";
-            // 
-            // txtboxDescription
-            // 
-            this.txtboxDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtboxDescription.BackColor = System.Drawing.Color.White;
-            this.txtboxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtboxDescription.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxDescription.Location = new System.Drawing.Point(398, 38);
-            this.txtboxDescription.Name = "txtboxDescription";
-            this.txtboxDescription.Size = new System.Drawing.Size(275, 18);
-            this.txtboxDescription.TabIndex = 28;
-            // 
-            // txtboxName
-            // 
-            this.txtboxName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtboxName.BackColor = System.Drawing.Color.White;
-            this.txtboxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtboxName.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxName.Location = new System.Drawing.Point(398, 14);
-            this.txtboxName.Name = "txtboxName";
-            this.txtboxName.Size = new System.Drawing.Size(275, 18);
-            this.txtboxName.TabIndex = 26;
-            // 
-            // txtboxBarcode
-            // 
-            this.txtboxBarcode.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtboxBarcode.BackColor = System.Drawing.Color.White;
-            this.txtboxBarcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtboxBarcode.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxBarcode.Location = new System.Drawing.Point(398, 62);
-            this.txtboxBarcode.Name = "txtboxBarcode";
-            this.txtboxBarcode.Size = new System.Drawing.Size(275, 18);
-            this.txtboxBarcode.TabIndex = 27;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(336, 62);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 16);
-            this.label12.TabIndex = 32;
-            this.label12.Text = "Barcode";
-            // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(318, 38);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(74, 16);
-            this.label13.TabIndex = 30;
-            this.label13.Text = "Description";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(349, 14);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(43, 16);
-            this.label14.TabIndex = 29;
-            this.label14.Text = "Name";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(573, 164);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 23);
-            this.btnAdd.TabIndex = 31;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel7.Controls.Add(this.txtboxName);
-            this.panel7.Controls.Add(this.txtboxExpense);
-            this.panel7.Controls.Add(this.btnAdd);
-            this.panel7.Controls.Add(this.label8);
-            this.panel7.Controls.Add(this.label14);
-            this.panel7.Controls.Add(this.txtboxUsageCount);
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.label12);
-            this.panel7.Controls.Add(this.comboIsEmpty);
-            this.panel7.Controls.Add(this.txtboxBarcode);
-            this.panel7.Controls.Add(this.lblIsEmpty);
-            this.panel7.Controls.Add(this.txtboxDescription);
-            this.panel7.Location = new System.Drawing.Point(0, 111);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(983, 197);
-            this.panel7.TabIndex = 39;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(461, 83);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(113, 25);
-            this.label15.TabIndex = 40;
-            this.label15.Text = "Add Items";
+            this.addItemUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.addItemUserControl1.mainForm = null;
+            this.addItemUserControl1.Name = "addItemUserControl1";
+            this.addItemUserControl1.Size = new System.Drawing.Size(983, 644);
+            this.addItemUserControl1.TabIndex = 13;
+            this.addItemUserControl1.Visible = false;
             // 
             // MainForm
             // 
@@ -1115,18 +762,6 @@
             this.panelServices.ResumeLayout(false);
             this.panelVehicles.ResumeLayout(false);
             this.panelTransactions.ResumeLayout(false);
-            this.panelSalesHome.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panelForAddItem.ResumeLayout(false);
-            this.panelForAddItem.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1176,33 +811,6 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Panel panelSalesHome;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panelForAddItem;
-        private System.Windows.Forms.DataGridView dgvItems;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox txtboxName;
-        private System.Windows.Forms.TextBox txtboxExpense;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtboxUsageCount;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboIsEmpty;
-        private System.Windows.Forms.TextBox txtboxBarcode;
-        private System.Windows.Forms.Label lblIsEmpty;
-        private System.Windows.Forms.TextBox txtboxDescription;
-        private System.Windows.Forms.Label label15;
+        private ItemForms.AddItemUserControl addItemUserControl1;
     }
 }

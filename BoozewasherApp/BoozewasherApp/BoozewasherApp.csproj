@@ -103,6 +103,12 @@
     <Compile Include="Forms\ItemForms\AddItemForm.Designer.cs">
       <DependentUpon>AddItemForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ItemForms\AddItemUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemForms\AddItemUserControl.Designer.cs">
+      <DependentUpon>AddItemUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ItemForms\DeleteItemForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     <Compile Include="Settings.cs" />
     <EmbeddedResource Include="Forms\ItemForms\AddItemForm.resx">
       <DependentUpon>AddItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ItemForms\AddItemUserControl.resx">
+      <DependentUpon>AddItemUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemForms\DeleteItemForm.resx">
       <DependentUpon>DeleteItemForm.cs</DependentUpon>

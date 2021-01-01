@@ -1,4 +1,5 @@
-﻿using BoozewasherApp.Helpers;
+﻿using BoozewasherApp.Forms.ItemForms;
+using BoozewasherApp.Helpers;
 using BoozewasherDomain.Enums;
 using BoozewasherDomain.IRepositories;
 using System;
@@ -124,10 +125,15 @@ namespace BoozewasherApp.Forms
         {
             this.Cursor = Cursors.WaitCursor;
 
-            dgvItems.DataSource = ItemRepository.GetAllItems();
+            //AddItemUserControl addItemUserControl = new AddItemUserControl();
+            //addItemUserControl.mainForm = this;
 
-            panelSalesHome.Visible = false;
-            panelForAddItem.Visible = true;
+            addItemUserControl1.mainForm = this;
+            addItemUserControl1.Visible = true;
+            //dgvItems.DataSource = ItemRepository.GetAllItems();
+
+            //panelSalesHome.Visible = false;
+            //panelForAddItem.Visible = true;
 
             this.Cursor = Cursors.Default;
         }

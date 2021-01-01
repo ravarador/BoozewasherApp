@@ -127,6 +127,12 @@
     <Compile Include="Forms\ItemForms\UpdateItemForm.Designer.cs">
       <DependentUpon>UpdateItemForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ItemForms\UpdateItemUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemForms\UpdateItemUserControl.Designer.cs">
+      <DependentUpon>UpdateItemUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemForms\UpdateItemForm.resx">
       <DependentUpon>UpdateItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ItemForms\UpdateItemUserControl.resx">
+      <DependentUpon>UpdateItemUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

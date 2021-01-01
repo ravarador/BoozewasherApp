@@ -125,17 +125,27 @@ namespace BoozewasherApp.Forms
         {
             this.Cursor = Cursors.WaitCursor;
 
-            //AddItemUserControl addItemUserControl = new AddItemUserControl();
-            //addItemUserControl.mainForm = this;
-
             addItemUserControl1.mainForm = this;
-            addItemUserControl1.Visible = true;
-            //dgvItems.DataSource = ItemRepository.GetAllItems();
-
-            //panelSalesHome.Visible = false;
-            //panelForAddItem.Visible = true;
+            ShowHideSalesUserControls(isAddItem: true);
 
             this.Cursor = Cursors.Default;
         }
+        private void btnItemsUpdate_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+
+            updateItemUserControl1.mainForm = this;
+            ShowHideSalesUserControls(isUpdateItem: true);
+
+            this.Cursor = Cursors.Default;
+        }
+
+        public void ShowHideSalesUserControls(bool isAddItem = false, bool isDeleteItem = false, bool isUpdateItem = false, bool isViewItem = false)
+        {
+            addItemUserControl1.Visible = isAddItem;
+            updateItemUserControl1.Visible = isUpdateItem;
+        }
+
+        
     }
 }

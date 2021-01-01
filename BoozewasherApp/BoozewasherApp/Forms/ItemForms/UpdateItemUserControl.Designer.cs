@@ -1,7 +1,7 @@
 ﻿
 namespace BoozewasherApp.Forms.ItemForms
 {
-    partial class AddItemUserControl
+    partial class UpdateItemUserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -33,7 +33,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtboxName = new System.Windows.Forms.TextBox();
             this.txtboxExpense = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txtboxUsageCount = new System.Windows.Forms.TextBox();
@@ -55,16 +55,16 @@ namespace BoozewasherApp.Forms.ItemForms
             this.label15.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(457, 41);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(113, 25);
-            this.label15.TabIndex = 43;
-            this.label15.Text = "Add Items";
+            this.label15.Size = new System.Drawing.Size(134, 25);
+            this.label15.TabIndex = 46;
+            this.label15.Text = "Update Item";
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel7.Controls.Add(this.txtboxName);
             this.panel7.Controls.Add(this.txtboxExpense);
-            this.panel7.Controls.Add(this.btnAdd);
+            this.panel7.Controls.Add(this.btnUpdate);
             this.panel7.Controls.Add(this.label8);
             this.panel7.Controls.Add(this.label14);
             this.panel7.Controls.Add(this.txtboxUsageCount);
@@ -78,7 +78,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.panel7.Location = new System.Drawing.Point(-4, 69);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1004, 197);
-            this.panel7.TabIndex = 42;
+            this.panel7.TabIndex = 45;
             // 
             // txtboxName
             // 
@@ -102,20 +102,20 @@ namespace BoozewasherApp.Forms.ItemForms
             this.txtboxExpense.Size = new System.Drawing.Size(275, 18);
             this.txtboxExpense.TabIndex = 37;
             // 
-            // btnAdd
+            // btnUpdate
             // 
-            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(584, 164);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 23);
-            this.btnAdd.TabIndex = 31;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(584, 164);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 23);
+            this.btnUpdate.TabIndex = 31;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label8
             // 
@@ -253,18 +253,19 @@ namespace BoozewasherApp.Forms.ItemForms
             this.dgvItems.RowHeadersVisible = false;
             this.dgvItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvItems.Size = new System.Drawing.Size(1000, 228);
-            this.dgvItems.TabIndex = 41;
+            this.dgvItems.TabIndex = 44;
+            this.dgvItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItems_CellClick);
             // 
-            // AddItemUserControl
+            // UpdateItemUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label15);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.dgvItems);
-            this.Name = "AddItemUserControl";
+            this.Name = "UpdateItemUserControl";
             this.Size = new System.Drawing.Size(1000, 500);
-            this.Load += new System.EventHandler(this.AddItemUserControl_Load);
+            this.Load += new System.EventHandler(this.UpdateItemUserControl_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).EndInit();
@@ -279,7 +280,7 @@ namespace BoozewasherApp.Forms.ItemForms
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox txtboxName;
         private System.Windows.Forms.TextBox txtboxExpense;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtboxUsageCount;

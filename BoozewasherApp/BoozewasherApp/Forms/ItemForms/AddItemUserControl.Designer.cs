@@ -115,6 +115,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.btnAdd.TabIndex = 31;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label8
             // 
@@ -251,7 +252,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.dgvItems.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvItems.RowHeadersVisible = false;
             this.dgvItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvItems.Size = new System.Drawing.Size(974, 283);
+            this.dgvItems.Size = new System.Drawing.Size(974, 250);
             this.dgvItems.TabIndex = 41;
             // 
             // AddItemUserControl
@@ -262,7 +263,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.dgvItems);
             this.Name = "AddItemUserControl";
-            this.Size = new System.Drawing.Size(974, 552);
+            this.Size = new System.Drawing.Size(974, 519);
             this.Load += new System.EventHandler(this.AddItemUserControl_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();

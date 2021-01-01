@@ -729,10 +729,10 @@
             // 
             // addItemUserControl1
             // 
-            this.addItemUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.addItemUserControl1.Location = new System.Drawing.Point(8, 110);
             this.addItemUserControl1.mainForm = null;
             this.addItemUserControl1.Name = "addItemUserControl1";
-            this.addItemUserControl1.Size = new System.Drawing.Size(983, 644);
+            this.addItemUserControl1.Size = new System.Drawing.Size(983, 561);
             this.addItemUserControl1.TabIndex = 13;
             this.addItemUserControl1.Visible = false;
             // 

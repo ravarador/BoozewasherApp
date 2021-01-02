@@ -115,6 +115,12 @@
     <Compile Include="Forms\ItemForms\DeleteItemForm.Designer.cs">
       <DependentUpon>DeleteItemForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ItemForms\DeleteItemUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemForms\DeleteItemUserControl.Designer.cs">
+      <DependentUpon>DeleteItemUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ItemForms\ItemLookupForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemForms\DeleteItemForm.resx">
       <DependentUpon>DeleteItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ItemForms\DeleteItemUserControl.resx">
+      <DependentUpon>DeleteItemUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemForms\ItemLookupForm.resx">
       <DependentUpon>ItemLookupForm.cs</DependentUpon>

@@ -56,7 +56,7 @@ namespace BoozewasherApp.Forms.ItemForms
             txtboxExpense.Text = dgvItems.SelectedRows[0].Cells[6].Value.ToString();
         }
         #region Private Methods
-        private void LoadDgvItems()
+        public void LoadDgvItems()
         {
             dgvItems.DataSource = mainForm.ItemRepository.GetAllItems();
         }

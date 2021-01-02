@@ -47,9 +47,9 @@ namespace BoozewasherApp.Forms.ItemForms
             this.label15.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(457, 41);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(134, 25);
+            this.label15.Size = new System.Drawing.Size(125, 25);
             this.label15.TabIndex = 49;
-            this.label15.Text = "Delete Items";
+            this.label15.Text = "Delete Item";
             // 
             // panel7
             // 

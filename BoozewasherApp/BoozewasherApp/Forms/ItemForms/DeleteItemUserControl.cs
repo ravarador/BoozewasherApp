@@ -21,7 +21,7 @@ namespace BoozewasherApp.Forms.ItemForms
 
         private void DeleteItemUserControl_Load(object sender, EventArgs e)
         {
-            LoadDgvItem();
+            LoadDgvItems();
         }
         private void dgvItems_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -31,11 +31,11 @@ namespace BoozewasherApp.Forms.ItemForms
         {
             mainForm.ItemRepository.DeleteItem(SelectedItemId);
 
-            LoadDgvItem();
+            LoadDgvItems();
         }
 
         #region Private Methods
-        private void LoadDgvItem()
+        public void LoadDgvItems()
         {
             dgvItems.DataSource = mainForm.ItemRepository.GetAllItems();
         }

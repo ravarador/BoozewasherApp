@@ -738,7 +738,7 @@
             this.addItemUserControl1.Location = new System.Drawing.Point(8, 110);
             this.addItemUserControl1.mainForm = null;
             this.addItemUserControl1.Name = "addItemUserControl1";
-            this.addItemUserControl1.Size = new System.Drawing.Size(991, 542);
+            this.addItemUserControl1.Size = new System.Drawing.Size(983, 542);
             this.addItemUserControl1.TabIndex = 13;
             this.addItemUserControl1.Visible = false;
             // 
@@ -746,7 +746,7 @@
             // 
             this.updateItemUserControl1.Location = new System.Drawing.Point(8, 110);
             this.updateItemUserControl1.Name = "updateItemUserControl1";
-            this.updateItemUserControl1.Size = new System.Drawing.Size(991, 542);
+            this.updateItemUserControl1.Size = new System.Drawing.Size(983, 542);
             this.updateItemUserControl1.TabIndex = 14;
             this.updateItemUserControl1.Visible = false;
             // 
@@ -754,7 +754,7 @@
             // 
             this.deleteItemUserControl1.Location = new System.Drawing.Point(8, 110);
             this.deleteItemUserControl1.Name = "deleteItemUserControl1";
-            this.deleteItemUserControl1.Size = new System.Drawing.Size(991, 542);
+            this.deleteItemUserControl1.Size = new System.Drawing.Size(983, 542);
             this.deleteItemUserControl1.TabIndex = 15;
             this.deleteItemUserControl1.Visible = false;
             // 

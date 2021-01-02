@@ -20,7 +20,7 @@ namespace BoozewasherApp.Forms.ItemForms
 
         private void DeleteItemUserControl_Load(object sender, EventArgs e)
         {
-
+            LoadDgvItem();
         }
 
         #region Private Methods

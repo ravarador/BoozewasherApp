@@ -111,7 +111,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(901, 113);
+            this.btnDelete.Location = new System.Drawing.Point(558, 99);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 23);
             this.btnDelete.TabIndex = 31;

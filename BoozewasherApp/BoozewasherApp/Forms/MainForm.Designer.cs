@@ -73,6 +73,7 @@
             this.tabPageSettings = new System.Windows.Forms.TabPage();
             this.addItemUserControl1 = new BoozewasherApp.Forms.ItemForms.AddItemUserControl();
             this.updateItemUserControl1 = new BoozewasherApp.Forms.ItemForms.UpdateItemUserControl();
+            this.deleteItemUserControl1 = new BoozewasherApp.Forms.ItemForms.DeleteItemUserControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).BeginInit();
@@ -304,6 +305,7 @@
             this.tabPageSales.Controls.Add(this.btnTransactions);
             this.tabPageSales.Controls.Add(this.addItemUserControl1);
             this.tabPageSales.Controls.Add(this.updateItemUserControl1);
+            this.tabPageSales.Controls.Add(this.deleteItemUserControl1);
             this.tabPageSales.Location = new System.Drawing.Point(4, 23);
             this.tabPageSales.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageSales.Name = "tabPageSales";
@@ -372,6 +374,7 @@
             this.btnItemsDelete.Text = "Delete";
             this.btnItemsDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnItemsDelete.UseVisualStyleBackColor = false;
+            this.btnItemsDelete.Click += new System.EventHandler(this.btnItemsDelete_Click);
             // 
             // btnItemsAdd
             // 
@@ -747,6 +750,14 @@
             this.updateItemUserControl1.TabIndex = 14;
             this.updateItemUserControl1.Visible = false;
             // 
+            // deleteItemUserControl1
+            // 
+            this.deleteItemUserControl1.Location = new System.Drawing.Point(8, 110);
+            this.deleteItemUserControl1.Name = "deleteItemUserControl1";
+            this.deleteItemUserControl1.Size = new System.Drawing.Size(991, 542);
+            this.deleteItemUserControl1.TabIndex = 15;
+            this.deleteItemUserControl1.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -824,5 +835,6 @@
         private System.Windows.Forms.Button button11;
         private ItemForms.AddItemUserControl addItemUserControl1;
         private ItemForms.UpdateItemUserControl updateItemUserControl1;
+        private ItemForms.DeleteItemUserControl deleteItemUserControl1;
     }
 }

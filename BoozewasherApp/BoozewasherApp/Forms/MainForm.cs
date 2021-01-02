@@ -120,7 +120,12 @@ namespace BoozewasherApp.Forms
             
         }
         #endregion
-
+        public void ShowHideSalesUserControls(bool isAddItem = false, bool isDeleteItem = false, bool isUpdateItem = false, bool isViewItem = false)
+        {
+            addItemUserControl1.Visible = isAddItem;
+            updateItemUserControl1.Visible = isUpdateItem;
+            deleteItemUserControl1.Visible = isDeleteItem;
+        }
         private void btnItemsAdd_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
@@ -140,12 +145,16 @@ namespace BoozewasherApp.Forms
             this.Cursor = Cursors.Default;
         }
 
-        public void ShowHideSalesUserControls(bool isAddItem = false, bool isDeleteItem = false, bool isUpdateItem = false, bool isViewItem = false)
-        {
-            addItemUserControl1.Visible = isAddItem;
-            updateItemUserControl1.Visible = isUpdateItem;
-        }
-
         
+
+        private void btnItemsDelete_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+
+            deleteItemUserControl1.mainForm = this;
+            ShowHideSalesUserControls(isDeleteItem: true);
+
+            this.Cursor = Cursors.Default;
+        }
     }
 }

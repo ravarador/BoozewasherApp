@@ -13,6 +13,7 @@ namespace BoozewasherApp.Forms.ItemForms
     public partial class DeleteItemUserControl : UserControl
     {
         public MainForm mainForm;
+        private int SelectedItemId { get; set; }
         public DeleteItemUserControl()
         {
             InitializeComponent();
@@ -20,6 +21,16 @@ namespace BoozewasherApp.Forms.ItemForms
 
         private void DeleteItemUserControl_Load(object sender, EventArgs e)
         {
+            LoadDgvItem();
+        }
+        private void dgvItems_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SelectedItemId = (int)dgvItems.SelectedRows[0].Cells[0].Value;
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            mainForm.ItemRepository.DeleteItem(SelectedItemId);
+
             LoadDgvItem();
         }
 
@@ -30,5 +41,8 @@ namespace BoozewasherApp.Forms.ItemForms
         }
 
         #endregion
+        
+
+        
     }
 }

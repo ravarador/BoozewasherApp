@@ -121,6 +121,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.btnDelete.TabIndex = 31;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // dgvItems
             // 
@@ -144,6 +145,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.dgvItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvItems.Size = new System.Drawing.Size(1000, 286);
             this.dgvItems.TabIndex = 47;
+            this.dgvItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItems_CellClick);
             // 
             // DeleteItemUserControl
             // 

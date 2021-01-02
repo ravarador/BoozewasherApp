@@ -150,6 +150,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.Controls.Add(this.dgvItems);
             this.Name = "DeleteItemUserControl";
             this.Size = new System.Drawing.Size(1000, 500);
+            this.Load += new System.EventHandler(this.DeleteItemUserControl_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).EndInit();

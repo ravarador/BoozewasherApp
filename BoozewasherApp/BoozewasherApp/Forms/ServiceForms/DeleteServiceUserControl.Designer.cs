@@ -1,7 +1,7 @@
 ﻿
-namespace BoozewasherApp.Forms.ItemForms
+namespace BoozewasherApp.Forms.ServiceForms
 {
-    partial class DeleteItemUserControl
+    partial class DeleteServiceUserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -36,9 +36,9 @@ namespace BoozewasherApp.Forms.ItemForms
             this.label14 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.dgvItems = new System.Windows.Forms.DataGridView();
+            this.dgvServices = new System.Windows.Forms.DataGridView();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).BeginInit();
             this.SuspendLayout();
             // 
             // label15
@@ -47,9 +47,9 @@ namespace BoozewasherApp.Forms.ItemForms
             this.label15.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(451, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(125, 25);
-            this.label15.TabIndex = 49;
-            this.label15.Text = "Delete Item";
+            this.label15.Size = new System.Drawing.Size(158, 25);
+            this.label15.TabIndex = 52;
+            this.label15.Text = "Delete Services";
             // 
             // panel7
             // 
@@ -62,7 +62,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.panel7.Location = new System.Drawing.Point(0, 28);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(983, 214);
-            this.panel7.TabIndex = 48;
+            this.panel7.TabIndex = 51;
             // 
             // button1
             // 
@@ -123,43 +123,43 @@ namespace BoozewasherApp.Forms.ItemForms
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // dgvItems
+            // dgvServices
             // 
-            this.dgvItems.AllowUserToAddRows = false;
-            this.dgvItems.AllowUserToDeleteRows = false;
-            this.dgvItems.AllowUserToResizeColumns = false;
-            this.dgvItems.AllowUserToResizeRows = false;
-            this.dgvItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvItems.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.dgvItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvItems.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvItems.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvItems.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvItems.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvItems.Location = new System.Drawing.Point(0, 248);
-            this.dgvItems.MultiSelect = false;
-            this.dgvItems.Name = "dgvItems";
-            this.dgvItems.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvItems.RowHeadersVisible = false;
-            this.dgvItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvItems.Size = new System.Drawing.Size(983, 294);
-            this.dgvItems.TabIndex = 47;
-            this.dgvItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItems_CellClick);
+            this.dgvServices.AllowUserToAddRows = false;
+            this.dgvServices.AllowUserToDeleteRows = false;
+            this.dgvServices.AllowUserToResizeColumns = false;
+            this.dgvServices.AllowUserToResizeRows = false;
+            this.dgvServices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvServices.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dgvServices.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvServices.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvServices.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvServices.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvServices.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvServices.Location = new System.Drawing.Point(0, 248);
+            this.dgvServices.MultiSelect = false;
+            this.dgvServices.Name = "dgvServices";
+            this.dgvServices.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvServices.RowHeadersVisible = false;
+            this.dgvServices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvServices.Size = new System.Drawing.Size(983, 294);
+            this.dgvServices.TabIndex = 50;
+            this.dgvServices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServices_CellClick);
             // 
-            // DeleteItemUserControl
+            // DeleteServiceUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label15);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.dgvItems);
-            this.Name = "DeleteItemUserControl";
+            this.Controls.Add(this.dgvServices);
+            this.Name = "DeleteServiceUserControl";
             this.Size = new System.Drawing.Size(983, 542);
-            this.Load += new System.EventHandler(this.DeleteItemUserControl_Load);
+            this.Load += new System.EventHandler(this.DeleteServiceUserControl_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,6 +174,6 @@ namespace BoozewasherApp.Forms.ItemForms
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.DataGridView dgvItems;
+        private System.Windows.Forms.DataGridView dgvServices;
     }
 }

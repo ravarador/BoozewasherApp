@@ -157,11 +157,23 @@
     <Compile Include="Forms\ServiceForms\AddServiceForm.Designer.cs">
       <DependentUpon>AddServiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ServiceForms\AddServiceUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceForms\AddServiceUserControl.Designer.cs">
+      <DependentUpon>AddServiceUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ServiceForms\DeleteServiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ServiceForms\DeleteServiceForm.Designer.cs">
       <DependentUpon>DeleteServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServiceForms\DeleteServiceUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceForms\DeleteServiceUserControl.Designer.cs">
+      <DependentUpon>DeleteServiceUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ServiceForms\ServiceLookupForm.cs">
       <SubType>Form</SubType>
@@ -174,6 +186,12 @@
     </Compile>
     <Compile Include="Forms\ServiceForms\UpdateServiceForm.Designer.cs">
       <DependentUpon>UpdateServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServiceForms\UpdateServiceUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceForms\UpdateServiceUserControl.Designer.cs">
+      <DependentUpon>UpdateServiceUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SummaryForms\SummaryChart.cs">
       <SubType>Form</SubType>
@@ -282,14 +300,23 @@
     <EmbeddedResource Include="Forms\ServiceForms\AddServiceForm.resx">
       <DependentUpon>AddServiceForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceForms\AddServiceUserControl.resx">
+      <DependentUpon>AddServiceUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceForms\DeleteServiceForm.resx">
       <DependentUpon>DeleteServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceForms\DeleteServiceUserControl.resx">
+      <DependentUpon>DeleteServiceUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceForms\ServiceLookupForm.resx">
       <DependentUpon>ServiceLookupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceForms\UpdateServiceForm.resx">
       <DependentUpon>UpdateServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceForms\UpdateServiceUserControl.resx">
+      <DependentUpon>UpdateServiceUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SummaryForms\SummaryChart.resx">
       <DependentUpon>SummaryChart.cs</DependentUpon>

@@ -120,11 +120,16 @@ namespace BoozewasherApp.Forms
             
         }
         #endregion
-        public void ShowHideSalesUserControls(bool isAddItem = false, bool isDeleteItem = false, bool isUpdateItem = false, bool isViewItem = false)
+        public void ShowHideSalesUserControls(bool isAddItem = false, bool isDeleteItem = false, bool isUpdateItem = false, bool isViewItem = false,
+                                              bool isAddService = false, bool isDeleteService = false, bool isUpdateService = false, bool isViewService = false)
         {
             addItemUserControl1.Visible = isAddItem;
             updateItemUserControl1.Visible = isUpdateItem;
             deleteItemUserControl1.Visible = isDeleteItem;
+
+            addServiceUserControl1.Visible = isAddService;
+            updateServiceUserControl1.Visible = isUpdateService;
+            deleteServiceUserControl1.Visible = isDeleteService;
         }
         private void btnItemsAdd_Click(object sender, EventArgs e)
         {
@@ -147,7 +152,6 @@ namespace BoozewasherApp.Forms
             this.Cursor = Cursors.Default;
         }
 
-        
 
         private void btnItemsDelete_Click(object sender, EventArgs e)
         {
@@ -156,6 +160,39 @@ namespace BoozewasherApp.Forms
             deleteItemUserControl1.mainForm = this;
             deleteItemUserControl1.LoadDgvItems();
             ShowHideSalesUserControls(isDeleteItem: true);
+
+            this.Cursor = Cursors.Default;
+        }
+
+        private void btnServicesAdd_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+
+            addServiceUserControl1.mainForm = this;
+            addServiceUserControl1.LoadDgvServices();
+            ShowHideSalesUserControls(isAddService: true);
+
+            this.Cursor = Cursors.Default;
+        }
+
+        private void btnServicesUpdate_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+
+            updateServiceUserControl1.mainForm = this;
+            updateServiceUserControl1.LoadDgvServices();
+            ShowHideSalesUserControls(isUpdateService: true);
+
+            this.Cursor = Cursors.Default;
+        }
+
+        private void btnServicesDelete_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+
+            deleteServiceUserControl1.mainForm = this;
+            deleteServiceUserControl1.LoadDgvServices();
+            ShowHideSalesUserControls(isDeleteService: true);
 
             this.Cursor = Cursors.Default;
         }

@@ -157,6 +157,12 @@
     <Compile Include="Forms\ServiceForms\AddServiceForm.Designer.cs">
       <DependentUpon>AddServiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ServiceForms\AddServiceUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceForms\AddServiceUserControl.Designer.cs">
+      <DependentUpon>AddServiceUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ServiceForms\DeleteServiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceForms\AddServiceForm.resx">
       <DependentUpon>AddServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceForms\AddServiceUserControl.resx">
+      <DependentUpon>AddServiceUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceForms\DeleteServiceForm.resx">
       <DependentUpon>DeleteServiceForm.cs</DependentUpon>

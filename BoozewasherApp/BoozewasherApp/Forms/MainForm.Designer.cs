@@ -770,8 +770,9 @@
             // addServiceUserControl1
             // 
             this.addServiceUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.addServiceUserControl1.mainForm = null;
             this.addServiceUserControl1.Name = "addServiceUserControl1";
-            this.addServiceUserControl1.Size = new System.Drawing.Size(983, 625);
+            this.addServiceUserControl1.Size = new System.Drawing.Size(983, 580);
             this.addServiceUserControl1.TabIndex = 16;
             this.addServiceUserControl1.Visible = false;
             // 

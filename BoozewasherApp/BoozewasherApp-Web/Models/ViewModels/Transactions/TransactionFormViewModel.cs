@@ -21,6 +21,7 @@ namespace BoozewasherApp_Web.Models.ViewModels.Transactions
         [Display(Name = "Service Type")]
         public int ServiceId { get; set; }
 
+        [Display (Name = "Vehicle ID")]
         public int VehicleId { get; set; }
 
         public decimal Cost { get; set; }

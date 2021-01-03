@@ -15,21 +15,8 @@
     <p></p>
 
     <div class="form-group">
-        @Html.Label("Vehicle Type")
-        @Html.DropDownListFor(t => t.VehicleId, new SelectList(Model.Vehicles, "Id", "Type"), "Select Vehicle Type", new { @class = "form-control" })
-        @Html.ValidationMessageFor(t => t.VehicleId)
-    </div>
-
-
-    <div class="form-group">
-        @Html.Label("Vehicle Brand")
-        @Html.DropDownListFor(t => t.VehicleId, new SelectList(Model.Vehicles, "Id", "Brand"), "Select Vehicle Brand", new { @class = "form-control" })
-        @Html.ValidationMessageFor(t => t.VehicleId)
-    </div>
-
-    <div class="form-group">
-        @Html.Label("Vehicle Model")
-        @Html.DropDownListFor(t => t.VehicleId, new SelectList(Model.Vehicles, "Id", "Model"), "Select Vehicle Model", new { @class = "form-control" })
+        @Html.LabelFor(t => t.VehicleId)
+        @Html.TextBoxFor(t => t.VehicleId, new { @class = "form-control" })
         @Html.ValidationMessageFor(t => t.VehicleId)
     </div>
 

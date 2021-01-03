@@ -188,6 +188,8 @@ namespace BoozewasherApp.Forms
         {
             this.Cursor = Cursors.WaitCursor;
 
+            deleteServiceUserControl1.mainForm = this;
+            deleteServiceUserControl1.LoadDgvServices();
             ShowHideSalesUserControls(isDeleteService: true);
 
             this.Cursor = Cursors.Default;

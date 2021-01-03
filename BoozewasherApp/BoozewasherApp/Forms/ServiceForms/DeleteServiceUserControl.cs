@@ -12,6 +12,8 @@ namespace BoozewasherApp.Forms.ServiceForms
 {
     public partial class DeleteServiceUserControl : UserControl
     {
+        public MainForm mainForm;
+        private int SelectedServiceId { get; set; }
         public DeleteServiceUserControl()
         {
             InitializeComponent();
@@ -21,10 +23,23 @@ namespace BoozewasherApp.Forms.ServiceForms
         {
 
         }
-
+        private void dgvServices_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SelectedServiceId = (int)dgvServices.SelectedRows[0].Cells[0].Value;
+        }
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            mainForm.ServiceRepository.DeleteService(SelectedServiceId);
 
+            LoadDgvServices();
         }
+
+        #region Private Methods
+        public void LoadDgvServices()
+        {
+            dgvServices.DataSource = mainForm.ServiceRepository.GetAllServices();
+        }
+
+        #endregion
     }
 }

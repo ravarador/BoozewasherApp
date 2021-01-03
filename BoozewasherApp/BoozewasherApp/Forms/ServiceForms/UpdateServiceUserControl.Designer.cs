@@ -93,6 +93,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.btnUpdate.TabIndex = 31;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label14
             // 
@@ -181,6 +182,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.Controls.Add(this.dgvServices);
             this.Name = "UpdateServiceUserControl";
             this.Size = new System.Drawing.Size(983, 542);
+            this.Load += new System.EventHandler(this.UpdateServiceUserControl_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();

@@ -16,5 +16,15 @@ namespace BoozewasherApp.Forms.ServiceForms
         {
             InitializeComponent();
         }
+
+        private void DeleteServiceUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

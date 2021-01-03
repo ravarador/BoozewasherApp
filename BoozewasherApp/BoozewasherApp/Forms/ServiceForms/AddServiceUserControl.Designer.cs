@@ -93,6 +93,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.btnAdd.TabIndex = 31;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label14
             // 
@@ -181,6 +182,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.Controls.Add(this.dgvServices);
             this.Name = "AddServiceUserControl";
             this.Size = new System.Drawing.Size(983, 542);
+            this.Load += new System.EventHandler(this.AddServiceUserControl_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();

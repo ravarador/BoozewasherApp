@@ -16,5 +16,15 @@ namespace BoozewasherApp.Forms.ServiceForms
         {
             InitializeComponent();
         }
+
+        private void UpdateServiceUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

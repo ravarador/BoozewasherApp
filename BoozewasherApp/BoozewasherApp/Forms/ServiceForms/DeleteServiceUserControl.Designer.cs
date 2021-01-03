@@ -121,6 +121,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.btnDelete.TabIndex = 31;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // dgvServices
             // 
@@ -154,6 +155,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.Controls.Add(this.dgvServices);
             this.Name = "DeleteServiceUserControl";
             this.Size = new System.Drawing.Size(983, 542);
+            this.Load += new System.EventHandler(this.DeleteServiceUserControl_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();

@@ -179,6 +179,8 @@ namespace BoozewasherApp.Forms
         {
             this.Cursor = Cursors.WaitCursor;
 
+            updateServiceUserControl1.mainForm = this;
+            updateServiceUserControl1.LoadDgvServices();
             ShowHideSalesUserControls(isUpdateService: true);
 
             this.Cursor = Cursors.Default;

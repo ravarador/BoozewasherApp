@@ -172,6 +172,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.dgvServices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvServices.Size = new System.Drawing.Size(983, 294);
             this.dgvServices.TabIndex = 47;
+            this.dgvServices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServices_CellClick);
             // 
             // UpdateServiceUserControl
             // 

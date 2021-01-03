@@ -21,7 +21,7 @@ namespace BoozewasherApp.Forms.ItemForms
 
         private void AddItemUserControl_Load(object sender, EventArgs e)
         {
-            LoadDgvItems();
+            //LoadDgvItems();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

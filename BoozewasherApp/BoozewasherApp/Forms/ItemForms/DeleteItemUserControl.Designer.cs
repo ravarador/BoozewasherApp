@@ -45,7 +45,7 @@ namespace BoozewasherApp.Forms.ItemForms
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(457, 41);
+            this.label15.Location = new System.Drawing.Point(451, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(125, 25);
             this.label15.TabIndex = 49;
@@ -59,9 +59,9 @@ namespace BoozewasherApp.Forms.ItemForms
             this.panel7.Controls.Add(this.label14);
             this.panel7.Controls.Add(this.comboBox1);
             this.panel7.Controls.Add(this.btnDelete);
-            this.panel7.Location = new System.Drawing.Point(-2, 69);
+            this.panel7.Location = new System.Drawing.Point(0, 28);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1004, 139);
+            this.panel7.Size = new System.Drawing.Size(983, 137);
             this.panel7.TabIndex = 48;
             // 
             // button1
@@ -92,7 +92,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(382, 22);
+            this.label14.Location = new System.Drawing.Point(371, 21);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 16);
             this.label14.TabIndex = 34;
@@ -137,13 +137,13 @@ namespace BoozewasherApp.Forms.ItemForms
             this.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvItems.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvItems.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvItems.Location = new System.Drawing.Point(0, 214);
+            this.dgvItems.Location = new System.Drawing.Point(0, 171);
             this.dgvItems.MultiSelect = false;
             this.dgvItems.Name = "dgvItems";
             this.dgvItems.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvItems.RowHeadersVisible = false;
             this.dgvItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvItems.Size = new System.Drawing.Size(1000, 286);
+            this.dgvItems.Size = new System.Drawing.Size(983, 371);
             this.dgvItems.TabIndex = 47;
             this.dgvItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItems_CellClick);
             // 
@@ -155,7 +155,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.dgvItems);
             this.Name = "DeleteItemUserControl";
-            this.Size = new System.Drawing.Size(1000, 500);
+            this.Size = new System.Drawing.Size(983, 542);
             this.Load += new System.EventHandler(this.DeleteItemUserControl_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();

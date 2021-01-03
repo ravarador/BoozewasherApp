@@ -22,7 +22,7 @@ namespace BoozewasherApp.Forms.ItemForms
 
         private void UpdateItemUserControl_Load(object sender, EventArgs e)
         {
-            LoadDgvItems();
+            //LoadDgvItems();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

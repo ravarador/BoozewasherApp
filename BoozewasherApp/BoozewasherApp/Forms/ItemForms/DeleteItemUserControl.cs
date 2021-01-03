@@ -21,7 +21,7 @@ namespace BoozewasherApp.Forms.ItemForms
 
         private void DeleteItemUserControl_Load(object sender, EventArgs e)
         {
-            LoadDgvItems();
+            //LoadDgvItems();
         }
         private void dgvItems_CellClick(object sender, DataGridViewCellEventArgs e)
         {

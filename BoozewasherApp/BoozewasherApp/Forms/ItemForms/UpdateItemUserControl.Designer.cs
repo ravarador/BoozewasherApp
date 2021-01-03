@@ -77,7 +77,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.panel7.Controls.Add(this.txtboxDescription);
             this.panel7.Location = new System.Drawing.Point(0, 28);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(983, 195);
+            this.panel7.Size = new System.Drawing.Size(983, 214);
             this.panel7.TabIndex = 45;
             // 
             // txtboxName
@@ -86,7 +86,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.txtboxName.BackColor = System.Drawing.Color.White;
             this.txtboxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtboxName.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxName.Location = new System.Drawing.Point(398, 13);
+            this.txtboxName.Location = new System.Drawing.Point(398, 23);
             this.txtboxName.Name = "txtboxName";
             this.txtboxName.Size = new System.Drawing.Size(275, 18);
             this.txtboxName.TabIndex = 26;
@@ -97,7 +97,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.txtboxExpense.BackColor = System.Drawing.Color.White;
             this.txtboxExpense.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtboxExpense.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxExpense.Location = new System.Drawing.Point(398, 139);
+            this.txtboxExpense.Location = new System.Drawing.Point(398, 149);
             this.txtboxExpense.Name = "txtboxExpense";
             this.txtboxExpense.Size = new System.Drawing.Size(275, 18);
             this.txtboxExpense.TabIndex = 37;
@@ -110,7 +110,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(573, 163);
+            this.btnUpdate.Location = new System.Drawing.Point(573, 173);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 23);
             this.btnUpdate.TabIndex = 31;
@@ -123,7 +123,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(336, 139);
+            this.label8.Location = new System.Drawing.Point(336, 149);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 16);
             this.label8.TabIndex = 38;
@@ -134,7 +134,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(349, 13);
+            this.label14.Location = new System.Drawing.Point(349, 23);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(43, 16);
             this.label14.TabIndex = 29;
@@ -146,7 +146,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.txtboxUsageCount.BackColor = System.Drawing.Color.White;
             this.txtboxUsageCount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtboxUsageCount.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxUsageCount.Location = new System.Drawing.Point(398, 115);
+            this.txtboxUsageCount.Location = new System.Drawing.Point(398, 125);
             this.txtboxUsageCount.Name = "txtboxUsageCount";
             this.txtboxUsageCount.Size = new System.Drawing.Size(275, 18);
             this.txtboxUsageCount.TabIndex = 35;
@@ -156,7 +156,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(318, 37);
+            this.label13.Location = new System.Drawing.Point(318, 47);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(74, 16);
             this.label13.TabIndex = 30;
@@ -167,7 +167,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(309, 115);
+            this.label11.Location = new System.Drawing.Point(309, 125);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(83, 16);
             this.label11.TabIndex = 36;
@@ -178,7 +178,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(336, 61);
+            this.label12.Location = new System.Drawing.Point(336, 71);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(56, 16);
             this.label12.TabIndex = 32;
@@ -195,7 +195,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.comboIsEmpty.Items.AddRange(new object[] {
             "True",
             "False"});
-            this.comboIsEmpty.Location = new System.Drawing.Point(398, 85);
+            this.comboIsEmpty.Location = new System.Drawing.Point(398, 95);
             this.comboIsEmpty.Name = "comboIsEmpty";
             this.comboIsEmpty.Size = new System.Drawing.Size(275, 24);
             this.comboIsEmpty.TabIndex = 34;
@@ -206,7 +206,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.txtboxBarcode.BackColor = System.Drawing.Color.White;
             this.txtboxBarcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtboxBarcode.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxBarcode.Location = new System.Drawing.Point(398, 61);
+            this.txtboxBarcode.Location = new System.Drawing.Point(398, 71);
             this.txtboxBarcode.Name = "txtboxBarcode";
             this.txtboxBarcode.Size = new System.Drawing.Size(275, 18);
             this.txtboxBarcode.TabIndex = 27;
@@ -216,7 +216,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.lblIsEmpty.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIsEmpty.AutoSize = true;
             this.lblIsEmpty.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIsEmpty.Location = new System.Drawing.Point(329, 88);
+            this.lblIsEmpty.Location = new System.Drawing.Point(329, 98);
             this.lblIsEmpty.Name = "lblIsEmpty";
             this.lblIsEmpty.Size = new System.Drawing.Size(63, 16);
             this.lblIsEmpty.TabIndex = 33;
@@ -228,7 +228,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.txtboxDescription.BackColor = System.Drawing.Color.White;
             this.txtboxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtboxDescription.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxDescription.Location = new System.Drawing.Point(398, 37);
+            this.txtboxDescription.Location = new System.Drawing.Point(398, 47);
             this.txtboxDescription.Name = "txtboxDescription";
             this.txtboxDescription.Size = new System.Drawing.Size(275, 18);
             this.txtboxDescription.TabIndex = 28;
@@ -247,13 +247,13 @@ namespace BoozewasherApp.Forms.ItemForms
             this.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvItems.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvItems.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvItems.Location = new System.Drawing.Point(0, 229);
+            this.dgvItems.Location = new System.Drawing.Point(0, 248);
             this.dgvItems.MultiSelect = false;
             this.dgvItems.Name = "dgvItems";
             this.dgvItems.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvItems.RowHeadersVisible = false;
             this.dgvItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvItems.Size = new System.Drawing.Size(983, 313);
+            this.dgvItems.Size = new System.Drawing.Size(983, 294);
             this.dgvItems.TabIndex = 44;
             this.dgvItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItems_CellClick);
             // 

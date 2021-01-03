@@ -61,7 +61,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.panel7.Controls.Add(this.btnDelete);
             this.panel7.Location = new System.Drawing.Point(0, 28);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(983, 137);
+            this.panel7.Size = new System.Drawing.Size(983, 214);
             this.panel7.TabIndex = 51;
             // 
             // button1
@@ -71,7 +71,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(558, 71);
+            this.button1.Location = new System.Drawing.Point(573, 77);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 23);
             this.button1.TabIndex = 36;
@@ -82,9 +82,9 @@ namespace BoozewasherApp.Forms.ServiceForms
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(456, 47);
+            this.textBox1.Location = new System.Drawing.Point(398, 53);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 18);
+            this.textBox1.Size = new System.Drawing.Size(275, 18);
             this.textBox1.TabIndex = 35;
             // 
             // label14
@@ -92,7 +92,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(371, 21);
+            this.label14.Location = new System.Drawing.Point(324, 26);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 16);
             this.label14.TabIndex = 34;
@@ -103,9 +103,9 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(456, 17);
+            this.comboBox1.Location = new System.Drawing.Point(398, 23);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(202, 24);
+            this.comboBox1.Size = new System.Drawing.Size(275, 24);
             this.comboBox1.TabIndex = 32;
             // 
             // btnDelete
@@ -115,7 +115,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(558, 100);
+            this.btnDelete.Location = new System.Drawing.Point(573, 106);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 23);
             this.btnDelete.TabIndex = 31;
@@ -137,13 +137,13 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.dgvServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvServices.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvServices.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvServices.Location = new System.Drawing.Point(0, 171);
+            this.dgvServices.Location = new System.Drawing.Point(0, 248);
             this.dgvServices.MultiSelect = false;
             this.dgvServices.Name = "dgvServices";
             this.dgvServices.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvServices.RowHeadersVisible = false;
             this.dgvServices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvServices.Size = new System.Drawing.Size(983, 371);
+            this.dgvServices.Size = new System.Drawing.Size(983, 294);
             this.dgvServices.TabIndex = 50;
             this.dgvServices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServices_CellClick);
             // 

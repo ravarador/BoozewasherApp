@@ -67,13 +67,16 @@
             this.btnVehicles = new System.Windows.Forms.Button();
             this.btnServices = new System.Windows.Forms.Button();
             this.btnTransactions = new System.Windows.Forms.Button();
-            this.deleteItemUserControl1 = new BoozewasherApp.Forms.ItemForms.DeleteItemUserControl();
-            this.addItemUserControl1 = new BoozewasherApp.Forms.ItemForms.AddItemUserControl();
-            this.updateItemUserControl1 = new BoozewasherApp.Forms.ItemForms.UpdateItemUserControl();
             this.tabPageInventory = new System.Windows.Forms.TabPage();
             this.tabPageReports = new System.Windows.Forms.TabPage();
             this.tabPageAnalytics = new System.Windows.Forms.TabPage();
             this.tabPageSettings = new System.Windows.Forms.TabPage();
+            this.deleteItemUserControl1 = new BoozewasherApp.Forms.ItemForms.DeleteItemUserControl();
+            this.addItemUserControl1 = new BoozewasherApp.Forms.ItemForms.AddItemUserControl();
+            this.updateItemUserControl1 = new BoozewasherApp.Forms.ItemForms.UpdateItemUserControl();
+            this.addServiceUserControl1 = new BoozewasherApp.Forms.ServiceForms.AddServiceUserControl();
+            this.updateServiceUserControl1 = new BoozewasherApp.Forms.ServiceForms.UpdateServiceUserControl();
+            this.deleteServiceUserControl1 = new BoozewasherApp.Forms.ServiceForms.DeleteServiceUserControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).BeginInit();
@@ -306,6 +309,9 @@
             this.tabPageSales.Controls.Add(this.deleteItemUserControl1);
             this.tabPageSales.Controls.Add(this.addItemUserControl1);
             this.tabPageSales.Controls.Add(this.updateItemUserControl1);
+            this.tabPageSales.Controls.Add(this.addServiceUserControl1);
+            this.tabPageSales.Controls.Add(this.updateServiceUserControl1);
+            this.tabPageSales.Controls.Add(this.deleteServiceUserControl1);
             this.tabPageSales.Location = new System.Drawing.Point(4, 23);
             this.tabPageSales.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageSales.Name = "tabPageSales";
@@ -514,6 +520,7 @@
             this.btnServicesUpdate.Text = "Update";
             this.btnServicesUpdate.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnServicesUpdate.UseVisualStyleBackColor = false;
+            this.btnServicesUpdate.Click += new System.EventHandler(this.btnServicesUpdate_Click);
             // 
             // btnServicesDelete
             // 
@@ -530,6 +537,7 @@
             this.btnServicesDelete.Text = "Delete";
             this.btnServicesDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnServicesDelete.UseVisualStyleBackColor = false;
+            this.btnServicesDelete.Click += new System.EventHandler(this.btnServicesDelete_Click);
             // 
             // btnServicesAdd
             // 
@@ -546,6 +554,7 @@
             this.btnServicesAdd.Text = "Add";
             this.btnServicesAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnServicesAdd.UseVisualStyleBackColor = false;
+            this.btnServicesAdd.Click += new System.EventHandler(this.btnServicesAdd_Click);
             // 
             // panelVehicles
             // 
@@ -695,31 +704,6 @@
             this.btnTransactions.UseVisualStyleBackColor = false;
             this.btnTransactions.Click += new System.EventHandler(this.btnTransactions_Click);
             // 
-            // deleteItemUserControl1
-            // 
-            this.deleteItemUserControl1.Location = new System.Drawing.Point(8, 82);
-            this.deleteItemUserControl1.Name = "deleteItemUserControl1";
-            this.deleteItemUserControl1.Size = new System.Drawing.Size(983, 580);
-            this.deleteItemUserControl1.TabIndex = 14;
-            this.deleteItemUserControl1.Visible = false;
-            // 
-            // addItemUserControl1
-            // 
-            this.addItemUserControl1.Location = new System.Drawing.Point(8, 82);
-            this.addItemUserControl1.mainForm = null;
-            this.addItemUserControl1.Name = "addItemUserControl1";
-            this.addItemUserControl1.Size = new System.Drawing.Size(983, 580);
-            this.addItemUserControl1.TabIndex = 13;
-            this.addItemUserControl1.Visible = false;
-            // 
-            // updateItemUserControl1
-            // 
-            this.updateItemUserControl1.Location = new System.Drawing.Point(8, 82);
-            this.updateItemUserControl1.Name = "updateItemUserControl1";
-            this.updateItemUserControl1.Size = new System.Drawing.Size(983, 580);
-            this.updateItemUserControl1.TabIndex = 15;
-            this.updateItemUserControl1.Visible = false;
-            // 
             // tabPageInventory
             // 
             this.tabPageInventory.BackColor = System.Drawing.Color.White;
@@ -757,6 +741,55 @@
             this.tabPageSettings.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabPageSettings.Size = new System.Drawing.Size(1104, 685);
             this.tabPageSettings.TabIndex = 4;
+            // 
+            // deleteItemUserControl1
+            // 
+            this.deleteItemUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.deleteItemUserControl1.Name = "deleteItemUserControl1";
+            this.deleteItemUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.deleteItemUserControl1.TabIndex = 14;
+            this.deleteItemUserControl1.Visible = false;
+            // 
+            // addItemUserControl1
+            // 
+            this.addItemUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.addItemUserControl1.mainForm = null;
+            this.addItemUserControl1.Name = "addItemUserControl1";
+            this.addItemUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.addItemUserControl1.TabIndex = 13;
+            this.addItemUserControl1.Visible = false;
+            // 
+            // updateItemUserControl1
+            // 
+            this.updateItemUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.updateItemUserControl1.Name = "updateItemUserControl1";
+            this.updateItemUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.updateItemUserControl1.TabIndex = 15;
+            this.updateItemUserControl1.Visible = false;
+            // 
+            // addServiceUserControl1
+            // 
+            this.addServiceUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.addServiceUserControl1.Name = "addServiceUserControl1";
+            this.addServiceUserControl1.Size = new System.Drawing.Size(983, 625);
+            this.addServiceUserControl1.TabIndex = 16;
+            this.addServiceUserControl1.Visible = false;
+            // 
+            // updateServiceUserControl1
+            // 
+            this.updateServiceUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.updateServiceUserControl1.Name = "updateServiceUserControl1";
+            this.updateServiceUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.updateServiceUserControl1.TabIndex = 17;
+            this.updateServiceUserControl1.Visible = false;
+            // 
+            // deleteServiceUserControl1
+            // 
+            this.deleteServiceUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.deleteServiceUserControl1.Name = "deleteServiceUserControl1";
+            this.deleteServiceUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.deleteServiceUserControl1.TabIndex = 18;
+            this.deleteServiceUserControl1.Visible = false;
             // 
             // MainForm
             // 
@@ -836,5 +869,8 @@
         private ItemForms.DeleteItemUserControl deleteItemUserControl1;
         private ItemForms.AddItemUserControl addItemUserControl1;
         private ItemForms.UpdateItemUserControl updateItemUserControl1;
+        private ServiceForms.AddServiceUserControl addServiceUserControl1;
+        private ServiceForms.UpdateServiceUserControl updateServiceUserControl1;
+        private ServiceForms.DeleteServiceUserControl deleteServiceUserControl1;
     }
 }

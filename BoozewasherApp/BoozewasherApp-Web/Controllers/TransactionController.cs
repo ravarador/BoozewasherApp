@@ -104,12 +104,14 @@ namespace BoozewasherApp_Web.Controllers
             return RedirectToAction("Index", "Transaction");
         }
 
+        [Authorize(Roles = RoleName.CanManageTransactions)]
         public ActionResult VehicleLookup()
         {
             var vehicles = _context.Vehicles.ToList();
             return View(vehicles);
         }
 
+        [Authorize(Roles = RoleName.CanManageTransactions)]
         public ActionResult SelectedVehicle(int id)
         {
             var vehicle = _context.Vehicles.SingleOrDefault(t => t.Id == id);

@@ -23,7 +23,7 @@
         @foreach (var vehicles in Model)
         {
             <tr>
-                <td>@Html.ActionLink(vehicles.Type, "SelectedVehicle", "Transaction", new { id = vehicles.Id }, null)</td>
+                <td>@Html.ActionLink(vehicles.Type, "SelectedVehicle", "Transaction", new { id = vehicles.Id}, null)</td>
                 <td>@vehicles.Description</td>
                 <td>@vehicles.Brand</td>
                 <td>@vehicles.Model</td>

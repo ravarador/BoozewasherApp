@@ -71,7 +71,7 @@ namespace BoozewasherApp_Web.Controllers
                 return View("TransactionForm");
             }
 
-            if (transaction.Id == 0)
+            if (transaction.Id == transaction.VehicleId)
             {
                 transaction.DateTime = DateTime.Now;
                 _context.Transactions.Add(transaction);
@@ -79,6 +79,9 @@ namespace BoozewasherApp_Web.Controllers
             else
             {
                 var transactionInDB = _context.Transactions.SingleOrDefault(t => t.Id == transaction.Id);
+
+                if (transactionInDB == null)
+                    return HttpNotFound();
 
                 transactionInDB.VehicleId = transaction.VehicleId;
                 transactionInDB.ServiceId = transaction.ServiceId;
@@ -104,12 +107,14 @@ namespace BoozewasherApp_Web.Controllers
             return RedirectToAction("Index", "Transaction");
         }
 
+        [Authorize(Roles = RoleName.CanManageTransactions)]
         public ActionResult VehicleLookup()
         {
             var vehicles = _context.Vehicles.ToList();
             return View(vehicles);
         }
 
+        [Authorize(Roles = RoleName.CanManageTransactions)]
         public ActionResult SelectedVehicle(int id)
         {
             var vehicle = _context.Vehicles.SingleOrDefault(t => t.Id == id);
@@ -119,7 +124,7 @@ namespace BoozewasherApp_Web.Controllers
 
             var viewModel = new TransactionFormViewModel()
             {
-               VehicleId = vehicle.Id,
+               VehicleId = id,
                Services = _context.Services.ToList()
             };
             return View("TransactionForm", viewModel);

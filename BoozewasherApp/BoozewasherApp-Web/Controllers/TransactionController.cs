@@ -80,6 +80,9 @@ namespace BoozewasherApp_Web.Controllers
             {
                 var transactionInDB = _context.Transactions.SingleOrDefault(t => t.Id == transaction.Id);
 
+                if (transactionInDB == null)
+                    return HttpNotFound();
+
                 transactionInDB.VehicleId = transaction.VehicleId;
                 transactionInDB.ServiceId = transaction.ServiceId;
                 transactionInDB.PlateNumber = transaction.PlateNumber;
@@ -121,7 +124,7 @@ namespace BoozewasherApp_Web.Controllers
 
             var viewModel = new TransactionFormViewModel()
             {
-               VehicleId = vehicle.Id,
+               VehicleId = id,
                Services = _context.Services.ToList()
             };
             return View("TransactionForm", viewModel);

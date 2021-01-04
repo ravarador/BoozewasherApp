@@ -121,7 +121,8 @@ namespace BoozewasherApp.Forms
         }
         #endregion
         public void ShowHideSalesUserControls(bool isAddItem = false, bool isDeleteItem = false, bool isUpdateItem = false, bool isViewItem = false,
-                                              bool isAddService = false, bool isDeleteService = false, bool isUpdateService = false, bool isViewService = false)
+                                              bool isAddService = false, bool isDeleteService = false, bool isUpdateService = false, bool isViewService = false,
+                                              bool isAddVehicle = false, bool isDeleteVehicle = false, bool isUpdateVehicle = false, bool isViewVehicle = false)
         {
             addItemUserControl1.Visible = isAddItem;
             updateItemUserControl1.Visible = isUpdateItem;
@@ -130,6 +131,10 @@ namespace BoozewasherApp.Forms
             addServiceUserControl1.Visible = isAddService;
             updateServiceUserControl1.Visible = isUpdateService;
             deleteServiceUserControl1.Visible = isDeleteService;
+            
+            addVehicleUserControl1.Visible = isAddVehicle;
+            updateVehicleUserControl1.Visible = isUpdateVehicle;
+            deleteVehicleUserControl1.Visible = isDeleteVehicle;
         }
         private void btnItemsAdd_Click(object sender, EventArgs e)
         {
@@ -193,6 +198,33 @@ namespace BoozewasherApp.Forms
             deleteServiceUserControl1.mainForm = this;
             deleteServiceUserControl1.LoadDgvServices();
             ShowHideSalesUserControls(isDeleteService: true);
+
+            this.Cursor = Cursors.Default;
+        }
+
+        private void btnVehiclesAdd_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+
+            ShowHideSalesUserControls(isAddVehicle: true);
+
+            this.Cursor = Cursors.Default;
+        }
+
+        private void btnVehiclesUpdate_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+
+            ShowHideSalesUserControls(isUpdateVehicle: true);
+
+            this.Cursor = Cursors.Default;
+        }
+
+        private void btnVehiclesDelete_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+
+            ShowHideSalesUserControls(isDeleteVehicle: true);
 
             this.Cursor = Cursors.Default;
         }

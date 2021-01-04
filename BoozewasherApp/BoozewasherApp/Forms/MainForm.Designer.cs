@@ -606,6 +606,7 @@
             this.btnVehiclesUpdate.Text = "Update";
             this.btnVehiclesUpdate.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVehiclesUpdate.UseVisualStyleBackColor = false;
+            this.btnVehiclesUpdate.Click += new System.EventHandler(this.btnVehiclesUpdate_Click);
             // 
             // btnVehiclesDelete
             // 
@@ -622,6 +623,7 @@
             this.btnVehiclesDelete.Text = "Delete";
             this.btnVehiclesDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVehiclesDelete.UseVisualStyleBackColor = false;
+            this.btnVehiclesDelete.Click += new System.EventHandler(this.btnVehiclesDelete_Click);
             // 
             // btnVehiclesAdd
             // 
@@ -638,6 +640,7 @@
             this.btnVehiclesAdd.Text = "Add";
             this.btnVehiclesAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVehiclesAdd.UseVisualStyleBackColor = false;
+            this.btnVehiclesAdd.Click += new System.EventHandler(this.btnVehiclesAdd_Click);
             // 
             // btnItems
             // 
@@ -804,6 +807,7 @@
             this.addVehicleUserControl1.Name = "addVehicleUserControl1";
             this.addVehicleUserControl1.Size = new System.Drawing.Size(983, 580);
             this.addVehicleUserControl1.TabIndex = 19;
+            this.addVehicleUserControl1.Visible = false;
             // 
             // updateVehicleUserControl1
             // 
@@ -811,6 +815,7 @@
             this.updateVehicleUserControl1.Name = "updateVehicleUserControl1";
             this.updateVehicleUserControl1.Size = new System.Drawing.Size(983, 580);
             this.updateVehicleUserControl1.TabIndex = 20;
+            this.updateVehicleUserControl1.Visible = false;
             // 
             // deleteVehicleUserControl1
             // 
@@ -818,6 +823,7 @@
             this.deleteVehicleUserControl1.Name = "deleteVehicleUserControl1";
             this.deleteVehicleUserControl1.Size = new System.Drawing.Size(983, 580);
             this.deleteVehicleUserControl1.TabIndex = 21;
+            this.deleteVehicleUserControl1.Visible = false;
             // 
             // MainForm
             // 

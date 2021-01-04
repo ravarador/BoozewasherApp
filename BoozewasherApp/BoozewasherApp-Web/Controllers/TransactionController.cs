@@ -71,14 +71,14 @@ namespace BoozewasherApp_Web.Controllers
                 return View("TransactionForm");
             }
 
-            if (transaction.Id == 0)
+            if (transaction.Id == transaction.VehicleId)
             {
                 transaction.DateTime = DateTime.Now;
                 _context.Transactions.Add(transaction);
             }
             else
             {
-                var transactionInDB = _context.Transactions.Single(t => t.Id == transaction.Id);
+                var transactionInDB = _context.Transactions.SingleOrDefault(t => t.Id == transaction.Id);
 
                 if (transactionInDB == null)
                     return HttpNotFound();

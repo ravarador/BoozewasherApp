@@ -78,7 +78,7 @@ namespace BoozewasherApp_Web.Controllers
             }
             else
             {
-                var transactionInDB = _context.Transactions.SingleOrDefault(t => t.Id == transaction.Id);
+                var transactionInDB = _context.Transactions.Single(t => t.Id == transaction.Id);
 
                 if (transactionInDB == null)
                     return HttpNotFound();

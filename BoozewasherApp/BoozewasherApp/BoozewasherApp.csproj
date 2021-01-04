@@ -253,6 +253,12 @@
     <Compile Include="Forms\VehicleForms\UpdateVehicleForm.Designer.cs">
       <DependentUpon>UpdateVehicleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\VehicleForms\UpdateVehicleUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\VehicleForms\UpdateVehicleUserControl.Designer.cs">
+      <DependentUpon>UpdateVehicleUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\VehicleForms\VehicleLookupForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleForms\UpdateVehicleForm.resx">
       <DependentUpon>UpdateVehicleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VehicleForms\UpdateVehicleUserControl.resx">
+      <DependentUpon>UpdateVehicleUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleForms\VehicleLookupForm.resx">
       <DependentUpon>VehicleLookupForm.cs</DependentUpon>

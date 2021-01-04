@@ -247,6 +247,12 @@
     <Compile Include="Forms\VehicleForms\DeleteVehicleForm.Designer.cs">
       <DependentUpon>DeleteVehicleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\VehicleForms\DeleteVehicleUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\VehicleForms\DeleteVehicleUserControl.Designer.cs">
+      <DependentUpon>DeleteVehicleUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\VehicleForms\UpdateVehicleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleForms\DeleteVehicleForm.resx">
       <DependentUpon>DeleteVehicleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VehicleForms\DeleteVehicleUserControl.resx">
+      <DependentUpon>DeleteVehicleUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleForms\UpdateVehicleForm.resx">
       <DependentUpon>UpdateVehicleForm.cs</DependentUpon>

@@ -77,6 +77,9 @@
             this.addServiceUserControl1 = new BoozewasherApp.Forms.ServiceForms.AddServiceUserControl();
             this.updateServiceUserControl1 = new BoozewasherApp.Forms.ServiceForms.UpdateServiceUserControl();
             this.deleteServiceUserControl1 = new BoozewasherApp.Forms.ServiceForms.DeleteServiceUserControl();
+            this.addVehicleUserControl1 = new BoozewasherApp.Forms.VehicleForms.AddVehicleUserControl();
+            this.updateVehicleUserControl1 = new BoozewasherApp.Forms.VehicleForms.UpdateVehicleUserControl();
+            this.deleteVehicleUserControl1 = new BoozewasherApp.Forms.VehicleForms.DeleteVehicleUserControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).BeginInit();
@@ -312,6 +315,9 @@
             this.tabPageSales.Controls.Add(this.addServiceUserControl1);
             this.tabPageSales.Controls.Add(this.updateServiceUserControl1);
             this.tabPageSales.Controls.Add(this.deleteServiceUserControl1);
+            this.tabPageSales.Controls.Add(this.addVehicleUserControl1);
+            this.tabPageSales.Controls.Add(this.updateVehicleUserControl1);
+            this.tabPageSales.Controls.Add(this.deleteVehicleUserControl1);
             this.tabPageSales.Location = new System.Drawing.Point(4, 23);
             this.tabPageSales.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageSales.Name = "tabPageSales";
@@ -792,6 +798,27 @@
             this.deleteServiceUserControl1.TabIndex = 18;
             this.deleteServiceUserControl1.Visible = false;
             // 
+            // addVehicleUserControl1
+            // 
+            this.addVehicleUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.addVehicleUserControl1.Name = "addVehicleUserControl1";
+            this.addVehicleUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.addVehicleUserControl1.TabIndex = 19;
+            // 
+            // updateVehicleUserControl1
+            // 
+            this.updateVehicleUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.updateVehicleUserControl1.Name = "updateVehicleUserControl1";
+            this.updateVehicleUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.updateVehicleUserControl1.TabIndex = 20;
+            // 
+            // deleteVehicleUserControl1
+            // 
+            this.deleteVehicleUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.deleteVehicleUserControl1.Name = "deleteVehicleUserControl1";
+            this.deleteVehicleUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.deleteVehicleUserControl1.TabIndex = 21;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -873,5 +900,8 @@
         private ServiceForms.AddServiceUserControl addServiceUserControl1;
         private ServiceForms.UpdateServiceUserControl updateServiceUserControl1;
         private ServiceForms.DeleteServiceUserControl deleteServiceUserControl1;
+        private VehicleForms.AddVehicleUserControl addVehicleUserControl1;
+        private VehicleForms.UpdateVehicleUserControl updateVehicleUserControl1;
+        private VehicleForms.DeleteVehicleUserControl deleteVehicleUserControl1;
     }
 }

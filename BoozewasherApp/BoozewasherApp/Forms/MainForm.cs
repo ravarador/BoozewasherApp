@@ -206,6 +206,8 @@ namespace BoozewasherApp.Forms
         {
             this.Cursor = Cursors.WaitCursor;
 
+            addVehicleUserControl1.mainForm = this;
+            addVehicleUserControl1.LoadDgvVehicles();
             ShowHideSalesUserControls(isAddVehicle: true);
 
             this.Cursor = Cursors.Default;
@@ -215,6 +217,8 @@ namespace BoozewasherApp.Forms
         {
             this.Cursor = Cursors.WaitCursor;
 
+            updateVehicleUserControl1.mainForm = this;
+            updateVehicleUserControl1.LoadDgvVehicles();
             ShowHideSalesUserControls(isUpdateVehicle: true);
 
             this.Cursor = Cursors.Default;
@@ -224,6 +228,8 @@ namespace BoozewasherApp.Forms
         {
             this.Cursor = Cursors.WaitCursor;
 
+            deleteVehicleUserControl1.mainForm = this;
+            deleteVehicleUserControl1.LoadDgvVehicles();
             ShowHideSalesUserControls(isDeleteVehicle: true);
 
             this.Cursor = Cursors.Default;

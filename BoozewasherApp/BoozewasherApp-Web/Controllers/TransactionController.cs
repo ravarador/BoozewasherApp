@@ -73,7 +73,7 @@ namespace BoozewasherApp_Web.Controllers
 
             if (transaction.Id == transaction.VehicleId)
             {
-                transaction.DateTime = DateTime.Now;
+               transaction.DateTime = DateTime.Now;
                 _context.Transactions.Add(transaction);
             }
             else

@@ -121,6 +121,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.btnDelete.TabIndex = 31;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // dgvVehicles
             // 
@@ -144,6 +145,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.dgvVehicles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVehicles.Size = new System.Drawing.Size(983, 294);
             this.dgvVehicles.TabIndex = 50;
+            this.dgvVehicles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehicles_CellClick);
             // 
             // DeleteVehicleUserControl
             // 
@@ -154,6 +156,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.Controls.Add(this.dgvVehicles);
             this.Name = "DeleteVehicleUserControl";
             this.Size = new System.Drawing.Size(983, 542);
+            this.Load += new System.EventHandler(this.DeleteVehicleUserControl_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicles)).EndInit();

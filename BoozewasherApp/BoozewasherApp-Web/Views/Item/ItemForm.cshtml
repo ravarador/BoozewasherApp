@@ -29,13 +29,13 @@
 
     <div class="form-group">
         @Html.LabelFor(i => i.Item.UsageCount)
-        @Html.TextBoxFor(i => i.Item.UsageCount, new { @class = "form-control" })
+        @Html.TextBoxFor(i => i.Item.UsageCount, "{0:#.#}", new { @class = "form-control" })
         @Html.ValidationMessageFor(i => i.Item.UsageCount)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(i => i.Item.Expense)
-        @Html.TextBoxFor(i => i.Item.Expense, new { @class = "form-control" })
+        @Html.TextBoxFor(i => i.Item.Expense, "{0:#.#}", new { @class = "form-control" })
         @Html.ValidationMessageFor(i => i.Item.Expense)
     </div>
 

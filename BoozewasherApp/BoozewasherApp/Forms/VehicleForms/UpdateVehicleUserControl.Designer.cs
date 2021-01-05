@@ -97,6 +97,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.btnUpdate.TabIndex = 31;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label14
             // 
@@ -197,6 +198,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.dgvVehicles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVehicles.Size = new System.Drawing.Size(983, 294);
             this.dgvVehicles.TabIndex = 47;
+            this.dgvVehicles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehicles_CellClick);
             // 
             // UpdateVehicleUserControl
             // 
@@ -207,6 +209,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.Controls.Add(this.dgvVehicles);
             this.Name = "UpdateVehicleUserControl";
             this.Size = new System.Drawing.Size(983, 542);
+            this.Load += new System.EventHandler(this.UpdateVehicleUserControl_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicles)).EndInit();

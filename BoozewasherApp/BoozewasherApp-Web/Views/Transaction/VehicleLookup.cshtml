@@ -31,32 +31,5 @@
         }
     </tbody>
 </table>
-<script>
-    $(document).ready(function () {
-        $("#vehicles").DataTable({
-            ajax: {
-                url: "API/Vehicles/GetVehicles",
-                dataSrc: ""
-            },
-            columns: [
-                {
-                    data: "Type",
-                    render: function (data, type, Vehicle) {
-                        return "<a href='/Transaction/VehicleLookup/" + Vehicle.Id + "'>" + Vehicle.Type + "</a>";
-                    }
-                },
-                {
-                    data: "Description"
-                },
-                {
-                    data: "Brand"
-                },
-                {
-                    data: "Model"
-                }
-            ]
-        });
-    });
 
-</script>
 

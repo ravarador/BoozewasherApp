@@ -97,6 +97,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.btnAdd.TabIndex = 31;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label14
             // 
@@ -207,6 +208,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.Controls.Add(this.dgvVehicles);
             this.Name = "AddVehicleUserControl";
             this.Size = new System.Drawing.Size(983, 542);
+            this.Load += new System.EventHandler(this.AddVehicleUserControl_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicles)).EndInit();

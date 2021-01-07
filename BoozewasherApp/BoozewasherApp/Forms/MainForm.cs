@@ -244,6 +244,7 @@ namespace BoozewasherApp.Forms
 
             addTransactionUserControl1.mainForm = this;
             addTransactionUserControl1.LoadDgvTransactions();
+            addTransactionUserControl1.SetColumnsOfItemDgv();
             ShowHideSalesUserControls(isAddTransaction: true);
 
             this.Cursor = Cursors.Default;

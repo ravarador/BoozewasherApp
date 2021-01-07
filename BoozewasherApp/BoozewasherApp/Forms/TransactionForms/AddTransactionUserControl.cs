@@ -1,4 +1,5 @@
-﻿using BoozewasherApp.Forms.ServiceForms;
+﻿using BoozewasherApp.Forms.ItemForms;
+using BoozewasherApp.Forms.ServiceForms;
 using BoozewasherApp.Forms.VehicleForms;
 using BoozewasherDomain.Dtos;
 using System;
@@ -23,7 +24,7 @@ namespace BoozewasherApp.Forms.TransactionForms
 
         private void AddTransactionUserControl_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnServiceLookup_Click(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace BoozewasherApp.Forms.TransactionForms
 
         private void btnItemLookup_Click(object sender, EventArgs e)
         {
-
+            OpenItemLookupForm();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -100,6 +101,21 @@ namespace BoozewasherApp.Forms.TransactionForms
             var vehicleLookupForm = new VehicleLookupForm(mainForm.VehicleRepository);
             vehicleLookupForm.ShowDialog();
             txtboxVehicle.Text = vehicleLookupForm.SelectedVehicleIdForLookup.ToString();
+        }
+        private void OpenItemLookupForm()
+        {
+            var itemLookupForm = new ItemLookupForm(mainForm.ItemRepository);
+            itemLookupForm.ShowDialog();
+
+            dataGridView1.Rows.Add(itemLookupForm.SelectedItem.Name, 
+                                   itemLookupForm.SelectedItem.UsageCount, 
+                                   itemLookupForm.SelectedItem.IsEmpty);
+        }
+        public void SetColumnsOfItemDgv()
+        {
+            dataGridView1.Columns.Add("Name", "Name");
+            dataGridView1.Columns.Add("UsageCount", "Usage");
+            dataGridView1.Columns.Add("IsEmpty", "Is Empty?");
         }
         #endregion
     }

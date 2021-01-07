@@ -67,10 +67,6 @@
             this.btnVehicles = new System.Windows.Forms.Button();
             this.btnServices = new System.Windows.Forms.Button();
             this.btnTransactions = new System.Windows.Forms.Button();
-            this.tabPageInventory = new System.Windows.Forms.TabPage();
-            this.tabPageReports = new System.Windows.Forms.TabPage();
-            this.tabPageAnalytics = new System.Windows.Forms.TabPage();
-            this.tabPageSettings = new System.Windows.Forms.TabPage();
             this.deleteItemUserControl1 = new BoozewasherApp.Forms.ItemForms.DeleteItemUserControl();
             this.addItemUserControl1 = new BoozewasherApp.Forms.ItemForms.AddItemUserControl();
             this.updateItemUserControl1 = new BoozewasherApp.Forms.ItemForms.UpdateItemUserControl();
@@ -80,6 +76,11 @@
             this.addVehicleUserControl1 = new BoozewasherApp.Forms.VehicleForms.AddVehicleUserControl();
             this.updateVehicleUserControl1 = new BoozewasherApp.Forms.VehicleForms.UpdateVehicleUserControl();
             this.deleteVehicleUserControl1 = new BoozewasherApp.Forms.VehicleForms.DeleteVehicleUserControl();
+            this.addTransactionUserControl1 = new BoozewasherApp.Forms.TransactionForms.AddTransactionUserControl();
+            this.tabPageInventory = new System.Windows.Forms.TabPage();
+            this.tabPageReports = new System.Windows.Forms.TabPage();
+            this.tabPageAnalytics = new System.Windows.Forms.TabPage();
+            this.tabPageSettings = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).BeginInit();
@@ -318,6 +319,7 @@
             this.tabPageSales.Controls.Add(this.addVehicleUserControl1);
             this.tabPageSales.Controls.Add(this.updateVehicleUserControl1);
             this.tabPageSales.Controls.Add(this.deleteVehicleUserControl1);
+            this.tabPageSales.Controls.Add(this.addTransactionUserControl1);
             this.tabPageSales.Location = new System.Drawing.Point(4, 23);
             this.tabPageSales.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageSales.Name = "tabPageSales";
@@ -369,6 +371,7 @@
             this.btnTransactionsUpdate.Text = "Update";
             this.btnTransactionsUpdate.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTransactionsUpdate.UseVisualStyleBackColor = false;
+            this.btnTransactionsUpdate.Click += new System.EventHandler(this.btnTransactionsUpdate_Click);
             // 
             // btnTransactionsDelete
             // 
@@ -385,6 +388,7 @@
             this.btnTransactionsDelete.Text = "Delete";
             this.btnTransactionsDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTransactionsDelete.UseVisualStyleBackColor = false;
+            this.btnTransactionsDelete.Click += new System.EventHandler(this.btnTransactionsDelete_Click);
             // 
             // btnTransactionsAdd
             // 
@@ -401,6 +405,7 @@
             this.btnTransactionsAdd.Text = "Add";
             this.btnTransactionsAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTransactionsAdd.UseVisualStyleBackColor = false;
+            this.btnTransactionsAdd.Click += new System.EventHandler(this.btnTransactionsAdd_Click);
             // 
             // panelItems
             // 
@@ -713,44 +718,6 @@
             this.btnTransactions.UseVisualStyleBackColor = false;
             this.btnTransactions.Click += new System.EventHandler(this.btnTransactions_Click);
             // 
-            // tabPageInventory
-            // 
-            this.tabPageInventory.BackColor = System.Drawing.Color.White;
-            this.tabPageInventory.Location = new System.Drawing.Point(4, 23);
-            this.tabPageInventory.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageInventory.Name = "tabPageInventory";
-            this.tabPageInventory.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInventory.Size = new System.Drawing.Size(1104, 685);
-            this.tabPageInventory.TabIndex = 1;
-            // 
-            // tabPageReports
-            // 
-            this.tabPageReports.BackColor = System.Drawing.Color.White;
-            this.tabPageReports.Location = new System.Drawing.Point(4, 23);
-            this.tabPageReports.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageReports.Name = "tabPageReports";
-            this.tabPageReports.Size = new System.Drawing.Size(1104, 685);
-            this.tabPageReports.TabIndex = 2;
-            // 
-            // tabPageAnalytics
-            // 
-            this.tabPageAnalytics.BackColor = System.Drawing.Color.White;
-            this.tabPageAnalytics.Location = new System.Drawing.Point(4, 23);
-            this.tabPageAnalytics.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageAnalytics.Name = "tabPageAnalytics";
-            this.tabPageAnalytics.Size = new System.Drawing.Size(1104, 685);
-            this.tabPageAnalytics.TabIndex = 3;
-            // 
-            // tabPageSettings
-            // 
-            this.tabPageSettings.BackColor = System.Drawing.Color.White;
-            this.tabPageSettings.Location = new System.Drawing.Point(4, 23);
-            this.tabPageSettings.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageSettings.Name = "tabPageSettings";
-            this.tabPageSettings.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPageSettings.Size = new System.Drawing.Size(1104, 685);
-            this.tabPageSettings.TabIndex = 4;
-            // 
             // deleteItemUserControl1
             // 
             this.deleteItemUserControl1.Location = new System.Drawing.Point(8, 82);
@@ -804,6 +771,7 @@
             // addVehicleUserControl1
             // 
             this.addVehicleUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.addVehicleUserControl1.mainForm = null;
             this.addVehicleUserControl1.Name = "addVehicleUserControl1";
             this.addVehicleUserControl1.Size = new System.Drawing.Size(983, 580);
             this.addVehicleUserControl1.TabIndex = 19;
@@ -824,6 +792,52 @@
             this.deleteVehicleUserControl1.Size = new System.Drawing.Size(983, 580);
             this.deleteVehicleUserControl1.TabIndex = 21;
             this.deleteVehicleUserControl1.Visible = false;
+            // 
+            // addTransactionUserControl1
+            // 
+            this.addTransactionUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.addTransactionUserControl1.Name = "addTransactionUserControl1";
+            this.addTransactionUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.addTransactionUserControl1.TabIndex = 22;
+            this.addTransactionUserControl1.Visible = false;
+            // 
+            // tabPageInventory
+            // 
+            this.tabPageInventory.BackColor = System.Drawing.Color.White;
+            this.tabPageInventory.Location = new System.Drawing.Point(4, 23);
+            this.tabPageInventory.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageInventory.Name = "tabPageInventory";
+            this.tabPageInventory.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageInventory.Size = new System.Drawing.Size(1104, 685);
+            this.tabPageInventory.TabIndex = 1;
+            // 
+            // tabPageReports
+            // 
+            this.tabPageReports.BackColor = System.Drawing.Color.White;
+            this.tabPageReports.Location = new System.Drawing.Point(4, 23);
+            this.tabPageReports.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageReports.Name = "tabPageReports";
+            this.tabPageReports.Size = new System.Drawing.Size(1104, 685);
+            this.tabPageReports.TabIndex = 2;
+            // 
+            // tabPageAnalytics
+            // 
+            this.tabPageAnalytics.BackColor = System.Drawing.Color.White;
+            this.tabPageAnalytics.Location = new System.Drawing.Point(4, 23);
+            this.tabPageAnalytics.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageAnalytics.Name = "tabPageAnalytics";
+            this.tabPageAnalytics.Size = new System.Drawing.Size(1104, 685);
+            this.tabPageAnalytics.TabIndex = 3;
+            // 
+            // tabPageSettings
+            // 
+            this.tabPageSettings.BackColor = System.Drawing.Color.White;
+            this.tabPageSettings.Location = new System.Drawing.Point(4, 23);
+            this.tabPageSettings.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageSettings.Name = "tabPageSettings";
+            this.tabPageSettings.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tabPageSettings.Size = new System.Drawing.Size(1104, 685);
+            this.tabPageSettings.TabIndex = 4;
             // 
             // MainForm
             // 
@@ -909,5 +923,6 @@
         private VehicleForms.AddVehicleUserControl addVehicleUserControl1;
         private VehicleForms.UpdateVehicleUserControl updateVehicleUserControl1;
         private VehicleForms.DeleteVehicleUserControl deleteVehicleUserControl1;
+        private TransactionForms.AddTransactionUserControl addTransactionUserControl1;
     }
 }

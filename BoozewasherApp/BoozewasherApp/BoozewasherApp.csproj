@@ -217,6 +217,12 @@
     <Compile Include="Forms\TransactionForms\AddTransactionForm.Designer.cs">
       <DependentUpon>AddTransactionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TransactionForms\AddTransactionUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\AddTransactionUserControl.Designer.cs">
+      <DependentUpon>AddTransactionUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TransactionForms\DeleteTransactionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -347,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TransactionForms\AddTransactionForm.resx">
       <DependentUpon>AddTransactionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TransactionForms\AddTransactionUserControl.resx">
+      <DependentUpon>AddTransactionUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TransactionForms\DeleteTransactionForm.resx">
       <DependentUpon>DeleteTransactionForm.cs</DependentUpon>

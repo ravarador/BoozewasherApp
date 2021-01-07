@@ -122,7 +122,8 @@ namespace BoozewasherApp.Forms
         #endregion
         public void ShowHideSalesUserControls(bool isAddItem = false, bool isDeleteItem = false, bool isUpdateItem = false, bool isViewItem = false,
                                               bool isAddService = false, bool isDeleteService = false, bool isUpdateService = false, bool isViewService = false,
-                                              bool isAddVehicle = false, bool isDeleteVehicle = false, bool isUpdateVehicle = false, bool isViewVehicle = false)
+                                              bool isAddVehicle = false, bool isDeleteVehicle = false, bool isUpdateVehicle = false, bool isViewVehicle = false,
+                                              bool isAddTransaction = false, bool isDeleteTransaction = false, bool isUpdateTransaction = false, bool isViewTransaction = false)
         {
             addItemUserControl1.Visible = isAddItem;
             updateItemUserControl1.Visible = isUpdateItem;
@@ -135,6 +136,8 @@ namespace BoozewasherApp.Forms
             addVehicleUserControl1.Visible = isAddVehicle;
             updateVehicleUserControl1.Visible = isUpdateVehicle;
             deleteVehicleUserControl1.Visible = isDeleteVehicle;
+
+            addTransactionUserControl1.Visible = isAddTransaction;
         }
         private void btnItemsAdd_Click(object sender, EventArgs e)
         {
@@ -233,6 +236,27 @@ namespace BoozewasherApp.Forms
             ShowHideSalesUserControls(isDeleteVehicle: true);
 
             this.Cursor = Cursors.Default;
+        }
+
+        private void btnTransactionsAdd_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+
+            addTransactionUserControl1.mainForm = this;
+            addTransactionUserControl1.LoadDgvTransactions();
+            ShowHideSalesUserControls(isAddTransaction: true);
+
+            this.Cursor = Cursors.Default;
+        }
+
+        private void btnTransactionsUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTransactionsDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -47,7 +47,7 @@
                         data: "UsageCount"
                     },
                     {
-                        data: "Expense"
+                        data: "Expense", render: $.fn.DataTable.render.number(',', '.', 2, '')
                     }
                 ]
             });

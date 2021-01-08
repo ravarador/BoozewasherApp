@@ -76,6 +76,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.dgvTransactions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTransactions.Size = new System.Drawing.Size(983, 294);
             this.dgvTransactions.TabIndex = 47;
+            this.dgvTransactions.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransactions_CellClick);
             // 
             // btnVehicleLookup
             // 
@@ -91,6 +92,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.btnVehicleLookup.TabIndex = 45;
             this.btnVehicleLookup.Text = "Vehicle Lookup";
             this.btnVehicleLookup.UseVisualStyleBackColor = false;
+            this.btnVehicleLookup.Click += new System.EventHandler(this.btnVehicleLookup_Click);
             // 
             // btnServiceLookup
             // 
@@ -106,6 +108,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.btnServiceLookup.TabIndex = 44;
             this.btnServiceLookup.Text = "Service Lookup";
             this.btnServiceLookup.UseVisualStyleBackColor = false;
+            this.btnServiceLookup.Click += new System.EventHandler(this.btnServiceLookup_Click);
             // 
             // btnItemLookup
             // 
@@ -121,6 +124,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.btnItemLookup.TabIndex = 43;
             this.btnItemLookup.Text = "Item Lookup";
             this.btnItemLookup.UseVisualStyleBackColor = false;
+            this.btnItemLookup.Click += new System.EventHandler(this.btnItemLookup_Click);
             // 
             // dataGridView1
             // 
@@ -186,6 +190,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.btnUpdate.TabIndex = 31;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label8
             // 
@@ -320,6 +325,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.Controls.Add(this.panel7);
             this.Name = "UpdateTransactionUserControl";
             this.Size = new System.Drawing.Size(983, 542);
+            this.Load += new System.EventHandler(this.UpdateTransactionUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCost)).EndInit();

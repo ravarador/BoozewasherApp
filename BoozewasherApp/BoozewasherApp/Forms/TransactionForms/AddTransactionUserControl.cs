@@ -26,7 +26,7 @@ namespace BoozewasherApp.Forms.TransactionForms
 
         private void AddTransactionUserControl_Load(object sender, EventArgs e)
         {
-            SetColumnsOfItemDgv();
+            //SetColumnsOfItemDgv();
         }
 
         private void btnServiceLookup_Click(object sender, EventArgs e)
@@ -47,6 +47,8 @@ namespace BoozewasherApp.Forms.TransactionForms
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AddTransaction();
+            LoadDgvTransactions();
+            ResetFields();
         }
 
         #region Private Methods
@@ -65,8 +67,6 @@ namespace BoozewasherApp.Forms.TransactionForms
 
             mainForm.TransactionRepository.AddTransaction(transaction);
 
-            LoadDgvTransactions();
-            ResetFields();
         }
         private List<int> GetServiceTypes()
         {

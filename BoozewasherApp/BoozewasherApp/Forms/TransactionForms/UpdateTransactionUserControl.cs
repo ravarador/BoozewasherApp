@@ -23,7 +23,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         public UpdateTransactionUserControl()
         {
             InitializeComponent();
-            SetColumnsOfItemDgv();
+            //SetColumnsOfItemDgv();
         }
 
         private void UpdateTransactionUserControl_Load(object sender, EventArgs e)

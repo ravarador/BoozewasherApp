@@ -15,18 +15,20 @@ using System.Windows.Forms;
 
 namespace BoozewasherApp.Forms.TransactionForms
 {
-    public partial class AddTransactionUserControl : UserControl
+    public partial class UpdateTransactionUserControl : UserControl
     {
         public MainForm mainForm;
         private string ItemsListInForm;
-        public AddTransactionUserControl()
+        private int SelectedTransactionId { get; set; }
+        public UpdateTransactionUserControl()
         {
             InitializeComponent();
+            //SetColumnsOfItemDgv();
         }
 
-        private void AddTransactionUserControl_Load(object sender, EventArgs e)
+        private void UpdateTransactionUserControl_Load(object sender, EventArgs e)
         {
-            //SetColumnsOfItemDgv();
+
         }
 
         private void btnServiceLookup_Click(object sender, EventArgs e)
@@ -44,18 +46,45 @@ namespace BoozewasherApp.Forms.TransactionForms
             OpenItemLookupForm();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            AddTransaction();
+            UpdateTransaction();
             LoadDgvTransactions();
             ResetFields();
         }
 
+        private void dgvTransactions_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ResetFields();
+
+            SelectedTransactionId = (int)dgvTransactions.SelectedRows[0].Cells[0].Value;
+
+            dateTimePicker1.Value = DateTime.Parse(dgvTransactions.SelectedRows[0].Cells[1].Value.ToString());
+            txtboxPlateNumber.Text = dgvTransactions.SelectedRows[0].Cells[2].Value.ToString();
+            txtboxService.Text = dgvTransactions.SelectedRows[0].Cells[5].Value.ToString();
+            txtboxVehicle.Text = dgvTransactions.SelectedRows[0].Cells[6].Value.ToString();
+            numericCost.Text = dgvTransactions.SelectedRows[0].Cells[7].Value.ToString();
+
+            ItemsListInForm = dgvTransactions.SelectedRows[0].Cells[8].Value.ToString();
+
+            if (!string.IsNullOrEmpty(ItemsListInForm))
+            {
+                var itemsArray = ItemsListInForm.Split(',');
+
+                foreach (var itemFromArray in itemsArray)
+                {
+                    var item = mainForm.ItemRepository.GetItemById(int.Parse(itemFromArray));
+                    dataGridView1.Rows.Add(item.Name, item.UsageCount, item.IsEmpty);
+                }
+            }
+        }
+
         #region Private Methods
-        private void AddTransaction()
+        private void UpdateTransaction()
         {
             var transaction = new Transaction()
             {
+                Id = SelectedTransactionId,
                 DateTime = DateTime.Now,
                 ServiceId = int.Parse(txtboxService.Text),
                 VehicleId = int.Parse(txtboxVehicle.Text),
@@ -65,8 +94,7 @@ namespace BoozewasherApp.Forms.TransactionForms
 
             };
 
-            mainForm.TransactionRepository.AddTransaction(transaction);
-
+            mainForm.TransactionRepository.UpdateTransaction(transaction);
         }
         private List<int> GetServiceTypes()
         {
@@ -120,8 +148,8 @@ namespace BoozewasherApp.Forms.TransactionForms
                 ItemsListInForm += "," + itemLookupForm.SelectedItemIdForLookup.ToString();
             }
 
-            dataGridView1.Rows.Add(itemLookupForm.SelectedItem.Name, 
-                                   itemLookupForm.SelectedItem.UsageCount, 
+            dataGridView1.Rows.Add(itemLookupForm.SelectedItem.Name,
+                                   itemLookupForm.SelectedItem.UsageCount,
                                    itemLookupForm.SelectedItem.IsEmpty);
         }
         private void SetColumnsOfItemDgv()

@@ -81,6 +81,7 @@
             this.tabPageReports = new System.Windows.Forms.TabPage();
             this.tabPageAnalytics = new System.Windows.Forms.TabPage();
             this.tabPageSettings = new System.Windows.Forms.TabPage();
+            this.updateTransactionUserControl1 = new BoozewasherApp.Forms.TransactionForms.UpdateTransactionUserControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).BeginInit();
@@ -320,6 +321,7 @@
             this.tabPageSales.Controls.Add(this.updateVehicleUserControl1);
             this.tabPageSales.Controls.Add(this.deleteVehicleUserControl1);
             this.tabPageSales.Controls.Add(this.addTransactionUserControl1);
+            this.tabPageSales.Controls.Add(this.updateTransactionUserControl1);
             this.tabPageSales.Location = new System.Drawing.Point(4, 23);
             this.tabPageSales.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageSales.Name = "tabPageSales";
@@ -839,6 +841,14 @@
             this.tabPageSettings.Size = new System.Drawing.Size(1104, 685);
             this.tabPageSettings.TabIndex = 4;
             // 
+            // updateTransactionUserControl1
+            // 
+            this.updateTransactionUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.updateTransactionUserControl1.Name = "updateTransactionUserControl1";
+            this.updateTransactionUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.updateTransactionUserControl1.TabIndex = 23;
+            this.updateTransactionUserControl1.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -924,5 +934,6 @@
         private VehicleForms.UpdateVehicleUserControl updateVehicleUserControl1;
         private VehicleForms.DeleteVehicleUserControl deleteVehicleUserControl1;
         private TransactionForms.AddTransactionUserControl addTransactionUserControl1;
+        private TransactionForms.UpdateTransactionUserControl updateTransactionUserControl1;
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace BoozewasherApp.Forms.TransactionForms
 {
-    partial class AddTransactionUserControl
+    partial class UpdateTransactionUserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,8 +29,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.dgvTransactions = new System.Windows.Forms.DataGridView();
             this.btnVehicleLookup = new System.Windows.Forms.Button();
             this.btnServiceLookup = new System.Windows.Forms.Button();
             this.btnItemLookup = new System.Windows.Forms.Button();
@@ -38,7 +37,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.numericCost = new System.Windows.Forms.NumericUpDown();
             this.txtboxPlateNumber = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -47,46 +46,37 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.txtboxVehicle = new System.Windows.Forms.TextBox();
             this.lblIsEmpty = new System.Windows.Forms.Label();
             this.txtboxService = new System.Windows.Forms.TextBox();
-            this.dgvTransactions = new System.Windows.Forms.DataGridView();
-            this.panel7.SuspendLayout();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCost)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label15
+            // dgvTransactions
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(445, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(173, 25);
-            this.label15.TabIndex = 46;
-            this.label15.Text = "Add Transaction";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel7.Controls.Add(this.btnVehicleLookup);
-            this.panel7.Controls.Add(this.btnServiceLookup);
-            this.panel7.Controls.Add(this.btnItemLookup);
-            this.panel7.Controls.Add(this.dataGridView1);
-            this.panel7.Controls.Add(this.numericCost);
-            this.panel7.Controls.Add(this.txtboxPlateNumber);
-            this.panel7.Controls.Add(this.dateTimePicker1);
-            this.panel7.Controls.Add(this.btnAdd);
-            this.panel7.Controls.Add(this.label8);
-            this.panel7.Controls.Add(this.label14);
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.label12);
-            this.panel7.Controls.Add(this.txtboxVehicle);
-            this.panel7.Controls.Add(this.lblIsEmpty);
-            this.panel7.Controls.Add(this.txtboxService);
-            this.panel7.Location = new System.Drawing.Point(0, 28);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(983, 214);
-            this.panel7.TabIndex = 45;
+            this.dgvTransactions.AllowUserToAddRows = false;
+            this.dgvTransactions.AllowUserToDeleteRows = false;
+            this.dgvTransactions.AllowUserToResizeColumns = false;
+            this.dgvTransactions.AllowUserToResizeRows = false;
+            this.dgvTransactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTransactions.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dgvTransactions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTransactions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvTransactions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTransactions.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvTransactions.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvTransactions.Location = new System.Drawing.Point(0, 248);
+            this.dgvTransactions.MultiSelect = false;
+            this.dgvTransactions.Name = "dgvTransactions";
+            this.dgvTransactions.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvTransactions.RowHeadersVisible = false;
+            this.dgvTransactions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTransactions.Size = new System.Drawing.Size(983, 294);
+            this.dgvTransactions.TabIndex = 47;
+            this.dgvTransactions.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransactions_CellClick);
             // 
             // btnVehicleLookup
             // 
@@ -186,21 +176,21 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.dateTimePicker1.TabIndex = 39;
             this.dateTimePicker1.Value = new System.DateTime(2021, 1, 6, 14, 37, 33, 0);
             // 
-            // btnAdd
+            // btnUpdate
             // 
-            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(573, 147);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 23);
-            this.btnAdd.TabIndex = 31;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(573, 147);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 23);
+            this.btnUpdate.TabIndex = 31;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label8
             // 
@@ -292,44 +282,55 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.txtboxService.Size = new System.Drawing.Size(186, 18);
             this.txtboxService.TabIndex = 28;
             // 
-            // dgvTransactions
+            // label15
             // 
-            this.dgvTransactions.AllowUserToAddRows = false;
-            this.dgvTransactions.AllowUserToDeleteRows = false;
-            this.dgvTransactions.AllowUserToResizeColumns = false;
-            this.dgvTransactions.AllowUserToResizeRows = false;
-            this.dgvTransactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTransactions.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.dgvTransactions.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvTransactions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvTransactions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTransactions.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvTransactions.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvTransactions.Location = new System.Drawing.Point(0, 248);
-            this.dgvTransactions.MultiSelect = false;
-            this.dgvTransactions.Name = "dgvTransactions";
-            this.dgvTransactions.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvTransactions.RowHeadersVisible = false;
-            this.dgvTransactions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTransactions.Size = new System.Drawing.Size(983, 294);
-            this.dgvTransactions.TabIndex = 44;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(445, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(203, 25);
+            this.label15.TabIndex = 49;
+            this.label15.Text = "Update Transaction";
             // 
-            // AddTransactionUserControl
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel7.Controls.Add(this.btnVehicleLookup);
+            this.panel7.Controls.Add(this.btnServiceLookup);
+            this.panel7.Controls.Add(this.btnItemLookup);
+            this.panel7.Controls.Add(this.dataGridView1);
+            this.panel7.Controls.Add(this.numericCost);
+            this.panel7.Controls.Add(this.txtboxPlateNumber);
+            this.panel7.Controls.Add(this.dateTimePicker1);
+            this.panel7.Controls.Add(this.btnUpdate);
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Controls.Add(this.label14);
+            this.panel7.Controls.Add(this.label13);
+            this.panel7.Controls.Add(this.label11);
+            this.panel7.Controls.Add(this.label12);
+            this.panel7.Controls.Add(this.txtboxVehicle);
+            this.panel7.Controls.Add(this.lblIsEmpty);
+            this.panel7.Controls.Add(this.txtboxService);
+            this.panel7.Location = new System.Drawing.Point(0, 28);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(983, 214);
+            this.panel7.TabIndex = 48;
+            // 
+            // UpdateTransactionUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgvTransactions);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.dgvTransactions);
-            this.Name = "AddTransactionUserControl";
+            this.Name = "UpdateTransactionUserControl";
             this.Size = new System.Drawing.Size(983, 542);
-            this.Load += new System.EventHandler(this.AddTransactionUserControl_Load);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.Load += new System.EventHandler(this.UpdateTransactionUserControl_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCost)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,9 +338,15 @@ namespace BoozewasherApp.Forms.TransactionForms
 
         #endregion
 
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DataGridView dgvTransactions;
+        private System.Windows.Forms.Button btnVehicleLookup;
+        private System.Windows.Forms.Button btnServiceLookup;
+        private System.Windows.Forms.Button btnItemLookup;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.NumericUpDown numericCost;
+        private System.Windows.Forms.TextBox txtboxPlateNumber;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -348,13 +355,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         private System.Windows.Forms.TextBox txtboxVehicle;
         private System.Windows.Forms.Label lblIsEmpty;
         private System.Windows.Forms.TextBox txtboxService;
-        private System.Windows.Forms.DataGridView dgvTransactions;
-        private System.Windows.Forms.NumericUpDown numericCost;
-        private System.Windows.Forms.TextBox txtboxPlateNumber;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button btnVehicleLookup;
-        private System.Windows.Forms.Button btnServiceLookup;
-        private System.Windows.Forms.Button btnItemLookup;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel7;
     }
 }

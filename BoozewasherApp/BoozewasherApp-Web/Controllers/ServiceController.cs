@@ -36,7 +36,7 @@ namespace BoozewasherApp_Web.Controllers
             {
                 Service = new Service()
             };
-            return View ("ServiceForm");
+            return View ("ServiceForm", viewModel);
         }
 
         [Authorize(Roles = RoleName.CanManageServices)]
@@ -59,7 +59,7 @@ namespace BoozewasherApp_Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Save(Service service)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View("ServiceForm");
             }

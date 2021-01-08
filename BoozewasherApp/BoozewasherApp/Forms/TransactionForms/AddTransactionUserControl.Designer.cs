@@ -170,7 +170,6 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.txtboxPlateNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtboxPlateNumber.BackColor = System.Drawing.Color.White;
             this.txtboxPlateNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtboxPlateNumber.Enabled = false;
             this.txtboxPlateNumber.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtboxPlateNumber.Location = new System.Drawing.Point(398, 96);
             this.txtboxPlateNumber.Name = "txtboxPlateNumber";

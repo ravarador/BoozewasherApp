@@ -2,6 +2,7 @@
 using BoozewasherApp.Forms.ServiceForms;
 using BoozewasherApp.Forms.VehicleForms;
 using BoozewasherDomain.Dtos;
+using BoozewasherDomain.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace BoozewasherApp.Forms.TransactionForms
     public partial class AddTransactionUserControl : UserControl
     {
         public MainForm mainForm;
+        private string ItemsListInForm;
         public AddTransactionUserControl()
         {
             InitializeComponent();
@@ -24,7 +26,7 @@ namespace BoozewasherApp.Forms.TransactionForms
 
         private void AddTransactionUserControl_Load(object sender, EventArgs e)
         {
-            
+            SetColumnsOfItemDgv();
         }
 
         private void btnServiceLookup_Click(object sender, EventArgs e)
@@ -44,26 +46,27 @@ namespace BoozewasherApp.Forms.TransactionForms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            AddTransaction();
         }
 
         #region Private Methods
         private void AddTransaction()
         {
-            //var transaction = new Transaction()
-            //{
-            //    DateTime = DateTime.Now,
-            //    ServiceId = int.Parse(comboServiceType.SelectedItem.ToString()),
-            //    VehicleId = int.Parse(comboVehicleType.SelectedItem.ToString()),
-            //    PlateNumber = txtboxPlateNumber.Text,
-            //    Cost = decimal.Parse(txtboxCost.Text),
-            //    ItemsList = ItemsListInForm
+            var transaction = new Transaction()
+            {
+                DateTime = DateTime.Now,
+                ServiceId = int.Parse(txtboxService.Text),
+                VehicleId = int.Parse(txtboxVehicle.Text),
+                PlateNumber = txtboxPlateNumber.Text,
+                Cost = numericCost.Value,
+                ItemsList = ItemsListInForm
 
-            //};
+            };
 
-            //TransactionRepository.AddTransaction(transaction);
+            mainForm.TransactionRepository.AddTransaction(transaction);
 
-            //LoadDgvTransaction();
+            LoadDgvTransactions();
+            ResetFields();
         }
         private List<int> GetServiceTypes()
         {
@@ -86,7 +89,8 @@ namespace BoozewasherApp.Forms.TransactionForms
                                                           ServiceId = a.ServiceId,
                                                           VehicleType = a.Vehicle.Type,
                                                           VehicleId = a.VehicleId,
-                                                          Cost = a.Cost
+                                                          Cost = a.Cost,
+                                                          ItemsList = a.ItemsList
                                                       }).ToList();
         }
 
@@ -107,15 +111,33 @@ namespace BoozewasherApp.Forms.TransactionForms
             var itemLookupForm = new ItemLookupForm(mainForm.ItemRepository);
             itemLookupForm.ShowDialog();
 
+            if (string.IsNullOrEmpty(ItemsListInForm))
+            {
+                ItemsListInForm += itemLookupForm.SelectedItemIdForLookup.ToString();
+            }
+            else
+            {
+                ItemsListInForm += "," + itemLookupForm.SelectedItemIdForLookup.ToString();
+            }
+
             dataGridView1.Rows.Add(itemLookupForm.SelectedItem.Name, 
                                    itemLookupForm.SelectedItem.UsageCount, 
                                    itemLookupForm.SelectedItem.IsEmpty);
         }
-        public void SetColumnsOfItemDgv()
+        private void SetColumnsOfItemDgv()
         {
             dataGridView1.Columns.Add("Name", "Name");
             dataGridView1.Columns.Add("UsageCount", "Usage");
             dataGridView1.Columns.Add("IsEmpty", "Is Empty?");
+        }
+        public void ResetFields()
+        {
+            txtboxService.Text = string.Empty;
+            txtboxVehicle.Text = string.Empty;
+            txtboxPlateNumber.Text = string.Empty;
+            numericCost.Value = 0.00m;
+            ItemsListInForm = string.Empty;
+            dataGridView1.Rows.Clear();
         }
         #endregion
     }

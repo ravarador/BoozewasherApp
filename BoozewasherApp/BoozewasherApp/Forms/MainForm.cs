@@ -139,6 +139,7 @@ namespace BoozewasherApp.Forms
 
             addTransactionUserControl1.Visible = isAddTransaction;
             updateTransactionUserControl1.Visible = isUpdateTransaction;
+            deleteTransactionUserControl1.Visible = isDeleteTransaction;
         }
         private void btnItemsAdd_Click(object sender, EventArgs e)
         {
@@ -265,7 +266,13 @@ namespace BoozewasherApp.Forms
 
         private void btnTransactionsDelete_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
 
+            deleteTransactionUserControl1.mainForm = this;
+            deleteTransactionUserControl1.LoadDgvTransactions();
+            ShowHideSalesUserControls(isDeleteTransaction: true);
+
+            this.Cursor = Cursors.Default;
         }
     }
 }

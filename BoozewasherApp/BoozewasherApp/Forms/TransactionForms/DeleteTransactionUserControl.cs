@@ -32,7 +32,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DeleteTransaction();
-            LoadDgvServices();
+            LoadDgvTransactions();
         }
 
         #region Private Methods
@@ -40,7 +40,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         {
             mainForm.TransactionRepository.DeleteTransaction(SelectedTransactionId);
         }
-        public void LoadDgvServices()
+        public void LoadDgvTransactions()
         {
             dgvTransactions.DataSource = mainForm.TransactionRepository.GetAllTransactions();
         }

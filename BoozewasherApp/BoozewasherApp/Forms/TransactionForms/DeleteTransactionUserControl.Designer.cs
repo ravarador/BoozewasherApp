@@ -121,6 +121,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.btnDelete.TabIndex = 31;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // dgvTransactions
             // 
@@ -144,6 +145,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.dgvTransactions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTransactions.Size = new System.Drawing.Size(983, 294);
             this.dgvTransactions.TabIndex = 53;
+            this.dgvTransactions.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransactions_CellClick);
             // 
             // DeleteTransactionUserControl
             // 
@@ -154,6 +156,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.Controls.Add(this.dgvTransactions);
             this.Name = "DeleteTransactionUserControl";
             this.Size = new System.Drawing.Size(983, 542);
+            this.Load += new System.EventHandler(this.DeleteTransactionUserControl_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).EndInit();

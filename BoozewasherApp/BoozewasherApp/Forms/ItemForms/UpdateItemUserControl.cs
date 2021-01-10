@@ -27,20 +27,7 @@ namespace BoozewasherApp.Forms.ItemForms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            var item = new Item()
-            {
-                Id = SelectedItemId,
-                Name = txtboxName.Text,
-                Description = txtboxDescription.Text,
-                Barcode = txtboxBarcode.Text,
-                IsEmpty = bool.Parse(comboIsEmpty.SelectedItem.ToString()),
-                UsageCount = int.Parse(txtboxUsageCount.Text),
-                Expense = decimal.Parse(txtboxExpense.Text),
-
-            };
-
-            mainForm.ItemRepository.UpdateItem(item);
-
+            UpdateItem();
             LoadDgvItems();
         }
 
@@ -55,7 +42,23 @@ namespace BoozewasherApp.Forms.ItemForms
             txtboxUsageCount.Text = dgvItems.SelectedRows[0].Cells[5].Value.ToString();
             txtboxExpense.Text = dgvItems.SelectedRows[0].Cells[6].Value.ToString();
         }
-        #region Private Methods
+        #region Private/public Methods
+        private void UpdateItem()
+        {
+            var item = new Item()
+            {
+                Id = SelectedItemId,
+                Name = txtboxName.Text,
+                Description = txtboxDescription.Text,
+                Barcode = txtboxBarcode.Text,
+                IsEmpty = bool.Parse(comboIsEmpty.SelectedItem.ToString()),
+                UsageCount = int.Parse(txtboxUsageCount.Text),
+                Expense = decimal.Parse(txtboxExpense.Text),
+
+            };
+
+            mainForm.ItemRepository.UpdateItem(item);
+        }
         public void LoadDgvItems()
         {
             dgvItems.DataSource = mainForm.ItemRepository.GetAllItems();

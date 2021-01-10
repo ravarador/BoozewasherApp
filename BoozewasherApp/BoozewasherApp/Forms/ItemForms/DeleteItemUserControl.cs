@@ -29,12 +29,15 @@ namespace BoozewasherApp.Forms.ItemForms
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            mainForm.ItemRepository.DeleteItem(SelectedItemId);
-
+            DeleteItem();
             LoadDgvItems();
         }
 
-        #region Private Methods
+        #region Private/public Methods
+        private void DeleteItem()
+        {
+            mainForm.ItemRepository.DeleteItem(SelectedItemId);
+        }
         public void LoadDgvItems()
         {
             dgvItems.DataSource = mainForm.ItemRepository.GetAllItems();

@@ -27,13 +27,13 @@ namespace BoozewasherApp.Forms.ItemForms
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AddItem();
+            LoadDgvItems();
         }
 
-        #region Private Methods
+        #region Private/public Methods
 
         private void AddItem()
         {
-
             var item = new Item()
             {
                 Name = txtboxName.Text,
@@ -46,8 +46,6 @@ namespace BoozewasherApp.Forms.ItemForms
             };
 
             mainForm.ItemRepository.AddItem(item);
-
-            LoadDgvItems();
         }
 
         public void LoadDgvItems()

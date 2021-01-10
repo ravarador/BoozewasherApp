@@ -38,34 +38,16 @@ namespace BoozewasherApp.Forms
 
         }
         #region TAB CONTROL
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = (int)TabControlEnums.Home;
-        }
-        private void btnSales_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = (int)TabControlEnums.Sales;
-        }
+        private void btnHome_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Home;
+        private void btnSales_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Sales;
 
-        private void btnEmployees_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = (int)TabControlEnums.Employees;
-        }
+        private void btnEmployees_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Employees;
 
-        private void btnReports_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = (int)TabControlEnums.Reports;
-        }
+        private void btnReports_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Reports;
 
-        private void btnAnalytics_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = (int)TabControlEnums.Analytics;
-        }
+        private void btnAnalytics_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Analytics;
 
-        private void btnSettings_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = (int)TabControlEnums.Settings;
-        }
+        private void btnSettings_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Settings;
         #endregion
         #region DropDownMenu SALES
         private void btnTransactions_Click(object sender, EventArgs e)
@@ -162,7 +144,6 @@ namespace BoozewasherApp.Forms
             this.Cursor = Cursors.Default;
         }
 
-
         private void btnItemsDelete_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
@@ -245,6 +226,7 @@ namespace BoozewasherApp.Forms
             this.Cursor = Cursors.WaitCursor;
 
             addTransactionUserControl1.mainForm = this;
+            addTransactionUserControl1.SetColumnsOfItemDgv();
             addTransactionUserControl1.LoadDgvTransactions();
             addTransactionUserControl1.ResetFields();
             ShowHideSalesUserControls(isAddTransaction: true);
@@ -257,6 +239,7 @@ namespace BoozewasherApp.Forms
             this.Cursor = Cursors.WaitCursor;
 
             updateTransactionUserControl1.mainForm = this;
+            updateTransactionUserControl1.SetColumnsOfItemDgv();
             updateTransactionUserControl1.LoadDgvTransactions();
             updateTransactionUserControl1.ResetFields();
             ShowHideSalesUserControls(isUpdateTransaction: true);

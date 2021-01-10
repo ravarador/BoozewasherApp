@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoozewasherDomain.Dtos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,7 +43,19 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         public void LoadDgvTransactions()
         {
-            dgvTransactions.DataSource = mainForm.TransactionRepository.GetAllTransactions();
+            dgvTransactions.DataSource = mainForm.TransactionRepository.GetAllTransactions()
+                                                      .Select(a => new TransactionDto
+                                                      {
+                                                          Id = a.Id,
+                                                          DateTime = a.DateTime,
+                                                          PlateNumber = a.PlateNumber,
+                                                          ServiceType = a.Service.Type,
+                                                          ServiceId = a.ServiceId,
+                                                          VehicleType = a.Vehicle.Type,
+                                                          VehicleId = a.VehicleId,
+                                                          Cost = a.Cost,
+                                                          ItemsList = a.ItemsList
+                                                      }).ToList();
         }
 
         #endregion

@@ -34,7 +34,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.btnVehicleLookup = new System.Windows.Forms.Button();
             this.btnServiceLookup = new System.Windows.Forms.Button();
             this.btnItemLookup = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvItemsList = new System.Windows.Forms.DataGridView();
             this.numericCost = new System.Windows.Forms.NumericUpDown();
             this.txtboxPlateNumber = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -49,7 +49,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.txtboxService = new System.Windows.Forms.TextBox();
             this.dgvTransactions = new System.Windows.Forms.DataGridView();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItemsList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +70,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.panel7.Controls.Add(this.btnVehicleLookup);
             this.panel7.Controls.Add(this.btnServiceLookup);
             this.panel7.Controls.Add(this.btnItemLookup);
-            this.panel7.Controls.Add(this.dataGridView1);
+            this.panel7.Controls.Add(this.dgvItemsList);
             this.panel7.Controls.Add(this.numericCost);
             this.panel7.Controls.Add(this.txtboxPlateNumber);
             this.panel7.Controls.Add(this.dateTimePicker1);
@@ -136,24 +136,24 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.btnItemLookup.UseVisualStyleBackColor = false;
             this.btnItemLookup.Click += new System.EventHandler(this.btnItemLookup_Click);
             // 
-            // dataGridView1
+            // dgvItemsList
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(699, 43);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 98);
-            this.dataGridView1.TabIndex = 42;
+            this.dgvItemsList.AllowUserToAddRows = false;
+            this.dgvItemsList.AllowUserToDeleteRows = false;
+            this.dgvItemsList.AllowUserToResizeColumns = false;
+            this.dgvItemsList.AllowUserToResizeRows = false;
+            this.dgvItemsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvItemsList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dgvItemsList.BackgroundColor = System.Drawing.Color.White;
+            this.dgvItemsList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvItemsList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvItemsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvItemsList.Location = new System.Drawing.Point(699, 43);
+            this.dgvItemsList.Name = "dgvItemsList";
+            this.dgvItemsList.RowHeadersVisible = false;
+            this.dgvItemsList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvItemsList.Size = new System.Drawing.Size(240, 98);
+            this.dgvItemsList.TabIndex = 42;
             // 
             // numericCost
             // 
@@ -327,7 +327,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.Load += new System.EventHandler(this.AddTransactionUserControl_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItemsList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).EndInit();
             this.ResumeLayout(false);
@@ -355,6 +355,6 @@ namespace BoozewasherApp.Forms.TransactionForms
         private System.Windows.Forms.Button btnVehicleLookup;
         private System.Windows.Forms.Button btnServiceLookup;
         private System.Windows.Forms.Button btnItemLookup;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvItemsList;
     }
 }

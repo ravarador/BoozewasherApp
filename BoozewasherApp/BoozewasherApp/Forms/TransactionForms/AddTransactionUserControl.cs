@@ -106,13 +106,15 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         public void SetColumnsOfItemDgv()
         {
-            dgvTransactions.Columns.Clear();
+            
             dataGridView1.Columns.Add("Name", "Name");
             dataGridView1.Columns.Add("UsageCount", "Usage");
             dataGridView1.Columns.Add("IsEmpty", "Is Empty?");
         }
         public void ResetFields()
         {
+            dataGridView1.Columns.Clear();
+            //dataGridView1.DataSource = null;
             txtboxService.Text = string.Empty;
             txtboxVehicle.Text = string.Empty;
             txtboxPlateNumber.Text = string.Empty;

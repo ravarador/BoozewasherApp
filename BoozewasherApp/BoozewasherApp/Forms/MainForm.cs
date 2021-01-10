@@ -226,9 +226,9 @@ namespace BoozewasherApp.Forms
             this.Cursor = Cursors.WaitCursor;
 
             addTransactionUserControl1.mainForm = this;
+            addTransactionUserControl1.ResetFields();
             addTransactionUserControl1.SetColumnsOfItemDgv();
             addTransactionUserControl1.LoadDgvTransactions();
-            addTransactionUserControl1.ResetFields();
             ShowHideSalesUserControls(isAddTransaction: true);
 
             this.Cursor = Cursors.Default;
@@ -239,9 +239,9 @@ namespace BoozewasherApp.Forms
             this.Cursor = Cursors.WaitCursor;
 
             updateTransactionUserControl1.mainForm = this;
+            updateTransactionUserControl1.ResetFields();
             updateTransactionUserControl1.SetColumnsOfItemDgv();
             updateTransactionUserControl1.LoadDgvTransactions();
-            updateTransactionUserControl1.ResetFields();
             ShowHideSalesUserControls(isUpdateTransaction: true);
 
             this.Cursor = Cursors.Default;

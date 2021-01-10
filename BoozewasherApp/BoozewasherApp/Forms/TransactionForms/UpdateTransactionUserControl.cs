@@ -141,6 +141,8 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         public void ResetFields()
         {
+            dataGridView1.Columns.Clear();
+            //dataGridView1.DataSource = null;
             txtboxService.Text = string.Empty;
             txtboxVehicle.Text = string.Empty;
             txtboxPlateNumber.Text = string.Empty;

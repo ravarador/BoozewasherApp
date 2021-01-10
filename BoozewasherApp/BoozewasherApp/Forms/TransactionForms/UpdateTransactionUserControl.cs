@@ -23,7 +23,6 @@ namespace BoozewasherApp.Forms.TransactionForms
         public UpdateTransactionUserControl()
         {
             InitializeComponent();
-            //SetColumnsOfItemDgv();
         }
 
         private void UpdateTransactionUserControl_Load(object sender, EventArgs e)
@@ -31,20 +30,11 @@ namespace BoozewasherApp.Forms.TransactionForms
 
         }
 
-        private void btnServiceLookup_Click(object sender, EventArgs e)
-        {
-            OpenServiceLookupForm();
-        }
+        private void btnServiceLookup_Click(object sender, EventArgs e) => OpenServiceLookupForm();
 
-        private void btnVehicleLookup_Click(object sender, EventArgs e)
-        {
-            OpenVehicleLookupForm();
-        }
+        private void btnVehicleLookup_Click(object sender, EventArgs e) => OpenVehicleLookupForm();
 
-        private void btnItemLookup_Click(object sender, EventArgs e)
-        {
-            OpenItemLookupForm();
-        }
+        private void btnItemLookup_Click(object sender, EventArgs e) => OpenItemLookupForm();
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -79,7 +69,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             }
         }
 
-        #region Private Methods
+        #region Private/public Methods
         private void UpdateTransaction()
         {
             var transaction = new Transaction()
@@ -95,15 +85,6 @@ namespace BoozewasherApp.Forms.TransactionForms
             };
 
             mainForm.TransactionRepository.UpdateTransaction(transaction);
-        }
-        private List<int> GetServiceTypes()
-        {
-            return mainForm.ServiceRepository.GetAllServices().Select(a => a.Id).ToList();
-        }
-
-        private List<int> GetVehicleTypes()
-        {
-            return mainForm.VehicleRepository.GetAllVehicles().Select(a => a.Id).ToList();
         }
         public void LoadDgvTransactions()
         {
@@ -152,7 +133,7 @@ namespace BoozewasherApp.Forms.TransactionForms
                                    itemLookupForm.SelectedItem.UsageCount,
                                    itemLookupForm.SelectedItem.IsEmpty);
         }
-        private void SetColumnsOfItemDgv()
+        public void SetColumnsOfItemDgv()
         {
             dataGridView1.Columns.Add("Name", "Name");
             dataGridView1.Columns.Add("UsageCount", "Usage");

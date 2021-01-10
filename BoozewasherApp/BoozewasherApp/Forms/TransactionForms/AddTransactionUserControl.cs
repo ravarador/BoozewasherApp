@@ -29,20 +29,9 @@ namespace BoozewasherApp.Forms.TransactionForms
             //SetColumnsOfItemDgv();
         }
 
-        private void btnServiceLookup_Click(object sender, EventArgs e)
-        {
-            OpenServiceLookupForm();
-        }
-
-        private void btnVehicleLookup_Click(object sender, EventArgs e)
-        {
-            OpenVehicleLookupForm();
-        }
-
-        private void btnItemLookup_Click(object sender, EventArgs e)
-        {
-            OpenItemLookupForm();
-        }
+        private void btnServiceLookup_Click(object sender, EventArgs e) => OpenServiceLookupForm();
+        private void btnVehicleLookup_Click(object sender, EventArgs e) => OpenVehicleLookupForm();
+        private void btnItemLookup_Click(object sender, EventArgs e) => OpenItemLookupForm();
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -51,7 +40,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             ResetFields();
         }
 
-        #region Private Methods
+        #region Private/public Methods
         private void AddTransaction()
         {
             var transaction = new Transaction()
@@ -67,15 +56,6 @@ namespace BoozewasherApp.Forms.TransactionForms
 
             mainForm.TransactionRepository.AddTransaction(transaction);
 
-        }
-        private List<int> GetServiceTypes()
-        {
-            return mainForm.ServiceRepository.GetAllServices().Select(a => a.Id).ToList();
-        }
-
-        private List<int> GetVehicleTypes()
-        {
-            return mainForm.VehicleRepository.GetAllVehicles().Select(a => a.Id).ToList();
         }
         public void LoadDgvTransactions()
         {
@@ -124,8 +104,9 @@ namespace BoozewasherApp.Forms.TransactionForms
                                    itemLookupForm.SelectedItem.UsageCount, 
                                    itemLookupForm.SelectedItem.IsEmpty);
         }
-        private void SetColumnsOfItemDgv()
+        public void SetColumnsOfItemDgv()
         {
+            dgvTransactions.Columns.Clear();
             dataGridView1.Columns.Add("Name", "Name");
             dataGridView1.Columns.Add("UsageCount", "Usage");
             dataGridView1.Columns.Add("IsEmpty", "Is Empty?");

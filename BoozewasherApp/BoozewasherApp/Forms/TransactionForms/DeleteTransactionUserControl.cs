@@ -35,7 +35,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             LoadDgvTransactions();
         }
 
-        #region Private Methods
+        #region Private/public Methods
         private void DeleteTransaction()
         {
             mainForm.TransactionRepository.DeleteTransaction(SelectedTransactionId);

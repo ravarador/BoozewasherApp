@@ -29,17 +29,19 @@ namespace BoozewasherApp.Forms.ServiceForms
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            mainForm.ServiceRepository.DeleteService(SelectedServiceId);
-
+            DeleteService();
             LoadDgvServices();
         }
 
-        #region Private Methods
+        #region Private/public Methods
+        private void DeleteService()
+        {
+            mainForm.ServiceRepository.DeleteService(SelectedServiceId);
+        }
         public void LoadDgvServices()
         {
             dgvServices.DataSource = mainForm.ServiceRepository.GetAllServices();
         }
-
         #endregion
     }
 }

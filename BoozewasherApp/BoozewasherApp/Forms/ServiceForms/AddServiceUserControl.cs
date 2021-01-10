@@ -27,9 +27,10 @@ namespace BoozewasherApp.Forms.ServiceForms
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AddService();
+            LoadDgvServices();
         }
 
-        #region Private Methods
+        #region Private/public Methods
         private void AddService()
         {
             var service = new Service()
@@ -40,8 +41,6 @@ namespace BoozewasherApp.Forms.ServiceForms
             };
 
             mainForm.ServiceRepository.AddService(service);
-
-            LoadDgvServices();
         }
 
         public void LoadDgvServices()

@@ -26,16 +26,7 @@ namespace BoozewasherApp.Forms.ServiceForms
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            var service = new Service()
-            {
-                Id = SelectedServiceId,
-                Type = txtboxType.Text,
-                Description = txtboxDescription.Text,
-                Expense = decimal.Parse(txtboxExpense.Text)
-            };
-
-            mainForm.ServiceRepository.UpdateService(service);
-
+            UpdateService();
             LoadDgvServices();
         }
         private void dgvServices_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -47,7 +38,19 @@ namespace BoozewasherApp.Forms.ServiceForms
             txtboxExpense.Text = dgvServices.SelectedRows[0].Cells[3].Value.ToString();
         }
 
-        #region Private Methods
+        #region Private/public Methods
+        private void UpdateService()
+        {
+            var service = new Service()
+            {
+                Id = SelectedServiceId,
+                Type = txtboxType.Text,
+                Description = txtboxDescription.Text,
+                Expense = decimal.Parse(txtboxExpense.Text)
+            };
+
+            mainForm.ServiceRepository.UpdateService(service);
+        }
         public void LoadDgvServices()
         {
             dgvServices.DataSource = mainForm.ServiceRepository.GetAllServices();

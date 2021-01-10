@@ -26,8 +26,7 @@ namespace BoozewasherApp.Forms.VehicleForms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            mainForm.VehicleRepository.DeleteVehicle(SelectedVehicleId);
-
+            DeleteVehicle();
             LoadDgvVehicles();
         }
 
@@ -36,7 +35,11 @@ namespace BoozewasherApp.Forms.VehicleForms
             SelectedVehicleId = (int)dgvVehicles.SelectedRows[0].Cells[0].Value;
         }
 
-        #region Private Methods
+        #region Private/public Methods
+        private void DeleteVehicle()
+        {
+            mainForm.VehicleRepository.DeleteVehicle(SelectedVehicleId);
+        }
         public void LoadDgvVehicles()
         {
             dgvVehicles.DataSource = mainForm.VehicleRepository.GetAllVehicles();

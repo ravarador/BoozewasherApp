@@ -27,8 +27,9 @@ namespace BoozewasherApp.Forms.VehicleForms
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AddVehicle();
+            LoadDgvVehicles();
         }
-        #region Private Methods
+        #region Private/public Methods
 
         private void AddVehicle()
         {
@@ -41,8 +42,6 @@ namespace BoozewasherApp.Forms.VehicleForms
             };
 
             mainForm.VehicleRepository.AddVehicle(vehicle);
-
-            LoadDgvVehicles();
         }
 
         public void LoadDgvVehicles()

@@ -27,17 +27,7 @@ namespace BoozewasherApp.Forms.VehicleForms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            var vehicle = new Vehicle()
-            {
-                Id = SelectedVehicleId,
-                Type = txtboxType.Text,
-                Brand = txtboxBrand.Text,
-                Model = txtboxModel.Text,
-                Description = txtboxDescription.Text
-            };
-
-            mainForm.VehicleRepository.UpdateVehicle(vehicle);
-
+            UpdateVehicle();
             LoadDgvVehicles();
         }
 
@@ -50,7 +40,20 @@ namespace BoozewasherApp.Forms.VehicleForms
             txtboxBrand.Text = dgvVehicles.SelectedRows[0].Cells[3].Value.ToString();
             txtboxModel.Text = dgvVehicles.SelectedRows[0].Cells[4].Value.ToString();
         }
-        #region Private Methods
+        #region Private/public Methods
+        private void UpdateVehicle()
+        {
+            var vehicle = new Vehicle()
+            {
+                Id = SelectedVehicleId,
+                Type = txtboxType.Text,
+                Brand = txtboxBrand.Text,
+                Model = txtboxModel.Text,
+                Description = txtboxDescription.Text
+            };
+
+            mainForm.VehicleRepository.UpdateVehicle(vehicle);
+        }
         public void LoadDgvVehicles()
         {
             dgvVehicles.DataSource = mainForm.VehicleRepository.GetAllVehicles();

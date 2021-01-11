@@ -224,6 +224,10 @@
     <Compile Include="Migrations\202012291321579_ChangedItemsListInTransactionToStringType.designer.cs">
       <DependentUpon>202012291321579_ChangedItemsListInTransactionToStringType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101111208486_AddItemIdInTransactions.cs" />
+    <Compile Include="Migrations\202101111208486_AddItemIdInTransactions.designer.cs">
+      <DependentUpon>202101111208486_AddItemIdInTransactions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ContextModel\Item.cs" />
     <Compile Include="Models\ContextModel\RoleName.cs" />
     <Compile Include="Models\Dtos\ItemDto.cs" />
@@ -662,6 +666,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012291321579_ChangedItemsListInTransactionToStringType.resx">
       <DependentUpon>202012291321579_ChangedItemsListInTransactionToStringType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101111208486_AddItemIdInTransactions.resx">
+      <DependentUpon>202101111208486_AddItemIdInTransactions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

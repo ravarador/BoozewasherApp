@@ -67,10 +67,6 @@
             this.btnVehicles = new System.Windows.Forms.Button();
             this.btnServices = new System.Windows.Forms.Button();
             this.btnTransactions = new System.Windows.Forms.Button();
-            this.tabPageInventory = new System.Windows.Forms.TabPage();
-            this.tabPageReports = new System.Windows.Forms.TabPage();
-            this.tabPageAnalytics = new System.Windows.Forms.TabPage();
-            this.tabPageSettings = new System.Windows.Forms.TabPage();
             this.deleteItemUserControl1 = new BoozewasherApp.Forms.ItemForms.DeleteItemUserControl();
             this.addItemUserControl1 = new BoozewasherApp.Forms.ItemForms.AddItemUserControl();
             this.updateItemUserControl1 = new BoozewasherApp.Forms.ItemForms.UpdateItemUserControl();
@@ -83,6 +79,11 @@
             this.addTransactionUserControl1 = new BoozewasherApp.Forms.TransactionForms.AddTransactionUserControl();
             this.updateTransactionUserControl1 = new BoozewasherApp.Forms.TransactionForms.UpdateTransactionUserControl();
             this.deleteTransactionUserControl1 = new BoozewasherApp.Forms.TransactionForms.DeleteTransactionUserControl();
+            this.tabPageInventory = new System.Windows.Forms.TabPage();
+            this.tabPageReports = new System.Windows.Forms.TabPage();
+            this.tabPageAnalytics = new System.Windows.Forms.TabPage();
+            this.tabPageSettings = new System.Windows.Forms.TabPage();
+            this.analyticsUserControl1 = new BoozewasherApp.Forms.SummaryForms.AnalyticsUserControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).BeginInit();
@@ -92,6 +93,7 @@
             this.panelItems.SuspendLayout();
             this.panelServices.SuspendLayout();
             this.panelVehicles.SuspendLayout();
+            this.tabPageAnalytics.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -722,44 +724,6 @@
             this.btnTransactions.UseVisualStyleBackColor = false;
             this.btnTransactions.Click += new System.EventHandler(this.btnTransactions_Click);
             // 
-            // tabPageInventory
-            // 
-            this.tabPageInventory.BackColor = System.Drawing.Color.White;
-            this.tabPageInventory.Location = new System.Drawing.Point(4, 23);
-            this.tabPageInventory.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageInventory.Name = "tabPageInventory";
-            this.tabPageInventory.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInventory.Size = new System.Drawing.Size(1104, 685);
-            this.tabPageInventory.TabIndex = 1;
-            // 
-            // tabPageReports
-            // 
-            this.tabPageReports.BackColor = System.Drawing.Color.White;
-            this.tabPageReports.Location = new System.Drawing.Point(4, 23);
-            this.tabPageReports.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageReports.Name = "tabPageReports";
-            this.tabPageReports.Size = new System.Drawing.Size(1104, 685);
-            this.tabPageReports.TabIndex = 2;
-            // 
-            // tabPageAnalytics
-            // 
-            this.tabPageAnalytics.BackColor = System.Drawing.Color.White;
-            this.tabPageAnalytics.Location = new System.Drawing.Point(4, 23);
-            this.tabPageAnalytics.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageAnalytics.Name = "tabPageAnalytics";
-            this.tabPageAnalytics.Size = new System.Drawing.Size(1104, 685);
-            this.tabPageAnalytics.TabIndex = 3;
-            // 
-            // tabPageSettings
-            // 
-            this.tabPageSettings.BackColor = System.Drawing.Color.White;
-            this.tabPageSettings.Location = new System.Drawing.Point(4, 23);
-            this.tabPageSettings.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageSettings.Name = "tabPageSettings";
-            this.tabPageSettings.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPageSettings.Size = new System.Drawing.Size(1104, 685);
-            this.tabPageSettings.TabIndex = 4;
-            // 
             // deleteItemUserControl1
             // 
             this.deleteItemUserControl1.Location = new System.Drawing.Point(8, 82);
@@ -859,6 +823,52 @@
             this.deleteTransactionUserControl1.TabIndex = 24;
             this.deleteTransactionUserControl1.Visible = false;
             // 
+            // tabPageInventory
+            // 
+            this.tabPageInventory.BackColor = System.Drawing.Color.White;
+            this.tabPageInventory.Location = new System.Drawing.Point(4, 23);
+            this.tabPageInventory.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageInventory.Name = "tabPageInventory";
+            this.tabPageInventory.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageInventory.Size = new System.Drawing.Size(1104, 685);
+            this.tabPageInventory.TabIndex = 1;
+            // 
+            // tabPageReports
+            // 
+            this.tabPageReports.BackColor = System.Drawing.Color.White;
+            this.tabPageReports.Location = new System.Drawing.Point(4, 23);
+            this.tabPageReports.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageReports.Name = "tabPageReports";
+            this.tabPageReports.Size = new System.Drawing.Size(1104, 685);
+            this.tabPageReports.TabIndex = 2;
+            // 
+            // tabPageAnalytics
+            // 
+            this.tabPageAnalytics.BackColor = System.Drawing.Color.White;
+            this.tabPageAnalytics.Controls.Add(this.analyticsUserControl1);
+            this.tabPageAnalytics.Location = new System.Drawing.Point(4, 23);
+            this.tabPageAnalytics.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageAnalytics.Name = "tabPageAnalytics";
+            this.tabPageAnalytics.Size = new System.Drawing.Size(1104, 685);
+            this.tabPageAnalytics.TabIndex = 3;
+            // 
+            // tabPageSettings
+            // 
+            this.tabPageSettings.BackColor = System.Drawing.Color.White;
+            this.tabPageSettings.Location = new System.Drawing.Point(4, 23);
+            this.tabPageSettings.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageSettings.Name = "tabPageSettings";
+            this.tabPageSettings.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tabPageSettings.Size = new System.Drawing.Size(1104, 685);
+            this.tabPageSettings.TabIndex = 4;
+            // 
+            // analyticsUserControl1
+            // 
+            this.analyticsUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.analyticsUserControl1.Name = "analyticsUserControl1";
+            this.analyticsUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.analyticsUserControl1.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -885,6 +895,7 @@
             this.panelItems.ResumeLayout(false);
             this.panelServices.ResumeLayout(false);
             this.panelVehicles.ResumeLayout(false);
+            this.tabPageAnalytics.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -946,5 +957,6 @@
         private TransactionForms.AddTransactionUserControl addTransactionUserControl1;
         private TransactionForms.UpdateTransactionUserControl updateTransactionUserControl1;
         private TransactionForms.DeleteTransactionUserControl deleteTransactionUserControl1;
+        private SummaryForms.AnalyticsUserControl analyticsUserControl1;
     }
 }

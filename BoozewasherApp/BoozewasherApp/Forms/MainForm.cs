@@ -45,7 +45,11 @@ namespace BoozewasherApp.Forms
 
         private void btnReports_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Reports;
 
-        private void btnAnalytics_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Analytics;
+        private void btnAnalytics_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = (int)TabControlEnums.Analytics;
+            analyticsUserControl1.mainForm = this;
+        }
 
         private void btnSettings_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Settings;
         #endregion

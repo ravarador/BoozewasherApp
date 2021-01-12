@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BoozewasherApp_Web.Models.ContextModel.Item> 
+﻿@model IEnumerable<BoozewasherApp_Web.Models.ContextModel.Item>
 @{
     ViewBag.Title = "ItemLookup";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,3 +6,32 @@
 <p></p>
 <h2>Items</h2>
 <p></p>
+@if (!Model.Any())
+{
+    <p>No items available.</p>
+}
+<table id="items" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Barcode</th>
+            <th>Is Empty</th>
+            <th>Usage Count</th>
+            <th>Expense</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(item.Name, "SelectedItem", "Transaction", new { id = item.Id }, null)</td>
+                <td>@item.Description</td>
+                <td>@item.Barcode</td>
+                <td>@item.IsEmpty</td>
+                <td>@item.UsageCount</td>
+                <td>@item.Expense</td>
+            </tr>
+        }
+    </tbody>
+</table>

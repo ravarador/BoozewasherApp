@@ -31,7 +31,6 @@ namespace BoozewasherApp_Web.Controllers
             return View("ReadOnlyIndex");
         }
 
-        #region Transaction Roles
         [Authorize(Roles = RoleName.CanManageTransactions)]
         public ActionResult New()
         {
@@ -107,7 +106,6 @@ namespace BoozewasherApp_Web.Controllers
 
             return RedirectToAction("Index", "Transaction");
         }
-        #endregion
 
         #region Vehicle Lookup
         [Authorize(Roles = RoleName.CanManageTransactions)]
@@ -131,6 +129,14 @@ namespace BoozewasherApp_Web.Controllers
                Services = _context.Services.ToList()
             };
             return View("TransactionForm", viewModel);
+        }
+        #endregion
+
+        #region Item Lookup
+        public ActionResult ItemLookup()
+        {
+            var items = _context.Items.ToList();
+            return View(items);
         }
         #endregion
     }

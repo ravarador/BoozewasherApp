@@ -67,6 +67,7 @@ namespace BoozewasherApp.Forms.SummaryForms
             this.btnGenerate.TabIndex = 15;
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.UseVisualStyleBackColor = false;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
             // grpboxDate
             // 
@@ -101,6 +102,7 @@ namespace BoozewasherApp.Forms.SummaryForms
             this.radSelectDateRange.TabIndex = 13;
             this.radSelectDateRange.Text = "Select Date Range";
             this.radSelectDateRange.UseVisualStyleBackColor = true;
+            this.radSelectDateRange.Click += new System.EventHandler(this.radSelectDate_Click);
             // 
             // radSelectDate
             // 
@@ -116,6 +118,7 @@ namespace BoozewasherApp.Forms.SummaryForms
             this.radSelectDate.TabStop = true;
             this.radSelectDate.Text = "Select Date";
             this.radSelectDate.UseVisualStyleBackColor = true;
+            this.radSelectDate.Click += new System.EventHandler(this.radSelectDate_Click);
             // 
             // grpboxDateRange
             // 

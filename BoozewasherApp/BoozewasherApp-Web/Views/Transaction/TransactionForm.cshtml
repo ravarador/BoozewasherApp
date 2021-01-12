@@ -26,6 +26,10 @@
         @Html.ValidationMessageFor(t => t.ServiceId)
     </div>
 
+    <p></p>
+    @Html.ActionLink("Item Lookup", "ItemLookup", "Transaction", new { @class = "btn btn-outline-primary" })
+    <p></p>
+
     <div class="form-group">
         @Html.LabelFor(t => t.PlateNumber)
         @Html.TextBoxFor(t => t.PlateNumber, new { @class = "form-control" })

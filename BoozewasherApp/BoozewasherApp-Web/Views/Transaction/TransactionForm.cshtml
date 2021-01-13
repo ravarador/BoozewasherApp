@@ -31,6 +31,12 @@
     <p></p>
 
     <div class="form-group">
+        @Html.LabelFor(t => t.ItemId)
+        @Html.TextBoxFor(t => t.ItemId, "{0:#.#}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(t => t.ItemId)
+    </div>
+
+    <div class="form-group">
         @Html.LabelFor(t => t.PlateNumber)
         @Html.TextBoxFor(t => t.PlateNumber, new { @class = "form-control" })
         @Html.ValidationMessageFor(t => t.PlateNumber)

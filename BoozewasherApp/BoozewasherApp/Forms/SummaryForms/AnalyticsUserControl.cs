@@ -152,7 +152,7 @@ namespace BoozewasherApp.Forms.SummaryForms
             {
                 //SummaryList = SummaryList.Select(e => e.DateTime).Distinct().ToList();
                 var plt = new ScottPlot.Plot(600, 400);
-
+                formsPlot1.Reset();
 
                 // generate random data to plot
                 string[] groupNames = SummaryList.Select(a => a.DateTime.ToString("HH:mm")).ToArray();
@@ -179,10 +179,37 @@ namespace BoozewasherApp.Forms.SummaryForms
                                                       a.DateTime.Day == datePickerSelectDate.Value.Day)
                                           .Select(a => decimal.ToDouble(a.PaintjobTotalCost));
 
-                double[] values = { ys1.FirstOrDefault(), ys2.FirstOrDefault(), ys3.FirstOrDefault(), ys4.FirstOrDefault() };
-                string[] seriesNames = { ServiceTypeConstants.Carwash, ServiceTypeConstants.BackToZero, ServiceTypeConstants.Detailing, ServiceTypeConstants.PaintJob };
+                
 
-                formsPlot1.plt.PlotPie(values, seriesNames, showPercentages: true, showValues: true, showLabels: true, label: "Total Cost Pie Graph");
+                List<double> values = new List<double>();
+                List<string> seriesNames = new List<string>();
+
+
+                if (ys1.FirstOrDefault() > 0)
+                {
+                    values.Add(ys1.FirstOrDefault());
+                    seriesNames.Add(ServiceTypeConstants.Carwash);
+                }
+                
+                if (ys2.FirstOrDefault() > 0)
+                {
+                    values.Add(ys2.FirstOrDefault());
+                    seriesNames.Add(ServiceTypeConstants.BackToZero);
+                }
+
+                if (ys3.FirstOrDefault() > 0)
+                {
+                    values.Add(ys3.FirstOrDefault());
+                    seriesNames.Add(ServiceTypeConstants.Detailing);
+                }
+
+                if (ys4.FirstOrDefault() > 0)
+                {
+                    values.Add(ys4.FirstOrDefault());
+                    seriesNames.Add(ServiceTypeConstants.PaintJob);
+                }
+
+                formsPlot1.plt.PlotPie(values.ToArray(), seriesNames.ToArray(), showPercentages: true, showValues: true, showLabels: true, label: "Total Cost Pie Graph", explodedChart: true);
                 formsPlot1.plt.Legend();
 
 

@@ -49,6 +49,7 @@ namespace BoozewasherApp_Web.Models.ViewModels.Transactions
             ServiceId = transaction.ServiceId;
             VehicleId = transaction.VehicleId;
             Cost = transaction.Cost;
+            
         }
     }
    

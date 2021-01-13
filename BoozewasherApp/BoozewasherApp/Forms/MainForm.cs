@@ -261,5 +261,10 @@ namespace BoozewasherApp.Forms
 
             this.Cursor = Cursors.Default;
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

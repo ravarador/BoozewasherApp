@@ -107,6 +107,7 @@ namespace BoozewasherApp_Web.Controllers
             return RedirectToAction("Index", "Transaction");
         }
 
+        #region Vehicle Lookup
         [Authorize(Roles = RoleName.CanManageTransactions)]
         public ActionResult VehicleLookup()
         {
@@ -129,6 +130,33 @@ namespace BoozewasherApp_Web.Controllers
             };
             return View("TransactionForm", viewModel);
         }
+        #endregion
+
+        #region Item Lookup
+
+        [Authorize (Roles = RoleName.CanManageTransactions)]
+        public ActionResult ItemLookup()
+        {
+            var items = _context.Items.ToList();
+            return View(items);
+        }
+
+        public ActionResult SelectedItem(int id)
+        {
+            var item = _context.Items.SingleOrDefault(t => t.Id == id);
+
+            if (item == null)
+                return HttpNotFound();
+
+            var viewModel = new TransactionFormViewModel()
+            {
+                ItemId =  id,
+                Services = _context.Services.ToList()
+            };
+            return View("TransactionForm", viewModel);
+        }
+
+        #endregion
     }
 }
 

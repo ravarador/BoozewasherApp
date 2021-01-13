@@ -84,11 +84,11 @@ namespace BoozewasherApp.Forms.SummaryForms
             // datePickerSelectDate
             // 
             this.datePickerSelectDate.Location = new System.Drawing.Point(9, 22);
-            this.datePickerSelectDate.MaxDate = new System.DateTime(2021, 1, 12, 0, 0, 0, 0);
+            this.datePickerSelectDate.MaxDate = new System.DateTime(2021, 12, 25, 23, 59, 59, 0);
             this.datePickerSelectDate.Name = "datePickerSelectDate";
             this.datePickerSelectDate.Size = new System.Drawing.Size(200, 23);
             this.datePickerSelectDate.TabIndex = 4;
-            this.datePickerSelectDate.Value = new System.DateTime(2021, 1, 12, 0, 0, 0, 0);
+            this.datePickerSelectDate.Value = new System.DateTime(2021, 1, 13, 23, 14, 35, 0);
             // 
             // radSelectDateRange
             // 

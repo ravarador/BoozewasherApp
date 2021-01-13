@@ -209,7 +209,7 @@ namespace BoozewasherApp.Forms.SummaryForms
                     seriesNames.Add(ServiceTypeConstants.PaintJob);
                 }
 
-                formsPlot1.plt.PlotPie(values.ToArray(), seriesNames.ToArray(), showPercentages: true, showValues: true, showLabels: true, label: "Total Cost Pie Graph", explodedChart: true);
+                formsPlot1.plt.PlotPie(values.ToArray(), seriesNames.ToArray(), showPercentages: true, showValues: true, showLabels: true, label: "Total Cost Pie Graph");
                 formsPlot1.plt.Legend();
 
 

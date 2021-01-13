@@ -133,6 +133,8 @@ namespace BoozewasherApp_Web.Controllers
         #endregion
 
         #region Item Lookup
+
+        [Authorize (Roles = RoleName.CanManageTransactions)]
         public ActionResult ItemLookup()
         {
             var items = _context.Items.ToList();

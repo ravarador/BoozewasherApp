@@ -49,6 +49,74 @@ namespace BoozewasherApp.Forms.SummaryForms
         }
 
         #region Private/public methods
+        public void DrawGraphAllData()
+        {
+            SummaryList = mainForm.TransactionRepository.GetAllTransactions()
+                                                      .Select(a => new SummaryDto
+                                                      {
+                                                          Id = a.Id,
+                                                          DateTime = a.DateTime,
+                                                          PlateNumber = a.PlateNumber,
+                                                          ServiceType = a.Service.Type,
+                                                          Expense = a.Service.Expense.Value,
+                                                          VehicleType = a.Vehicle.Type,
+                                                          Brand = a.Vehicle.Brand,
+                                                          Model = a.Vehicle.Model,
+                                                          Cost = a.Cost
+                                                      }).ToList();
+            DataComputations();
+
+            //SummaryList = SummaryList.Select(e => e.DateTime).Distinct().ToList();
+            var plt = new ScottPlot.Plot(600, 400);
+            formsPlot1.Reset();
+
+            // generate random data to plot
+            string[] groupNames = SummaryList.Select(a => a.DateTime.ToString("HH:mm")).ToArray();
+
+            int groupCount = groupNames.Length;
+
+            var ys1 = SummaryList.Select(a => decimal.ToDouble(a.CarwashTotalCost));
+
+            var ys2 = SummaryList.Select(a => decimal.ToDouble(a.BackToZeroTotalCost));
+
+            var ys3 = SummaryList.Select(a => decimal.ToDouble(a.DetailingTotalCost));
+
+            var ys4 = SummaryList.Select(a => decimal.ToDouble(a.PaintjobTotalCost));
+
+            List<double> values = new List<double>();
+            List<string> seriesNames = new List<string>();
+
+
+            if (ys1.FirstOrDefault() > 0)
+            {
+                values.Add(ys1.FirstOrDefault());
+                seriesNames.Add(ServiceTypeConstants.Carwash);
+            }
+
+            if (ys2.FirstOrDefault() > 0)
+            {
+                values.Add(ys2.FirstOrDefault());
+                seriesNames.Add(ServiceTypeConstants.BackToZero);
+            }
+
+            if (ys3.FirstOrDefault() > 0)
+            {
+                values.Add(ys3.FirstOrDefault());
+                seriesNames.Add(ServiceTypeConstants.Detailing);
+            }
+
+            if (ys4.FirstOrDefault() > 0)
+            {
+                values.Add(ys4.FirstOrDefault());
+                seriesNames.Add(ServiceTypeConstants.PaintJob);
+            }
+
+            formsPlot1.plt.PlotPie(values.ToArray(), seriesNames.ToArray(), showPercentages: true, showValues: true, showLabels: true, label: "Total Cost Pie Graph");
+            formsPlot1.plt.Legend();
+            formsPlot1.plt.Style(figBg: Color.White);
+            formsPlot1.plt.Title("ALL DATA");
+            formsPlot1.Render();
+        }
         private void LoadData()
         {
             SummaryDateAndDateRangeDto dateAndDateRangeDto = new SummaryDateAndDateRangeDto();
@@ -211,9 +279,14 @@ namespace BoozewasherApp.Forms.SummaryForms
 
                 formsPlot1.plt.PlotPie(values.ToArray(), seriesNames.ToArray(), showPercentages: true, showValues: true, showLabels: true, label: "Total Cost Pie Graph");
                 formsPlot1.plt.Legend();
-
+                formsPlot1.plt.Style(figBg: Color.White);
+                formsPlot1.plt.Title(datePickerSelectDate.Value.ToShortDateString());
 
                 formsPlot1.Render();
+            }
+            else
+            {
+                
             }
         }
         #endregion

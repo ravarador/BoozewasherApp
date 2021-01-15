@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BoozewasherDomain.Entities;
+using FluentValidation.Results;
 
 namespace BoozewasherApp.Forms.ItemForms
 {
@@ -31,7 +32,6 @@ namespace BoozewasherApp.Forms.ItemForms
         }
 
         #region Private/public Methods
-
         private void AddItem()
         {
             var item = new Item()
@@ -45,12 +45,24 @@ namespace BoozewasherApp.Forms.ItemForms
 
             };
 
-            mainForm.ItemRepository.AddItem(item);
+            ItemValidator validator = new ItemValidator();
+            ValidationResult result = validator.Validate(item);
+
+            if (result.IsValid)
+            {
+                mainForm.ItemRepository.AddItem(item);
+            }
+            else
+            {
+                MessageBox.Show(result.ToString());
+            }
+            
         }
 
         public void LoadDgvItems()
         {
             dgvItems.DataSource = mainForm.ItemRepository.GetAllItems();
+            comboIsEmpty.SelectedItem = "False";
         }
 
         #endregion

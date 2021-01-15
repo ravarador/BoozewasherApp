@@ -8,15 +8,12 @@ using FluentValidation;
 
 namespace BoozewasherApp.Forms.ItemForms
 {
-    public class ItemValidator : BaseAbstractValidator<Item>
+    public class ItemValidator : AbstractValidator<Item>
     {
-        public ItemValidator(Item item)
+        public ItemValidator()
         {
             RuleFor(v => v.Name)
-                .NotEmpty().When(m => string.IsNullOrWhiteSpace(m.Name))
-                .WithMessage("Name cannot be blank or whitespace!");
-
-            ValidationResult = Validate(item);
+                .NotEmpty().When(item => string.IsNullOrWhiteSpace(item.Name));
         }
     }
 }

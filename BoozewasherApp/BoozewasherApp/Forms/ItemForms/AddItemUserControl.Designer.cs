@@ -101,6 +101,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.txtboxExpense.Name = "txtboxExpense";
             this.txtboxExpense.Size = new System.Drawing.Size(275, 18);
             this.txtboxExpense.TabIndex = 37;
+            this.txtboxExpense.Text = "0";
             // 
             // btnAdd
             // 
@@ -150,6 +151,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.txtboxUsageCount.Name = "txtboxUsageCount";
             this.txtboxUsageCount.Size = new System.Drawing.Size(275, 18);
             this.txtboxUsageCount.TabIndex = 35;
+            this.txtboxUsageCount.Text = "0";
             // 
             // label13
             // 

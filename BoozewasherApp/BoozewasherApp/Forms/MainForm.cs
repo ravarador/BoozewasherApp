@@ -133,6 +133,7 @@ namespace BoozewasherApp.Forms
             this.Cursor = Cursors.WaitCursor;
 
             addItemUserControl1.mainForm = this;
+            addItemUserControl1.ResetFields();
             addItemUserControl1.LoadDgvItems();
             ShowHideSalesUserControls(isAddItem: true);
 
@@ -143,6 +144,7 @@ namespace BoozewasherApp.Forms
             this.Cursor = Cursors.WaitCursor;
 
             updateItemUserControl1.mainForm = this;
+            updateItemUserControl1.ResetFields();
             updateItemUserControl1.LoadDgvItems();
             ShowHideSalesUserControls(isUpdateItem: true);
 

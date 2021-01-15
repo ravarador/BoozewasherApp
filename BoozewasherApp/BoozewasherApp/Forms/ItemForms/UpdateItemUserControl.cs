@@ -72,12 +72,22 @@ namespace BoozewasherApp.Forms.ItemForms
             if (result.IsValid)
             {
                 mainForm.ItemRepository.UpdateItem(item);
+                ResetFields();
             }
             else
             {
                 MessageBox.Show(result.ToString());
             }
             
+        }
+        public void ResetFields()
+        {
+            txtboxName.Text = string.Empty;
+            txtboxDescription.Text = string.Empty;
+            txtboxBarcode.Text = string.Empty;
+            comboIsEmpty.SelectedItem = "False";
+            txtboxUsageCount.Text = "0";
+            txtboxExpense.Text = "0";
         }
         public void LoadDgvItems()
         {

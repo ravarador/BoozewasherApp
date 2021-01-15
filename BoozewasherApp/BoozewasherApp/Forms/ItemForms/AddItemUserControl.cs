@@ -51,6 +51,7 @@ namespace BoozewasherApp.Forms.ItemForms
             if (result.IsValid)
             {
                 mainForm.ItemRepository.AddItem(item);
+                ResetFields();
             }
             else
             {
@@ -58,7 +59,15 @@ namespace BoozewasherApp.Forms.ItemForms
             }
             
         }
-
+        public void ResetFields()
+        {
+            txtboxName.Text = string.Empty;
+            txtboxDescription.Text = string.Empty;
+            txtboxBarcode.Text = string.Empty;
+            comboIsEmpty.SelectedItem = "False";
+            txtboxUsageCount.Text = "0";
+            txtboxExpense.Text = "0";
+        }
         public void LoadDgvItems()
         {
             dgvItems.DataSource = mainForm.ItemRepository.GetAllItems();

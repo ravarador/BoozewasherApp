@@ -14,7 +14,7 @@ namespace BoozewasherApp.Forms.ItemForms
 {
     public partial class UpdateItemUserControl : UserControl
     {
-        private int SelectedItemId { get; set; }
+        private int? SelectedItemId { get; set; }
         public MainForm mainForm;
         public UpdateItemUserControl()
         {
@@ -28,8 +28,16 @@ namespace BoozewasherApp.Forms.ItemForms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            UpdateItem();
-            LoadDgvItems();
+            if (SelectedItemId != null)
+            {
+                UpdateItem();
+                LoadDgvItems();
+            }
+            else
+            {
+                MessageBox.Show("Select an item to update!", "Error");
+            }
+            
         }
 
         private void dgvItems_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -48,7 +56,7 @@ namespace BoozewasherApp.Forms.ItemForms
         {
             var item = new Item()
             {
-                Id = SelectedItemId,
+                Id = SelectedItemId.Value,
                 Name = txtboxName.Text,
                 Description = txtboxDescription.Text,
                 Barcode = txtboxBarcode.Text,

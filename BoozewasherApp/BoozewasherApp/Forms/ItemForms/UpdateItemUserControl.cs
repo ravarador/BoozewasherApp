@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BoozewasherDomain.Entities;
+using FluentValidation.Results;
 
 namespace BoozewasherApp.Forms.ItemForms
 {
@@ -57,7 +58,18 @@ namespace BoozewasherApp.Forms.ItemForms
 
             };
 
-            mainForm.ItemRepository.UpdateItem(item);
+            ItemValidator validator = new ItemValidator();
+            ValidationResult result = validator.Validate(item);
+
+            if (result.IsValid)
+            {
+                mainForm.ItemRepository.UpdateItem(item);
+            }
+            else
+            {
+                MessageBox.Show(result.ToString());
+            }
+            
         }
         public void LoadDgvItems()
         {

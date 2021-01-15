@@ -139,7 +139,7 @@ namespace BoozewasherApp.Forms.SummaryForms
                                                           Cost = a.Cost
                                                       }).ToList();
             }
-            else
+            else if (radSelectDateRange.Checked)
             {
                 dateAndDateRangeDto.DateTimeFrom = datePickerDateFromRange.Value.Date;
                 dateAndDateRangeDto.DateTimeTo = datePickerDateToRange.Value.Date;
@@ -227,25 +227,13 @@ namespace BoozewasherApp.Forms.SummaryForms
 
                 int groupCount = groupNames.Length;
 
-                var ys1 = SummaryList.Where(a => a.DateTime.Year == datePickerSelectDate.Value.Year &&
-                                                      a.DateTime.Month == datePickerSelectDate.Value.Month &&
-                                                      a.DateTime.Day == datePickerSelectDate.Value.Day)
-                                          .Select(a => decimal.ToDouble(a.CarwashTotalCost));
+                var ys1 = SummaryList.Select(a => decimal.ToDouble(a.CarwashTotalCost));
 
-                var ys2 = SummaryList.Where(a => a.DateTime.Year == datePickerSelectDate.Value.Year &&
-                                                      a.DateTime.Month == datePickerSelectDate.Value.Month &&
-                                                      a.DateTime.Day == datePickerSelectDate.Value.Day)
-                                          .Select(a => decimal.ToDouble(a.BackToZeroTotalCost));
+                var ys2 = SummaryList.Select(a => decimal.ToDouble(a.BackToZeroTotalCost));
 
-                var ys3 = SummaryList.Where(a => a.DateTime.Year == datePickerSelectDate.Value.Year &&
-                                                      a.DateTime.Month == datePickerSelectDate.Value.Month &&
-                                                      a.DateTime.Day == datePickerSelectDate.Value.Day)
-                                          .Select(a => decimal.ToDouble(a.DetailingTotalCost));
+                var ys3 = SummaryList.Select(a => decimal.ToDouble(a.DetailingTotalCost));
 
-                var ys4 = SummaryList.Where(a => a.DateTime.Year == datePickerSelectDate.Value.Year &&
-                                                      a.DateTime.Month == datePickerSelectDate.Value.Month &&
-                                                      a.DateTime.Day == datePickerSelectDate.Value.Day)
-                                          .Select(a => decimal.ToDouble(a.PaintjobTotalCost));
+                var ys4 = SummaryList.Select(a => decimal.ToDouble(a.PaintjobTotalCost));
 
                 
 
@@ -284,9 +272,59 @@ namespace BoozewasherApp.Forms.SummaryForms
 
                 formsPlot1.Render();
             }
-            else
+            else if (radSelectDateRange.Checked)
             {
-                
+                //SummaryList = SummaryList.Select(e => e.DateTime).Distinct().ToList();
+                var plt = new ScottPlot.Plot(600, 400);
+                formsPlot1.Reset();
+
+                // generate random data to plot
+                string[] groupNames = SummaryList.Select(a => a.DateTime.ToString("HH:mm")).ToArray();
+
+                int groupCount = groupNames.Length;
+
+                var ys1 = SummaryList.Select(a => decimal.ToDouble(a.CarwashTotalCost));
+
+                var ys2 = SummaryList.Select(a => decimal.ToDouble(a.BackToZeroTotalCost));
+
+                var ys3 = SummaryList.Select(a => decimal.ToDouble(a.DetailingTotalCost));
+
+                var ys4 = SummaryList.Select(a => decimal.ToDouble(a.PaintjobTotalCost));
+
+                List<double> values = new List<double>();
+                List<string> seriesNames = new List<string>();
+
+
+                if (ys1.FirstOrDefault() > 0)
+                {
+                    values.Add(ys1.FirstOrDefault());
+                    seriesNames.Add(ServiceTypeConstants.Carwash);
+                }
+
+                if (ys2.FirstOrDefault() > 0)
+                {
+                    values.Add(ys2.FirstOrDefault());
+                    seriesNames.Add(ServiceTypeConstants.BackToZero);
+                }
+
+                if (ys3.FirstOrDefault() > 0)
+                {
+                    values.Add(ys3.FirstOrDefault());
+                    seriesNames.Add(ServiceTypeConstants.Detailing);
+                }
+
+                if (ys4.FirstOrDefault() > 0)
+                {
+                    values.Add(ys4.FirstOrDefault());
+                    seriesNames.Add(ServiceTypeConstants.PaintJob);
+                }
+
+                formsPlot1.plt.PlotPie(values.ToArray(), seriesNames.ToArray(), showPercentages: true, showValues: true, showLabels: true, label: "Total Cost Pie Graph");
+                formsPlot1.plt.Legend();
+                formsPlot1.plt.Style(figBg: Color.White);
+                formsPlot1.plt.Title(datePickerSelectDate.Value.ToShortDateString());
+
+                formsPlot1.Render();
             }
         }
         #endregion

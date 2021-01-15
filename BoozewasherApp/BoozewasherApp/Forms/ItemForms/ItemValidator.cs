@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BoozewasherDomain.Entities;
 
 namespace BoozewasherApp.Forms.ItemForms
 {
-    class ItemValidator
+    public class ItemValidator : BaseAbstractValidator<Item>
     {
     }
 }

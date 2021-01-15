@@ -1,4 +1,5 @@
 ﻿using BoozewasherDomain.Entities;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ namespace BoozewasherApp.Forms.ServiceForms
 {
     public partial class UpdateServiceUserControl : UserControl
     {
-        private int SelectedServiceId { get; set; }
+        private int? SelectedServiceId { get; set; }
         public MainForm mainForm;
         public UpdateServiceUserControl()
         {
@@ -26,8 +27,15 @@ namespace BoozewasherApp.Forms.ServiceForms
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            UpdateService();
-            LoadDgvServices();
+            if (SelectedServiceId != null)
+            {
+                UpdateService();
+                LoadDgvServices();
+            }
+            else
+            {
+                MessageBox.Show("Select an item to update!", "Error");
+            }
         }
         private void dgvServices_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -43,13 +51,22 @@ namespace BoozewasherApp.Forms.ServiceForms
         {
             var service = new Service()
             {
-                Id = SelectedServiceId,
+                Id = SelectedServiceId.Value,
                 Type = txtboxType.Text,
                 Description = txtboxDescription.Text,
                 Expense = decimal.Parse(txtboxExpense.Text)
             };
 
-            mainForm.ServiceRepository.UpdateService(service);
+            ServiceValidator validator = new ServiceValidator();
+            ValidationResult result = validator.Validate(service);
+            if (result.IsValid)
+            {
+                mainForm.ServiceRepository.UpdateService(service);
+            }
+            else
+            {
+                MessageBox.Show(result.ToString());
+            }
         }
         public void LoadDgvServices()
         {

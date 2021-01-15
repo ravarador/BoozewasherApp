@@ -77,7 +77,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.txtboxType.Location = new System.Drawing.Point(398, 23);
             this.txtboxType.Name = "txtboxType";
             this.txtboxType.Size = new System.Drawing.Size(275, 18);
-            this.txtboxType.TabIndex = 26;
+            this.txtboxType.TabIndex = 5;
             // 
             // btnUpdate
             // 
@@ -90,7 +90,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.btnUpdate.Location = new System.Drawing.Point(573, 95);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 23);
-            this.btnUpdate.TabIndex = 31;
+            this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -137,7 +137,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.txtboxDescription.Location = new System.Drawing.Point(398, 71);
             this.txtboxDescription.Name = "txtboxDescription";
             this.txtboxDescription.Size = new System.Drawing.Size(275, 18);
-            this.txtboxDescription.TabIndex = 27;
+            this.txtboxDescription.TabIndex = 7;
             // 
             // txtboxExpense
             // 
@@ -148,7 +148,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.txtboxExpense.Location = new System.Drawing.Point(398, 47);
             this.txtboxExpense.Name = "txtboxExpense";
             this.txtboxExpense.Size = new System.Drawing.Size(275, 18);
-            this.txtboxExpense.TabIndex = 28;
+            this.txtboxExpense.TabIndex = 6;
             // 
             // dgvServices
             // 
@@ -171,7 +171,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.dgvServices.RowHeadersVisible = false;
             this.dgvServices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvServices.Size = new System.Drawing.Size(983, 294);
-            this.dgvServices.TabIndex = 47;
+            this.dgvServices.TabIndex = 9;
             this.dgvServices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServices_CellClick);
             // 
             // UpdateServiceUserControl

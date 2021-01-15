@@ -13,7 +13,7 @@ namespace BoozewasherApp.Forms.ItemForms
     public partial class DeleteItemUserControl : UserControl
     {
         public MainForm mainForm;
-        private int SelectedItemId { get; set; }
+        private int? SelectedItemId { get; set; }
         public DeleteItemUserControl()
         {
             InitializeComponent();
@@ -29,14 +29,22 @@ namespace BoozewasherApp.Forms.ItemForms
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DeleteItem();
-            LoadDgvItems();
+            if (SelectedItemId != null)
+            {
+                DeleteItem();
+                LoadDgvItems();
+            }
+            else
+            {
+                MessageBox.Show("Select an item to delete!", "Error");
+            }
+            
         }
 
         #region Private/public Methods
         private void DeleteItem()
         {
-            mainForm.ItemRepository.DeleteItem(SelectedItemId);
+            mainForm.ItemRepository.DeleteItem(SelectedItemId.Value);
         }
         public void LoadDgvItems()
         {

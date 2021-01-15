@@ -1,4 +1,5 @@
 ﻿using BoozewasherDomain.Entities;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,8 +40,18 @@ namespace BoozewasherApp.Forms.ServiceForms
                 Description = txtboxDescription.Text,
                 Expense = decimal.Parse(txtboxExpense.Text)
             };
+            ServiceValidator validator = new ServiceValidator();
+            ValidationResult result = validator.Validate(service);
 
-            mainForm.ServiceRepository.AddService(service);
+            if (result.IsValid)
+            {
+                mainForm.ServiceRepository.AddService(service);
+            }
+            else
+            {
+                MessageBox.Show(result.ToString());
+            }
+            
         }
 
         public void LoadDgvServices()

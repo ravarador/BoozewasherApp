@@ -149,6 +149,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.txtboxExpense.Name = "txtboxExpense";
             this.txtboxExpense.Size = new System.Drawing.Size(275, 18);
             this.txtboxExpense.TabIndex = 28;
+            this.txtboxExpense.Text = "0";
             // 
             // dgvServices
             // 

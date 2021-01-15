@@ -191,6 +191,7 @@
     <Compile Include="Forms\ServiceForms\ServiceLookupForm.Designer.cs">
       <DependentUpon>ServiceLookupForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ServiceForms\ServiceValidator.cs" />
     <Compile Include="Forms\ServiceForms\UpdateServiceForm.cs">
       <SubType>Form</SubType>
     </Compile>

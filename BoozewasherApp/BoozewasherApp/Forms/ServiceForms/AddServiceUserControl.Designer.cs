@@ -77,7 +77,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.txtboxType.Location = new System.Drawing.Point(398, 23);
             this.txtboxType.Name = "txtboxType";
             this.txtboxType.Size = new System.Drawing.Size(275, 18);
-            this.txtboxType.TabIndex = 26;
+            this.txtboxType.TabIndex = 5;
             // 
             // btnAdd
             // 
@@ -90,7 +90,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.btnAdd.Location = new System.Drawing.Point(573, 95);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 23);
-            this.btnAdd.TabIndex = 31;
+            this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -137,7 +137,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.txtboxDescription.Location = new System.Drawing.Point(398, 71);
             this.txtboxDescription.Name = "txtboxDescription";
             this.txtboxDescription.Size = new System.Drawing.Size(275, 18);
-            this.txtboxDescription.TabIndex = 27;
+            this.txtboxDescription.TabIndex = 7;
             // 
             // txtboxExpense
             // 
@@ -148,7 +148,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.txtboxExpense.Location = new System.Drawing.Point(398, 47);
             this.txtboxExpense.Name = "txtboxExpense";
             this.txtboxExpense.Size = new System.Drawing.Size(275, 18);
-            this.txtboxExpense.TabIndex = 28;
+            this.txtboxExpense.TabIndex = 6;
             this.txtboxExpense.Text = "0";
             // 
             // dgvServices
@@ -172,7 +172,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.dgvServices.RowHeadersVisible = false;
             this.dgvServices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvServices.Size = new System.Drawing.Size(983, 294);
-            this.dgvServices.TabIndex = 44;
+            this.dgvServices.TabIndex = 9;
             // 
             // AddServiceUserControl
             // 

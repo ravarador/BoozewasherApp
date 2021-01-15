@@ -12,8 +12,9 @@ namespace BoozewasherApp.Forms.ItemForms
     {
         public ItemValidator()
         {
-            RuleFor(v => v.Name)
-                .NotEmpty().When(item => string.IsNullOrWhiteSpace(item.Name));
+            RuleFor(v => v.Name).NotEmpty();
+            RuleFor(v => v.Description).NotEmpty();
+            RuleFor(v => v.Barcode).NotEmpty();
         }
     }
 }

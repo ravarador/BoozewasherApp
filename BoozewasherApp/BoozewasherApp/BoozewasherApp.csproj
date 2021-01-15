@@ -49,6 +49,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.9.4.0\lib\net461\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -97,6 +100,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SummaryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EmployeeForms\EmployeeHomeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeForms\EmployeeHomeUserControl.Designer.cs">
+      <DependentUpon>EmployeeHomeUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ItemForms\AddItemForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +136,7 @@
     <Compile Include="Forms\ItemForms\ItemLookupForm.Designer.cs">
       <DependentUpon>ItemLookupForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ItemForms\ItemValidator.cs" />
     <Compile Include="Forms\ItemForms\UpdateItemForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,6 +322,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="Forms\EmployeeForms\EmployeeHomeUserControl.resx">
+      <DependentUpon>EmployeeHomeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemForms\AddItemForm.resx">
       <DependentUpon>AddItemForm.cs</DependentUpon>
     </EmbeddedResource>

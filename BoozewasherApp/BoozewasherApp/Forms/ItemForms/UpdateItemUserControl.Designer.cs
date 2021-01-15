@@ -89,7 +89,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.txtboxName.Location = new System.Drawing.Point(398, 23);
             this.txtboxName.Name = "txtboxName";
             this.txtboxName.Size = new System.Drawing.Size(275, 18);
-            this.txtboxName.TabIndex = 26;
+            this.txtboxName.TabIndex = 5;
             // 
             // txtboxExpense
             // 
@@ -100,7 +100,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.txtboxExpense.Location = new System.Drawing.Point(398, 149);
             this.txtboxExpense.Name = "txtboxExpense";
             this.txtboxExpense.Size = new System.Drawing.Size(275, 18);
-            this.txtboxExpense.TabIndex = 37;
+            this.txtboxExpense.TabIndex = 10;
             // 
             // btnUpdate
             // 
@@ -113,7 +113,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.btnUpdate.Location = new System.Drawing.Point(573, 173);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 23);
-            this.btnUpdate.TabIndex = 31;
+            this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -149,7 +149,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.txtboxUsageCount.Location = new System.Drawing.Point(398, 125);
             this.txtboxUsageCount.Name = "txtboxUsageCount";
             this.txtboxUsageCount.Size = new System.Drawing.Size(275, 18);
-            this.txtboxUsageCount.TabIndex = 35;
+            this.txtboxUsageCount.TabIndex = 9;
             // 
             // label13
             // 
@@ -198,7 +198,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.comboIsEmpty.Location = new System.Drawing.Point(398, 95);
             this.comboIsEmpty.Name = "comboIsEmpty";
             this.comboIsEmpty.Size = new System.Drawing.Size(275, 24);
-            this.comboIsEmpty.TabIndex = 34;
+            this.comboIsEmpty.TabIndex = 8;
             // 
             // txtboxBarcode
             // 
@@ -209,7 +209,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.txtboxBarcode.Location = new System.Drawing.Point(398, 71);
             this.txtboxBarcode.Name = "txtboxBarcode";
             this.txtboxBarcode.Size = new System.Drawing.Size(275, 18);
-            this.txtboxBarcode.TabIndex = 27;
+            this.txtboxBarcode.TabIndex = 7;
             // 
             // lblIsEmpty
             // 
@@ -231,7 +231,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.txtboxDescription.Location = new System.Drawing.Point(398, 47);
             this.txtboxDescription.Name = "txtboxDescription";
             this.txtboxDescription.Size = new System.Drawing.Size(275, 18);
-            this.txtboxDescription.TabIndex = 28;
+            this.txtboxDescription.TabIndex = 6;
             // 
             // dgvItems
             // 
@@ -254,7 +254,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.dgvItems.RowHeadersVisible = false;
             this.dgvItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvItems.Size = new System.Drawing.Size(983, 294);
-            this.dgvItems.TabIndex = 44;
+            this.dgvItems.TabIndex = 12;
             this.dgvItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItems_CellClick);
             // 
             // UpdateItemUserControl

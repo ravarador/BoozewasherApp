@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BoozewasherApp.Forms.ServiceForms
 {
-    class ServiceValidator : AbstractValidator<Service>
+    public class ServiceValidator : AbstractValidator<Service>
     {
         public ServiceValidator()
         {

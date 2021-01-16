@@ -3,6 +3,7 @@ using BoozewasherApp.Forms.ServiceForms;
 using BoozewasherApp.Forms.VehicleForms;
 using BoozewasherDomain.Dtos;
 using BoozewasherDomain.Entities;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,7 @@ namespace BoozewasherApp.Forms.TransactionForms
     {
         public MainForm mainForm;
         private string ItemsListInForm;
-        private int SelectedTransactionId { get; set; }
+        private int? SelectedTransactionId { get; set; }
         public UpdateTransactionUserControl()
         {
             InitializeComponent();
@@ -38,9 +39,36 @@ namespace BoozewasherApp.Forms.TransactionForms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            UpdateTransaction();
-            LoadDgvTransactions();
-            ResetFields();
+            if (SelectedTransactionId != null)
+            {
+                if (string.IsNullOrWhiteSpace(txtboxService.Text) || string.IsNullOrWhiteSpace(txtboxVehicle.Text))
+                {
+                    if (string.IsNullOrWhiteSpace(txtboxService.Text) && string.IsNullOrWhiteSpace(txtboxVehicle.Text))
+                    {
+                        MessageBox.Show("Please select vehicle and service", "Error");
+                    }
+                    else if (string.IsNullOrWhiteSpace(txtboxVehicle.Text))
+                    {
+                        MessageBox.Show("Please select a vehicle", "Error");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please select a service.", "Error");
+                    }
+
+                }
+                else
+                {
+                    UpdateTransaction();
+                    LoadDgvTransactions();
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Select a transaction to update!", "Error");
+            }
+            
         }
 
         private void dgvTransactions_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -74,7 +102,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         {
             var transaction = new Transaction()
             {
-                Id = SelectedTransactionId,
+                Id = SelectedTransactionId.Value,
                 DateTime = DateTime.Now,
                 ServiceId = int.Parse(txtboxService.Text),
                 VehicleId = int.Parse(txtboxVehicle.Text),
@@ -84,7 +112,19 @@ namespace BoozewasherApp.Forms.TransactionForms
 
             };
 
-            mainForm.TransactionRepository.UpdateTransaction(transaction);
+            TransactionValidator validator = new TransactionValidator();
+            ValidationResult result = validator.Validate(transaction);
+
+            if (result.IsValid)
+            {
+                mainForm.TransactionRepository.UpdateTransaction(transaction);
+                ResetFields();
+            }
+            else
+            {
+                MessageBox.Show(result.ToString());
+            }
+            
         }
         public void LoadDgvTransactions()
         {

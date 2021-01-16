@@ -40,7 +40,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             {
                 if (string.IsNullOrWhiteSpace(txtboxService.Text) && string.IsNullOrWhiteSpace(txtboxVehicle.Text))
                 {
-                    MessageBox.Show("Complete all fields!", "Error");
+                    MessageBox.Show("Please select vehicle and service", "Error");
                 }
                 else if (string.IsNullOrWhiteSpace(txtboxVehicle.Text))
                 {

@@ -1,4 +1,5 @@
 ﻿using BoozewasherDomain.Entities;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,9 +42,26 @@ namespace BoozewasherApp.Forms.VehicleForms
                 Description = txtboxDescription.Text
             };
 
-            mainForm.VehicleRepository.AddVehicle(vehicle);
-        }
+            VehicleValidator validator = new VehicleValidator();
+            ValidationResult result = validator.Validate(vehicle);
 
+            if (result.IsValid)
+            {
+                mainForm.VehicleRepository.AddVehicle(vehicle);
+                ResetFields();
+            }
+            else
+            {
+                MessageBox.Show(result.ToString());
+            }
+        }
+        public void ResetFields()
+        {
+            txtboxType.Text = string.Empty;
+            txtboxBrand.Text = string.Empty;
+            txtboxModel.Text = string.Empty;
+            txtboxDescription.Text = string.Empty;
+        }
         public void LoadDgvVehicles()
         {
             dgvVehicles.DataSource = mainForm.VehicleRepository.GetAllVehicles();

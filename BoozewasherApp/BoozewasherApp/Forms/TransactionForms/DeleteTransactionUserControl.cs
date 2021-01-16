@@ -14,7 +14,7 @@ namespace BoozewasherApp.Forms.TransactionForms
     public partial class DeleteTransactionUserControl : UserControl
     {
         public MainForm mainForm;
-        private int SelectedTransactionId { get; set; }
+        private int? SelectedTransactionId { get; set; }
         public DeleteTransactionUserControl()
         {
             InitializeComponent();
@@ -32,14 +32,22 @@ namespace BoozewasherApp.Forms.TransactionForms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DeleteTransaction();
-            LoadDgvTransactions();
+            if (SelectedTransactionId != null)
+            {
+                DeleteTransaction();
+                LoadDgvTransactions();
+            }
+            else
+            {
+                MessageBox.Show("Select transaction to delete!", "Error");
+            }
+            
         }
 
         #region Private/public Methods
         private void DeleteTransaction()
         {
-            mainForm.TransactionRepository.DeleteTransaction(SelectedTransactionId);
+            mainForm.TransactionRepository.DeleteTransaction(SelectedTransactionId.Value);
         }
         public void LoadDgvTransactions()
         {

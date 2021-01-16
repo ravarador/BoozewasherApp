@@ -81,7 +81,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.txtboxType.Location = new System.Drawing.Point(398, 23);
             this.txtboxType.Name = "txtboxType";
             this.txtboxType.Size = new System.Drawing.Size(275, 18);
-            this.txtboxType.TabIndex = 26;
+            this.txtboxType.TabIndex = 5;
             // 
             // btnUpdate
             // 
@@ -94,7 +94,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.btnUpdate.Location = new System.Drawing.Point(573, 119);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 23);
-            this.btnUpdate.TabIndex = 31;
+            this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -119,7 +119,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.txtboxDescription.Location = new System.Drawing.Point(398, 95);
             this.txtboxDescription.Name = "txtboxDescription";
             this.txtboxDescription.Size = new System.Drawing.Size(275, 18);
-            this.txtboxDescription.TabIndex = 35;
+            this.txtboxDescription.TabIndex = 8;
             // 
             // label13
             // 
@@ -163,7 +163,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.txtboxModel.Location = new System.Drawing.Point(398, 71);
             this.txtboxModel.Name = "txtboxModel";
             this.txtboxModel.Size = new System.Drawing.Size(275, 18);
-            this.txtboxModel.TabIndex = 27;
+            this.txtboxModel.TabIndex = 7;
             // 
             // txtboxBrand
             // 
@@ -174,7 +174,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.txtboxBrand.Location = new System.Drawing.Point(398, 47);
             this.txtboxBrand.Name = "txtboxBrand";
             this.txtboxBrand.Size = new System.Drawing.Size(275, 18);
-            this.txtboxBrand.TabIndex = 28;
+            this.txtboxBrand.TabIndex = 6;
             // 
             // dgvVehicles
             // 
@@ -197,7 +197,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.dgvVehicles.RowHeadersVisible = false;
             this.dgvVehicles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVehicles.Size = new System.Drawing.Size(983, 294);
-            this.dgvVehicles.TabIndex = 47;
+            this.dgvVehicles.TabIndex = 10;
             this.dgvVehicles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehicles_CellClick);
             // 
             // UpdateVehicleUserControl

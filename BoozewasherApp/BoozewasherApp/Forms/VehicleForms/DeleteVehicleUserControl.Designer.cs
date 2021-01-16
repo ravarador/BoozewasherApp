@@ -74,7 +74,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.button1.Location = new System.Drawing.Point(573, 77);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 23);
-            this.button1.TabIndex = 36;
+            this.button1.TabIndex = 7;
             this.button1.Text = "Search List";
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -85,7 +85,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.textBox1.Location = new System.Drawing.Point(398, 53);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(275, 18);
-            this.textBox1.TabIndex = 35;
+            this.textBox1.TabIndex = 6;
             // 
             // label14
             // 
@@ -106,7 +106,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.comboBox1.Location = new System.Drawing.Point(398, 23);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(275, 24);
-            this.comboBox1.TabIndex = 32;
+            this.comboBox1.TabIndex = 5;
             // 
             // btnDelete
             // 
@@ -118,7 +118,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.btnDelete.Location = new System.Drawing.Point(573, 106);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 23);
-            this.btnDelete.TabIndex = 31;
+            this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -144,7 +144,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             this.dgvVehicles.RowHeadersVisible = false;
             this.dgvVehicles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVehicles.Size = new System.Drawing.Size(983, 294);
-            this.dgvVehicles.TabIndex = 50;
+            this.dgvVehicles.TabIndex = 9;
             this.dgvVehicles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehicles_CellClick);
             // 
             // DeleteVehicleUserControl

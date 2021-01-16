@@ -99,7 +99,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.btnVehicleLookup.Location = new System.Drawing.Point(590, 69);
             this.btnVehicleLookup.Name = "btnVehicleLookup";
             this.btnVehicleLookup.Size = new System.Drawing.Size(83, 23);
-            this.btnVehicleLookup.TabIndex = 45;
+            this.btnVehicleLookup.TabIndex = 9;
             this.btnVehicleLookup.Text = "Vehicle Lookup";
             this.btnVehicleLookup.UseVisualStyleBackColor = false;
             this.btnVehicleLookup.Click += new System.EventHandler(this.btnVehicleLookup_Click);
@@ -115,7 +115,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.btnServiceLookup.Location = new System.Drawing.Point(590, 45);
             this.btnServiceLookup.Name = "btnServiceLookup";
             this.btnServiceLookup.Size = new System.Drawing.Size(83, 23);
-            this.btnServiceLookup.TabIndex = 44;
+            this.btnServiceLookup.TabIndex = 7;
             this.btnServiceLookup.Text = "Service Lookup";
             this.btnServiceLookup.UseVisualStyleBackColor = false;
             this.btnServiceLookup.Click += new System.EventHandler(this.btnServiceLookup_Click);
@@ -131,7 +131,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.btnItemLookup.Location = new System.Drawing.Point(839, 147);
             this.btnItemLookup.Name = "btnItemLookup";
             this.btnItemLookup.Size = new System.Drawing.Size(100, 23);
-            this.btnItemLookup.TabIndex = 43;
+            this.btnItemLookup.TabIndex = 12;
             this.btnItemLookup.Text = "Item Lookup";
             this.btnItemLookup.UseVisualStyleBackColor = false;
             this.btnItemLookup.Click += new System.EventHandler(this.btnItemLookup_Click);
@@ -163,7 +163,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.numericCost.Location = new System.Drawing.Point(398, 120);
             this.numericCost.Name = "numericCost";
             this.numericCost.Size = new System.Drawing.Size(275, 21);
-            this.numericCost.TabIndex = 41;
+            this.numericCost.TabIndex = 11;
             // 
             // txtboxPlateNumber
             // 
@@ -174,7 +174,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.txtboxPlateNumber.Location = new System.Drawing.Point(398, 96);
             this.txtboxPlateNumber.Name = "txtboxPlateNumber";
             this.txtboxPlateNumber.Size = new System.Drawing.Size(275, 18);
-            this.txtboxPlateNumber.TabIndex = 40;
+            this.txtboxPlateNumber.TabIndex = 10;
             // 
             // dateTimePicker1
             // 
@@ -183,7 +183,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.dateTimePicker1.Location = new System.Drawing.Point(398, 17);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(275, 25);
-            this.dateTimePicker1.TabIndex = 39;
+            this.dateTimePicker1.TabIndex = 5;
             this.dateTimePicker1.Value = new System.DateTime(2021, 1, 6, 14, 37, 33, 0);
             // 
             // btnAdd
@@ -197,7 +197,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.btnAdd.Location = new System.Drawing.Point(573, 147);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 23);
-            this.btnAdd.TabIndex = 31;
+            this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -267,7 +267,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.txtboxVehicle.Location = new System.Drawing.Point(398, 72);
             this.txtboxVehicle.Name = "txtboxVehicle";
             this.txtboxVehicle.Size = new System.Drawing.Size(186, 18);
-            this.txtboxVehicle.TabIndex = 27;
+            this.txtboxVehicle.TabIndex = 8;
             // 
             // lblIsEmpty
             // 
@@ -290,7 +290,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.txtboxService.Location = new System.Drawing.Point(398, 48);
             this.txtboxService.Name = "txtboxService";
             this.txtboxService.Size = new System.Drawing.Size(186, 18);
-            this.txtboxService.TabIndex = 28;
+            this.txtboxService.TabIndex = 6;
             // 
             // dgvTransactions
             // 
@@ -313,7 +313,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             this.dgvTransactions.RowHeadersVisible = false;
             this.dgvTransactions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTransactions.Size = new System.Drawing.Size(983, 294);
-            this.dgvTransactions.TabIndex = 44;
+            this.dgvTransactions.TabIndex = 14;
             // 
             // AddTransactionUserControl
             // 

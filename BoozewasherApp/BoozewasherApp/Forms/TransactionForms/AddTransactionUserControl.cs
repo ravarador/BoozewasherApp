@@ -3,6 +3,7 @@ using BoozewasherApp.Forms.ServiceForms;
 using BoozewasherApp.Forms.VehicleForms;
 using BoozewasherDomain.Dtos;
 using BoozewasherDomain.Entities;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,9 +36,27 @@ namespace BoozewasherApp.Forms.TransactionForms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddTransaction();
-            LoadDgvTransactions();
-            ResetFields();
+            if (string.IsNullOrWhiteSpace(txtboxService.Text) || string.IsNullOrWhiteSpace(txtboxVehicle.Text))
+            {
+                if (string.IsNullOrWhiteSpace(txtboxService.Text) && string.IsNullOrWhiteSpace(txtboxVehicle.Text))
+                {
+                    MessageBox.Show("Complete all fields!", "Error");
+                }
+                else if (string.IsNullOrWhiteSpace(txtboxVehicle.Text))
+                {
+                    MessageBox.Show("Please select a vehicle", "Error");
+                }
+                else
+                {
+                    MessageBox.Show("Please select a service.", "Error");
+                }
+                
+            }
+            else
+            {
+                AddTransaction();
+                LoadDgvTransactions();
+            }
         }
 
         #region Private/public Methods
@@ -54,7 +73,18 @@ namespace BoozewasherApp.Forms.TransactionForms
 
             };
 
-            mainForm.TransactionRepository.AddTransaction(transaction);
+            TransactionValidator validator = new TransactionValidator();
+            ValidationResult result = validator.Validate(transaction);
+
+            if (result.IsValid)
+            {
+                mainForm.TransactionRepository.AddTransaction(transaction);
+                ResetFields();
+            }
+            else
+            {
+                MessageBox.Show(result.ToString());
+            }
 
         }
         public void LoadDgvTransactions()

@@ -13,7 +13,7 @@ namespace BoozewasherApp.Forms.ServiceForms
     public partial class DeleteServiceUserControl : UserControl
     {
         public MainForm mainForm;
-        private int SelectedServiceId { get; set; }
+        private int? SelectedServiceId { get; set; }
         public DeleteServiceUserControl()
         {
             InitializeComponent();
@@ -29,14 +29,21 @@ namespace BoozewasherApp.Forms.ServiceForms
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DeleteService();
-            LoadDgvServices();
+            if (SelectedServiceId != null)
+            {
+                DeleteService();
+                LoadDgvServices();
+            }
+            else
+            {
+                MessageBox.Show("Select service to delete!", "Error");
+            }
         }
 
         #region Private/public Methods
         private void DeleteService()
         {
-            mainForm.ServiceRepository.DeleteService(SelectedServiceId);
+            mainForm.ServiceRepository.DeleteService(SelectedServiceId.Value);
         }
         public void LoadDgvServices()
         {

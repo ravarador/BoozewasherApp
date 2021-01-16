@@ -214,6 +214,7 @@ namespace BoozewasherApp.Forms
             this.Cursor = Cursors.WaitCursor;
 
             updateVehicleUserControl1.mainForm = this;
+            updateItemUserControl1.ResetFields();
             updateVehicleUserControl1.LoadDgvVehicles();
             ShowHideSalesUserControls(isUpdateVehicle: true);
 

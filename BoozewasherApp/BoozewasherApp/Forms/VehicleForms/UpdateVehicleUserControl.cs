@@ -1,4 +1,5 @@
 ﻿using BoozewasherDomain.Entities;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ namespace BoozewasherApp.Forms.VehicleForms
 {
     public partial class UpdateVehicleUserControl : UserControl
     {
-        private int SelectedVehicleId { get; set; }
+        private int? SelectedVehicleId { get; set; }
         public MainForm mainForm;
         public UpdateVehicleUserControl()
         {
@@ -27,8 +28,16 @@ namespace BoozewasherApp.Forms.VehicleForms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            UpdateVehicle();
-            LoadDgvVehicles();
+            if (SelectedVehicleId != null)
+            {
+                UpdateVehicle();
+                LoadDgvVehicles();
+            }
+            else
+            {
+                MessageBox.Show("Select an item to update!", "Error");
+            }
+            
         }
 
         private void dgvVehicles_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -45,14 +54,33 @@ namespace BoozewasherApp.Forms.VehicleForms
         {
             var vehicle = new Vehicle()
             {
-                Id = SelectedVehicleId,
+                Id = SelectedVehicleId.Value,
                 Type = txtboxType.Text,
                 Brand = txtboxBrand.Text,
                 Model = txtboxModel.Text,
                 Description = txtboxDescription.Text
             };
 
-            mainForm.VehicleRepository.UpdateVehicle(vehicle);
+            VehicleValidator validator = new VehicleValidator();
+            ValidationResult result = validator.Validate(vehicle);
+
+            if (result.IsValid)
+            {
+                mainForm.VehicleRepository.UpdateVehicle(vehicle);
+                ResetFields();
+            }
+            else
+            {
+                MessageBox.Show(result.ToString());
+            }
+            
+        }
+        public void ResetFields()
+        {
+            txtboxType.Text = string.Empty;
+            txtboxBrand.Text = string.Empty;
+            txtboxModel.Text = string.Empty;
+            txtboxDescription.Text = string.Empty;
         }
         public void LoadDgvVehicles()
         {

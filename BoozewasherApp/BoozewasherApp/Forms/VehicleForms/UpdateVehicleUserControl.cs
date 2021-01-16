@@ -35,7 +35,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             }
             else
             {
-                MessageBox.Show("Select an item to update!", "Error");
+                MessageBox.Show("Select vehicle to update!", "Error");
             }
             
         }

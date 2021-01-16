@@ -33,7 +33,7 @@ namespace BoozewasherApp.Forms.VehicleForms
             }
             else
             {
-                MessageBox.Show("Select an item to delete!", "Error");
+                MessageBox.Show("Select vehicle to delete!", "Error");
             }
             
         }

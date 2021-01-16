@@ -34,7 +34,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             }
             else
             {
-                MessageBox.Show("Select an item to update!", "Error");
+                MessageBox.Show("Select service to update!", "Error");
             }
         }
         private void dgvServices_CellClick(object sender, DataGridViewCellEventArgs e)

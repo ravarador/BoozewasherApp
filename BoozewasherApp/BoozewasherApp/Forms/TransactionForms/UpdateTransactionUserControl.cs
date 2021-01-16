@@ -66,7 +66,7 @@ namespace BoozewasherApp.Forms.TransactionForms
             }
             else
             {
-                MessageBox.Show("Select a transaction to update!", "Error");
+                MessageBox.Show("Select transaction to update!", "Error");
             }
             
         }

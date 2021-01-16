@@ -13,7 +13,7 @@ namespace BoozewasherApp.Forms.VehicleForms
     public partial class DeleteVehicleUserControl : UserControl
     {
         public MainForm mainForm;
-        private int SelectedVehicleId { get; set; }
+        private int? SelectedVehicleId { get; set; }
         public DeleteVehicleUserControl()
         {
             InitializeComponent();
@@ -26,8 +26,16 @@ namespace BoozewasherApp.Forms.VehicleForms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DeleteVehicle();
-            LoadDgvVehicles();
+            if (SelectedVehicleId != null)
+            {
+                DeleteVehicle();
+                LoadDgvVehicles();
+            }
+            else
+            {
+                MessageBox.Show("Select an item to delete!", "Error");
+            }
+            
         }
 
         private void dgvVehicles_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -38,7 +46,7 @@ namespace BoozewasherApp.Forms.VehicleForms
         #region Private/public Methods
         private void DeleteVehicle()
         {
-            mainForm.VehicleRepository.DeleteVehicle(SelectedVehicleId);
+            mainForm.VehicleRepository.DeleteVehicle(SelectedVehicleId.Value);
         }
         public void LoadDgvVehicles()
         {

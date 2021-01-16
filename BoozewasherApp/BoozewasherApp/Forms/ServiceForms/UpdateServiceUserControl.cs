@@ -68,6 +68,13 @@ namespace BoozewasherApp.Forms.ServiceForms
                 MessageBox.Show(result.ToString());
             }
         }
+        public void ResetFields()
+        {
+            SelectedServiceId = null;
+            txtboxType.Text = string.Empty;
+            txtboxDescription.Text = string.Empty;
+            txtboxExpense.Text = string.Empty;
+        }
         public void LoadDgvServices()
         {
             dgvServices.DataSource = mainForm.ServiceRepository.GetAllServices();

@@ -53,7 +53,12 @@ namespace BoozewasherApp.Forms.ServiceForms
             }
             
         }
-
+        public void ResetFields()
+        {
+            txtboxType.Text = string.Empty;
+            txtboxDescription.Text = string.Empty;
+            txtboxExpense.Text = string.Empty;
+        }
         public void LoadDgvServices()
         {
             dgvServices.DataSource = mainForm.ServiceRepository.GetAllServices();

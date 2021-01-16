@@ -167,6 +167,7 @@ namespace BoozewasherApp.Forms
             this.Cursor = Cursors.WaitCursor;
 
             addServiceUserControl1.mainForm = this;
+            addServiceUserControl1.ResetFields();
             addServiceUserControl1.LoadDgvServices();
             ShowHideSalesUserControls(isAddService: true);
 
@@ -178,6 +179,7 @@ namespace BoozewasherApp.Forms
             this.Cursor = Cursors.WaitCursor;
 
             updateServiceUserControl1.mainForm = this;
+            updateServiceUserControl1.ResetFields();
             updateServiceUserControl1.LoadDgvServices();
             ShowHideSalesUserControls(isUpdateService: true);
 
@@ -200,6 +202,7 @@ namespace BoozewasherApp.Forms
             this.Cursor = Cursors.WaitCursor;
 
             addVehicleUserControl1.mainForm = this;
+            addVehicleUserControl1.ResetFields();
             addVehicleUserControl1.LoadDgvVehicles();
             ShowHideSalesUserControls(isAddVehicle: true);
 

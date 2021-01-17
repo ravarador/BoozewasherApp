@@ -130,9 +130,13 @@ namespace BoozewasherApp.Forms.TransactionForms
                 ItemsListInForm += "," + itemLookupForm.SelectedItemIdForLookup.ToString();
             }
 
-            dgvItemsList.Rows.Add(itemLookupForm.SelectedItem.Name, 
-                                   itemLookupForm.SelectedItem.UsageCount, 
+            if (itemLookupForm.SelectedItem != null)
+            {
+                dgvItemsList.Rows.Add(itemLookupForm.SelectedItem.Name,
+                                   itemLookupForm.SelectedItem.UsageCount,
                                    itemLookupForm.SelectedItem.IsEmpty);
+            }
+            
         }
         public void SetColumnsOfItemDgv()
         {

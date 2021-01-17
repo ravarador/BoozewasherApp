@@ -14,7 +14,7 @@ namespace BoozewasherApp.Forms.ServiceForms
     public partial class ServiceLookupForm : Form
     {
         private IServiceRepository ServiceRepository { get; set; }
-        public int SelectedServiceIdForLookup { get; set; }
+        public int? SelectedServiceIdForLookup { get; set; }
         public ServiceLookupForm(IServiceRepository serviceRepository)
         {
             InitializeComponent();

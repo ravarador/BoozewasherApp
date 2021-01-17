@@ -14,7 +14,7 @@ namespace BoozewasherApp.Forms.VehicleForms
     public partial class VehicleLookupForm : Form
     {
         private IVehicleRepository VehicleRepository { get; set; }
-        public int SelectedVehicleIdForLookup { get; set; }
+        public int? SelectedVehicleIdForLookup { get; set; }
         public VehicleLookupForm(IVehicleRepository vehicleRepository)
         {
             InitializeComponent();

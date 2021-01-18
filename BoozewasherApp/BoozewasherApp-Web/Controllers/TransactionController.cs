@@ -107,7 +107,7 @@ namespace BoozewasherApp_Web.Controllers
             return RedirectToAction("Index", "Transaction");
         }
 
-        #region Vehicle Lookup
+        #region Lookup
         [Authorize(Roles = RoleName.CanManageTransactions)]
         public ActionResult VehicleLookup()
         {
@@ -116,47 +116,14 @@ namespace BoozewasherApp_Web.Controllers
         }
 
         [Authorize(Roles = RoleName.CanManageTransactions)]
-        public ActionResult SelectedVehicle(int id)
-        {
-            var vehicle = _context.Vehicles.SingleOrDefault(t => t.Id == id);
-
-            if (vehicle == null)
-                return HttpNotFound();
-
-            var viewModel = new TransactionFormViewModel()
-            {
-               VehicleId = id,
-               Services = _context.Services.ToList()
-            };
-            return View("TransactionForm", viewModel);
-        }
-        #endregion
-
-        #region Item Lookup
-
-        [Authorize (Roles = RoleName.CanManageTransactions)]
         public ActionResult ItemLookup()
         {
             var items = _context.Items.ToList();
             return View(items);
         }
 
-        public ActionResult SelectedItem(int id)
-        {
-            var item = _context.Items.SingleOrDefault(t => t.Id == id);
-
-            if (item == null)
-                return HttpNotFound();
-
-            var viewModel = new TransactionFormViewModel()
-            {
-                ItemId =  id,
-                Services = _context.Services.ToList()
-            };
-            return View("TransactionForm", viewModel);
-        }
-
         #endregion
+
     }
 }
 

@@ -93,6 +93,36 @@ namespace BoozewasherApp_Web.Controllers
         }
 
         //
+        // POST: /Account/LoginFromApp
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<string> LoginFromApp(LoginViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return "Model is not valid.";
+            }
+
+            // This doesn't count login failures towards account lockout
+            // To enable password failures to trigger account lockout, change to shouldLockout: true
+            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            switch (result)
+            {
+                case SignInStatus.Success:
+                    return "Login successful";
+                case SignInStatus.LockedOut:
+                    return "You have been locked out";
+                case SignInStatus.RequiresVerification:
+                    return "Your account requires verification";
+                case SignInStatus.Failure:
+                    return "Failed to login";
+                default:
+                    return "Unable to login due to unknown error";
+            }
+        }
+
+        //
         // GET: /Account/VerifyCode
         [AllowAnonymous]
         public async Task<ActionResult> VerifyCode(string provider, string returnUrl, bool rememberMe)

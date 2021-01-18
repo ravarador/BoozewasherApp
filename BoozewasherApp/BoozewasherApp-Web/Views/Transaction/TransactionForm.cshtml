@@ -11,29 +11,29 @@
     @Html.ValidationSummary(true, "Please fill up requirements");
 
     <p></p>
-    @Html.ActionLink("Vehicle Lookup", "VehicleLookup", "Transaction", new { @class = "btn btn-outline-primary" })
-    <p></p>
-
-    <div class="form-group">
-        @Html.LabelFor(t => t.VehicleId)
+    @Html.LabelFor(t => t.VehicleId)
+    <div class="input-group mb-3">
         @Html.TextBoxFor(t => t.VehicleId, "{0:#.#}", new { @class = "form-control" })
         @Html.ValidationMessageFor(t => t.VehicleId)
+        <div class="input-group-append">
+            @Html.ActionLink("Vehicle Lookup", "VehicleLookup", "Transaction", new { @class = "btn btn-outline-primary" })
+        </div>
+    </div>
+
+    <p></p>
+    @Html.LabelFor(t => t.ItemId)
+    <div class="input-group mb-3">
+        @Html.TextBoxFor(t => t.ItemId, "{0:#.#}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(t => t.ItemId)
+        <div class="input-group-append">
+            @Html.ActionLink("Item Lookup", "ItemLookup", "Transaction", new { @class = "btn btn-outline-primary" })
+        </div>
     </div>
 
     <div class="form-group">
         @Html.LabelFor(t => t.ServiceId)
         @Html.DropDownListFor(t => t.ServiceId, new SelectList(Model.Services, "Id", "Type"), "Select Service Type", new { @class = "form-control" })
         @Html.ValidationMessageFor(t => t.ServiceId)
-    </div>
-
-    <p></p>
-    @Html.ActionLink("Item Lookup", "ItemLookup", "Transaction", new { @class = "btn btn-outline-primary" })
-    <p></p>
-
-    <div class="form-group">
-        @Html.LabelFor(t => t.ItemId)
-        @Html.TextBoxFor(t => t.ItemId, "{0:#.#}", new { @class = "form-control" })
-        @Html.ValidationMessageFor(t => t.ItemId)
     </div>
 
     <div class="form-group">

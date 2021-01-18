@@ -11,13 +11,13 @@
     @Html.ValidationSummary(true, "Please fill up requirements");
 
     <p></p>
-    @Html.ActionLink("Vehicle Lookup", "VehicleLookup", "Transaction", new { @class = "btn btn-outline-primary" })
-    <p></p>
-
-    <div class="form-group">
-        @Html.LabelFor(t => t.VehicleId)
+    @Html.LabelFor(t => t.VehicleId)
+    <div class="input-group mb-3">
         @Html.TextBoxFor(t => t.VehicleId, "{0:#.#}", new { @class = "form-control" })
         @Html.ValidationMessageFor(t => t.VehicleId)
+        <div class="input-group-append">
+            @Html.ActionLink("Vehicle Lookup", "VehicleLookup", "Transaction", new { @class = "btn btn-outline-primary" })
+        </div>
     </div>
 
     <div class="form-group">

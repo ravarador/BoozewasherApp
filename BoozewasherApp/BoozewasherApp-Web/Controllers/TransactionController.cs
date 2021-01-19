@@ -121,6 +121,24 @@ namespace BoozewasherApp_Web.Controllers
             var items = _context.Items.ToList();
             return View(items);
         }
+        #endregion
+
+        #region Selected
+        public ActionResult SelectedVehicle(int id)
+        {
+            var vehicle = _context.Vehicles.SingleOrDefault(i => i.Id == id);
+
+            if (vehicle == null)
+                return HttpNotFound();
+
+            var viewModel = new TransactionFormViewModel
+            {
+                VehicleId = id,
+                Services = _context.Services.ToList()
+            };
+
+            return View("TransactionForm", viewModel);
+        }
 
         #endregion
 

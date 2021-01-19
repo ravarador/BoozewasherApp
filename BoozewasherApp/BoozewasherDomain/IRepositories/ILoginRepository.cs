@@ -9,6 +9,6 @@ namespace BoozewasherDomain.IRepositories
 {
     public interface ILoginRepository
     {
-        string AuthenticateLogin(LoginDto login);
+        AuthenticationMessageDto AuthenticateLogin(LoginDto login);
     }
 }

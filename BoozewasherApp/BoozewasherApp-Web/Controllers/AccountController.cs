@@ -10,6 +10,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BoozewasherApp_Web.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
+using BoozewasherApp_Web.Models.Dtos;
+using Newtonsoft.Json;
 
 namespace BoozewasherApp_Web.Controllers
 {
@@ -96,29 +98,42 @@ namespace BoozewasherApp_Web.Controllers
         // POST: /Account/LoginFromApp
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
         public async Task<string> LoginFromApp(LoginViewModel model)
         {
+            var message = new AuthenticationMessageDto();
             if (!ModelState.IsValid)
             {
-                return "Model is not valid.";
+                message.IsAuthenticated = false;
+                message.ResponseMessage = "Please input a correct email.";
+                return JsonConvert.SerializeObject(message);
             }
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, false, shouldLockout: false);
+            
             switch (result)
             {
                 case SignInStatus.Success:
-                    return "Login successful";
+                    message.IsAuthenticated = true;
+                    message.ResponseMessage = "Login successful";
+                    return JsonConvert.SerializeObject(message);
                 case SignInStatus.LockedOut:
-                    return "You have been locked out";
+                    message.IsAuthenticated = false;
+                    message.ResponseMessage = "You have been locked out";
+                    return JsonConvert.SerializeObject(message);
                 case SignInStatus.RequiresVerification:
-                    return "Your account requires verification";
+                    message.IsAuthenticated = false;
+                    message.ResponseMessage = "Your account requires verification";
+                    return JsonConvert.SerializeObject(message);
                 case SignInStatus.Failure:
-                    return "Failed to login";
+                    message.IsAuthenticated = false;
+                    message.ResponseMessage = "Incorrect username/password";
+                    return JsonConvert.SerializeObject(message);
                 default:
-                    return "Unable to login due to unknown error";
+                    message.IsAuthenticated = false;
+                    message.ResponseMessage = "Unable to login due to unknown error";
+                    return JsonConvert.SerializeObject(message);
             }
         }
 

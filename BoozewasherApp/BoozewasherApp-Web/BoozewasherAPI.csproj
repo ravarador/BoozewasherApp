@@ -225,6 +225,11 @@
     <Compile Include="Migrations\202012291321579_ChangedItemsListInTransactionToStringType.designer.cs">
       <DependentUpon>202012291321579_ChangedItemsListInTransactionToStringType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101191410515_AddBranchTable.cs" />
+    <Compile Include="Migrations\202101191410515_AddBranchTable.designer.cs">
+      <DependentUpon>202101191410515_AddBranchTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContextModel\Branch.cs" />
     <Compile Include="Models\ContextModel\Item.cs" />
     <Compile Include="Models\ContextModel\RoleName.cs" />
     <Compile Include="Models\Dtos\AuthenticationMessageDto.cs" />
@@ -665,6 +670,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012291321579_ChangedItemsListInTransactionToStringType.resx">
       <DependentUpon>202012291321579_ChangedItemsListInTransactionToStringType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101191410515_AddBranchTable.resx">
+      <DependentUpon>202101191410515_AddBranchTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

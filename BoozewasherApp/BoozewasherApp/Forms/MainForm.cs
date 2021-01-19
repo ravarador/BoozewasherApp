@@ -16,6 +16,7 @@ namespace BoozewasherApp.Forms
 {
     public partial class MainForm : Form
     {
+        public LoginForm LoginForm { get; set; }
         public IServiceRepository ServiceRepository { get; private set; }
         public IVehicleRepository VehicleRepository { get; private set; }
         public ITransactionRepository TransactionRepository { get; private set; }
@@ -271,7 +272,9 @@ namespace BoozewasherApp.Forms
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            LoginForm.ResetFields();
+            LoginForm.Show();
         }
     }
 }

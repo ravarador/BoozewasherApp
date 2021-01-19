@@ -22,10 +22,10 @@ namespace BoozewasherApp
         static void Main()
         {
             container = new Container();
-            //container.Register<IServiceRepository, ServiceRepository>(Lifestyle.Singleton);
-            //container.Register<IVehicleRepository, VehicleRepository>(Lifestyle.Singleton);
-            //container.Register<ITransactionRepository, TransactionRepository>(Lifestyle.Singleton);
-            //container.Register<IItemRepository, ItemRepository>(Lifestyle.Singleton);
+            container.Register<IServiceRepository, ServiceRepository>(Lifestyle.Singleton);
+            container.Register<IVehicleRepository, VehicleRepository>(Lifestyle.Singleton);
+            container.Register<ITransactionRepository, TransactionRepository>(Lifestyle.Singleton);
+            container.Register<IItemRepository, ItemRepository>(Lifestyle.Singleton);
             container.Register<ILoginRepository, LoginRepository>(Lifestyle.Singleton);
             //container.Register<ParentForm>(Lifestyle.Singleton);
             //container.Register<MainForm>(Lifestyle.Singleton);

@@ -15,10 +15,22 @@ namespace BoozewasherApp.Forms
     public partial class LoginForm : Form
     {
         public ILoginRepository LoginRepository { get; private set; }
-        public LoginForm(ILoginRepository loginRepository)
+        public IServiceRepository ServiceRepository { get; private set; }
+        public IVehicleRepository VehicleRepository { get; private set; }
+        public ITransactionRepository TransactionRepository { get; private set; }
+        public IItemRepository ItemRepository { get; private set; }
+        public LoginForm(ILoginRepository loginRepository, 
+                         IServiceRepository serviceRepository,
+                         IItemRepository itemRepository,
+                         IVehicleRepository vehicleRepository,
+                         ITransactionRepository transactionRepository)
         {
             InitializeComponent();
             LoginRepository = loginRepository;
+            ServiceRepository = serviceRepository;
+            VehicleRepository = vehicleRepository;
+            TransactionRepository = transactionRepository;
+            ItemRepository = itemRepository;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -34,11 +46,21 @@ namespace BoozewasherApp.Forms
             if (validate.IsAuthenticated)
             {
                 MessageBox.Show(validate.ResponseMessage);
+                var mainForm = new MainForm(ServiceRepository, ItemRepository, VehicleRepository, TransactionRepository);
+                mainForm.LoginForm = this;
+                mainForm.Show();
+                this.Hide();
             }
             else
             {
                 MessageBox.Show(validate.ResponseMessage);
             }
+        }
+
+        public void ResetFields()
+        {
+            txtboxEmail.Text = string.Empty;
+            txtboxPassword.Text = string.Empty;
         }
     }
 }

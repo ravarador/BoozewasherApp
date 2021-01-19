@@ -43,7 +43,7 @@ namespace BoozewasherApp.Forms
             this.txtboxEmail.Location = new System.Drawing.Point(68, 142);
             this.txtboxEmail.Name = "txtboxEmail";
             this.txtboxEmail.Size = new System.Drawing.Size(208, 23);
-            this.txtboxEmail.TabIndex = 0;
+            this.txtboxEmail.TabIndex = 1;
             // 
             // label1
             // 
@@ -59,7 +59,7 @@ namespace BoozewasherApp.Forms
             this.btnLogin.Location = new System.Drawing.Point(127, 277);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 27);
-            this.btnLogin.TabIndex = 2;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -68,8 +68,9 @@ namespace BoozewasherApp.Forms
             // 
             this.txtboxPassword.Location = new System.Drawing.Point(68, 211);
             this.txtboxPassword.Name = "txtboxPassword";
+            this.txtboxPassword.PasswordChar = '*';
             this.txtboxPassword.Size = new System.Drawing.Size(208, 23);
-            this.txtboxPassword.TabIndex = 3;
+            this.txtboxPassword.TabIndex = 2;
             // 
             // label2
             // 
@@ -106,6 +107,7 @@ namespace BoozewasherApp.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

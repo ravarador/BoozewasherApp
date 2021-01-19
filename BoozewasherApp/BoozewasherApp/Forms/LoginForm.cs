@@ -62,5 +62,6 @@ namespace BoozewasherApp.Forms
             txtboxEmail.Text = string.Empty;
             txtboxPassword.Text = string.Empty;
         }
+
     }
 }

@@ -13,7 +13,7 @@ namespace BoozewasherApp_Web.Controllers
     public class TransactionController : Controller
     {
         private ApplicationDbContext _context;
-
+        
         public TransactionController()
         {
             _context = new ApplicationDbContext();
@@ -134,6 +134,23 @@ namespace BoozewasherApp_Web.Controllers
             var viewModel = new TransactionFormViewModel
             {
                 VehicleId = id,
+                Services = _context.Services.ToList()
+            };
+
+            return View("TransactionForm", viewModel);
+        }
+
+  
+        public ActionResult SelectedItem(int id)
+        {
+            var item = _context.Items.SingleOrDefault(i => i.Id == id);
+
+            if (item == null)
+                return HttpNotFound();
+
+            var viewModel = new TransactionFormViewModel
+            {
+                ItemId = id,
                 Services = _context.Services.ToList()
             };
 

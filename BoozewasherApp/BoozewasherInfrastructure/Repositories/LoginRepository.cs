@@ -1,4 +1,5 @@
 ﻿using BoozewasherDomain.Dtos;
+using BoozewasherDomain.IRepositories;
 using BoozewasherInfrastructure.Properties;
 using RestSharp;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BoozewasherInfrastructure.Repositories
 {
-    public class LoginRepository
+    public class LoginRepository : ILoginRepository
     {
         public string AuthenticateLogin(LoginDto login)
         {

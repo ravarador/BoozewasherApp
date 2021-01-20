@@ -12,6 +12,7 @@ namespace BoozewasherApp_Web.Models.ViewModels.Transactions
         public IEnumerable<Service> Services { get; set; }
         public IEnumerable<Vehicle> Vehicles { get; set; }
         public IEnumerable<Item> Items { get; set; }
+        public IEnumerable<Branch> Branches { get; set; }
        
         public int Id { get; set; }
         public DateTime DateTime { get; set; }
@@ -29,6 +30,9 @@ namespace BoozewasherApp_Web.Models.ViewModels.Transactions
 
         [Display(Name = "Item ID")]
         public int ItemId { get; set; }
+
+        [Display (Name = "Branch Name")]
+        public int BranchId { get; set; }
 
         public string Title
         {
@@ -49,6 +53,7 @@ namespace BoozewasherApp_Web.Models.ViewModels.Transactions
             ServiceId = transaction.ServiceId;
             VehicleId = transaction.VehicleId;
             Cost = transaction.Cost;
+            BranchId = transaction.BranchId;
             
         }
     }

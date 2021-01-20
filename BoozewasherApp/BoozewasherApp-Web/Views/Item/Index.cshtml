@@ -18,6 +18,7 @@
             <th>IsEmpty</th>
             <th>UsageCount</th>
             <th>Expense</th>
+            <th>Branch</th>
             <th>Delete</th>
         </tr>
     </thead>
@@ -55,6 +56,9 @@
                     },
                     {
                         data: "Expense", render: $.fn.DataTable.render.number(',', '.', 2, '')
+                    },
+                    {
+                        data: "Branch.Name"
                     },
                     {
                         data: "Id",

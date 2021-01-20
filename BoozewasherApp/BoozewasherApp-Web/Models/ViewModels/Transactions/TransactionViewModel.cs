@@ -17,6 +17,8 @@ namespace BoozewasherApp_Web.Models.ViewModels.Transactions
 
         public Vehicle Vehicle { get; set; }
         public int VehicleId { get; set; }
+        public Branch Branch { get; set; }
+        public int BranchId { get; set; }
 
         public decimal Cost { get; set; }
     }

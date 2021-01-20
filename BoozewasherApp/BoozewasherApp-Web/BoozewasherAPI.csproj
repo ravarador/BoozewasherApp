@@ -233,6 +233,10 @@
     <Compile Include="Migrations\202101200841315_SeedUsersForAllTable.designer.cs">
       <DependentUpon>202101200841315_SeedUsersForAllTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101201332280_AddFirstNameAndLastNameToAppUser.cs" />
+    <Compile Include="Migrations\202101201332280_AddFirstNameAndLastNameToAppUser.designer.cs">
+      <DependentUpon>202101201332280_AddFirstNameAndLastNameToAppUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ContextModel\Branch.cs" />
     <Compile Include="Models\ContextModel\Item.cs" />
     <Compile Include="Models\ContextModel\RoleName.cs" />
@@ -680,6 +684,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101200841315_SeedUsersForAllTable.resx">
       <DependentUpon>202101200841315_SeedUsersForAllTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101201332280_AddFirstNameAndLastNameToAppUser.resx">
+      <DependentUpon>202101201332280_AddFirstNameAndLastNameToAppUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

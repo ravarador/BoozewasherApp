@@ -68,21 +68,24 @@
                     }
                 ]
             });
-            $("#items").on("click", ".js-delete", function () {
-                var button = $(this);
 
-                bootbox.confirm("Would you like to delete this item?", function (result) {
-                    if (result) {
-                        $.ajax({
-                            url: "API/Items/DeleteItem/" + button.attr("data-items-id"),
-                            method: "DELETE",
-                            success: function () {
-                                button.parents("tr").remove();
-                            }
-                        });
-                    }
-                });
+        });
+
+        $("#items").on("click", ".js-delete", function () {
+            var button = $(this);
+
+            bootbox.confirm("Would you like to delete this item?", function (result) {
+                if (result) {
+                    $.ajax({
+                        url: "API/Items/DeleteItem/" + button.attr("data-item-id"),
+                        method: "DELETE",
+                        success: function () {
+                            button.parents("tr").remove();
+                        }
+                    });
+                }
             });
         });
+
     </script>
 }

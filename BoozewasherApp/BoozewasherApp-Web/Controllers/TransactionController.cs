@@ -134,11 +134,14 @@ namespace BoozewasherApp_Web.Controllers
         {
             var vehicle = _context.Vehicles.SingleOrDefault(i => i.Id == id);
 
+            TempData["vehicleId"] = id;
+
             if (vehicle == null)
                 return HttpNotFound();
 
             var viewModel = new TransactionFormViewModel
             {
+                ItemId = Convert.ToInt32(TempData["itemId"]),
                 VehicleId = id,
                 Branches = _context.Branches.ToList(),
                 Services = _context.Services.ToList()
@@ -152,11 +155,14 @@ namespace BoozewasherApp_Web.Controllers
         {
             var item = _context.Items.SingleOrDefault(i => i.Id == id);
 
+            TempData["itemId"] = id;
+
             if (item == null)
                 return HttpNotFound();
 
             var viewModel = new TransactionFormViewModel
             {
+                VehicleId = Convert.ToInt32(TempData["vehicleId"]),
                 ItemId = id,
                 Branches = _context.Branches.ToList(),
                 Services = _context.Services.ToList()

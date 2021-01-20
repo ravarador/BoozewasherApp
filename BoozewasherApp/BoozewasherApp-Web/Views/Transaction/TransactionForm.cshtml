@@ -37,6 +37,12 @@
     </div>
 
     <div class="form-group">
+        @Html.LabelFor(t => t.BranchId)
+        @Html.DropDownListFor(t => t.BranchId, new SelectList(Model.Branches, "Id", "Name"), "Select Branch", new { @class = "form-control" })
+        @Html.ValidationMessageFor(t => t.BranchId)
+    </div>
+
+    <div class="form-group">
         @Html.LabelFor(t => t.PlateNumber)
         @Html.TextBoxFor(t => t.PlateNumber, new { @class = "form-control" })
         @Html.ValidationMessageFor(t => t.PlateNumber)

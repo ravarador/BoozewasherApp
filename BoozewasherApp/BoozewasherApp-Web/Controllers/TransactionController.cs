@@ -36,10 +36,13 @@ namespace BoozewasherApp_Web.Controllers
         {
             var services = _context.Services.ToList();
             var vehicles = _context.Vehicles.ToList();
+            var branches = _context.Branches.ToList();
+
             var viewModel = new TransactionFormViewModel
             {
                 Services = services,
-                Vehicles = vehicles
+                Vehicles = vehicles,
+                Branches = branches
             };
             return View("TransactionForm", viewModel);
         }
@@ -49,6 +52,7 @@ namespace BoozewasherApp_Web.Controllers
         {
             var transaction = _context.Transactions.Include("Service")
                                                    .Include("Vehicle")
+                                                   .Include("Branch")
                                                    .SingleOrDefault(t => t.Id == id);
 
             if (transaction == null)
@@ -57,7 +61,8 @@ namespace BoozewasherApp_Web.Controllers
             var viewModel = new TransactionFormViewModel(transaction)
             {
                 Vehicles = _context.Vehicles.ToList(),
-                Services = _context.Services.ToList()
+                Services = _context.Services.ToList(),
+                Branches = _context.Branches.ToList()
             };
             return View("TransactionForm", viewModel);
         }
@@ -85,6 +90,7 @@ namespace BoozewasherApp_Web.Controllers
 
                 transactionInDB.VehicleId = transaction.VehicleId;
                 transactionInDB.ServiceId = transaction.ServiceId;
+                transactionInDB.BranchId = transaction.BranchId;
                 transactionInDB.PlateNumber = transaction.PlateNumber;
                 transactionInDB.Cost = transaction.Cost;
             }

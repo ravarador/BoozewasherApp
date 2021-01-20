@@ -229,6 +229,10 @@
     <Compile Include="Migrations\202101191410515_AddBranchTable.designer.cs">
       <DependentUpon>202101191410515_AddBranchTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101200841315_SeedUsersForAllTable.cs" />
+    <Compile Include="Migrations\202101200841315_SeedUsersForAllTable.designer.cs">
+      <DependentUpon>202101200841315_SeedUsersForAllTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ContextModel\Branch.cs" />
     <Compile Include="Models\ContextModel\Item.cs" />
     <Compile Include="Models\ContextModel\RoleName.cs" />
@@ -673,6 +677,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101191410515_AddBranchTable.resx">
       <DependentUpon>202101191410515_AddBranchTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101200841315_SeedUsersForAllTable.resx">
+      <DependentUpon>202101200841315_SeedUsersForAllTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

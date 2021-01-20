@@ -1,4 +1,5 @@
-﻿using BoozewasherDomain.Entities;
+﻿using BoozewasherDomain.Dtos;
+using BoozewasherDomain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace BoozewasherDomain.IRepositories
     {
         void AddItem(Item item);
         void DeleteItem(int id);
-        List<Item> GetAllItems();
+        List<ItemDto> GetAllItems();
         void UpdateItem(Item item);
         Item GetItemById(int id);
     }

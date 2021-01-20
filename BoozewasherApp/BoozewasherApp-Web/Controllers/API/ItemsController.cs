@@ -25,8 +25,9 @@ namespace BoozewasherApp_Web.Controllers.API
 
         public IHttpActionResult GetItems()
         {
-            var itemsDto = _context.Items.ToList()
-                                       .Select(Mapper.Map<Item, ItemDto>);
+            var itemsDto = _context.Items.Include("Branch")
+                                         .ToList()
+                                         .Select(Mapper.Map<Item, ItemDto>);
 
             return Ok(itemsDto);
         }
@@ -34,7 +35,7 @@ namespace BoozewasherApp_Web.Controllers.API
         //GET /API/Items/GetItem
         public IHttpActionResult GetItem(int id)
         {
-            var item = _context.Items.SingleOrDefault(s => s.Id == id);
+            var item = _context.Items.Include("Branch").SingleOrDefault(s => s.Id == id);
 
             if (item == null)
                 return NotFound();

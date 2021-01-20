@@ -13,11 +13,15 @@ namespace BoozewasherDomain.Dtos
         public DateTime DateTime { get; set; }
         public string PlateNumber { get; set; }
         public string ServiceType { get; set; }
+        public decimal ServiceExpense { get; set; }
         public string VehicleType { get; set; }
+        public string VehicleBrand { get; set; }
+        public string VehicleModel { get; set; }
         public int ServiceId { get; set; }
         public int VehicleId { get; set; }
 
         public decimal Cost { get; set; }
         public string ItemsList { get; set; }
+        public string BranchName { get; set; }
     }
 }

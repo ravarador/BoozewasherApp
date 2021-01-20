@@ -32,7 +32,7 @@ namespace BoozewasherInfrastructure.Repositories
             var response = client.Execute(request);
         }
 
-        public List<Transaction> GetAllTransactions()
+        public List<TransactionDto> GetAllTransactions()
         {
             var client = new RestClient(Resources.ConnectionString);
             var request = new RestRequest("/api/transactions/gettransactions/", Method.GET);
@@ -41,7 +41,19 @@ namespace BoozewasherInfrastructure.Repositories
 
             var dataList = JsonConvert.DeserializeObject<List<Transaction>>(response.Content);
 
-            return dataList;
+            return dataList.Select(a => new TransactionDto { Id = a.Id, 
+                                                             DateTime = a.DateTime, 
+                                                             ServiceId = a.ServiceId, 
+                                                             ServiceType = a.Service.Type, 
+                                                             ServiceExpense = a.Service.Expense.Value,
+                                                             VehicleId = a.VehicleId, 
+                                                             VehicleType = a.Vehicle.Type, 
+                                                             VehicleBrand = a.Vehicle.Brand,
+                                                             VehicleModel = a.Vehicle.Model,
+                                                             PlateNumber = a.PlateNumber, 
+                                                             Cost = a.Cost, 
+                                                             ItemsList = a.ItemsList, 
+                                                             BranchName = a.Branch.Name }).ToList();
         }
 
         public List<Transaction> GetTransactionsByDateRange(SummaryDateAndDateRangeDto dateAndDateRangeDto)

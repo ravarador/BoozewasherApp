@@ -57,11 +57,11 @@ namespace BoozewasherApp.Forms.SummaryForms
                                                           Id = a.Id,
                                                           DateTime = a.DateTime,
                                                           PlateNumber = a.PlateNumber,
-                                                          ServiceType = a.Service.Type,
-                                                          Expense = a.Service.Expense.Value,
-                                                          VehicleType = a.Vehicle.Type,
-                                                          Brand = a.Vehicle.Brand,
-                                                          Model = a.Vehicle.Model,
+                                                          ServiceType = a.ServiceType,
+                                                          Expense = a.ServiceExpense,
+                                                          VehicleType = a.VehicleType,
+                                                          Brand = a.VehicleBrand,
+                                                          Model = a.VehicleModel,
                                                           Cost = a.Cost
                                                       }).ToList();
             DataComputations();

@@ -51,19 +51,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         public void LoadDgvTransactions()
         {
-            dgvTransactions.DataSource = mainForm.TransactionRepository.GetAllTransactions()
-                                                      .Select(a => new TransactionDto
-                                                      {
-                                                          Id = a.Id,
-                                                          DateTime = a.DateTime,
-                                                          PlateNumber = a.PlateNumber,
-                                                          ServiceType = a.Service.Type,
-                                                          ServiceId = a.ServiceId,
-                                                          VehicleType = a.Vehicle.Type,
-                                                          VehicleId = a.VehicleId,
-                                                          Cost = a.Cost,
-                                                          ItemsList = a.ItemsList
-                                                      }).ToList();
+            dgvTransactions.DataSource = mainForm.TransactionRepository.GetAllTransactions();
         }
 
         #endregion

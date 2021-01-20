@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dtos\AuthenticationMessageDto.cs" />
+    <Compile Include="Dtos\ItemDto.cs" />
     <Compile Include="Dtos\ItemLookupDto.cs" />
     <Compile Include="Dtos\LoginDto.cs" />
     <Compile Include="Entities\Branch.cs" />

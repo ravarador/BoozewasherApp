@@ -63,6 +63,7 @@ namespace BoozewasherApp.Forms.ItemForms
                 IsEmpty = bool.Parse(comboIsEmpty.SelectedItem.ToString()),
                 UsageCount = int.Parse(txtboxUsageCount.Text),
                 Expense = decimal.Parse(txtboxExpense.Text),
+                BranchId = 1
 
             };
 

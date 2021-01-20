@@ -13,7 +13,7 @@ namespace BoozewasherDomain.IRepositories
     {
         void AddTransaction(Transaction transaction);
         void DeleteTransaction(int id);
-        List<Transaction> GetAllTransactions();
+        List<TransactionDto> GetAllTransactions();
         void UpdateTransaction(Transaction transaction);
         List<Transaction> GetTransactionsByDateRange(SummaryDateAndDateRangeDto dateAndDateRangeDto);
         List<Transaction> GetTransactionsByDate(SummaryDateAndDateRangeDto dateAndDateRangeDto);

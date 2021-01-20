@@ -74,18 +74,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         private void LoadDgvTransaction()
         {
-            dgvTransaction.DataSource = TransactionRepository.GetAllTransactions()
-                                                      .Select(a => new TransactionDto 
-                                                      {
-                                                          Id = a.Id,
-                                                          DateTime = a.DateTime,
-                                                          PlateNumber = a.PlateNumber,
-                                                          ServiceType = a.Service.Type,
-                                                          ServiceId = a.ServiceId,
-                                                          VehicleType = a.Vehicle.Type,
-                                                          VehicleId = a.VehicleId,
-                                                          Cost = a.Cost
-                                                      }).ToList();
+            dgvTransaction.DataSource = TransactionRepository.GetAllTransactions().ToList();
         }
 
         private void OpenServiceLookupForm()

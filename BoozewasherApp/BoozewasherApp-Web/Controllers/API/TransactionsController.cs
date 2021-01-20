@@ -29,6 +29,7 @@ namespace BoozewasherApp_Web.Controllers.API
         {
             var transactionsDto = _context.Transactions.Include("Service")
                                                        .Include("Vehicle")
+                                                       .Include("Branch")
                                                        .ToList();
             return Ok(transactionsDto);
         }
@@ -39,6 +40,7 @@ namespace BoozewasherApp_Web.Controllers.API
         {
             return _context.Transactions.Include("Service")
                                         .Include("Vehicle")
+                                        .Include("Branch")
                                         .Where(a => a.DateTime.Year >= dateAndDateRangeDto.DateTimeFrom.Year &&
                                                     a.DateTime.Month >= dateAndDateRangeDto.DateTimeFrom.Month &&
                                                     a.DateTime.Day >= dateAndDateRangeDto.DateTimeFrom.Day &&
@@ -53,6 +55,7 @@ namespace BoozewasherApp_Web.Controllers.API
         {
             return _context.Transactions.Include("Service")
                                         .Include("Vehicle")
+                                        .Include("Branch")
                                         .Where(a => a.DateTime.Year == dateAndDateRangeDto.DateTime.Year &&
                                                     a.DateTime.Month == dateAndDateRangeDto.DateTime.Month &&
                                                     a.DateTime.Day == dateAndDateRangeDto.DateTime.Day)
@@ -62,7 +65,10 @@ namespace BoozewasherApp_Web.Controllers.API
         //GET /API/Transactions/1
         public IHttpActionResult GetTransaction(int id)
         {
-            var transaction = _context.Transactions.SingleOrDefault(v => v.Id == id);
+            var transaction = _context.Transactions.Include("Service")
+                                                   .Include("Vehicle")
+                                                   .Include("Branch")
+                                                   .SingleOrDefault(v => v.Id == id);
 
             if (transaction == null)
                 return NotFound();

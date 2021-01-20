@@ -1,4 +1,5 @@
-﻿using BoozewasherDomain.Entities;
+﻿using BoozewasherDomain.Dtos;
+using BoozewasherDomain.Entities;
 using BoozewasherDomain.IRepositories;
 using BoozewasherInfrastructure.Properties;
 using Newtonsoft.Json;
@@ -30,7 +31,7 @@ namespace BoozewasherInfrastructure.Repositories
             var response = client.Execute(request);
         }
 
-        public List<Item> GetAllItems()
+        public List<ItemDto> GetAllItems()
         {
             var client = new RestClient(Resources.ConnectionString);
             var request = new RestRequest("/api/items/getitems/", Method.GET);
@@ -39,7 +40,14 @@ namespace BoozewasherInfrastructure.Repositories
 
             var dataList = JsonConvert.DeserializeObject<List<Item>>(response.Content);
 
-            return dataList;
+            return dataList.Select(a => new ItemDto { Id = a.Id, 
+                                                      Name = a.Name, 
+                                                      Description = a.Description, 
+                                                      Barcode = a.Barcode, 
+                                                      UsageCount = a.UsageCount, 
+                                                      IsEmpty = a.IsEmpty, 
+                                                      Expense = a.Expense, 
+                                                      BranchName = a.Branch.Name  }).ToList();
         }
 
         public Item GetItemById(int id)

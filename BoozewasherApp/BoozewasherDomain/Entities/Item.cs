@@ -15,5 +15,8 @@ namespace BoozewasherDomain.Entities
         public bool IsEmpty { get; set; }
         public int UsageCount { get; set; }
         public decimal Expense { get; set; }
+        public Branch Branch { get; set; }
+        public int BranchId { get; set; }
+
     }
 }

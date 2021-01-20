@@ -35,8 +35,11 @@ namespace BoozewasherApp_Web.Controllers
         [Authorize(Roles = RoleName.CanManageItems)]
         public ActionResult New()
         {
+            var branches = _context.Branches.ToList();
+
             var viewModel = new ItemsFormViewModel
             {
+                Branches = branches,
                 Item = new Item()
             };
 
@@ -46,6 +49,7 @@ namespace BoozewasherApp_Web.Controllers
         [Authorize(Roles = RoleName.CanManageItems)]
         public ActionResult Edit(int id)
         {
+            var branches = _context.Branches.ToList();
             var item = _context.Items.SingleOrDefault(i => i.Id == id);
 
             if (item == null)
@@ -53,6 +57,7 @@ namespace BoozewasherApp_Web.Controllers
 
             var viewModel = new ItemsFormViewModel
             {
+                Branches = branches,
                 Item = item
             };
 

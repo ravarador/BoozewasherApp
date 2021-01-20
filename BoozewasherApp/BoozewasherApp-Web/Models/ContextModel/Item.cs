@@ -25,6 +25,8 @@ namespace BoozewasherApp_Web.Models.ContextModel
         [Required]
         public decimal Expense { get; set; }
         public Branch Branch { get; set; }
+
+        [Display(Name = "Branch Name")]
         public int BranchId { get; set; }
     }
 }

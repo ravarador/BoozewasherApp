@@ -8,6 +8,8 @@ namespace BoozewasherApp_Web.Models.ViewModels.Items
 {
     public class ItemsFormViewModel
     {
+        public IEnumerable <Branch> Branches { get; set; }
+
         public Item Item { get; set; }
     }
 }

@@ -39,6 +39,12 @@
         @Html.ValidationMessageFor(i => i.Item.Expense)
     </div>
 
+    <div class="form-group">
+        @Html.LabelFor(t => t.Item.BranchId)
+        @Html.DropDownListFor(t => t.Item.BranchId, new SelectList(Model.Branches, "Id", "Name"), "Select Branch", new { @class = "form-control" })
+        @Html.ValidationMessageFor(t => t.Item.BranchId)
+    </div>
+
     <div class="checkbox">
         <label>
             @Html.CheckBoxFor(i => i.Item.IsEmpty) Is Empty

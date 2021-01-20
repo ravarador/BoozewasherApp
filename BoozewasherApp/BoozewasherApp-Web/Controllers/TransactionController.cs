@@ -140,6 +140,7 @@ namespace BoozewasherApp_Web.Controllers
             var viewModel = new TransactionFormViewModel
             {
                 VehicleId = id,
+                Branches = _context.Branches.ToList(),
                 Services = _context.Services.ToList()
             };
 
@@ -157,6 +158,7 @@ namespace BoozewasherApp_Web.Controllers
             var viewModel = new TransactionFormViewModel
             {
                 ItemId = id,
+                Branches = _context.Branches.ToList(),
                 Services = _context.Services.ToList()
             };
 

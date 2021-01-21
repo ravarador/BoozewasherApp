@@ -42,7 +42,16 @@ namespace BoozewasherApp_Web.Controllers.API
 
             return Ok(Mapper.Map<Item, ItemDto>(item));
         }
+        //GET /API/Items/GetItemsByBranchId
+        public IHttpActionResult GetItemsByBranchId(int id)
+        {
+            var itemsDto = _context.Items.Include("Branch")
+                                         .Where(a => a.BranchId == id)
+                                         .ToList()
+                                         .Select(Mapper.Map<Item, ItemDto>);
 
+            return Ok(itemsDto);
+        }
         //POST /API/Items/CreateItem
         [HttpPost]
         public IHttpActionResult CreateItem(ItemDto itemDto)

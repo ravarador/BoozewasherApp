@@ -92,7 +92,7 @@ namespace BoozewasherApp.Forms.ItemForms
         }
         public void LoadDgvItems()
         {
-            dgvItems.DataSource = mainForm.ItemRepository.GetAllItems();
+            dgvItems.DataSource = mainForm.ItemRepository.GetItemsByBranchId(mainForm.UserInformation.BranchId);
         }
         #endregion
     }

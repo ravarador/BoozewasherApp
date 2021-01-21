@@ -51,7 +51,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         public void LoadDgvTransactions()
         {
-            dgvTransactions.DataSource = mainForm.TransactionRepository.GetAllTransactions();
+            dgvTransactions.DataSource = mainForm.TransactionRepository.GetTransactionsByBranchId(mainForm.UserInformation.BranchId);
         }
 
         #endregion

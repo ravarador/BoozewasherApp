@@ -14,13 +14,13 @@ namespace BoozewasherApp.Forms.ItemForms
 {
     public partial class ItemLookupForm : Form
     {
-        private IItemRepository ItemRepository { get; set; }
+        private MainForm mainForm { get; set; }
         public int SelectedItemIdForLookup { get; set; }
         public Item SelectedItem { get; set; }
-        public ItemLookupForm(IItemRepository itemRepository)
+        public ItemLookupForm(MainForm MainForm)
         {
             InitializeComponent();
-            ItemRepository = itemRepository;
+            mainForm = MainForm;
 
         }
 
@@ -51,7 +51,7 @@ namespace BoozewasherApp.Forms.ItemForms
         #region Private Methods
         private void LoadDgvItem()
         {
-            dgvItem.DataSource = ItemRepository.GetAllItems();
+            dgvItem.DataSource = mainForm.ItemRepository.GetItemsByBranchId(mainForm.UserInformation.BranchId);
         }
         #endregion
     }

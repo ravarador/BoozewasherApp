@@ -106,23 +106,11 @@
     <Compile Include="Forms\EmployeeForms\EmployeeHomeUserControl.Designer.cs">
       <DependentUpon>EmployeeHomeUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ItemForms\AddItemForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ItemForms\AddItemForm.Designer.cs">
-      <DependentUpon>AddItemForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ItemForms\AddItemUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\ItemForms\AddItemUserControl.Designer.cs">
       <DependentUpon>AddItemUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ItemForms\DeleteItemForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ItemForms\DeleteItemForm.Designer.cs">
-      <DependentUpon>DeleteItemForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ItemForms\DeleteItemUserControl.cs">
       <SubType>UserControl</SubType>
@@ -137,12 +125,6 @@
       <DependentUpon>ItemLookupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ItemForms\ItemValidator.cs" />
-    <Compile Include="Forms\ItemForms\UpdateItemForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ItemForms\UpdateItemForm.Designer.cs">
-      <DependentUpon>UpdateItemForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ItemForms\UpdateItemUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,29 +143,11 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ParentForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ParentForm.Designer.cs">
-      <DependentUpon>ParentForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ServiceForms\AddServiceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ServiceForms\AddServiceForm.Designer.cs">
-      <DependentUpon>AddServiceForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ServiceForms\AddServiceUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\ServiceForms\AddServiceUserControl.Designer.cs">
       <DependentUpon>AddServiceUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ServiceForms\DeleteServiceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ServiceForms\DeleteServiceForm.Designer.cs">
-      <DependentUpon>DeleteServiceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ServiceForms\DeleteServiceUserControl.cs">
       <SubType>UserControl</SubType>
@@ -198,12 +162,6 @@
       <DependentUpon>ServiceLookupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ServiceForms\ServiceValidator.cs" />
-    <Compile Include="Forms\ServiceForms\UpdateServiceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ServiceForms\UpdateServiceForm.Designer.cs">
-      <DependentUpon>UpdateServiceForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ServiceForms\UpdateServiceUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -234,23 +192,11 @@
     <Compile Include="Forms\SummaryForms\AnalyticsUserControl.Designer.cs">
       <DependentUpon>AnalyticsUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\TransactionForms\AddTransactionForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\TransactionForms\AddTransactionForm.Designer.cs">
-      <DependentUpon>AddTransactionForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\TransactionForms\AddTransactionUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\TransactionForms\AddTransactionUserControl.Designer.cs">
       <DependentUpon>AddTransactionUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\TransactionForms\DeleteTransactionForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\TransactionForms\DeleteTransactionForm.Designer.cs">
-      <DependentUpon>DeleteTransactionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TransactionForms\DeleteTransactionUserControl.cs">
       <SubType>UserControl</SubType>
@@ -259,23 +205,11 @@
       <DependentUpon>DeleteTransactionUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TransactionForms\TransactionValidator.cs" />
-    <Compile Include="Forms\TransactionForms\UpdateTransactionForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\TransactionForms\UpdateTransactionForm.Designer.cs">
-      <DependentUpon>UpdateTransactionForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\TransactionForms\UpdateTransactionUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\TransactionForms\UpdateTransactionUserControl.Designer.cs">
       <DependentUpon>UpdateTransactionUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\VehicleForms\AddVehicleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\VehicleForms\AddVehicleForm.Designer.cs">
-      <DependentUpon>AddVehicleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\VehicleForms\AddVehicleUserControl.cs">
       <SubType>UserControl</SubType>
@@ -283,23 +217,11 @@
     <Compile Include="Forms\VehicleForms\AddVehicleUserControl.Designer.cs">
       <DependentUpon>AddVehicleUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\VehicleForms\DeleteVehicleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\VehicleForms\DeleteVehicleForm.Designer.cs">
-      <DependentUpon>DeleteVehicleForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\VehicleForms\DeleteVehicleUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\VehicleForms\DeleteVehicleUserControl.Designer.cs">
       <DependentUpon>DeleteVehicleUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\VehicleForms\UpdateVehicleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\VehicleForms\UpdateVehicleForm.Designer.cs">
-      <DependentUpon>UpdateVehicleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\VehicleForms\UpdateVehicleUserControl.cs">
       <SubType>UserControl</SubType>
@@ -334,23 +256,14 @@
     <EmbeddedResource Include="Forms\EmployeeForms\EmployeeHomeUserControl.resx">
       <DependentUpon>EmployeeHomeUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ItemForms\AddItemForm.resx">
-      <DependentUpon>AddItemForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemForms\AddItemUserControl.resx">
       <DependentUpon>AddItemUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ItemForms\DeleteItemForm.resx">
-      <DependentUpon>DeleteItemForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemForms\DeleteItemUserControl.resx">
       <DependentUpon>DeleteItemUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemForms\ItemLookupForm.resx">
       <DependentUpon>ItemLookupForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ItemForms\UpdateItemForm.resx">
-      <DependentUpon>UpdateItemForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemForms\UpdateItemUserControl.resx">
       <DependentUpon>UpdateItemUserControl.cs</DependentUpon>
@@ -361,26 +274,14 @@
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ParentForm.resx">
-      <DependentUpon>ParentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ServiceForms\AddServiceForm.resx">
-      <DependentUpon>AddServiceForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceForms\AddServiceUserControl.resx">
       <DependentUpon>AddServiceUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ServiceForms\DeleteServiceForm.resx">
-      <DependentUpon>DeleteServiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceForms\DeleteServiceUserControl.resx">
       <DependentUpon>DeleteServiceUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceForms\ServiceLookupForm.resx">
       <DependentUpon>ServiceLookupForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ServiceForms\UpdateServiceForm.resx">
-      <DependentUpon>UpdateServiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceForms\UpdateServiceUserControl.resx">
       <DependentUpon>UpdateServiceUserControl.cs</DependentUpon>
@@ -397,38 +298,20 @@
     <EmbeddedResource Include="Forms\SummaryForms\AnalyticsUserControl.resx">
       <DependentUpon>AnalyticsUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\TransactionForms\AddTransactionForm.resx">
-      <DependentUpon>AddTransactionForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TransactionForms\AddTransactionUserControl.resx">
       <DependentUpon>AddTransactionUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\TransactionForms\DeleteTransactionForm.resx">
-      <DependentUpon>DeleteTransactionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TransactionForms\DeleteTransactionUserControl.resx">
       <DependentUpon>DeleteTransactionUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\TransactionForms\UpdateTransactionForm.resx">
-      <DependentUpon>UpdateTransactionForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TransactionForms\UpdateTransactionUserControl.resx">
       <DependentUpon>UpdateTransactionUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\VehicleForms\AddVehicleForm.resx">
-      <DependentUpon>AddVehicleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleForms\AddVehicleUserControl.resx">
       <DependentUpon>AddVehicleUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\VehicleForms\DeleteVehicleForm.resx">
-      <DependentUpon>DeleteVehicleForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleForms\DeleteVehicleUserControl.resx">
       <DependentUpon>DeleteVehicleUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\VehicleForms\UpdateVehicleForm.resx">
-      <DependentUpon>UpdateVehicleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VehicleForms\UpdateVehicleUserControl.resx">
       <DependentUpon>UpdateVehicleUserControl.cs</DependentUpon>

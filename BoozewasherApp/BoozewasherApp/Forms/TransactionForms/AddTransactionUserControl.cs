@@ -90,7 +90,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         public void LoadDgvTransactions()
         {
-            dgvTransactions.DataSource = mainForm.TransactionRepository.GetAllTransactions();
+            dgvTransactions.DataSource = mainForm.TransactionRepository.GetTransactionsByBranchId(mainForm.UserInformation.BranchId);
         }
 
         private void OpenServiceLookupForm()
@@ -107,7 +107,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         private void OpenItemLookupForm()
         {
-            var itemLookupForm = new ItemLookupForm(mainForm.ItemRepository);
+            var itemLookupForm = new ItemLookupForm(mainForm);
             itemLookupForm.ShowDialog();
 
             if (string.IsNullOrEmpty(ItemsListInForm))

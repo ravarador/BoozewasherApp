@@ -56,6 +56,33 @@ namespace BoozewasherInfrastructure.Repositories
                                                              BranchName = a.Branch.Name }).ToList();
         }
 
+        public List<TransactionDto> GetTransactionsByBranchId(int id)
+        {
+            var client = new RestClient(Resources.ConnectionString);
+            var request = new RestRequest("/api/transactions/GetTransactionsByBranchId/" + id, Method.GET);
+            request.RequestFormat = DataFormat.Json;
+            var response = client.Execute(request);
+
+            var dataList = JsonConvert.DeserializeObject<List<Transaction>>(response.Content);
+
+            return dataList.Select(a => new TransactionDto
+            {
+                Id = a.Id,
+                DateTime = a.DateTime,
+                ServiceId = a.ServiceId,
+                ServiceType = a.Service.Type,
+                ServiceExpense = a.Service.Expense.Value,
+                VehicleId = a.VehicleId,
+                VehicleType = a.Vehicle.Type,
+                VehicleBrand = a.Vehicle.Brand,
+                VehicleModel = a.Vehicle.Model,
+                PlateNumber = a.PlateNumber,
+                Cost = a.Cost,
+                ItemsList = a.ItemsList,
+                BranchName = a.Branch.Name
+            }).ToList();
+        }
+
         public List<Transaction> GetTransactionsByDateRange(SummaryDateAndDateRangeDto dateAndDateRangeDto)
         {
             var client = new RestClient(Resources.ConnectionString);

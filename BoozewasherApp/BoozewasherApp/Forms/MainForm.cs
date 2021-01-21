@@ -39,7 +39,7 @@ namespace BoozewasherApp.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            lblUserInformation.Text = $"User: {UserInformation.FirstName} {UserInformation.LastName} | Logged In DateTime: {DateTime.Now.ToShortDateString()}";
+            lblUserInformation.Text = $"User: {UserInformation.FirstName} {UserInformation.LastName} | Logged In DateTime: {DateTime.Now.ToShortDateString()} | Branch ID: {UserInformation.BranchId}";
         }
         #region TAB CONTROL
         private void btnHome_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Home;

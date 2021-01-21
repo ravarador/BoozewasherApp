@@ -16,7 +16,7 @@ namespace BoozewasherInfrastructure.Repositories
         public List<Branch> GetAllBranches()
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/branch/getbranches/", Method.GET);
+            var request = new RestRequest("/api/branches/getbranches/", Method.GET);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);
 

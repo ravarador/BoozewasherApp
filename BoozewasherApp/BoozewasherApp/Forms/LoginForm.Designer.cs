@@ -37,7 +37,7 @@ namespace BoozewasherApp.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBranch = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -130,15 +130,15 @@ namespace BoozewasherApp.Forms
             this.btnClose.TabIndex = 5;
             this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // comboBranch
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(59, 153);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 24);
-            this.comboBox1.TabIndex = 7;
+            this.comboBranch.BackColor = System.Drawing.Color.LightGray;
+            this.comboBranch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBranch.FormattingEnabled = true;
+            this.comboBranch.Location = new System.Drawing.Point(59, 153);
+            this.comboBranch.Name = "comboBranch";
+            this.comboBranch.Size = new System.Drawing.Size(177, 24);
+            this.comboBranch.TabIndex = 7;
             // 
             // label3
             // 
@@ -156,7 +156,7 @@ namespace BoozewasherApp.Forms
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(315, 365);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBranch);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
@@ -170,6 +170,7 @@ namespace BoozewasherApp.Forms
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -187,7 +188,7 @@ namespace BoozewasherApp.Forms
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBranch;
         private System.Windows.Forms.Label label3;
     }
 }

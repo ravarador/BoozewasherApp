@@ -14,18 +14,21 @@ namespace BoozewasherApp.Forms
 {
     public partial class LoginForm : Form
     {
+        public IBranchRepository BranchRepository { get; private set; }
         public ILoginRepository LoginRepository { get; private set; }
         public IServiceRepository ServiceRepository { get; private set; }
         public IVehicleRepository VehicleRepository { get; private set; }
         public ITransactionRepository TransactionRepository { get; private set; }
         public IItemRepository ItemRepository { get; private set; }
-        public LoginForm(ILoginRepository loginRepository, 
+        public LoginForm(IBranchRepository branchRepository,
+                         ILoginRepository loginRepository, 
                          IServiceRepository serviceRepository,
                          IItemRepository itemRepository,
                          IVehicleRepository vehicleRepository,
                          ITransactionRepository transactionRepository)
         {
             InitializeComponent();
+            BranchRepository = branchRepository;
             LoginRepository = loginRepository;
             ServiceRepository = serviceRepository;
             VehicleRepository = vehicleRepository;
@@ -35,6 +38,12 @@ namespace BoozewasherApp.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            int? selectedBranchId = null;
+            if (comboBranch.SelectedItem != null)
+            {
+                selectedBranchId = GetBranchIdFromComboBox();
+            }
+
             var credentials = new LoginDto
             {
                 Email = txtboxEmail.Text,
@@ -46,7 +55,8 @@ namespace BoozewasherApp.Forms
             var UserInformation = new UserInformationDto()
             {
                 FirstName = validate.FirstName,
-                LastName = validate.LastName
+                LastName = validate.LastName,
+                BranchId = selectedBranchId.Value
             };
 
             if (validate.IsAuthenticated)
@@ -62,12 +72,32 @@ namespace BoozewasherApp.Forms
                 MessageBox.Show(validate.ResponseMessage);
             }
         }
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            LoadBranchesToCombobox();
+        }
+        #region Private/public methods
+        private int GetBranchIdFromComboBox()
+        {
+            var selectedItem = comboBranch.SelectedItem.ToString();
+            var branchId = selectedItem.Split('-')[0].Trim();
+            return int.Parse(branchId);
+        }
+        private void LoadBranchesToCombobox()
+        {
+            var branches = BranchRepository.GetAllBranches();
 
+            foreach (var branch in branches)
+            {
+                comboBranch.Items.Add($"{branch.Id} - {branch.Name}");
+            }
+        }
         public void ResetFields()
         {
             txtboxEmail.Text = string.Empty;
             txtboxPassword.Text = string.Empty;
         }
 
+        #endregion
     }
 }

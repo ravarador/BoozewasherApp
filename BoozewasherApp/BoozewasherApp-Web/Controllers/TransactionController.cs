@@ -130,6 +130,8 @@ namespace BoozewasherApp_Web.Controllers
         #endregion
 
         #region Selected
+
+        [Authorize(Roles = RoleName.CanManageTransactions)]
         public ActionResult SelectedVehicle(int id)
         {
             var vehicle = _context.Vehicles.SingleOrDefault(i => i.Id == id);
@@ -150,7 +152,7 @@ namespace BoozewasherApp_Web.Controllers
             return View("TransactionForm", viewModel);
         }
 
-  
+        [Authorize(Roles = RoleName.CanManageTransactions)]
         public ActionResult SelectedItem(int id)
         {
             var item = _context.Items.SingleOrDefault(i => i.Id == id);

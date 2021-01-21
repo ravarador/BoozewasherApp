@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace BoozewasherDomain.Dtos
 {
-    public class AuthenticationMessageDto
+    public class UserInformationDto
     {
-        public bool IsAuthenticated { get; set; }
-        public string ResponseMessage { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
     }

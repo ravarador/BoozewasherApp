@@ -111,27 +111,26 @@ namespace BoozewasherApp_Web.Controllers
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, false, shouldLockout: false);
-            
+            var userInfo = SignInManager.UserManager.FindByEmail(model.Email);
+            message.IsAuthenticated = false;
             switch (result)
             {
                 case SignInStatus.Success:
                     message.IsAuthenticated = true;
                     message.ResponseMessage = "Login successful";
+                    message.FirstName = userInfo.FirstName;
+                    message.LastName = userInfo.LastName;
                     return JsonConvert.SerializeObject(message);
                 case SignInStatus.LockedOut:
-                    message.IsAuthenticated = false;
                     message.ResponseMessage = "You have been locked out";
                     return JsonConvert.SerializeObject(message);
                 case SignInStatus.RequiresVerification:
-                    message.IsAuthenticated = false;
                     message.ResponseMessage = "Your account requires verification";
                     return JsonConvert.SerializeObject(message);
                 case SignInStatus.Failure:
-                    message.IsAuthenticated = false;
                     message.ResponseMessage = "Incorrect username/password";
                     return JsonConvert.SerializeObject(message);
                 default:
-                    message.IsAuthenticated = false;
                     message.ResponseMessage = "Unable to login due to unknown error";
                     return JsonConvert.SerializeObject(message);
             }

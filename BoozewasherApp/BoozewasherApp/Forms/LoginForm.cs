@@ -43,10 +43,16 @@ namespace BoozewasherApp.Forms
             };
             var validate = LoginRepository.AuthenticateLogin(credentials);
 
+            var UserInformation = new UserInformationDto()
+            {
+                FirstName = validate.FirstName,
+                LastName = validate.LastName
+            };
+
             if (validate.IsAuthenticated)
             {
                 MessageBox.Show(validate.ResponseMessage);
-                var mainForm = new MainForm(ServiceRepository, ItemRepository, VehicleRepository, TransactionRepository);
+                var mainForm = new MainForm(UserInformation, ServiceRepository, ItemRepository, VehicleRepository, TransactionRepository);
                 mainForm.LoginForm = this;
                 mainForm.Show();
                 this.Hide();

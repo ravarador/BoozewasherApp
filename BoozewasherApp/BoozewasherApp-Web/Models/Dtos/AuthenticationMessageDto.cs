@@ -9,5 +9,7 @@ namespace BoozewasherApp_Web.Models.Dtos
     {
         public bool IsAuthenticated { get; set; }
         public string ResponseMessage { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     }
 }

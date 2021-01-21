@@ -1,5 +1,6 @@
 ﻿using BoozewasherApp.Forms.ItemForms;
 using BoozewasherApp.Helpers;
+using BoozewasherDomain.Dtos;
 using BoozewasherDomain.Enums;
 using BoozewasherDomain.IRepositories;
 using System;
@@ -17,17 +18,19 @@ namespace BoozewasherApp.Forms
     public partial class MainForm : Form
     {
         public LoginForm LoginForm { get; set; }
+        public UserInformationDto  UserInformation { get; private set; }
         public IServiceRepository ServiceRepository { get; private set; }
         public IVehicleRepository VehicleRepository { get; private set; }
         public ITransactionRepository TransactionRepository { get; private set; }
         public IItemRepository ItemRepository { get; private set; }
-        public MainForm(IServiceRepository serviceRepository,
+        public MainForm(UserInformationDto userInformation,
+                        IServiceRepository serviceRepository,
                         IItemRepository itemRepository,
                         IVehicleRepository vehicleRepository,
                         ITransactionRepository transactionRepository)
         {
             InitializeComponent();
-
+            UserInformation = userInformation;
             ServiceRepository = serviceRepository;
             VehicleRepository = vehicleRepository;
             TransactionRepository = transactionRepository;
@@ -36,7 +39,7 @@ namespace BoozewasherApp.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            lblUserInformation.Text = $"User: {UserInformation.FirstName} {UserInformation.LastName} | Logged In DateTime: {DateTime.Now.ToShortDateString()}";
         }
         #region TAB CONTROL
         private void btnHome_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Home;

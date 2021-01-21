@@ -27,6 +27,7 @@ namespace BoozewasherApp
             container.Register<ITransactionRepository, TransactionRepository>(Lifestyle.Singleton);
             container.Register<IItemRepository, ItemRepository>(Lifestyle.Singleton);
             container.Register<ILoginRepository, LoginRepository>(Lifestyle.Singleton);
+            container.Register<IBranchRepository, BranchRepository>(Lifestyle.Singleton);
             //container.Register<ParentForm>(Lifestyle.Singleton);
             //container.Register<MainForm>(Lifestyle.Singleton);
             container.Register<LoginForm>(Lifestyle.Singleton);

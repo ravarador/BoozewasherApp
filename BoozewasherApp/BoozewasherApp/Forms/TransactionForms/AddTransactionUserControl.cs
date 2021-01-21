@@ -70,7 +70,7 @@ namespace BoozewasherApp.Forms.TransactionForms
                 PlateNumber = txtboxPlateNumber.Text,
                 Cost = numericCost.Value,
                 ItemsList = ItemsListInForm,
-                BranchId = 1
+                BranchId = mainForm.UserInformation.BranchId
 
             };
 

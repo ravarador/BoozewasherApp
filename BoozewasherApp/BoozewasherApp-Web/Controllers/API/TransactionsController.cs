@@ -33,7 +33,17 @@ namespace BoozewasherApp_Web.Controllers.API
                                                        .ToList();
             return Ok(transactionsDto);
         }
+        //GET /API/Transactions/GetTransactionsByBranchId
+        public IHttpActionResult GetTransactionsByBranchId(int id)
+        {
+            var transactions = _context.Transactions.Include("Service")
+                                                .Include("Vehicle")
+                                                .Include("Branch")
+                                                .Where(a => a.BranchId == id)
+                                                .ToList();
 
+            return Ok(transactions);
+        }
         [HttpPost]
         //GET /API/Transactions
         public IList<Transaction> GetTransactionsByDateRange(SummaryDateAndDateRangeDto dateAndDateRangeDto)

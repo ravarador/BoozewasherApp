@@ -11,5 +11,6 @@ namespace BoozewasherDomain.Dtos
         public DateTime DateTime { get; set; }
         public DateTime DateTimeFrom { get; set; }
         public DateTime DateTimeTo { get; set; }
+        public int BranchId { get; set; }
     }
 }

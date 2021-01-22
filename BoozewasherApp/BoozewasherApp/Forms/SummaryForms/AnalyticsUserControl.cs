@@ -120,7 +120,7 @@ namespace BoozewasherApp.Forms.SummaryForms
         private void LoadData()
         {
             SummaryDateAndDateRangeDto dateAndDateRangeDto = new SummaryDateAndDateRangeDto();
-
+            dateAndDateRangeDto.BranchId = mainForm.UserInformation.BranchId;
             if (radSelectDate.Checked)
             {
                 dateAndDateRangeDto.DateTime = datePickerSelectDate.Value.Date;

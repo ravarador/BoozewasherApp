@@ -10,5 +10,6 @@ namespace BoozewasherApp_Web.Models.Dtos
         public DateTime DateTimeFrom { get; set; }
         public DateTime DateTimeTo { get; set; }
         public DateTime DateTime { get; set; }
+        public int BranchId { get; set; }
     }
 }

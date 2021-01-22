@@ -56,7 +56,8 @@ namespace BoozewasherApp_Web.Controllers.API
                                                     a.DateTime.Day >= dateAndDateRangeDto.DateTimeFrom.Day &&
                                                     a.DateTime.Year <= dateAndDateRangeDto.DateTimeTo.Year &&
                                                     a.DateTime.Month <= dateAndDateRangeDto.DateTimeTo.Month &&
-                                                    a.DateTime.Day <= dateAndDateRangeDto.DateTimeTo.Day)
+                                                    a.DateTime.Day <= dateAndDateRangeDto.DateTimeTo.Day &&
+                                                    a.BranchId == dateAndDateRangeDto.BranchId)
                                         .ToList();
         }
 
@@ -68,7 +69,8 @@ namespace BoozewasherApp_Web.Controllers.API
                                         .Include("Branch")
                                         .Where(a => a.DateTime.Year == dateAndDateRangeDto.DateTime.Year &&
                                                     a.DateTime.Month == dateAndDateRangeDto.DateTime.Month &&
-                                                    a.DateTime.Day == dateAndDateRangeDto.DateTime.Day)
+                                                    a.DateTime.Day == dateAndDateRangeDto.DateTime.Day &&
+                                                    a.BranchId == dateAndDateRangeDto.BranchId)
                                         .ToList();
         }
 

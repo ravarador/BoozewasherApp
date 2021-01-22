@@ -51,7 +51,7 @@ namespace BoozewasherApp.Forms.SummaryForms
         #region Private/public methods
         public void DrawGraphAllData()
         {
-            SummaryList = mainForm.TransactionRepository.GetAllTransactions()
+            SummaryList = mainForm.TransactionRepository.GetTransactionsByBranchId(mainForm.UserInformation.BranchId)
                                                       .Select(a => new SummaryDto
                                                       {
                                                           Id = a.Id,

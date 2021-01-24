@@ -238,6 +238,11 @@
     <Compile Include="Migrations\202101240644449_AddEmployeeTable.designer.cs">
       <DependentUpon>202101240644449_AddEmployeeTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101240700588_AddAttendanceTable.cs" />
+    <Compile Include="Migrations\202101240700588_AddAttendanceTable.designer.cs">
+      <DependentUpon>202101240700588_AddAttendanceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContextModel\Attendance.cs" />
     <Compile Include="Models\ContextModel\Branch.cs" />
     <Compile Include="Models\ContextModel\Employee.cs" />
     <Compile Include="Models\ContextModel\Item.cs" />
@@ -689,6 +694,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101240644449_AddEmployeeTable.resx">
       <DependentUpon>202101240644449_AddEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101240700588_AddAttendanceTable.resx">
+      <DependentUpon>202101240700588_AddAttendanceTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

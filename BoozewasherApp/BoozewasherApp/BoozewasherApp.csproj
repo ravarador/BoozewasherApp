@@ -100,6 +100,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SummaryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EmployeeForms\AddEmployeeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeForms\AddEmployeeUserControl.Designer.cs">
+      <DependentUpon>AddEmployeeUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EmployeeForms\EmployeeHomeUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -259,6 +265,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="Forms\EmployeeForms\AddEmployeeUserControl.resx">
+      <DependentUpon>AddEmployeeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmployeeForms\EmployeeHomeUserControl.resx">
       <DependentUpon>EmployeeHomeUserControl.cs</DependentUpon>
     </EmbeddedResource>

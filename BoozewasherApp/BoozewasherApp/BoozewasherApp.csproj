@@ -112,6 +112,12 @@
     <Compile Include="Forms\EmployeeForms\EmployeeHomeUserControl.Designer.cs">
       <DependentUpon>EmployeeHomeUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EmployeeForms\UpdateEmployeeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeForms\UpdateEmployeeUserControl.Designer.cs">
+      <DependentUpon>UpdateEmployeeUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ItemForms\AddItemUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -270,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmployeeForms\EmployeeHomeUserControl.resx">
       <DependentUpon>EmployeeHomeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeeForms\UpdateEmployeeUserControl.resx">
+      <DependentUpon>UpdateEmployeeUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemForms\AddItemUserControl.resx">
       <DependentUpon>AddItemUserControl.cs</DependentUpon>

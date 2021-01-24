@@ -234,7 +234,12 @@
     <Compile Include="Migrations\202101201332280_AddFirstNameAndLastNameToAppUser.designer.cs">
       <DependentUpon>202101201332280_AddFirstNameAndLastNameToAppUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101240644449_AddEmployeeTable.cs" />
+    <Compile Include="Migrations\202101240644449_AddEmployeeTable.designer.cs">
+      <DependentUpon>202101240644449_AddEmployeeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ContextModel\Branch.cs" />
+    <Compile Include="Models\ContextModel\Employee.cs" />
     <Compile Include="Models\ContextModel\Item.cs" />
     <Compile Include="Models\ContextModel\RoleName.cs" />
     <Compile Include="Models\Dtos\AuthenticationMessageDto.cs" />
@@ -681,6 +686,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101201332280_AddFirstNameAndLastNameToAppUser.resx">
       <DependentUpon>202101201332280_AddFirstNameAndLastNameToAppUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101240644449_AddEmployeeTable.resx">
+      <DependentUpon>202101240644449_AddEmployeeTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -192,6 +192,7 @@
     <Compile Include="Controllers\API\ServicesController.cs" />
     <Compile Include="Controllers\API\TransactionsController.cs" />
     <Compile Include="Controllers\API\VehiclesController.cs" />
+    <Compile Include="Controllers\BranchController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -646,6 +647,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\AddService\" />
+    <Folder Include="Views\Branch\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />

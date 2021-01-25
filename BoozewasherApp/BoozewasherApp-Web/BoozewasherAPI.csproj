@@ -646,6 +646,7 @@
     <Content Include="Scripts\moment-with-locales.min.js.map" />
     <Content Include="Views\Transaction\ItemLookup.cshtml" />
     <Content Include="Views\Branch\Index.cshtml" />
+    <Content Include="Views\Branch\BranchForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

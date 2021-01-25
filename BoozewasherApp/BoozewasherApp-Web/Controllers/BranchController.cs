@@ -1,4 +1,6 @@
 ﻿using BoozewasherApp_Web.Models;
+using BoozewasherApp_Web.Models.ContextModel;
+using BoozewasherApp_Web.Models.ViewModels.Branches;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +28,16 @@ namespace BoozewasherApp_Web.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult New()
+        {
+            var viewModel = new BranchFormViewModel
+            {
+                Branch = new Branch()
+            };
+
+            return View("BranchForm", viewModel);
         }
     }
 }

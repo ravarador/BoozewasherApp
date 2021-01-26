@@ -250,6 +250,7 @@
     <Compile Include="Models\ContextModel\Item.cs" />
     <Compile Include="Models\ContextModel\RoleName.cs" />
     <Compile Include="Models\Dtos\AuthenticationMessageDto.cs" />
+    <Compile Include="Models\Dtos\BranchDto.cs" />
     <Compile Include="Models\Dtos\ItemDto.cs" />
     <Compile Include="Models\Dtos\ServiceDto.cs" />
     <Compile Include="Global.asax.cs">

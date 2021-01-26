@@ -24,6 +24,9 @@ namespace BoozewasherApp_Web.App_Start
 
             Mapper.CreateMap<Transaction, TransactionDto>();
             Mapper.CreateMap<TransactionDto, Transaction>();
+
+            Mapper.CreateMap<Branch, BranchDto>();
+            Mapper.CreateMap<BranchDto, Branch>();
         }
     }
 }

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BoozewasherApp_Web.Models.ContextModel.Branch>
+@{
+    ViewBag.Title = "Index";
+}
+<p></p>
+<h2>Branches</h2>
+<p></p>
+<table id="branches" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#branches").DataTable({
+                ajax: {
+                    url: "API/Branches/GetBranches",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "Name"
+                    },
+                    {
+                        data: "Address"
+                    }
+                ]
+            });
+
+        });
+    </script>
+}

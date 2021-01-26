@@ -45,6 +45,7 @@
     <Compile Include="Dtos\LoginDto.cs" />
     <Compile Include="Dtos\UserInformationDto.cs" />
     <Compile Include="Entities\Branch.cs" />
+    <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Item.cs" />
     <Compile Include="Entities\Service.cs" />
     <Compile Include="Entities\Summary.cs" />

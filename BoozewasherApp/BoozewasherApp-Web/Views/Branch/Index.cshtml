@@ -23,7 +23,28 @@
     <script>
         $(document).ready(function () {
             $("#branches").DataTable({
-
+                ajax: {
+                    url: "API/Branches/GetBranches",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "Name",
+                        render: function (data, type, Branch) {
+                            return "<a href='/Branch/Edit/" + Branch.Id + "'>" + Branch.Name + "</a>";
+                        }
+                    },
+                    {
+                        data: "Address"
+                    },
+                    {
+                        data: "Id",
+                        className: "text-center",
+                        render: function (data) {
+                            return "<button class=' btn btn-outline-primary js-delete' data-branch-id=" + data + "> Delete </button>";
+                        }
+                    }
+                ]
             });
 
 

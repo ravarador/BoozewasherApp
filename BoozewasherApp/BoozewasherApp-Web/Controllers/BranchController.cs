@@ -39,5 +39,54 @@ namespace BoozewasherApp_Web.Controllers
 
             return View("BranchForm", viewModel);
         }
+
+        public ActionResult Edit(int id)
+        {
+            var branch = _context.Branches.SingleOrDefault(b => b.Id == id);
+
+            if (branch == null)
+                return HttpNotFound();
+
+            var viewModel = new BranchFormViewModel
+            {
+                Branch = branch
+            };
+
+            return View("BranchForm", viewModel);
+        }
+
+        public ActionResult Delete(int id)
+        {
+            var branch = _context.Branches.SingleOrDefault(b => b.Id == id);
+
+            if (branch == null)
+                return HttpNotFound();
+
+            _context.Branches.Remove(branch);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Branch");
+        }
+
+        public ActionResult Save(Branch branch)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("BranchForm");
+            }
+
+            if (branch.Id == 0)
+                _context.Branches.Add(branch);
+            else
+            {
+                var branchInDB = _context.Branches.Single(b => b.Id == branch.Id);
+
+                branchInDB.Name = branch.Name;
+                branchInDB.Address = branch.Name;
+            }
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Branch");
+        }
     }
 }

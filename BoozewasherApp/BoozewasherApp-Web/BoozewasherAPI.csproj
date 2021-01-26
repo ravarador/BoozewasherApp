@@ -244,6 +244,10 @@
     <Compile Include="Migrations\202101240700588_AddAttendanceTable.designer.cs">
       <DependentUpon>202101240700588_AddAttendanceTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101261437518_SeedNewUserAndManageBranch.cs" />
+    <Compile Include="Migrations\202101261437518_SeedNewUserAndManageBranch.designer.cs">
+      <DependentUpon>202101261437518_SeedNewUserAndManageBranch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ContextModel\Attendance.cs" />
     <Compile Include="Models\ContextModel\Branch.cs" />
     <Compile Include="Models\ContextModel\Employee.cs" />
@@ -704,6 +708,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101240700588_AddAttendanceTable.resx">
       <DependentUpon>202101240700588_AddAttendanceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101261437518_SeedNewUserAndManageBranch.resx">
+      <DependentUpon>202101261437518_SeedNewUserAndManageBranch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

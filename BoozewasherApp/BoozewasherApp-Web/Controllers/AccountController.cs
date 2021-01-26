@@ -206,6 +206,23 @@ namespace BoozewasherApp_Web.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    //var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
+                    //var roleManager = new RoleManager<IdentityRole>(roleStore);
+                    //await roleManager.CreateAsync(new IdentityRole("CanManageBranches"));
+                    //await UserManager.AddToRoleAsync(user.Id, "CanManageBranches");
+
+                    //await roleManager.CreateAsync(new IdentityRole("CanManageVehicles"));
+                    //await UserManager.AddToRoleAsync(user.Id, "CanManageVehicles");
+
+                    //await roleManager.CreateAsync(new IdentityRole("CanManageServices"));
+                    //await UserManager.AddToRoleAsync(user.Id, "CanManageServices");
+
+                    //await roleManager.CreateAsync(new IdentityRole("CanManageItems"));
+                    //await UserManager.AddToRoleAsync(user.Id, "CanManageItems");
+
+                    //await roleManager.CreateAsync(new IdentityRole("CanManageTransactions"));
+                    //await UserManager.AddToRoleAsync(user.Id, "CanManageTransactions");
+
 
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     

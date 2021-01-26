@@ -30,6 +30,7 @@ namespace BoozewasherApp_Web.Controllers
             return View();
         }
 
+        [Authorize(Roles = RoleName.CanManageBranches)]
         public ActionResult New()
         {
             var viewModel = new BranchFormViewModel
@@ -40,6 +41,7 @@ namespace BoozewasherApp_Web.Controllers
             return View("BranchForm", viewModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageBranches)]
         public ActionResult Edit(int id)
         {
             var branch = _context.Branches.SingleOrDefault(b => b.Id == id);
@@ -55,6 +57,7 @@ namespace BoozewasherApp_Web.Controllers
             return View("BranchForm", viewModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageBranches)]
         public ActionResult Delete(int id)
         {
             var branch = _context.Branches.SingleOrDefault(b => b.Id == id);
@@ -68,6 +71,7 @@ namespace BoozewasherApp_Web.Controllers
             return RedirectToAction("Index", "Branch");
         }
 
+        [Authorize(Roles = RoleName.CanManageBranches)]
         public ActionResult Save(Branch branch)
         {
             if (!ModelState.IsValid)

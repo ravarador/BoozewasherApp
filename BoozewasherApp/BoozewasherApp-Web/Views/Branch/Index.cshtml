@@ -47,7 +47,21 @@
                 ]
             });
 
+            $("#branches").on("click", ".js-delete", function () {
+                var button = $(this);
 
+                bootbox.confirm("Would you like to delete this branch?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "API/Branches/DeleteBranch/" + button.attr("data-branch-id"),
+                            method: "DELETE",
+                            success: function () {
+                                button.parents("tr").remove();
+                            }
+                        });
+                    }
+                });
+            });
         });
     </script>
 }

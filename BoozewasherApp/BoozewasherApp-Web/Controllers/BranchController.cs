@@ -27,7 +27,10 @@ namespace BoozewasherApp_Web.Controllers
         // GET: Branch
         public ActionResult Index()
         {
-            return View();
+            if (User.IsInRole(RoleName.CanManageBranches))
+                return View("Index");
+
+            return View("ReadOnlyIndex");
         }
 
         [Authorize(Roles = RoleName.CanManageBranches)]

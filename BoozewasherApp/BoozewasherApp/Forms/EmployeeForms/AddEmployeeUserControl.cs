@@ -27,7 +27,8 @@ namespace BoozewasherApp.Forms.EmployeeForms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            AddEmployee();
+            LoadDgvEmployees();
         }
         #region Private/public Methods
         private void AddEmployee()
@@ -41,7 +42,8 @@ namespace BoozewasherApp.Forms.EmployeeForms
                 Birthdate = datePickerBirthdate.Value.ToShortDateString(),
                 TIN = txtboxTIN.Text,
                 Email = txtboxEmail.Text,
-                ContactNo = txtboxContactNumber.Text
+                ContactNo = txtboxContactNumber.Text,
+                BranchId = mainForm.UserInformation.BranchId
             };
 
             EmployeeValidator validator = new EmployeeValidator();

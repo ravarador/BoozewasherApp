@@ -286,6 +286,8 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ViewModels\Branches\BranchFormViewModel.cs" />
     <Compile Include="Models\ViewModels\Branches\BranchViewModel.cs" />
+    <Compile Include="Models\ViewModels\Employees\EmployeeFormViewModel.cs" />
+    <Compile Include="Models\ViewModels\Employees\EmployeeViewModel.cs" />
     <Compile Include="Models\ViewModels\Items\ItemsFormViewModel.cs" />
     <Compile Include="Models\ViewModels\Items\ItemViewModel.cs" />
     <Compile Include="Models\ViewModels\Services\ServiceFormViewModel.cs" />

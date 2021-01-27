@@ -46,9 +46,17 @@ namespace BoozewasherApp.Forms
         }
         #region TAB CONTROL
         private void btnHome_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Home;
-        private void btnSales_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Sales;
+        private void btnSales_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = (int)TabControlEnums.Sales;
+            ShowHideSalesUserControls();
+        }
 
-        private void btnEmployees_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Employees;
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = (int)TabControlEnums.Employees;
+            ShowHideEmployeeUserControls();
+        }
 
         private void btnReports_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Reports;
 
@@ -134,6 +142,10 @@ namespace BoozewasherApp.Forms
             addTransactionUserControl1.Visible = isAddTransaction;
             updateTransactionUserControl1.Visible = isUpdateTransaction;
             deleteTransactionUserControl1.Visible = isDeleteTransaction;
+        }
+        public void ShowHideEmployeeUserControls(bool isAddEmployee = false, bool isDeleteEmployee = false, bool isUpdateEmployee = false, bool isViewEmployee = false)
+        {
+            addEmployeeUserControl1.Visible = isAddEmployee;
         }
         private void btnItemsAdd_Click(object sender, EventArgs e)
         {
@@ -275,12 +287,23 @@ namespace BoozewasherApp.Forms
 
             this.Cursor = Cursors.Default;
         }
+        private void btnAddEmployee_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
 
+            addEmployeeUserControl1.mainForm = this;
+            addEmployeeUserControl1.LoadDgvEmployees();
+            ShowHideEmployeeUserControls(isAddEmployee: true);
+
+            this.Cursor = Cursors.Default;
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
             LoginForm.ResetFields();
             LoginForm.Show();
         }
+
+        
     }
 }

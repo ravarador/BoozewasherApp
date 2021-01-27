@@ -79,11 +79,13 @@
             this.addTransactionUserControl1 = new BoozewasherApp.Forms.TransactionForms.AddTransactionUserControl();
             this.updateTransactionUserControl1 = new BoozewasherApp.Forms.TransactionForms.UpdateTransactionUserControl();
             this.deleteTransactionUserControl1 = new BoozewasherApp.Forms.TransactionForms.DeleteTransactionUserControl();
-            this.tabPageInventory = new System.Windows.Forms.TabPage();
+            this.tabPageEmployees = new System.Windows.Forms.TabPage();
             this.tabPageReports = new System.Windows.Forms.TabPage();
             this.tabPageAnalytics = new System.Windows.Forms.TabPage();
             this.analyticsUserControl1 = new BoozewasherApp.Forms.SummaryForms.AnalyticsUserControl();
             this.tabPageSettings = new System.Windows.Forms.TabPage();
+            this.addEmployeeUserControl1 = new BoozewasherApp.Forms.EmployeeForms.AddEmployeeUserControl();
+            this.btnAddEmployee = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).BeginInit();
@@ -93,6 +95,7 @@
             this.panelItems.SuspendLayout();
             this.panelServices.SuspendLayout();
             this.panelVehicles.SuspendLayout();
+            this.tabPageEmployees.SuspendLayout();
             this.tabPageAnalytics.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -285,7 +288,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPageHome);
             this.tabControl1.Controls.Add(this.tabPageSales);
-            this.tabControl1.Controls.Add(this.tabPageInventory);
+            this.tabControl1.Controls.Add(this.tabPageEmployees);
             this.tabControl1.Controls.Add(this.tabPageReports);
             this.tabControl1.Controls.Add(this.tabPageAnalytics);
             this.tabControl1.Controls.Add(this.tabPageSettings);
@@ -824,15 +827,17 @@
             this.deleteTransactionUserControl1.TabIndex = 24;
             this.deleteTransactionUserControl1.Visible = false;
             // 
-            // tabPageInventory
+            // tabPageEmployees
             // 
-            this.tabPageInventory.BackColor = System.Drawing.Color.White;
-            this.tabPageInventory.Location = new System.Drawing.Point(4, 23);
-            this.tabPageInventory.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageInventory.Name = "tabPageInventory";
-            this.tabPageInventory.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInventory.Size = new System.Drawing.Size(1104, 685);
-            this.tabPageInventory.TabIndex = 1;
+            this.tabPageEmployees.BackColor = System.Drawing.Color.White;
+            this.tabPageEmployees.Controls.Add(this.btnAddEmployee);
+            this.tabPageEmployees.Controls.Add(this.addEmployeeUserControl1);
+            this.tabPageEmployees.Location = new System.Drawing.Point(4, 23);
+            this.tabPageEmployees.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageEmployees.Name = "tabPageEmployees";
+            this.tabPageEmployees.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageEmployees.Size = new System.Drawing.Size(1104, 685);
+            this.tabPageEmployees.TabIndex = 1;
             // 
             // tabPageReports
             // 
@@ -870,6 +875,31 @@
             this.tabPageSettings.Size = new System.Drawing.Size(1104, 685);
             this.tabPageSettings.TabIndex = 4;
             // 
+            // addEmployeeUserControl1
+            // 
+            this.addEmployeeUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.addEmployeeUserControl1.mainForm = null;
+            this.addEmployeeUserControl1.Name = "addEmployeeUserControl1";
+            this.addEmployeeUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.addEmployeeUserControl1.TabIndex = 0;
+            this.addEmployeeUserControl1.Visible = false;
+            // 
+            // btnAddEmployee
+            // 
+            this.btnAddEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnAddEmployee.FlatAppearance.BorderSize = 0;
+            this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEmployee.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnAddEmployee.Location = new System.Drawing.Point(841, 29);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(150, 47);
+            this.btnAddEmployee.TabIndex = 2;
+            this.btnAddEmployee.Text = "Add Employee";
+            this.btnAddEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAddEmployee.UseVisualStyleBackColor = false;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -897,6 +927,7 @@
             this.panelItems.ResumeLayout(false);
             this.panelServices.ResumeLayout(false);
             this.panelVehicles.ResumeLayout(false);
+            this.tabPageEmployees.ResumeLayout(false);
             this.tabPageAnalytics.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -913,7 +944,7 @@
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnAnalytics;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPageInventory;
+        private System.Windows.Forms.TabPage tabPageEmployees;
         private System.Windows.Forms.TabPage tabPageReports;
         private System.Windows.Forms.TabPage tabPageAnalytics;
         private System.Windows.Forms.TabPage tabPageSettings;
@@ -960,5 +991,7 @@
         private TransactionForms.UpdateTransactionUserControl updateTransactionUserControl1;
         private TransactionForms.DeleteTransactionUserControl deleteTransactionUserControl1;
         private SummaryForms.AnalyticsUserControl analyticsUserControl1;
+        private EmployeeForms.AddEmployeeUserControl addEmployeeUserControl1;
+        private System.Windows.Forms.Button btnAddEmployee;
     }
 }

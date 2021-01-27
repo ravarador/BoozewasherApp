@@ -656,11 +656,11 @@
     <Content Include="Views\Branch\Index.cshtml" />
     <Content Include="Views\Branch\BranchForm.cshtml" />
     <Content Include="Views\Branch\ReadOnlyIndex.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\AddService\" />
-    <Folder Include="Views\Employees\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />

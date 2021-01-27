@@ -112,6 +112,7 @@
     <Compile Include="Forms\EmployeeForms\EmployeeHomeUserControl.Designer.cs">
       <DependentUpon>EmployeeHomeUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EmployeeForms\EmployeeValidator.cs" />
     <Compile Include="Forms\EmployeeForms\UpdateEmployeeUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

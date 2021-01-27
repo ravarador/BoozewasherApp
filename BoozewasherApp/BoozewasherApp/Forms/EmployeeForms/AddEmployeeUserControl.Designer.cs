@@ -31,24 +31,24 @@ namespace BoozewasherApp.Forms.EmployeeForms
         {
             this.label15 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.txtboxName = new System.Windows.Forms.TextBox();
+            this.txtboxContactNumber = new System.Windows.Forms.TextBox();
+            this.txtboxEmail = new System.Windows.Forms.TextBox();
+            this.txtboxTIN = new System.Windows.Forms.TextBox();
+            this.txtboxAddress = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtboxFirstName = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtboxBarcode = new System.Windows.Forms.TextBox();
+            this.txtboxLastName = new System.Windows.Forms.TextBox();
             this.lblIsEmpty = new System.Windows.Forms.Label();
-            this.txtboxDescription = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtboxMiddleName = new System.Windows.Forms.TextBox();
             this.dgvEmployees = new System.Windows.Forms.DataGridView();
+            this.datePickerBirthdate = new System.Windows.Forms.DateTimePicker();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.SuspendLayout();
@@ -66,38 +66,104 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel7.Controls.Add(this.textBox5);
-            this.panel7.Controls.Add(this.textBox4);
-            this.panel7.Controls.Add(this.textBox3);
-            this.panel7.Controls.Add(this.textBox2);
-            this.panel7.Controls.Add(this.textBox1);
+            this.panel7.Controls.Add(this.datePickerBirthdate);
+            this.panel7.Controls.Add(this.txtboxContactNumber);
+            this.panel7.Controls.Add(this.txtboxEmail);
+            this.panel7.Controls.Add(this.txtboxTIN);
+            this.panel7.Controls.Add(this.txtboxAddress);
             this.panel7.Controls.Add(this.label2);
             this.panel7.Controls.Add(this.label1);
-            this.panel7.Controls.Add(this.txtboxName);
+            this.panel7.Controls.Add(this.txtboxFirstName);
             this.panel7.Controls.Add(this.btnAdd);
             this.panel7.Controls.Add(this.label8);
             this.panel7.Controls.Add(this.label14);
             this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.label11);
             this.panel7.Controls.Add(this.label12);
-            this.panel7.Controls.Add(this.txtboxBarcode);
+            this.panel7.Controls.Add(this.txtboxLastName);
             this.panel7.Controls.Add(this.lblIsEmpty);
-            this.panel7.Controls.Add(this.txtboxDescription);
+            this.panel7.Controls.Add(this.txtboxMiddleName);
             this.panel7.Location = new System.Drawing.Point(0, 28);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(983, 239);
             this.panel7.TabIndex = 45;
             // 
-            // txtboxName
+            // txtboxContactNumber
             // 
-            this.txtboxName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtboxName.BackColor = System.Drawing.Color.White;
-            this.txtboxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtboxName.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxName.Location = new System.Drawing.Point(399, 12);
-            this.txtboxName.Name = "txtboxName";
-            this.txtboxName.Size = new System.Drawing.Size(275, 18);
-            this.txtboxName.TabIndex = 5;
+            this.txtboxContactNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtboxContactNumber.BackColor = System.Drawing.Color.White;
+            this.txtboxContactNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxContactNumber.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxContactNumber.Location = new System.Drawing.Point(399, 180);
+            this.txtboxContactNumber.Name = "txtboxContactNumber";
+            this.txtboxContactNumber.Size = new System.Drawing.Size(275, 18);
+            this.txtboxContactNumber.TabIndex = 45;
+            // 
+            // txtboxEmail
+            // 
+            this.txtboxEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtboxEmail.BackColor = System.Drawing.Color.White;
+            this.txtboxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxEmail.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxEmail.Location = new System.Drawing.Point(399, 156);
+            this.txtboxEmail.Name = "txtboxEmail";
+            this.txtboxEmail.Size = new System.Drawing.Size(275, 18);
+            this.txtboxEmail.TabIndex = 44;
+            // 
+            // txtboxTIN
+            // 
+            this.txtboxTIN.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtboxTIN.BackColor = System.Drawing.Color.White;
+            this.txtboxTIN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxTIN.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxTIN.Location = new System.Drawing.Point(399, 132);
+            this.txtboxTIN.Name = "txtboxTIN";
+            this.txtboxTIN.Size = new System.Drawing.Size(275, 18);
+            this.txtboxTIN.TabIndex = 43;
+            // 
+            // txtboxAddress
+            // 
+            this.txtboxAddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtboxAddress.BackColor = System.Drawing.Color.White;
+            this.txtboxAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxAddress.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxAddress.Location = new System.Drawing.Point(399, 84);
+            this.txtboxAddress.Name = "txtboxAddress";
+            this.txtboxAddress.Size = new System.Drawing.Size(275, 18);
+            this.txtboxAddress.TabIndex = 41;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(289, 180);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 16);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Contact Number";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(354, 156);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 16);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Email";
+            // 
+            // txtboxFirstName
+            // 
+            this.txtboxFirstName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtboxFirstName.BackColor = System.Drawing.Color.White;
+            this.txtboxFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxFirstName.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxFirstName.Location = new System.Drawing.Point(399, 12);
+            this.txtboxFirstName.Name = "txtboxFirstName";
+            this.txtboxFirstName.Size = new System.Drawing.Size(275, 18);
+            this.txtboxFirstName.TabIndex = 5;
             // 
             // btnAdd
             // 
@@ -113,6 +179,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label8
             // 
@@ -169,16 +236,16 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.label12.TabIndex = 32;
             this.label12.Text = "Last Name";
             // 
-            // txtboxBarcode
+            // txtboxLastName
             // 
-            this.txtboxBarcode.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtboxBarcode.BackColor = System.Drawing.Color.White;
-            this.txtboxBarcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtboxBarcode.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxBarcode.Location = new System.Drawing.Point(399, 60);
-            this.txtboxBarcode.Name = "txtboxBarcode";
-            this.txtboxBarcode.Size = new System.Drawing.Size(275, 18);
-            this.txtboxBarcode.TabIndex = 7;
+            this.txtboxLastName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtboxLastName.BackColor = System.Drawing.Color.White;
+            this.txtboxLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxLastName.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxLastName.Location = new System.Drawing.Point(399, 60);
+            this.txtboxLastName.Name = "txtboxLastName";
+            this.txtboxLastName.Size = new System.Drawing.Size(275, 18);
+            this.txtboxLastName.TabIndex = 7;
             // 
             // lblIsEmpty
             // 
@@ -191,93 +258,16 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.lblIsEmpty.TabIndex = 33;
             this.lblIsEmpty.Text = "Address";
             // 
-            // txtboxDescription
+            // txtboxMiddleName
             // 
-            this.txtboxDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtboxDescription.BackColor = System.Drawing.Color.White;
-            this.txtboxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtboxDescription.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxDescription.Location = new System.Drawing.Point(399, 36);
-            this.txtboxDescription.Name = "txtboxDescription";
-            this.txtboxDescription.Size = new System.Drawing.Size(275, 18);
-            this.txtboxDescription.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(354, 156);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 16);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Email";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(289, 180);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 16);
-            this.label2.TabIndex = 40;
-            this.label2.Text = "Contact Number";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(399, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 18);
-            this.textBox1.TabIndex = 41;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(399, 108);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(275, 18);
-            this.textBox2.TabIndex = 42;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(399, 132);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(275, 18);
-            this.textBox3.TabIndex = 43;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(399, 156);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(275, 18);
-            this.textBox4.TabIndex = 44;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(399, 180);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(275, 18);
-            this.textBox5.TabIndex = 45;
+            this.txtboxMiddleName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtboxMiddleName.BackColor = System.Drawing.Color.White;
+            this.txtboxMiddleName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxMiddleName.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxMiddleName.Location = new System.Drawing.Point(399, 36);
+            this.txtboxMiddleName.Name = "txtboxMiddleName";
+            this.txtboxMiddleName.Size = new System.Drawing.Size(275, 18);
+            this.txtboxMiddleName.TabIndex = 6;
             // 
             // dgvEmployees
             // 
@@ -302,6 +292,13 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.dgvEmployees.Size = new System.Drawing.Size(983, 269);
             this.dgvEmployees.TabIndex = 47;
             // 
+            // datePickerBirthdate
+            // 
+            this.datePickerBirthdate.Location = new System.Drawing.Point(399, 108);
+            this.datePickerBirthdate.Name = "datePickerBirthdate";
+            this.datePickerBirthdate.Size = new System.Drawing.Size(275, 20);
+            this.datePickerBirthdate.TabIndex = 46;
+            // 
             // AddEmployeeUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,6 +308,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.Controls.Add(this.panel7);
             this.Name = "AddEmployeeUserControl";
             this.Size = new System.Drawing.Size(983, 542);
+            this.Load += new System.EventHandler(this.AddEmployeeUserControl_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).EndInit();
@@ -323,23 +321,23 @@ namespace BoozewasherApp.Forms.EmployeeForms
 
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtboxContactNumber;
+        private System.Windows.Forms.TextBox txtboxEmail;
+        private System.Windows.Forms.TextBox txtboxTIN;
+        private System.Windows.Forms.TextBox txtboxAddress;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtboxName;
+        private System.Windows.Forms.TextBox txtboxFirstName;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtboxBarcode;
+        private System.Windows.Forms.TextBox txtboxLastName;
         private System.Windows.Forms.Label lblIsEmpty;
-        private System.Windows.Forms.TextBox txtboxDescription;
+        private System.Windows.Forms.TextBox txtboxMiddleName;
         private System.Windows.Forms.DataGridView dgvEmployees;
+        private System.Windows.Forms.DateTimePicker datePickerBirthdate;
     }
 }

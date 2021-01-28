@@ -37,7 +37,7 @@
                     {
                         data: "FirstName",
                         render: function (data, type, Employee) {
-                            return "<a href='/Employee/Edit/" + Employee.Id + "'>" + Employee.Name + "</a>";
+                            return "<a href='/Employee/Edit/" + Employee.Id + "'>" + Employee.FirstName + "</a>";
                         }
                     },
                     {
@@ -73,7 +73,22 @@
                     }
                 ]
             });
+        });
 
+        $("#employees").on("click", ".js-delete", function () {
+            var button = $(this);
+
+            bootbox.confirm("Would you like to delete this employee?", function (result) {
+                if (result) {
+                    $.ajax({
+                        url: "API/Employee/DeleteEmployee/" + button.attr("data-employee-id"),
+                        method: "DELETE",
+                        success: function () {
+                            button.parents("tr").remove();
+                        }
+                    });
+                }
+            });
         });
     </script>
 }

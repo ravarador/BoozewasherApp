@@ -81,7 +81,7 @@
             bootbox.confirm("Would you like to delete this employee?", function (result) {
                 if (result) {
                     $.ajax({
-                        url: "API/Employee/DeleteEmployee/" + button.attr("data-employee-id"),
+                        url: "API/Employees/DeleteEmployee/" + button.attr("data-employee-id"),
                         method: "DELETE",
                         success: function () {
                             button.parents("tr").remove();

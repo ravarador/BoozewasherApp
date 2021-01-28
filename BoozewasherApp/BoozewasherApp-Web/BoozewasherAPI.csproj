@@ -657,6 +657,7 @@
     <Content Include="Views\Branch\BranchForm.cshtml" />
     <Content Include="Views\Branch\ReadOnlyIndex.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Employee\EmployeeForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

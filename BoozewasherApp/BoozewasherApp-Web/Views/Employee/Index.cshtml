@@ -29,9 +29,66 @@
     <script>
         $(document).ready(function () {
             $("#employees").DataTable({
-               
+                ajax: {
+                    url: "API/Employees/GetEmployees",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "FirstName",
+                        render: function (data, type, Employee) {
+                            return "<a href='/Employee/Edit/" + Employee.Id + "'>" + Employee.FirstName + "</a>";
+                        }
+                    },
+                    {
+                        data: "MiddleName"
+                    },
+                    {
+                        data: "LastName"
+                    },
+                    {
+                        data: "Address"
+                    },
+                    {
+                        data: "Birthdate"
+                    },
+                    {
+                        data: "TIN"
+                    },
+                    {
+                        data: "Email"
+                    },
+                    {
+                        data: "ContactNo"
+                    },
+                    {
+                        data: "Branch.Id"
+                    },
+                    {
+                        data: "Id",
+                        className: "text-center",
+                        render: function (data) {
+                            return "<button class=' btn btn-outline-primary js-delete' data-employee-id=" + data + "> Delete </button>";
+                        }
+                    }
+                ]
             });
+        });
 
+        $("#employees").on("click", ".js-delete", function () {
+            var button = $(this);
+
+            bootbox.confirm("Would you like to delete this employee?", function (result) {
+                if (result) {
+                    $.ajax({
+                        url: "API/Employees/DeleteEmployee/" + button.attr("data-employee-id"),
+                        method: "DELETE",
+                        success: function () {
+                            button.parents("tr").remove();
+                        }
+                    });
+                }
+            });
         });
     </script>
 }

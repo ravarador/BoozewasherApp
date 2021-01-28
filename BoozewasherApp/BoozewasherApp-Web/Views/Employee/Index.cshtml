@@ -4,4 +4,35 @@
 }
 <p></p>
 <h1>Employees</h1>
+<p></p>
+
+<table id="employees" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Birthdate</th>
+            <th>TIN</th>
+            <th>Email</th>
+            <th>Contact No</th>
+            <th>Branch</th>
+            <th class="text-center"> Delete </th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#employees").DataTable({
+               
+            });
+
+        });
+    </script>
+}
 

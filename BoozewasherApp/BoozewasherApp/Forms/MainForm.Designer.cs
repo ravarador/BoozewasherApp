@@ -80,12 +80,15 @@
             this.updateTransactionUserControl1 = new BoozewasherApp.Forms.TransactionForms.UpdateTransactionUserControl();
             this.deleteTransactionUserControl1 = new BoozewasherApp.Forms.TransactionForms.DeleteTransactionUserControl();
             this.tabPageEmployees = new System.Windows.Forms.TabPage();
+            this.btnAddEmployee = new System.Windows.Forms.Button();
+            this.addEmployeeUserControl1 = new BoozewasherApp.Forms.EmployeeForms.AddEmployeeUserControl();
             this.tabPageReports = new System.Windows.Forms.TabPage();
             this.tabPageAnalytics = new System.Windows.Forms.TabPage();
             this.analyticsUserControl1 = new BoozewasherApp.Forms.SummaryForms.AnalyticsUserControl();
             this.tabPageSettings = new System.Windows.Forms.TabPage();
-            this.addEmployeeUserControl1 = new BoozewasherApp.Forms.EmployeeForms.AddEmployeeUserControl();
-            this.btnAddEmployee = new System.Windows.Forms.Button();
+            this.btnDeleteEmployee = new System.Windows.Forms.Button();
+            this.btnUpdateEmployee = new System.Windows.Forms.Button();
+            this.btnSearchEmployee = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).BeginInit();
@@ -830,6 +833,9 @@
             // tabPageEmployees
             // 
             this.tabPageEmployees.BackColor = System.Drawing.Color.White;
+            this.tabPageEmployees.Controls.Add(this.btnDeleteEmployee);
+            this.tabPageEmployees.Controls.Add(this.btnUpdateEmployee);
+            this.tabPageEmployees.Controls.Add(this.btnSearchEmployee);
             this.tabPageEmployees.Controls.Add(this.btnAddEmployee);
             this.tabPageEmployees.Controls.Add(this.addEmployeeUserControl1);
             this.tabPageEmployees.Location = new System.Drawing.Point(4, 23);
@@ -838,6 +844,31 @@
             this.tabPageEmployees.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageEmployees.Size = new System.Drawing.Size(1104, 685);
             this.tabPageEmployees.TabIndex = 1;
+            // 
+            // btnAddEmployee
+            // 
+            this.btnAddEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnAddEmployee.FlatAppearance.BorderSize = 0;
+            this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEmployee.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnAddEmployee.Location = new System.Drawing.Point(790, 29);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(201, 47);
+            this.btnAddEmployee.TabIndex = 2;
+            this.btnAddEmployee.Text = "Add Employee";
+            this.btnAddEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAddEmployee.UseVisualStyleBackColor = false;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
+            // 
+            // addEmployeeUserControl1
+            // 
+            this.addEmployeeUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.addEmployeeUserControl1.mainForm = null;
+            this.addEmployeeUserControl1.Name = "addEmployeeUserControl1";
+            this.addEmployeeUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.addEmployeeUserControl1.TabIndex = 0;
+            this.addEmployeeUserControl1.Visible = false;
             // 
             // tabPageReports
             // 
@@ -875,30 +906,55 @@
             this.tabPageSettings.Size = new System.Drawing.Size(1104, 685);
             this.tabPageSettings.TabIndex = 4;
             // 
-            // addEmployeeUserControl1
+            // btnDeleteEmployee
             // 
-            this.addEmployeeUserControl1.Location = new System.Drawing.Point(8, 82);
-            this.addEmployeeUserControl1.mainForm = null;
-            this.addEmployeeUserControl1.Name = "addEmployeeUserControl1";
-            this.addEmployeeUserControl1.Size = new System.Drawing.Size(983, 580);
-            this.addEmployeeUserControl1.TabIndex = 0;
-            this.addEmployeeUserControl1.Visible = false;
+            this.btnDeleteEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
+            this.btnDeleteEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnDeleteEmployee.FlatAppearance.BorderSize = 0;
+            this.btnDeleteEmployee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
+            this.btnDeleteEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteEmployee.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(376, 29);
+            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(201, 47);
+            this.btnDeleteEmployee.TabIndex = 10;
+            this.btnDeleteEmployee.Text = "Delete Employee";
+            this.btnDeleteEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDeleteEmployee.UseVisualStyleBackColor = false;
             // 
-            // btnAddEmployee
+            // btnUpdateEmployee
             // 
-            this.btnAddEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.btnAddEmployee.FlatAppearance.BorderSize = 0;
-            this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEmployee.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmployee.ForeColor = System.Drawing.Color.White;
-            this.btnAddEmployee.Location = new System.Drawing.Point(841, 29);
-            this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(150, 47);
-            this.btnAddEmployee.TabIndex = 2;
-            this.btnAddEmployee.Text = "Add Employee";
-            this.btnAddEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAddEmployee.UseVisualStyleBackColor = false;
-            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
+            this.btnUpdateEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnUpdateEmployee.FlatAppearance.BorderSize = 0;
+            this.btnUpdateEmployee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnUpdateEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateEmployee.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateEmployee.Location = new System.Drawing.Point(583, 29);
+            this.btnUpdateEmployee.Name = "btnUpdateEmployee";
+            this.btnUpdateEmployee.Size = new System.Drawing.Size(201, 47);
+            this.btnUpdateEmployee.TabIndex = 9;
+            this.btnUpdateEmployee.Text = "Update Employee";
+            this.btnUpdateEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUpdateEmployee.UseVisualStyleBackColor = false;
+            // 
+            // btnSearchEmployee
+            // 
+            this.btnSearchEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
+            this.btnSearchEmployee.FlatAppearance.BorderSize = 0;
+            this.btnSearchEmployee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
+            this.btnSearchEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchEmployee.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnSearchEmployee.Location = new System.Drawing.Point(164, 29);
+            this.btnSearchEmployee.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSearchEmployee.Name = "btnSearchEmployee";
+            this.btnSearchEmployee.Size = new System.Drawing.Size(206, 47);
+            this.btnSearchEmployee.TabIndex = 8;
+            this.btnSearchEmployee.Text = "Search Employees";
+            this.btnSearchEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSearchEmployee.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -993,5 +1049,8 @@
         private SummaryForms.AnalyticsUserControl analyticsUserControl1;
         private EmployeeForms.AddEmployeeUserControl addEmployeeUserControl1;
         private System.Windows.Forms.Button btnAddEmployee;
+        private System.Windows.Forms.Button btnDeleteEmployee;
+        private System.Windows.Forms.Button btnUpdateEmployee;
+        private System.Windows.Forms.Button btnSearchEmployee;
     }
 }

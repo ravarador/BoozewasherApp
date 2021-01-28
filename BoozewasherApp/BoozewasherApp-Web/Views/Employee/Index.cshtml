@@ -29,7 +29,49 @@
     <script>
         $(document).ready(function () {
             $("#employees").DataTable({
-               
+                ajax: {
+                    url: "API/Employees/GetEmployees",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "FirstName",
+                        render: function (data, type, Employee) {
+                            return "<a href='/Employee/Edit/" + Employee.Id + "'>" + Employee.Name + "</a>";
+                        }
+                    },
+                    {
+                        data: "MiddleName"
+                    },
+                    {
+                        data: "LastName"
+                    },
+                    {
+                        data: "Address"
+                    },
+                    {
+                        data: "Birthdate"
+                    },
+                    {
+                        data: "TIN"
+                    },
+                    {
+                        data: "Email"
+                    },
+                    {
+                        data: "ContactNo"
+                    },
+                    {
+                        data: "Branch.Id"
+                    },
+                    {
+                        data: "Id",
+                        className: "text-center",
+                        render: function (data) {
+                            return "<button class=' btn btn-outline-primary js-delete' data-employee-id=" + data + "> Delete </button>";
+                        }
+                    }
+                ]
             });
 
         });

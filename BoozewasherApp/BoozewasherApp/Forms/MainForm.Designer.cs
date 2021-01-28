@@ -89,6 +89,7 @@
             this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.btnUpdateEmployee = new System.Windows.Forms.Button();
             this.btnSearchEmployee = new System.Windows.Forms.Button();
+            this.updateEmployeeUserControl1 = new BoozewasherApp.Forms.EmployeeForms.UpdateEmployeeUserControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).BeginInit();
@@ -833,6 +834,7 @@
             // tabPageEmployees
             // 
             this.tabPageEmployees.BackColor = System.Drawing.Color.White;
+            this.tabPageEmployees.Controls.Add(this.updateEmployeeUserControl1);
             this.tabPageEmployees.Controls.Add(this.btnDeleteEmployee);
             this.tabPageEmployees.Controls.Add(this.btnUpdateEmployee);
             this.tabPageEmployees.Controls.Add(this.btnSearchEmployee);
@@ -938,6 +940,7 @@
             this.btnUpdateEmployee.Text = "Update Employee";
             this.btnUpdateEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUpdateEmployee.UseVisualStyleBackColor = false;
+            this.btnUpdateEmployee.Click += new System.EventHandler(this.btnUpdateEmployee_Click);
             // 
             // btnSearchEmployee
             // 
@@ -955,6 +958,14 @@
             this.btnSearchEmployee.Text = "Search Employees";
             this.btnSearchEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSearchEmployee.UseVisualStyleBackColor = false;
+            // 
+            // updateEmployeeUserControl1
+            // 
+            this.updateEmployeeUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.updateEmployeeUserControl1.Name = "updateEmployeeUserControl1";
+            this.updateEmployeeUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.updateEmployeeUserControl1.TabIndex = 11;
+            this.updateEmployeeUserControl1.Visible = false;
             // 
             // MainForm
             // 
@@ -1052,5 +1063,6 @@
         private System.Windows.Forms.Button btnDeleteEmployee;
         private System.Windows.Forms.Button btnUpdateEmployee;
         private System.Windows.Forms.Button btnSearchEmployee;
+        private EmployeeForms.UpdateEmployeeUserControl updateEmployeeUserControl1;
     }
 }

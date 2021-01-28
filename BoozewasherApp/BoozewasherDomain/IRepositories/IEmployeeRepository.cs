@@ -14,6 +14,6 @@ namespace BoozewasherDomain.IRepositories
         List<Employee> GetAllEmployees();
         List<Employee> GetEmployeesByBranchId(int id);
         Employee GetEmployeeById(int id);
-        void UpdateItem(Employee employee);
+        void UpdateEmployee(Employee employee);
     }
 }

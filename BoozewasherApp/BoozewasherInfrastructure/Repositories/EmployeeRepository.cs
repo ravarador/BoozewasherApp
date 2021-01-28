@@ -66,7 +66,7 @@ namespace BoozewasherInfrastructure.Repositories
             return data;
         }
 
-        public void UpdateItem(Employee employee)
+        public void UpdateEmployee(Employee employee)
         {
             var client = new RestClient(Resources.ConnectionString);
             var request = new RestRequest("/api/employees/updateemployee/" + employee.Id, Method.PUT);

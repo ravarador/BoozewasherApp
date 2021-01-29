@@ -33,7 +33,8 @@ namespace BoozewasherApp_Web.Controllers
         {
             var viewModel = new EmployeeFormViewModel
             {
-                Employee = new Employee()
+                Employee = new Employee(),
+                Branches = _context.Branches.ToList()
             };
 
             return View("EmployeeForm", viewModel);
@@ -48,7 +49,8 @@ namespace BoozewasherApp_Web.Controllers
 
             var viewModel = new EmployeeFormViewModel
             {
-                Employee = employee
+                Employee = employee,
+                Branches = _context.Branches.ToList()
             };
 
             return View("EmployeeForm", viewModel);
@@ -67,6 +69,7 @@ namespace BoozewasherApp_Web.Controllers
             return RedirectToAction("Index", "Employee");
         }
 
+        [HttpPost]
         public ActionResult Save (Employee employee)
         {
             if (!ModelState.IsValid)

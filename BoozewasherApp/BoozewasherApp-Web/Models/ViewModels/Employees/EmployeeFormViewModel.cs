@@ -8,6 +8,7 @@ namespace BoozewasherApp_Web.Models.ViewModels.Employees
 {
     public class EmployeeFormViewModel
     {
+        public IEnumerable<Branch> Branches { get; set; }
         public Employee Employee { get; set; }
     }
 }

@@ -3,8 +3,9 @@
     ViewBag.Title = "EmployeeForm";
 }
 <p></p>
-<h2>EmployeeForm</h2>
+<h2>New Employee Form</h2>
 <p></p>
+
 @using (Html.BeginForm("Save", "Employee"))
 {
     @Html.ValidationSummary(true, "Please fill up requirements");

@@ -31,9 +31,12 @@ namespace BoozewasherApp_Web.Controllers
 
         public ActionResult New()
         {
+            var branches = _context.Branches.ToList();
+
             var viewModel = new EmployeeFormViewModel
             {
-                Employee = new Employee()
+                Employee = new Employee(),
+                Branches = branches     
             };
 
             return View("EmployeeForm", viewModel);
@@ -48,7 +51,8 @@ namespace BoozewasherApp_Web.Controllers
 
             var viewModel = new EmployeeFormViewModel
             {
-                Employee = employee
+                Employee = employee,
+                Branches = _context.Branches.ToList()
             };
 
             return View("EmployeeForm", viewModel);
@@ -67,6 +71,8 @@ namespace BoozewasherApp_Web.Controllers
             return RedirectToAction("Index", "Employee");
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save (Employee employee)
         {
             if (!ModelState.IsValid)
@@ -80,6 +86,9 @@ namespace BoozewasherApp_Web.Controllers
             {
                 var employeeInDB = _context.Employees.Single(e => e.Id == employee.Id);
 
+                if (employeeInDB == null)
+                    return HttpNotFound();
+
                 employeeInDB.FirstName = employee.FirstName;
                 employeeInDB.MiddleName = employee.MiddleName;
                 employeeInDB.LastName = employee.LastName;
@@ -92,7 +101,7 @@ namespace BoozewasherApp_Web.Controllers
 
                 _context.SaveChanges();
             }
-            return View("Index", "Employee");
+            return RedirectToAction("Index", "Employee");
         }
 
 

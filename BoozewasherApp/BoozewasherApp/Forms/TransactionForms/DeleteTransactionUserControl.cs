@@ -48,6 +48,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         private void DeleteTransaction()
         {
             mainForm.TransactionRepository.DeleteTransaction(SelectedTransactionId.Value);
+            SelectedTransactionId = null;
         }
         public void LoadDgvTransactions()
         {

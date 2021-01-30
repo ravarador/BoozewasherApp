@@ -45,6 +45,7 @@ namespace BoozewasherApp.Forms.ItemForms
         private void DeleteItem()
         {
             mainForm.ItemRepository.DeleteItem(SelectedItemId.Value);
+            SelectedItemId = null;
         }
         public void LoadDgvItems()
         {

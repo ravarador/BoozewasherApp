@@ -46,6 +46,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
         private void DeleteEmployee()
         {
             mainForm.EmployeeRepository.DeleteEmployee(SelectedEmployeeId.Value);
+            SelectedEmployeeId = null;
         }
         public void LoadDgvEmployees()
         {

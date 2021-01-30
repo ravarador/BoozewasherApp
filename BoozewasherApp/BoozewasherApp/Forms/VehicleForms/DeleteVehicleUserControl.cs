@@ -47,6 +47,7 @@ namespace BoozewasherApp.Forms.VehicleForms
         private void DeleteVehicle()
         {
             mainForm.VehicleRepository.DeleteVehicle(SelectedVehicleId.Value);
+            SelectedVehicleId = null;
         }
         public void LoadDgvVehicles()
         {

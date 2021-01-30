@@ -44,6 +44,7 @@ namespace BoozewasherApp.Forms.ServiceForms
         private void DeleteService()
         {
             mainForm.ServiceRepository.DeleteService(SelectedServiceId.Value);
+            SelectedServiceId = null;
         }
         public void LoadDgvServices()
         {

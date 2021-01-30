@@ -74,7 +74,8 @@ namespace BoozewasherApp_Web.Controllers
             return RedirectToAction("Index", "Branch");
         }
 
-        [Authorize(Roles = RoleName.CanManageBranches)]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Branch branch)
         {
             if (!ModelState.IsValid)

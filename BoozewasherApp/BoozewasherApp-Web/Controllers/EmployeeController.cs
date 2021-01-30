@@ -81,7 +81,9 @@ namespace BoozewasherApp_Web.Controllers
             }
 
             if (employee.Id == 0)
+            {
                 _context.Employees.Add(employee);
+            }
             else
             {
                 var employeeInDB = _context.Employees.Single(e => e.Id == employee.Id);
@@ -99,8 +101,9 @@ namespace BoozewasherApp_Web.Controllers
                 employeeInDB.ContactNo = employee.ContactNo;
                 employeeInDB.BranchId = employee.BranchId;
 
-                _context.SaveChanges();
             }
+
+            _context.SaveChanges();
             return RedirectToAction("Index", "Employee");
         }
 

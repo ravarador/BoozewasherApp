@@ -147,6 +147,7 @@ namespace BoozewasherApp.Forms
         {
             addEmployeeUserControl1.Visible = isAddEmployee;
             updateEmployeeUserControl1.Visible = isUpdateEmployee;
+            deleteEmployeeUserControl1.Visible = isDeleteEmployee;
         }
         private void btnItemsAdd_Click(object sender, EventArgs e)
         {
@@ -307,6 +308,16 @@ namespace BoozewasherApp.Forms
             updateEmployeeUserControl1.ResetFields();
             updateEmployeeUserControl1.LoadDgvEmployees();
             ShowHideEmployeeUserControls(isUpdateEmployee: true);
+
+            this.Cursor = Cursors.Default;
+        }
+        private void btnDeleteEmployee_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+
+            deleteEmployeeUserControl1.mainForm = this;
+            deleteEmployeeUserControl1.LoadDgvEmployees();
+            ShowHideEmployeeUserControls(isDeleteEmployee: true);
 
             this.Cursor = Cursors.Default;
         }

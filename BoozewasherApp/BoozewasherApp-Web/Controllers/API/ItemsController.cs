@@ -99,5 +99,42 @@ namespace BoozewasherApp_Web.Controllers.API
             _context.Items.Remove(itemInDb);
             _context.SaveChanges();
         }
+        public IHttpActionResult GetItemsBySearchParameter(SearchDto searchDto)
+        {
+            var items = _context.Items.Include("Branch")
+                                         .Where(a => a.BranchId == searchDto.BranchId);
+
+            switch(searchDto.SearchBy.ToUpper().Trim())
+            {
+                case "ID":
+                    items = items.Where(a => a.Id == int.Parse(searchDto.SearchText));
+                    break;
+                case "NAME":
+                    items = items.Where(a => a.Name.Contains(searchDto.SearchText));
+                    break;
+                case "DESCRIPTION": 
+                    items = items.Where(a => a.Description.Contains(searchDto.SearchText));
+                    break;
+                case "BARCODE": 
+                    items = items.Where(a => a.Barcode.Contains(searchDto.SearchText));
+                    break;
+                case "USAGECOUNT":
+                    items = items.Where(a => a.UsageCount == int.Parse(searchDto.SearchText));
+                    break;
+                case "EXPENSE":
+                    items = items.Where(a => a.Expense == decimal.Parse(searchDto.SearchText));
+                    break;
+                case "BRANCHNAME":
+                    items = items.Where(a => a.Branch.Name.Contains(searchDto.SearchText));
+                    break;
+                default:
+                    break;
+
+            }
+                                         //.ToList()
+                                         //.Select(Mapper.Map<Item, ItemDto>);
+
+            return Ok(items.ToList());
+        }
     }
 }

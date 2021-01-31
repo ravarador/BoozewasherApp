@@ -16,5 +16,6 @@ namespace BoozewasherDomain.IRepositories
         List<ItemDto> GetItemsByBranchId(int id);
         void UpdateItem(Item item);
         Item GetItemById(int id);
+        List<ItemDto> GetItemsBySearchParameter(SearchDto searchParameter);
     }
 }

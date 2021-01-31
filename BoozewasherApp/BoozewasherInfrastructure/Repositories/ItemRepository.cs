@@ -93,5 +93,28 @@ namespace BoozewasherInfrastructure.Repositories
             var response = client.Execute(request);
 
         }
+
+        public List<ItemDto> GetItemsBySearchParameter(SearchDto searchParameter)
+        {
+            var client = new RestClient(Resources.ConnectionString);
+            var request = new RestRequest("/api/items/getitemsbysearchparameter/", Method.POST);
+            request.AddJsonBody(searchParameter);
+            request.RequestFormat = DataFormat.Json;
+            var response = client.Execute(request);
+
+            var dataList = JsonConvert.DeserializeObject<List<Item>>(response.Content);
+
+            return dataList.Select(a => new ItemDto
+            {
+                Id = a.Id,
+                Name = a.Name,
+                Description = a.Description,
+                Barcode = a.Barcode,
+                UsageCount = a.UsageCount,
+                IsEmpty = a.IsEmpty,
+                Expense = a.Expense,
+                BranchName = a.Branch.Name
+            }).ToList();
+        }
     }
 }

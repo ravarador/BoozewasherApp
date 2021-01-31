@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoozewasherDomain.Dtos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,7 +41,17 @@ namespace BoozewasherApp.Forms.ItemForms
             }
             
         }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            var items = mainForm.ItemRepository.GetItemsBySearchParameter(new SearchDto
+            {
+                BranchId = mainForm.UserInformation.BranchId,
+                SearchBy = comboSearchBy.SelectedItem.ToString(),
+                SearchText = txtboxSearchText.Text
+            });
 
+            dgvItems.DataSource = items;
+        }
         #region Private/public Methods
         private void DeleteItem()
         {
@@ -52,8 +63,9 @@ namespace BoozewasherApp.Forms.ItemForms
             dgvItems.DataSource = mainForm.ItemRepository.GetItemsByBranchId(mainForm.UserInformation.BranchId);
         }
 
+
+
         #endregion
-        
 
         
     }

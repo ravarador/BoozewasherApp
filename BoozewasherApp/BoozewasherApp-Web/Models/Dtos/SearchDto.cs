@@ -12,4 +12,3 @@ namespace BoozewasherApp_Web.Models.Dtos
         public int BranchId { get; set; }
     }
 }
-}

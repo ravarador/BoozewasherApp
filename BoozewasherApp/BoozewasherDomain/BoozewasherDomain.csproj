@@ -43,6 +43,7 @@
     <Compile Include="Dtos\ItemDto.cs" />
     <Compile Include="Dtos\ItemLookupDto.cs" />
     <Compile Include="Dtos\LoginDto.cs" />
+    <Compile Include="Dtos\SearchDto.cs" />
     <Compile Include="Dtos\UserInformationDto.cs" />
     <Compile Include="Entities\Branch.cs" />
     <Compile Include="Entities\Employee.cs" />

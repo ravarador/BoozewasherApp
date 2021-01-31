@@ -257,6 +257,7 @@
     <Compile Include="Models\Dtos\AuthenticationMessageDto.cs" />
     <Compile Include="Models\Dtos\BranchDto.cs" />
     <Compile Include="Models\Dtos\ItemDto.cs" />
+    <Compile Include="Models\Dtos\SearchDto.cs" />
     <Compile Include="Models\Dtos\ServiceDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

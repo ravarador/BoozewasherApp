@@ -217,6 +217,9 @@ namespace BoozewasherApp_Web.Controllers
                     //await roleManager.CreateAsync(new IdentityRole("CanManageServices"));
                     //await UserManager.AddToRoleAsync(user.Id, "CanManageServices");
 
+                    //await roleManager.CreateAsync(new IdentityRole("CanManageEmployees"));
+                    //await UserManager.AddToRoleAsync(user.Id, "CanManageEmployees");
+
                     //await roleManager.CreateAsync(new IdentityRole("CanManageItems"));
                     //await UserManager.AddToRoleAsync(user.Id, "CanManageItems");
 

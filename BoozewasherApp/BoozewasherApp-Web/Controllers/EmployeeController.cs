@@ -26,9 +26,13 @@ namespace BoozewasherApp_Web.Controllers
         // GET: Employees
         public ActionResult Index()
         {
-            return View();
+            if (User.IsInRole(RoleName.CanManageEmployees))
+                return View("Index");
+
+            return View("ReadOnlyIndex");
         }
 
+        [Authorize(Roles = RoleName.CanManageEmployees)]
         public ActionResult New()
         {
             var branches = _context.Branches.ToList();
@@ -42,6 +46,7 @@ namespace BoozewasherApp_Web.Controllers
             return View("EmployeeForm", viewModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageEmployees)]
         public ActionResult Edit(int id)
         {
             var employee = _context.Employees.SingleOrDefault(e => e.Id == id);
@@ -58,6 +63,7 @@ namespace BoozewasherApp_Web.Controllers
             return View("EmployeeForm", viewModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageEmployees)]
         public ActionResult Delete(int id)
         {
             var employee = _context.Employees.SingleOrDefault(e => e.Id == id);

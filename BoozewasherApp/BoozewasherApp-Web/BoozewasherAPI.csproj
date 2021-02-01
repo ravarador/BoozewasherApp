@@ -249,6 +249,10 @@
     <Compile Include="Migrations\202101261437518_SeedNewUserAndManageBranch.designer.cs">
       <DependentUpon>202101261437518_SeedNewUserAndManageBranch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102011313357_SeedNewUserandManageEmployees.cs" />
+    <Compile Include="Migrations\202102011313357_SeedNewUserandManageEmployees.designer.cs">
+      <DependentUpon>202102011313357_SeedNewUserandManageEmployees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ContextModel\Attendance.cs" />
     <Compile Include="Models\ContextModel\Branch.cs" />
     <Compile Include="Models\ContextModel\Employee.cs" />
@@ -719,6 +723,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101261437518_SeedNewUserAndManageBranch.resx">
       <DependentUpon>202101261437518_SeedNewUserAndManageBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102011313357_SeedNewUserandManageEmployees.resx">
+      <DependentUpon>202102011313357_SeedNewUserandManageEmployees.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

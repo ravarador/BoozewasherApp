@@ -1,4 +1,5 @@
 ﻿
+using BoozewasherDomain.Dtos;
 using BoozewasherDomain.Entities;
 using System;
 using System.Collections.Generic;
@@ -14,5 +15,6 @@ namespace BoozewasherDomain.IRepositories
         void DeleteVehicle(int id);
         List<Vehicle> GetAllVehicles();
         void UpdateVehicle(Vehicle vehicle);
+        List<Vehicle> GetVehiclesBySearchParameter(SearchDto searchParameter);
     }
 }

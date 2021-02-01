@@ -89,5 +89,36 @@ namespace BoozewasherApp_Web.Controllers.API
             _context.Vehicles.Remove(vehicleInDb);
             _context.SaveChanges();
         }
+
+        //POST /API/Vehicles/GetVehiclesBySearchParameter
+        [HttpPost]
+        public IHttpActionResult GetVehiclesBySearchParameter(SearchDto searchDto)
+        {
+            if (!ModelState.IsValid)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+
+            var vehicles = _context.Vehicles.AsEnumerable();
+
+            switch (searchDto.SearchBy.ToUpper().Trim())
+            {
+                case "TYPE":
+                    vehicles = vehicles.Where(a => a.Type.Contains(searchDto.SearchText));
+                    break;
+                case "DESCRIPTION":
+                    vehicles = vehicles.Where(a => a.Description.Contains(searchDto.SearchText));
+                    break;
+                case "BRAND":
+                    vehicles = vehicles.Where(a => a.Brand.Contains(searchDto.SearchText));
+                    break;
+                case "MODEL":
+                    vehicles = vehicles.Where(a => a.Model.Contains(searchDto.SearchText));
+                    break;
+                default:
+                    break;
+
+            }
+
+            return Ok(vehicles.ToList().Select(Mapper.Map<Vehicle, VehicleDto>));
+        }
     }
 }

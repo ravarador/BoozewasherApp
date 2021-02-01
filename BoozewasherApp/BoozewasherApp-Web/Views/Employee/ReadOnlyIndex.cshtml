@@ -1,0 +1,68 @@
+﻿@model IEnumerable<BoozewasherApp_Web.Models.ContextModel.Employee>
+@{
+    ViewBag.Title = "Index";
+}
+<p></p>
+<h1>Employees</h1>
+<p></p>
+
+<table id="employees" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Birthdate</th>
+            <th>TIN</th>
+            <th>Email</th>
+            <th>Contact No</th>
+            <th>Branch</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#employees").DataTable({
+                ajax: {
+                    url: "API/Employees/GetEmployees",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "FirstName"
+                    },
+                    {
+                        data: "MiddleName"
+                    },
+                    {
+                        data: "LastName"
+                    },
+                    {
+                        data: "Address"
+                    },
+                    {
+                        data: "Birthdate"
+                    },
+                    {
+                        data: "TIN"
+                    },
+                    {
+                        data: "Email"
+                    },
+                    {
+                        data: "ContactNo"
+                    },
+                    {
+                        data: "Branch.Id"
+                    }
+                ]
+            });
+        });
+    </script>
+}
+

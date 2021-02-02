@@ -32,9 +32,9 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.label15 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtboxSearchText = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboSearchBy = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgvServices = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,9 +57,9 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel7.Controls.Add(this.label1);
             this.panel7.Controls.Add(this.btnSearch);
-            this.panel7.Controls.Add(this.textBox1);
+            this.panel7.Controls.Add(this.txtboxSearchText);
             this.panel7.Controls.Add(this.label14);
-            this.panel7.Controls.Add(this.comboBox1);
+            this.panel7.Controls.Add(this.comboSearchBy);
             this.panel7.Controls.Add(this.btnDelete);
             this.panel7.Location = new System.Drawing.Point(0, 28);
             this.panel7.Name = "panel7";
@@ -81,14 +81,14 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBox1
+            // txtboxSearchText
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(398, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 18);
-            this.textBox1.TabIndex = 6;
+            this.txtboxSearchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxSearchText.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxSearchText.Location = new System.Drawing.Point(398, 53);
+            this.txtboxSearchText.Name = "txtboxSearchText";
+            this.txtboxSearchText.Size = new System.Drawing.Size(275, 18);
+            this.txtboxSearchText.TabIndex = 6;
             // 
             // label14
             // 
@@ -101,18 +101,18 @@ namespace BoozewasherApp.Forms.ServiceForms
             this.label14.TabIndex = 34;
             this.label14.Text = "Search by:";
             // 
-            // comboBox1
+            // comboSearchBy
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboSearchBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboSearchBy.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboSearchBy.FormattingEnabled = true;
+            this.comboSearchBy.Items.AddRange(new object[] {
             "Type",
             "Description"});
-            this.comboBox1.Location = new System.Drawing.Point(398, 23);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(275, 24);
-            this.comboBox1.TabIndex = 5;
+            this.comboSearchBy.Location = new System.Drawing.Point(398, 23);
+            this.comboSearchBy.Name = "comboSearchBy";
+            this.comboSearchBy.Size = new System.Drawing.Size(275, 24);
+            this.comboSearchBy.TabIndex = 5;
             // 
             // btnDelete
             // 
@@ -187,9 +187,9 @@ namespace BoozewasherApp.Forms.ServiceForms
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtboxSearchText;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboSearchBy;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dgvServices;
         private System.Windows.Forms.Label label1;

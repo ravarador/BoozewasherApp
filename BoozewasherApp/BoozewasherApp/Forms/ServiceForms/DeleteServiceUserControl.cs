@@ -39,6 +39,10 @@ namespace BoozewasherApp.Forms.ServiceForms
                 MessageBox.Show("Select service to delete!", "Error");
             }
         }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
 
         #region Private/public Methods
         private void DeleteService()
@@ -51,5 +55,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             dgvServices.DataSource = mainForm.ServiceRepository.GetAllServices();
         }
         #endregion
+
+        
     }
 }

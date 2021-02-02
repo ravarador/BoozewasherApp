@@ -1,4 +1,5 @@
 ﻿
+using BoozewasherDomain.Dtos;
 using BoozewasherDomain.Entities;
 using System;
 using System.Collections.Generic;
@@ -14,5 +15,6 @@ namespace BoozewasherDomain.IRepositories
         void DeleteService(int id);
         List<Service> GetAllServices();
         void UpdateService(Service service);
+        List<Service> GetServicesBySearchParameter(SearchDto searchParameter);
     }
 }

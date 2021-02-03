@@ -45,7 +45,14 @@ namespace BoozewasherApp.Forms.VehicleForms
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SearchVehicles();
+            if (comboSearchBy.SelectedItem != null)
+            {
+                SearchVehicles();
+            }
+            else
+            {
+                MessageBox.Show("Search By must not be empty.");
+            }
         }
 
         #region Private/public Methods

@@ -142,7 +142,9 @@ namespace BoozewasherApp_Web.Controllers.API
             if (!ModelState.IsValid)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
 
-            var transactions = _context.Transactions.AsEnumerable();
+            var transactions = _context.Transactions.Include("Branch")
+                                                    .Where(a => a.BranchId == searchDto.BranchId)
+                                                    .AsEnumerable();
 
             switch (searchDto.SearchBy.ToUpper().Trim())
             {

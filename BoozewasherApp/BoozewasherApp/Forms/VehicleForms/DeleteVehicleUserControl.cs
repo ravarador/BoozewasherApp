@@ -45,6 +45,12 @@ namespace BoozewasherApp.Forms.VehicleForms
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            SearchVehicles();
+        }
+
+        #region Private/public Methods
+        private void SearchVehicles()
+        {
             var vehicles = mainForm.VehicleRepository.GetVehiclesBySearchParameter(new SearchDto
             {
                 BranchId = mainForm.UserInformation.BranchId,
@@ -54,8 +60,6 @@ namespace BoozewasherApp.Forms.VehicleForms
 
             dgvVehicles.DataSource = vehicles;
         }
-
-        #region Private/public Methods
         private void DeleteVehicle()
         {
             mainForm.VehicleRepository.DeleteVehicle(SelectedVehicleId.Value);

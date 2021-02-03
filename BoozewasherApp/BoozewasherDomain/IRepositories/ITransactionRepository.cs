@@ -18,6 +18,7 @@ namespace BoozewasherDomain.IRepositories
         void UpdateTransaction(Transaction transaction);
         List<Transaction> GetTransactionsByDateRange(SummaryDateAndDateRangeDto dateAndDateRangeDto);
         List<Transaction> GetTransactionsByDate(SummaryDateAndDateRangeDto dateAndDateRangeDto);
+        List<Transaction> GetTransactionsBySearchParameter(SearchDto searchParameter);
 
     }
 }

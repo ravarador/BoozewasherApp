@@ -42,11 +42,15 @@ namespace BoozewasherApp.Forms.ServiceForms
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (comboSearchBy.SelectedItem != null || !string.IsNullOrWhiteSpace(txtboxSearchText.Text))
+            if (comboSearchBy.SelectedItem != null)
             {
                 SearchServices();
             }
-                
+            else
+            {
+                MessageBox.Show("Search By must not be empty.");
+            }
+
         }
 
         #region Private/public Methods

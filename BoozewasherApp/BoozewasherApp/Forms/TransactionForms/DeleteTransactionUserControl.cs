@@ -45,9 +45,13 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (comboSearchBy.SelectedItem != null || !string.IsNullOrWhiteSpace(txtboxSearchText.Text))
+            if (comboSearchBy.SelectedItem != null)
             {
                 SearchTransactions();
+            }
+            else
+            {
+                MessageBox.Show("Search By must not be empty.");
             }
                 
         }

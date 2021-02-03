@@ -43,7 +43,11 @@ namespace BoozewasherApp.Forms.ItemForms
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SearchItems();
+            if (comboSearchBy.SelectedItem != null || !string.IsNullOrWhiteSpace(txtboxSearchText.Text))
+            {
+                SearchItems();
+            }
+            
         }
         #region Private/public Methods
         private void SearchItems()

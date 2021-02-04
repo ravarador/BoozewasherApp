@@ -41,6 +41,10 @@ namespace BoozewasherApp.Forms.EmployeeForms
                 MessageBox.Show("Select an item to delete!", "Error");
             }
         }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
 
         #region Private/public Methods
         private void DeleteEmployee()
@@ -54,5 +58,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
         }
 
         #endregion
+
+        
     }
 }

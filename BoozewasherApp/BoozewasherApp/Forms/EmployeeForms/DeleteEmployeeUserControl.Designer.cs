@@ -106,6 +106,14 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.comboSearchBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboSearchBy.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboSearchBy.FormattingEnabled = true;
+            this.comboSearchBy.Items.AddRange(new object[] {
+            "FirstName",
+            "MiddleName",
+            "LastName",
+            "Address",
+            "TIN",
+            "Email",
+            "ContactNo"});
             this.comboSearchBy.Location = new System.Drawing.Point(398, 23);
             this.comboSearchBy.Name = "comboSearchBy";
             this.comboSearchBy.Size = new System.Drawing.Size(275, 24);

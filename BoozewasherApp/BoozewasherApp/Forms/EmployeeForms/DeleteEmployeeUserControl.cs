@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoozewasherDomain.Dtos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,8 +42,30 @@ namespace BoozewasherApp.Forms.EmployeeForms
                 MessageBox.Show("Select an item to delete!", "Error");
             }
         }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (comboSearchBy.SelectedItem != null)
+            {
+                SearchEmployees();
+            }
+            else
+            {
+                MessageBox.Show("Search By must not be empty.");
+            }
+        }
 
         #region Private/public Methods
+        private void SearchEmployees()
+        {
+            var employees = mainForm.EmployeeRepository.GetEmployeesBySearchParameter(new SearchDto
+            {
+                BranchId = mainForm.UserInformation.BranchId,
+                SearchBy = comboSearchBy.SelectedItem.ToString(),
+                SearchText = txtboxSearchText.Text
+            });
+
+            dgvEmployees.DataSource = employees;
+        }
         private void DeleteEmployee()
         {
             mainForm.EmployeeRepository.DeleteEmployee(SelectedEmployeeId.Value);
@@ -54,5 +77,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
         }
 
         #endregion
+
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using BoozewasherDomain.Entities;
+﻿using BoozewasherDomain.Dtos;
+using BoozewasherDomain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,6 @@ namespace BoozewasherDomain.IRepositories
         List<Employee> GetEmployeesByBranchId(int id);
         Employee GetEmployeeById(int id);
         void UpdateEmployee(Employee employee);
+        List<Employee> GetEmployeesBySearchParameter(SearchDto searchParameter);
     }
 }

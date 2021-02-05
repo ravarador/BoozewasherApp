@@ -127,5 +127,17 @@ namespace BoozewasherInfrastructure.Repositories
             var response = client.Execute(request);
 
         }
+        public List<Transaction> GetTransactionsBySearchParameter(SearchDto searchParameter)
+        {
+            var client = new RestClient(Resources.ConnectionString);
+            var request = new RestRequest("/api/transactions/gettransactionsbysearchparameter/", Method.POST);
+            request.AddJsonBody(searchParameter);
+            request.RequestFormat = DataFormat.Json;
+            var response = client.Execute(request);
+
+            var dataList = JsonConvert.DeserializeObject<List<Transaction>>(response.Content);
+
+            return dataList.ToList();
+        }
     }
 }

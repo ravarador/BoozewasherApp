@@ -1,5 +1,7 @@
-﻿using BoozewasherApp_Web.Models;
+﻿using AutoMapper;
+using BoozewasherApp_Web.Models;
 using BoozewasherApp_Web.Models.ContextModel;
+using BoozewasherApp_Web.Models.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -87,6 +89,47 @@ namespace BoozewasherApp_Web.Controllers.API
 
             _context.Employees.Remove(employee);
             _context.SaveChanges();
+        }
+        //POST /API/Employees/GetEmployeesBySearchParameter
+        [HttpPost]
+        public IHttpActionResult GetEmployeesBySearchParameter(SearchDto searchDto)
+        {
+            if (!ModelState.IsValid)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+
+            var employees = _context.Employees.Include("Branch")
+                                                    .Where(a => a.BranchId == searchDto.BranchId)
+                                                    .AsEnumerable();
+
+            switch (searchDto.SearchBy.ToUpper().Trim())
+            {
+                case "FIRSTNAME":
+                    employees = employees.Where(a => a.FirstName.Contains(searchDto.SearchText));
+                    break;
+                case "MIDDLENAME":
+                    employees = employees.Where(a => a.MiddleName.Contains(searchDto.SearchText));
+                    break;
+                case "LASTNAME":
+                    employees = employees.Where(a => a.LastName.Contains(searchDto.SearchText));
+                    break;
+                case "ADDRESS":
+                    employees = employees.Where(a => a.Address.Contains(searchDto.SearchText));
+                    break;
+                case "TIN":
+                    employees = employees.Where(a => a.TIN.Contains(searchDto.SearchText));
+                    break;
+                case "EMAIL":
+                    employees = employees.Where(a => a.Email.Contains(searchDto.SearchText));
+                    break;
+                case "CONTACTNO":
+                    employees = employees.Where(a => a.ContactNo.Contains(searchDto.SearchText));
+                    break;
+                default:
+                    break;
+
+            }
+
+            return Ok(employees.ToList());
         }
     }
 }

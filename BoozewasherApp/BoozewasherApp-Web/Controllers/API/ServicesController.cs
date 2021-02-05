@@ -3,6 +3,7 @@ using BoozewasherApp_Web.Dtos;
 using BoozewasherApp_Web.Interfaces;
 using BoozewasherApp_Web.Models;
 using BoozewasherApp_Web.Models.ContextModel;
+using BoozewasherApp_Web.Models.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -88,6 +89,33 @@ namespace BoozewasherApp_Web.Controllers.API
 
             _context.Services.Remove(serviceInDb);
             _context.SaveChanges();
+        }
+
+        //POST /API/Services/GetServicesBySearchParameter
+        [HttpPost]
+        public IHttpActionResult GetServicesBySearchParameter(SearchDto searchDto)
+        {
+            if (!ModelState.IsValid)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+
+            var services = _context.Services.AsEnumerable();
+
+            switch (searchDto.SearchBy.ToUpper().Trim())
+            {
+                case "TYPE":
+                    services = services.Where(a => a.Type.Contains(searchDto.SearchText));
+                    break;
+                case "DESCRIPTION":
+                    services = services.Where(a => a.Description.Contains(searchDto.SearchText));
+                    break;
+                default:
+                    break;
+
+            }
+            //.ToList()
+            //.Select(Mapper.Map<Item, ItemDto>);
+
+            return Ok(services.ToList().Select(Mapper.Map<Service, ServiceDto>));
         }
     }
 }

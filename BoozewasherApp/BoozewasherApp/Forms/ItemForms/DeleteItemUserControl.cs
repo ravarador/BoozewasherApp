@@ -43,6 +43,19 @@ namespace BoozewasherApp.Forms.ItemForms
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            if (comboSearchBy.SelectedItem != null)
+            {
+                SearchItems();
+            }
+            else
+            {
+                MessageBox.Show("Search By must not be empty.");
+            }
+
+        }
+        #region Private/public Methods
+        private void SearchItems()
+        {
             var items = mainForm.ItemRepository.GetItemsBySearchParameter(new SearchDto
             {
                 BranchId = mainForm.UserInformation.BranchId,
@@ -52,7 +65,6 @@ namespace BoozewasherApp.Forms.ItemForms
 
             dgvItems.DataSource = items;
         }
-        #region Private/public Methods
         private void DeleteItem()
         {
             mainForm.ItemRepository.DeleteItem(SelectedItemId.Value);

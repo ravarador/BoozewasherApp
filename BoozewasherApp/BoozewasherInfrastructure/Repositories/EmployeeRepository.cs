@@ -1,4 +1,5 @@
-﻿using BoozewasherDomain.Entities;
+﻿using BoozewasherDomain.Dtos;
+using BoozewasherDomain.Entities;
 using BoozewasherDomain.IRepositories;
 using BoozewasherInfrastructure.Properties;
 using Newtonsoft.Json;
@@ -74,6 +75,18 @@ namespace BoozewasherInfrastructure.Repositories
             request.AddJsonBody(employee);
             var response = client.Execute(request);
 
+        }
+        public List<Employee> GetEmployeesBySearchParameter(SearchDto searchParameter)
+        {
+            var client = new RestClient(Resources.ConnectionString);
+            var request = new RestRequest("/api/employees/getemployeesbysearchparameter/", Method.POST);
+            request.AddJsonBody(searchParameter);
+            request.RequestFormat = DataFormat.Json;
+            var response = client.Execute(request);
+
+            var dataList = JsonConvert.DeserializeObject<List<Employee>>(response.Content);
+
+            return dataList.ToList();
         }
     }
 }

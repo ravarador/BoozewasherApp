@@ -43,8 +43,30 @@ namespace BoozewasherApp.Forms.TransactionForms
             }
             
         }
-
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (comboSearchBy.SelectedItem != null)
+            {
+                SearchTransactions();
+            }
+            else
+            {
+                MessageBox.Show("Search By must not be empty.");
+            }
+                
+        }
         #region Private/public Methods
+        private void SearchTransactions()
+        {
+            var transations = mainForm.TransactionRepository.GetTransactionsBySearchParameter(new SearchDto
+            {
+                BranchId = mainForm.UserInformation.BranchId,
+                SearchBy = comboSearchBy.SelectedItem.ToString(),
+                SearchText = txtboxSearchText.Text
+            });
+
+            dgvTransactions.DataSource = transations;
+        }
         private void DeleteTransaction()
         {
             mainForm.TransactionRepository.DeleteTransaction(SelectedTransactionId.Value);
@@ -56,5 +78,7 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
 
         #endregion
+
+        
     }
 }

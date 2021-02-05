@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoozewasherDomain.Dtos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,8 +40,30 @@ namespace BoozewasherApp.Forms.ServiceForms
                 MessageBox.Show("Select service to delete!", "Error");
             }
         }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (comboSearchBy.SelectedItem != null)
+            {
+                SearchServices();
+            }
+            else
+            {
+                MessageBox.Show("Search By must not be empty.");
+            }
+
+        }
 
         #region Private/public Methods
+        private void SearchServices()
+        {
+            var vehicles = mainForm.ServiceRepository.GetServicesBySearchParameter(new SearchDto
+            {
+                BranchId = mainForm.UserInformation.BranchId,
+                SearchBy = comboSearchBy.SelectedItem.ToString(),
+                SearchText = txtboxSearchText.Text
+            });
+            dgvServices.DataSource = vehicles;
+        }
         private void DeleteService()
         {
             mainForm.ServiceRepository.DeleteService(SelectedServiceId.Value);
@@ -51,5 +74,7 @@ namespace BoozewasherApp.Forms.ServiceForms
             dgvServices.DataSource = mainForm.ServiceRepository.GetAllServices();
         }
         #endregion
+
+        
     }
 }

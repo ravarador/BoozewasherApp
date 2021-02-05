@@ -1,4 +1,5 @@
 ﻿
+using BoozewasherDomain.Dtos;
 using BoozewasherDomain.Entities;
 using BoozewasherDomain.IRepositories;
 using BoozewasherInfrastructure.Properties;
@@ -58,6 +59,18 @@ namespace BoozewasherInfrastructure.Repositories
             request.AddJsonBody(service);
             var response = client.Execute(request);
 
+        }
+        public List<Service> GetServicesBySearchParameter(SearchDto searchParameter)
+        {
+            var client = new RestClient(Resources.ConnectionString);
+            var request = new RestRequest("/api/services/getservicesbysearchparameter/", Method.POST);
+            request.AddJsonBody(searchParameter);
+            request.RequestFormat = DataFormat.Json;
+            var response = client.Execute(request);
+
+            var dataList = JsonConvert.DeserializeObject<List<Service>>(response.Content);
+
+            return dataList.ToList();
         }
     }
 }

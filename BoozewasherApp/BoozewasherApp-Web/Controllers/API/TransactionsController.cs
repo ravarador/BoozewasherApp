@@ -134,5 +134,32 @@ namespace BoozewasherApp_Web.Controllers.API
             _context.Transactions.Remove(transactionInDb);
             _context.SaveChanges();
         }
+
+        //POST /API/Transactions/GetTransactionsBySearchParameter
+        [HttpPost]
+        public IHttpActionResult GetTransactionsBySearchParameter(SearchDto searchDto)
+        {
+            if (!ModelState.IsValid)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+
+            var transactions = _context.Transactions.Include("Branch")
+                                                    .Where(a => a.BranchId == searchDto.BranchId)
+                                                    .AsEnumerable();
+
+            switch (searchDto.SearchBy.ToUpper().Trim())
+            {
+                case "PLATENUMBER":
+                    transactions = transactions.Where(a => a.PlateNumber.Contains(searchDto.SearchText));
+                    break;
+
+                default:
+                    break;
+
+            }
+            //.ToList()
+            //.Select(Mapper.Map<Item, ItemDto>);
+
+            return Ok(transactions.ToList().Select(Mapper.Map<Transaction, TransactionDto>));
+        }
     }
 }

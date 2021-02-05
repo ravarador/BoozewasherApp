@@ -1,4 +1,5 @@
 ﻿using BoozewasherApp.Forms.ItemForms;
+using BoozewasherApp.Forms.SummaryForms;
 using BoozewasherApp.Helpers;
 using BoozewasherDomain.Dtos;
 using BoozewasherDomain.Enums;
@@ -58,8 +59,13 @@ namespace BoozewasherApp.Forms
             ShowHideEmployeeUserControls();
         }
 
-        private void btnReports_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = (int)TabControlEnums.Reports;
-
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            var summary = new SummaryReportSelector();
+            summary.mainForm = this;
+            summary.ShowDialog();
+            //tabControl1.SelectedIndex = (int)TabControlEnums.Reports;
+        }
         private void btnAnalytics_Click(object sender, EventArgs e)
         {
             analyticsUserControl1.mainForm = this;

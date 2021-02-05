@@ -15,12 +15,11 @@ namespace BoozewasherApp.Forms.SummaryForms
 {
     public partial class SummaryReportSelector : Form
     {
-        private ITransactionRepository TransactionRepository { get; set; }
+        public MainForm mainForm { get; set; }
         private List<SummaryDto> SummaryList { get; set; }
-        public SummaryReportSelector(ITransactionRepository transactionRepository)
+        public SummaryReportSelector()
         {
             InitializeComponent();
-            TransactionRepository = transactionRepository;
         }
 
         private void btnPreview_Click(object sender, EventArgs e)
@@ -30,8 +29,8 @@ namespace BoozewasherApp.Forms.SummaryForms
             if(radSelectDate.Checked)
             {
                 dateAndDateRangeDto.DateTime = datePickerSelectDate.Value.Date;
-
-                SummaryList = TransactionRepository.GetTransactionsByDate(dateAndDateRangeDto)
+                dateAndDateRangeDto.BranchId = mainForm.UserInformation.BranchId;
+                SummaryList = mainForm.TransactionRepository.GetTransactionsByDate(dateAndDateRangeDto)
                                                       .Select(a => new SummaryDto
                                                       {
                                                           Id = a.Id,
@@ -49,8 +48,8 @@ namespace BoozewasherApp.Forms.SummaryForms
             {
                 dateAndDateRangeDto.DateTimeFrom = datePickerDateFromRange.Value.Date;
                 dateAndDateRangeDto.DateTimeTo = datePickerDateToRange.Value.Date;
-
-                SummaryList = TransactionRepository.GetTransactionsByDateRange(dateAndDateRangeDto)
+                dateAndDateRangeDto.BranchId = mainForm.UserInformation.BranchId;
+                SummaryList = mainForm.TransactionRepository.GetTransactionsByDateRange(dateAndDateRangeDto)
                                                       .Select(a => new SummaryDto
                                                       {
                                                           Id = a.Id,
@@ -81,6 +80,11 @@ namespace BoozewasherApp.Forms.SummaryForms
                 grpboxDate.Enabled = false;
                 grpboxDateRange.Enabled = true;
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

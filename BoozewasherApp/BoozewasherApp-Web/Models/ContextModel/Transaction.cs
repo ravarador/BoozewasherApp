@@ -11,7 +11,8 @@ namespace BoozewasherApp_Web.Models.ContextModel
         public int Id { get; set; }
 
         [Required]
-        public DateTime DateTime { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime DateTime { get; set; } 
 
         [Required]
         [Display(Name = "Plate Number")]

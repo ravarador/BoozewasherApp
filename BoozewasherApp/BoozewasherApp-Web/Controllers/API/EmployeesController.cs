@@ -66,7 +66,7 @@ namespace BoozewasherApp_Web.Controllers.API
             if (!ModelState.IsValid)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
 
-            var employeeToUpdate = _context.Items.SingleOrDefault(i => i.Id == employee.Id);
+            var employeeToUpdate = _context.Employees.SingleOrDefault(i => i.Id == employee.Id);
 
             if (employeeToUpdate == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);

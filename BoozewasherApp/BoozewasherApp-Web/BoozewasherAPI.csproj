@@ -206,10 +206,6 @@
     <Compile Include="Migrations\202012140138095_AddedDataAnnotationsToServicesTransactionsVehiclesModel.designer.cs">
       <DependentUpon>202012140138095_AddedDataAnnotationsToServicesTransactionsVehiclesModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202012171247277_SeedUsers.cs" />
-    <Compile Include="Migrations\202012171247277_SeedUsers.designer.cs">
-      <DependentUpon>202012171247277_SeedUsers.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202012181253147_AddItemsTable.cs" />
     <Compile Include="Migrations\202012181253147_AddItemsTable.designer.cs">
       <DependentUpon>202012181253147_AddItemsTable.cs</DependentUpon>
@@ -230,10 +226,6 @@
     <Compile Include="Migrations\202101191410515_AddBranchTable.designer.cs">
       <DependentUpon>202101191410515_AddBranchTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101200841315_SeedUsersForAllTable.cs" />
-    <Compile Include="Migrations\202101200841315_SeedUsersForAllTable.designer.cs">
-      <DependentUpon>202101200841315_SeedUsersForAllTable.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202101201332280_AddFirstNameAndLastNameToAppUser.cs" />
     <Compile Include="Migrations\202101201332280_AddFirstNameAndLastNameToAppUser.designer.cs">
       <DependentUpon>202101201332280_AddFirstNameAndLastNameToAppUser.cs</DependentUpon>
@@ -242,17 +234,13 @@
     <Compile Include="Migrations\202101240644449_AddEmployeeTable.designer.cs">
       <DependentUpon>202101240644449_AddEmployeeTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101240700588_AddAttendanceTable.cs" />
-    <Compile Include="Migrations\202101240700588_AddAttendanceTable.designer.cs">
-      <DependentUpon>202101240700588_AddAttendanceTable.cs</DependentUpon>
+    <Compile Include="Migrations\202102061211356_AddAttendanceTable.cs" />
+    <Compile Include="Migrations\202102061211356_AddAttendanceTable.designer.cs">
+      <DependentUpon>202102061211356_AddAttendanceTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101261437518_SeedNewUserAndManageBranch.cs" />
-    <Compile Include="Migrations\202101261437518_SeedNewUserAndManageBranch.designer.cs">
-      <DependentUpon>202101261437518_SeedNewUserAndManageBranch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102011313357_SeedNewUserandManageEmployees.cs" />
-    <Compile Include="Migrations\202102011313357_SeedNewUserandManageEmployees.designer.cs">
-      <DependentUpon>202102011313357_SeedNewUserandManageEmployees.cs</DependentUpon>
+    <Compile Include="Migrations\202102061214097_SeedTableAspNetUsersAspNetRolesAspNetUserRoles.cs" />
+    <Compile Include="Migrations\202102061214097_SeedTableAspNetUsersAspNetRolesAspNetUserRoles.designer.cs">
+      <DependentUpon>202102061214097_SeedTableAspNetUsersAspNetRolesAspNetUserRoles.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ContextModel\Attendance.cs" />
     <Compile Include="Models\ContextModel\Branch.cs" />
@@ -692,9 +680,6 @@
     <EmbeddedResource Include="Migrations\202012140138095_AddedDataAnnotationsToServicesTransactionsVehiclesModel.resx">
       <DependentUpon>202012140138095_AddedDataAnnotationsToServicesTransactionsVehiclesModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012171247277_SeedUsers.resx">
-      <DependentUpon>202012171247277_SeedUsers.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012181253147_AddItemsTable.resx">
       <DependentUpon>202012181253147_AddItemsTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -710,23 +695,17 @@
     <EmbeddedResource Include="Migrations\202101191410515_AddBranchTable.resx">
       <DependentUpon>202101191410515_AddBranchTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101200841315_SeedUsersForAllTable.resx">
-      <DependentUpon>202101200841315_SeedUsersForAllTable.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101201332280_AddFirstNameAndLastNameToAppUser.resx">
       <DependentUpon>202101201332280_AddFirstNameAndLastNameToAppUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101240644449_AddEmployeeTable.resx">
       <DependentUpon>202101240644449_AddEmployeeTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101240700588_AddAttendanceTable.resx">
-      <DependentUpon>202101240700588_AddAttendanceTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102061211356_AddAttendanceTable.resx">
+      <DependentUpon>202102061211356_AddAttendanceTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101261437518_SeedNewUserAndManageBranch.resx">
-      <DependentUpon>202101261437518_SeedNewUserAndManageBranch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102011313357_SeedNewUserandManageEmployees.resx">
-      <DependentUpon>202102011313357_SeedNewUserandManageEmployees.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102061214097_SeedTableAspNetUsersAspNetRolesAspNetUserRoles.resx">
+      <DependentUpon>202102061214097_SeedTableAspNetUsersAspNetRolesAspNetUserRoles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

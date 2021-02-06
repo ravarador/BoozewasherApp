@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class SeedNewUserandManageEmployees : DbMigration
+    public partial class SeedTableAspNetUsersAspNetRolesAspNetUserRoles : DbMigration
     {
         public override void Up()
         {

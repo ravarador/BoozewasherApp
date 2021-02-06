@@ -7,13 +7,13 @@ namespace BoozewasherApp_Web.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class SeedUsers : IMigrationMetadata
+    public sealed partial class AddAttendanceTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(SeedUsers));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddAttendanceTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "202012171247277_SeedUsers"; }
+            get { return "202102061211356_AddAttendanceTable"; }
         }
         
         string IMigrationMetadata.Source

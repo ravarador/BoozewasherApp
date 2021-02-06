@@ -12,7 +12,5 @@ namespace BoozewasherApp_Web.Models.ContextModel
         public DateTime? TimeOutDate { get; set; }
         public Employee Employee { get; set; }
         public int EmployeeId { get; set; }
-        public Branch Branch { get; set; }
-        public int BranchId { get; set; }
     }
 }

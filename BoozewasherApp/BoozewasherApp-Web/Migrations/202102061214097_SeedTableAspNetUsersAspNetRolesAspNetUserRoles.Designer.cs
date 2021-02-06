@@ -7,13 +7,13 @@ namespace BoozewasherApp_Web.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class SeedNewUserandManageEmployees : IMigrationMetadata
+    public sealed partial class SeedTableAspNetUsersAspNetRolesAspNetUserRoles : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(SeedNewUserandManageEmployees));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(SeedTableAspNetUsersAspNetRolesAspNetUserRoles));
         
         string IMigrationMetadata.Id
         {
-            get { return "202102011313357_SeedNewUserandManageEmployees"; }
+            get { return "202102061214097_SeedTableAspNetUsersAspNetRolesAspNetUserRoles"; }
         }
         
         string IMigrationMetadata.Source

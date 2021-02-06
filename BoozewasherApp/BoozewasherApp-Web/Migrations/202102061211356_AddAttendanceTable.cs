@@ -14,18 +14,18 @@
                         Id = c.Int(nullable: false, identity: true),
                         TimeInDate = c.DateTime(nullable: false),
                         TimeOutDate = c.DateTime(),
-                        BranchId = c.Int(nullable: false),
+                        EmployeeId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Branches", t => t.BranchId, cascadeDelete: true)
-                .Index(t => t.BranchId);
+                .ForeignKey("dbo.Employees", t => t.EmployeeId, cascadeDelete: true)
+                .Index(t => t.EmployeeId);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Attendances", "BranchId", "dbo.Branches");
-            DropIndex("dbo.Attendances", new[] { "BranchId" });
+            DropForeignKey("dbo.Attendances", "EmployeeId", "dbo.Employees");
+            DropIndex("dbo.Attendances", new[] { "EmployeeId" });
             DropTable("dbo.Attendances");
         }
     }

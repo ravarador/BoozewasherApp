@@ -10,6 +10,8 @@ namespace BoozewasherApp_Web.Models.ContextModel
         public int Id { get; set; }
         public DateTime TimeInDate { get; set; }
         public DateTime? TimeOutDate { get; set; }
+        public Employee Employee { get; set; }
+        public int EmployeeId { get; set; }
         public Branch Branch { get; set; }
         public int BranchId { get; set; }
     }

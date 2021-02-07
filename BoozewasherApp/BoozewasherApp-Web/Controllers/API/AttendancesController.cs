@@ -28,25 +28,25 @@ namespace BoozewasherApp_Web.Controllers.API
             return Ok(attendance);
         }
         //POST /API/Attendances/TimeOutEmployee
-        public IHttpActionResult TimeOutEmployee(int Id, DateTime TimeOutTime)
+        public IHttpActionResult TimeOutEmployee(Attendance attendance)
         {
             if (!ModelState.IsValid)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
 
-            var attendanceToUpdate = _context.Attendances.SingleOrDefault(i => i.Id == Id);
+            var attendanceToUpdate = _context.Attendances.SingleOrDefault(i => i.Id == attendance.Id);
 
             if (attendanceToUpdate == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);
 
-            attendanceToUpdate.TimeOutDate = TimeOutTime;
+            attendanceToUpdate.TimeOutDate = attendance.TimeOutDate;
 
             _context.SaveChanges();
             return Ok();
         }
-        //GET /API/Attendances/GetAttendancesByDate
-        public IHttpActionResult GetAttendancesByDate(DateTime dateToday)
+        //POST /API/Attendances/GetAttendancesByDate
+        public IHttpActionResult GetAttendancesByDate(Attendance attendance)
         {
-            var attendances = _context.Attendances.Include("Employee").Where(a => a.TimeInDate.Date == dateToday.Date).ToList();
+            var attendances = _context.Attendances.Include("Employee").Where(a => a.TimeInDate.Date == attendance.TimeInDate.Date).ToList();
 
             if (attendances == null)
                 return NotFound();

@@ -59,6 +59,7 @@
     <Compile Include="Enums\ServiceTypeConstants.cs" />
     <Compile Include="Enums\TabControlEnums.cs" />
     <Compile Include="Enums\TaxConstants.cs" />
+    <Compile Include="IRepositories\IAttendanceRepository.cs" />
     <Compile Include="IRepositories\IBranchRepository.cs" />
     <Compile Include="IRepositories\IEmployeeRepository.cs" />
     <Compile Include="IRepositories\IItemRepository.cs" />

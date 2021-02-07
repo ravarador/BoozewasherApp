@@ -25,12 +25,14 @@ namespace BoozewasherApp.Forms
         public ITransactionRepository TransactionRepository { get; private set; }
         public IItemRepository ItemRepository { get; private set; }
         public IEmployeeRepository EmployeeRepository { get; private set; }
+        public IAttendanceRepository AttendanceRepository { get; private set; }
         public MainForm(UserInformationDto userInformation,
                         IServiceRepository serviceRepository,
                         IItemRepository itemRepository,
                         IVehicleRepository vehicleRepository,
                         ITransactionRepository transactionRepository,
-                        IEmployeeRepository employeeRepository)
+                        IEmployeeRepository employeeRepository,
+                        IAttendanceRepository attendanceRepository)
         {
             InitializeComponent();
             UserInformation = userInformation;
@@ -39,6 +41,7 @@ namespace BoozewasherApp.Forms
             TransactionRepository = transactionRepository;
             ItemRepository = itemRepository;
             EmployeeRepository = employeeRepository;
+            AttendanceRepository = attendanceRepository;
         }
 
         private void MainForm_Load(object sender, EventArgs e)

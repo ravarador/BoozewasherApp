@@ -68,7 +68,7 @@ namespace BoozewasherApp.Forms
             if (validate.IsAuthenticated)
             {
                 MessageBox.Show(validate.ResponseMessage);
-                var mainForm = new MainForm(UserInformation, ServiceRepository, ItemRepository, VehicleRepository, TransactionRepository, EmployeeRepository);
+                var mainForm = new MainForm(UserInformation, ServiceRepository, ItemRepository, VehicleRepository, TransactionRepository, EmployeeRepository, AttendanceRepository);
                 mainForm.LoginForm = this;
                 mainForm.Show();
                 this.Hide();

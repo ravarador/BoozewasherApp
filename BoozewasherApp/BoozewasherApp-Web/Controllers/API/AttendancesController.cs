@@ -1,4 +1,5 @@
 ﻿using BoozewasherApp_Web.Models;
+using BoozewasherApp_Web.Models.ContextModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,35 +11,69 @@ namespace BoozewasherApp_Web.Controllers.API
 {
     public class AttendancesController : ApiController
     {
-        //private ApplicationDbContext _context;
+        private ApplicationDbContext _context;
 
-        //public AttendancesController()
-        //{
-        //    _context = new ApplicationDbContext();
-        //}
+        public AttendancesController()
+        {
+            _context = new ApplicationDbContext();
+        }
+        //POST /API/Attendances/TimeInEmployee
+        public IHttpActionResult TimeInEmployee(Attendance attendance)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            _context.Attendances.Add(attendance);
+            _context.SaveChanges();
+            return Ok(attendance);
+        }
+        //POST /API/Attendances/TimeOutEmployee
+        public IHttpActionResult TimeOutEmployee(int Id, DateTime TimeOutTime)
+        {
+            if (!ModelState.IsValid)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+
+            var attendanceToUpdate = _context.Attendances.SingleOrDefault(i => i.Id == Id);
+
+            if (attendanceToUpdate == null)
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+
+            attendanceToUpdate.TimeOutDate = TimeOutTime;
+
+            _context.SaveChanges();
+            return Ok();
+        }
+        //GET /API/Attendances/GetAttendancesByDate
+        public IHttpActionResult GetAttendancesByDate(DateTime dateToday)
+        {
+            var attendances = _context.Attendances.Include("Employee").Where(a => a.TimeInDate.Date == dateToday.Date).ToList();
+
+            if (attendances == null)
+                return NotFound();
+
+            return Ok(attendances);
+        }
 
         ////GET /API/Attendances
 
         //public IHttpActionResult GetAttendances()
         //{
-        //    var itemsDto = _context.Attendances.Include("Branch")
-        //                                 .ToList()
-        //                                 .Select(Mapper.Map<Item, ItemDto>);
+        //    var attendances = _context.Attendances.Include("Employee").ToList();
 
-        //    return Ok(itemsDto);
+        //    return Ok(attendances);
         //}
 
-        ////GET /API/Items/GetItem
-        //public IHttpActionResult GetItem(int id)
+        ////GET /API/Attendances/GetAttendance
+        //public IHttpActionResult GetAttendance(int id)
         //{
-        //    var item = _context.Items.Include("Branch").SingleOrDefault(s => s.Id == id);
+        //    var attendance = _context.Attendances.Include("Employee").SingleOrDefault(s => s.Id == id);
 
-        //    if (item == null)
+        //    if (attendance == null)
         //        return NotFound();
 
-        //    return Ok(Mapper.Map<Item, ItemDto>(item));
+        //    return Ok(attendance);
         //}
-        ////GET /API/Items/GetItemsByBranchId
+        ////GET /API/Items/GetAttendanceByBranchId
         //public IHttpActionResult GetItemsByBranchId(int id)
         //{
         //    var itemsDto = _context.Items.Include("Branch")

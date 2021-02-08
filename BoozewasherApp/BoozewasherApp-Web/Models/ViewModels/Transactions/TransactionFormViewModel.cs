@@ -17,6 +17,8 @@ namespace BoozewasherApp_Web.Models.ViewModels.Transactions
         public int Id { get; set; }
         public DateTime DateTime { get; set; }
 
+
+        [Required]
         [Display(Name = "Plate Number")]
         public string PlateNumber { get; set; }
 

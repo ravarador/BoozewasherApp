@@ -14,7 +14,6 @@
     @Html.LabelFor(t => t.VehicleId)
     <div class="input-group mb-3">
         @Html.TextBoxFor(t => t.VehicleId, "{0:#.#}", new { @class = "form-control" })
-        @Html.ValidationMessageFor(t => t.VehicleId)
         <div class="input-group-append">
             @Html.ActionLink("Vehicle Lookup", "VehicleLookup", "Transaction", new { @class = "btn btn-outline-primary" })
         </div>
@@ -24,7 +23,6 @@
     @Html.LabelFor(t => t.ItemId)
     <div class="input-group mb-3">
         @Html.TextBoxFor(t => t.ItemId, "{0:#.#}", new { @class = "form-control" })
-        @Html.ValidationMessageFor(t => t.ItemId)
         <div class="input-group-append">
             @Html.ActionLink("Item Lookup", "ItemLookup", "Transaction", new { @class = "btn btn-outline-primary" })
         </div>
@@ -32,26 +30,27 @@
 
     <div class="form-group">
         @Html.LabelFor(t => t.ServiceId)
-        @Html.DropDownListFor(t => t.ServiceId, new SelectList(Model.Services, "Id", "Type"), "Select Service Type", new { @class = "form-control" })
-        @Html.ValidationMessageFor(t => t.ServiceId)
+        <p></p>
+        @Html.DropDownListFor(t => t.ServiceId, new SelectList(Model.Services, "Id", "Type"), "Select Service Type", new { @class = "custom-select" })
     </div>
 
     <div class="form-group">
         @Html.LabelFor(t => t.BranchId)
-        @Html.DropDownListFor(t => t.BranchId, new SelectList(Model.Branches, "Id", "Name"), "Select Branch", new { @class = "form-control" })
-        @Html.ValidationMessageFor(t => t.BranchId)
+        <p></p>
+        @Html.DropDownListFor(t => t.BranchId, new SelectList(Model.Branches, "Id", "Name"), "Select Branch", new { @class = "custom-select" })
+       
     </div>
 
     <div class="form-group">
         @Html.LabelFor(t => t.PlateNumber)
         @Html.TextBoxFor(t => t.PlateNumber, new { @class = "form-control" })
-        @Html.ValidationMessageFor(t => t.PlateNumber)
+      
+
     </div>
 
     <div class="form-group">
         @Html.LabelFor(t => t.Cost)
         @Html.TextBoxFor(t => t.Cost, "{0:#.#}", new { @class = "form-control" })
-        @Html.ValidationMessageFor(t => t.Cost)
     </div>
     <p></p>
     @Html.HiddenFor(t => t.Id)

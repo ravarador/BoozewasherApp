@@ -138,6 +138,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.btnTimeInOut.Text = "Time In / Time Out";
             this.btnTimeInOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTimeInOut.UseVisualStyleBackColor = true;
+            this.btnTimeInOut.Click += new System.EventHandler(this.btnTimeInOut_Click);
             // 
             // flowLayoutPanel1
             // 

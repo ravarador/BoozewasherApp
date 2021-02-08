@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoozewasherApp.Forms.AttendanceForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace BoozewasherApp.Forms.EmployeeForms
         public EmployeeHomeUserControl()
         {
             InitializeComponent();
+        }
+
+        private void btnTimeInOut_Click(object sender, EventArgs e)
+        {
+            var timeInTimeOutForm = new TimeInOutForm();
+            timeInTimeOutForm.ShowDialog();
         }
     }
 }

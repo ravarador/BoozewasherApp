@@ -80,6 +80,7 @@
             this.updateTransactionUserControl1 = new BoozewasherApp.Forms.TransactionForms.UpdateTransactionUserControl();
             this.deleteTransactionUserControl1 = new BoozewasherApp.Forms.TransactionForms.DeleteTransactionUserControl();
             this.tabPageEmployees = new System.Windows.Forms.TabPage();
+            this.deleteEmployeeUserControl1 = new BoozewasherApp.Forms.EmployeeForms.DeleteEmployeeUserControl();
             this.updateEmployeeUserControl1 = new BoozewasherApp.Forms.EmployeeForms.UpdateEmployeeUserControl();
             this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.btnUpdateEmployee = new System.Windows.Forms.Button();
@@ -90,7 +91,7 @@
             this.tabPageAnalytics = new System.Windows.Forms.TabPage();
             this.analyticsUserControl1 = new BoozewasherApp.Forms.SummaryForms.AnalyticsUserControl();
             this.tabPageSettings = new System.Windows.Forms.TabPage();
-            this.deleteEmployeeUserControl1 = new BoozewasherApp.Forms.EmployeeForms.DeleteEmployeeUserControl();
+            this.employeeHomeUserControl1 = new BoozewasherApp.Forms.EmployeeForms.EmployeeHomeUserControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxBooze)).BeginInit();
@@ -835,12 +836,13 @@
             // tabPageEmployees
             // 
             this.tabPageEmployees.BackColor = System.Drawing.Color.White;
-            this.tabPageEmployees.Controls.Add(this.deleteEmployeeUserControl1);
-            this.tabPageEmployees.Controls.Add(this.updateEmployeeUserControl1);
             this.tabPageEmployees.Controls.Add(this.btnDeleteEmployee);
             this.tabPageEmployees.Controls.Add(this.btnUpdateEmployee);
             this.tabPageEmployees.Controls.Add(this.btnSearchEmployee);
             this.tabPageEmployees.Controls.Add(this.btnAddEmployee);
+            this.tabPageEmployees.Controls.Add(this.employeeHomeUserControl1);
+            this.tabPageEmployees.Controls.Add(this.deleteEmployeeUserControl1);
+            this.tabPageEmployees.Controls.Add(this.updateEmployeeUserControl1);
             this.tabPageEmployees.Controls.Add(this.addEmployeeUserControl1);
             this.tabPageEmployees.Location = new System.Drawing.Point(4, 23);
             this.tabPageEmployees.Margin = new System.Windows.Forms.Padding(0);
@@ -848,6 +850,14 @@
             this.tabPageEmployees.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageEmployees.Size = new System.Drawing.Size(1104, 685);
             this.tabPageEmployees.TabIndex = 1;
+            // 
+            // deleteEmployeeUserControl1
+            // 
+            this.deleteEmployeeUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.deleteEmployeeUserControl1.Name = "deleteEmployeeUserControl1";
+            this.deleteEmployeeUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.deleteEmployeeUserControl1.TabIndex = 12;
+            this.deleteEmployeeUserControl1.Visible = false;
             // 
             // updateEmployeeUserControl1
             // 
@@ -971,13 +981,13 @@
             this.tabPageSettings.Size = new System.Drawing.Size(1104, 685);
             this.tabPageSettings.TabIndex = 4;
             // 
-            // deleteEmployeeUserControl1
+            // employeeHomeUserControl1
             // 
-            this.deleteEmployeeUserControl1.Location = new System.Drawing.Point(8, 82);
-            this.deleteEmployeeUserControl1.Name = "deleteEmployeeUserControl1";
-            this.deleteEmployeeUserControl1.Size = new System.Drawing.Size(983, 580);
-            this.deleteEmployeeUserControl1.TabIndex = 12;
-            this.deleteEmployeeUserControl1.Visible = false;
+            this.employeeHomeUserControl1.Location = new System.Drawing.Point(8, 82);
+            this.employeeHomeUserControl1.Name = "employeeHomeUserControl1";
+            this.employeeHomeUserControl1.Size = new System.Drawing.Size(983, 580);
+            this.employeeHomeUserControl1.TabIndex = 13;
+            this.employeeHomeUserControl1.Visible = false;
             // 
             // MainForm
             // 
@@ -1077,5 +1087,6 @@
         private System.Windows.Forms.Button btnSearchEmployee;
         private EmployeeForms.UpdateEmployeeUserControl updateEmployeeUserControl1;
         private EmployeeForms.DeleteEmployeeUserControl deleteEmployeeUserControl1;
+        private EmployeeForms.EmployeeHomeUserControl employeeHomeUserControl1;
     }
 }

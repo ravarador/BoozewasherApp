@@ -59,7 +59,7 @@ namespace BoozewasherApp.Forms
         private void btnEmployees_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = (int)TabControlEnums.Employees;
-            ShowHideEmployeeUserControls();
+            ShowHideEmployeeUserControls(isHomeEmployee: true);
         }
 
         private void btnReports_Click(object sender, EventArgs e)
@@ -152,11 +152,12 @@ namespace BoozewasherApp.Forms
             updateTransactionUserControl1.Visible = isUpdateTransaction;
             deleteTransactionUserControl1.Visible = isDeleteTransaction;
         }
-        public void ShowHideEmployeeUserControls(bool isAddEmployee = false, bool isDeleteEmployee = false, bool isUpdateEmployee = false, bool isViewEmployee = false)
+        public void ShowHideEmployeeUserControls(bool isAddEmployee = false, bool isDeleteEmployee = false, bool isUpdateEmployee = false, bool isViewEmployee = false, bool isHomeEmployee = false)
         {
             addEmployeeUserControl1.Visible = isAddEmployee;
             updateEmployeeUserControl1.Visible = isUpdateEmployee;
             deleteEmployeeUserControl1.Visible = isDeleteEmployee;
+            employeeHomeUserControl1.Visible = isHomeEmployee;
         }
         private void btnItemsAdd_Click(object sender, EventArgs e)
         {

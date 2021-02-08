@@ -11,26 +11,37 @@ namespace BoozewasherApp_Web.Models.ContextModel
 
         public int Id { get; set; }
 
-        [Display (Name = "First Name")]
+        [Display(Name = "First Name")]
+        [Required]
         public string FirstName { get; set; }
 
         [Display(Name = "Middle Name")]
+        [Required]
         public string MiddleName { get; set; }
 
         [Display(Name = "Last Name")]
+        [Required]
         public string LastName { get; set; }
+
+        [Required]
         public string  Address { get; set; }
 
         [Display(Name = "Date of Birth")]
+        [Required]
         public string Birthdate { get; set; }
+
         public string TIN { get; set; }
+
+        [Required]
         public string Email { get; set; }
 
         [Display(Name = "Contact Number")]
+        [Required]
         public string ContactNo { get; set; }
         public Branch Branch { get; set; }
 
         [Display(Name = "Branch ID")]
+        [Required]
         public int BranchId { get; set; }
     }
 }

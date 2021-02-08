@@ -11,19 +11,18 @@
     <div class="form-group">
         @Html.LabelFor(s => s.Service.Type)
         @Html.TextBoxFor(s => s.Service.Type, new { @class = "form-control" })
-        @Html.ValidationMessageFor(s => s.Service.Type)
+       
     </div>
 
     <div class="form-group">
         @Html.LabelFor(s => s.Service.Description)
         @Html.TextBoxFor(s => s.Service.Description, new { @class = "form-control" })
-        @Html.ValidationMessageFor(s => s.Service.Description)
+       
     </div>
 
     <div class="form-group">
         @Html.LabelFor(s => s.Service.Expense)
         @Html.TextBoxFor(s => s.Service.Expense, new { @class = "form-control" })
-        @Html.ValidationMessageFor(s => s.Service.Expense)
     </div>
     <p></p>
     @Html.HiddenFor(s => s.Service.Id)

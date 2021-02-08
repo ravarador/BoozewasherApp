@@ -100,6 +100,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SummaryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AttendanceForms\TimeInOutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttendanceForms\TimeInOutForm.Designer.cs">
+      <DependentUpon>TimeInOutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EmployeeForms\AddEmployeeUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -278,6 +284,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="Forms\AttendanceForms\TimeInOutForm.resx">
+      <DependentUpon>TimeInOutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmployeeForms\AddEmployeeUserControl.resx">
       <DependentUpon>AddEmployeeUserControl.cs</DependentUpon>
     </EmbeddedResource>

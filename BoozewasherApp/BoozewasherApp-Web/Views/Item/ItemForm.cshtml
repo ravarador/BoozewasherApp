@@ -12,37 +12,38 @@
     <div class="form-group">
         @Html.LabelFor(i => i.Item.Name)
         @Html.TextBoxFor(i => i.Item.Name, new { @class = "form-control" })
-        @Html.ValidationMessageFor(i => i.Item.Name)
+      
     </div>
 
     <div class="form-group">
         @Html.LabelFor(i => i.Item.Description)
         @Html.TextBoxFor(i => i.Item.Description, new { @class = "form-control" })
-        @Html.ValidationMessageFor(i => i.Item.Description)
+       
     </div>
 
     <div class="form-group">
         @Html.LabelFor(i => i.Item.Barcode)
         @Html.TextBoxFor(i => i.Item.Barcode, new { @class = "form-control" })
-        @Html.ValidationMessageFor(i => i.Item.Barcode)
+        
     </div>
 
     <div class="form-group">
         @Html.LabelFor(i => i.Item.UsageCount)
         @Html.TextBoxFor(i => i.Item.UsageCount, "{0:#.#}", new { @class = "form-control" })
-        @Html.ValidationMessageFor(i => i.Item.UsageCount)
+
     </div>
 
     <div class="form-group">
         @Html.LabelFor(i => i.Item.Expense)
         @Html.TextBoxFor(i => i.Item.Expense, "{0:#.#}", new { @class = "form-control" })
-        @Html.ValidationMessageFor(i => i.Item.Expense)
+       
     </div>
 
     <div class="form-group">
         @Html.LabelFor(t => t.Item.BranchId)
-        @Html.DropDownListFor(t => t.Item.BranchId, new SelectList(Model.Branches, "Id", "Name"), "Select Branch", new { @class = "form-control" })
-        @Html.ValidationMessageFor(t => t.Item.BranchId)
+        <p></p>
+        @Html.DropDownListFor(t => t.Item.BranchId, new SelectList(Model.Branches, "Id", "Name"), "Select Branch", new { @class = "custom-select" })
+       
     </div>
 
     <div class="checkbox">

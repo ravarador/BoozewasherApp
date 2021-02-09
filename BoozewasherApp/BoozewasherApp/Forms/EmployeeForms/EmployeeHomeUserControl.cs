@@ -13,6 +13,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
 {
     public partial class EmployeeHomeUserControl : UserControl
     {
+        public MainForm mainForm;
         public EmployeeHomeUserControl()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
         private void btnTimeInOut_Click(object sender, EventArgs e)
         {
             var timeInTimeOutForm = new TimeInOutForm();
+            timeInTimeOutForm.mainForm = mainForm;
             timeInTimeOutForm.ShowDialog();
         }
     }

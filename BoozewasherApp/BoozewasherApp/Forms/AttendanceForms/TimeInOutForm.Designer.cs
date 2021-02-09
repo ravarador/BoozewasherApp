@@ -69,6 +69,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
             this.btnTimeIn.TabIndex = 2;
             this.btnTimeIn.Text = "Time In";
             this.btnTimeIn.UseVisualStyleBackColor = false;
+            this.btnTimeIn.Click += new System.EventHandler(this.btnTimeIn_Click);
             // 
             // btnTimeOut
             // 
@@ -135,6 +136,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "TimeInOutForm";
             this.Text = "TimeInOutForm";
+            this.Load += new System.EventHandler(this.TimeInOutForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

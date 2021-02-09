@@ -59,6 +59,7 @@ namespace BoozewasherApp.Forms
         private void btnEmployees_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = (int)TabControlEnums.Employees;
+            employeeHomeUserControl1.mainForm = this;
             ShowHideEmployeeUserControls(isHomeEmployee: true);
         }
 

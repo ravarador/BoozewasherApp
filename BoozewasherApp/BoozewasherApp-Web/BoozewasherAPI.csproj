@@ -246,6 +246,10 @@
     <Compile Include="Migrations\202102081107108_AddDataAnnotationsToEmployee.designer.cs">
       <DependentUpon>202102081107108_AddDataAnnotationsToEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102091300566_AddAdataAnnotationsForBranches.cs" />
+    <Compile Include="Migrations\202102091300566_AddAdataAnnotationsForBranches.designer.cs">
+      <DependentUpon>202102091300566_AddAdataAnnotationsForBranches.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ContextModel\Attendance.cs" />
     <Compile Include="Models\ContextModel\Branch.cs" />
     <Compile Include="Models\ContextModel\Employee.cs" />
@@ -713,6 +717,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102081107108_AddDataAnnotationsToEmployee.resx">
       <DependentUpon>202102081107108_AddDataAnnotationsToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102091300566_AddAdataAnnotationsForBranches.resx">
+      <DependentUpon>202102091300566_AddAdataAnnotationsForBranches.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

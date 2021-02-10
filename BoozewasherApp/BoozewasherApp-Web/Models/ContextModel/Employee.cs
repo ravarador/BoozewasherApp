@@ -40,7 +40,7 @@ namespace BoozewasherApp_Web.Models.ContextModel
         public string ContactNo { get; set; }
         public Branch Branch { get; set; }
 
-        [Display(Name = "Branch ID")]
+        [Display(Name = "Branch Name")]
         [Required]
         public int BranchId { get; set; }
     }

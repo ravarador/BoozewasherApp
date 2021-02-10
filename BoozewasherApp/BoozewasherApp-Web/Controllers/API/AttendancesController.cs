@@ -27,7 +27,8 @@ namespace BoozewasherApp_Web.Controllers.API
             _context.SaveChanges();
             return Ok(attendance);
         }
-        //POST /API/Attendances/TimeOutEmployee
+        //PUT /API/Attendances/TimeOutEmployee
+        [HttpPut]
         public IHttpActionResult TimeOutEmployee(Attendance attendance)
         {
             if (!ModelState.IsValid)
@@ -43,7 +44,7 @@ namespace BoozewasherApp_Web.Controllers.API
             _context.SaveChanges();
             return Ok();
         }
-        //POST /API/Attendances/GetAttendancesByDate
+        //GET /API/Attendances/GetAttendancesByDate
         [HttpGet]
         public IHttpActionResult GetAttendancesByDate()
         {

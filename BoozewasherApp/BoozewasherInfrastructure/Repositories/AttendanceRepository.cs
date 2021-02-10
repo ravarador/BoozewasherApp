@@ -24,7 +24,7 @@ namespace BoozewasherInfrastructure.Repositories
         public void TimeOutEmployee(Attendance attendance)
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/attendances/timeoutemployee/", Method.POST);
+            var request = new RestRequest("/api/attendances/timeoutemployee/", Method.PUT);
             request.AddJsonBody(attendance);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);

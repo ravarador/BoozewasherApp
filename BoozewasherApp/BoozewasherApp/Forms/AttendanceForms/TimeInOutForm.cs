@@ -51,7 +51,26 @@ namespace BoozewasherApp.Forms.AttendanceForms
         }
         private void btnTimeOut_Click(object sender, EventArgs e)
         {
+            var selectedEmployeeId = GetEmployeeIdFromComboBox();
 
+            var attendanceToday = mainForm.AttendanceRepository.GetAttendancesByDate().Where(a => a.EmployeeId == selectedEmployeeId && a.TimeInDate.Date == DateTime.Now.Date && a.TimeOutDate == null);
+
+            if (attendanceToday.Any())
+            {
+                var attendance = new Attendance()
+                {
+                    Id = attendanceToday.SingleOrDefault().Id,
+                    EmployeeId = selectedEmployeeId,
+                    TimeOutDate = DateTime.Now
+                };
+                mainForm.AttendanceRepository.TimeOutEmployee(attendance);
+                MessageBox.Show("Time out successful!");
+                
+            }
+            else
+            {
+                MessageBox.Show("No pending time in!");
+            }
         }
         private int GetEmployeeIdFromComboBox()
         {

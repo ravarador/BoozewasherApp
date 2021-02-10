@@ -29,11 +29,22 @@ namespace BoozewasherApp.Forms.AttendanceForms
         }
         private void btnTimeIn_Click(object sender, EventArgs e)
         {
+            TimeIn();
+            
+        }
+        private void btnTimeOut_Click(object sender, EventArgs e)
+        {
+            TimeOut();
+        }
+        #region Private/public methods
+        private void TimeIn()
+        {
             var selectedEmployeeId = GetEmployeeIdFromComboBox();
 
             var attendanceToday = mainForm.AttendanceRepository.GetAttendancesByDate();
 
-            if (attendanceToday.Where(a => a.EmployeeId == selectedEmployeeId && a.TimeInDate.Date == DateTime.Now.Date).Any())
+            if (attendanceToday.Where(a => a.EmployeeId == selectedEmployeeId &&
+                                           a.TimeInDate.Date == DateTime.Now.Date).Any())
             {
                 MessageBox.Show("There is a pending time in!");
             }
@@ -47,13 +58,14 @@ namespace BoozewasherApp.Forms.AttendanceForms
                 mainForm.AttendanceRepository.TimeInEmployee(attendance);
                 MessageBox.Show("Time in successful!");
             }
-            
         }
-        private void btnTimeOut_Click(object sender, EventArgs e)
+        private void TimeOut()
         {
             var selectedEmployeeId = GetEmployeeIdFromComboBox();
 
-            var attendanceToday = mainForm.AttendanceRepository.GetAttendancesByDate().Where(a => a.EmployeeId == selectedEmployeeId && a.TimeInDate.Date == DateTime.Now.Date && a.TimeOutDate == null);
+            var attendanceToday = mainForm.AttendanceRepository.GetAttendancesByDate().Where(a => a.EmployeeId == selectedEmployeeId &&
+                                                                                                  a.TimeInDate.Date == DateTime.Now.Date &&
+                                                                                                  a.TimeOutDate == null);
 
             if (attendanceToday.Any())
             {
@@ -65,7 +77,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
                 };
                 mainForm.AttendanceRepository.TimeOutEmployee(attendance);
                 MessageBox.Show("Time out successful!");
-                
+
             }
             else
             {
@@ -79,6 +91,6 @@ namespace BoozewasherApp.Forms.AttendanceForms
             return int.Parse(branchId);
         }
 
-        
+        #endregion
     }
 }

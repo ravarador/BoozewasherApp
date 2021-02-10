@@ -30,17 +30,16 @@ namespace BoozewasherInfrastructure.Repositories
             var response = client.Execute(request);
         }
 
-        public List<Attendance> GetAttendancesByDate(Attendance attendance)
+        public List<Attendance> GetAttendancesByDate()
         {
             var client = new RestClient(Resources.ConnectionString);
-            var request = new RestRequest("/api/items/getattendancesbydate/", Method.POST);
-            request.AddJsonBody(attendance);
+            var request = new RestRequest("/api/attendances/getattendancesbydate/", Method.GET);
             request.RequestFormat = DataFormat.Json;
             var response = client.Execute(request);
 
             var dataList = JsonConvert.DeserializeObject<List<Attendance>>(response.Content);
 
-            return dataList.ToList();
+            return dataList;
         }
     }
 }

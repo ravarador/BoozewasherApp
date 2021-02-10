@@ -44,12 +44,16 @@ namespace BoozewasherApp_Web.Controllers.API
             return Ok();
         }
         //POST /API/Attendances/GetAttendancesByDate
-        public IHttpActionResult GetAttendancesByDate(Attendance attendance)
+        [HttpGet]
+        public IHttpActionResult GetAttendancesByDate()
         {
-            var attendances = _context.Attendances.Include("Employee").Where(a => a.TimeInDate.Date == attendance.TimeInDate.Date).ToList();
 
-            if (attendances == null)
-                return NotFound();
+            if (!ModelState.IsValid)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+
+            var attendances = _context.Attendances.Include("Employee").Where(a => a.TimeInDate.Year == DateTime.Now.Year &&
+                                                                                  a.TimeInDate.Month == DateTime.Now.Month &&
+                                                                                  a.TimeInDate.Day == DateTime.Now.Day).ToList();
 
             return Ok(attendances);
         }

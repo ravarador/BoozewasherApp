@@ -22,7 +22,7 @@ namespace BoozewasherApp_Web.Controllers.API
         //GET /API/Branches    
         public IHttpActionResult GetBranches()
         {
-            var branches = _context.Branches;
+            var branches = _context.Branches.ToList();
 
             return Ok(branches);
         }

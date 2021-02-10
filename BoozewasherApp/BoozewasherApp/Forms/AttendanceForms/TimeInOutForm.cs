@@ -24,15 +24,40 @@ namespace BoozewasherApp.Forms.AttendanceForms
             var employees = mainForm.EmployeeRepository.GetEmployeesByBranchId(mainForm.UserInformation.BranchId);
             foreach (var employee in employees)
             {
-                comboEmployees.Items.Add($"{employee.FirstName} {employee.LastName}");
+                comboEmployees.Items.Add($"{employee.Id} - {employee.FirstName} {employee.MiddleName} {employee.LastName}");
             }
         }
         private void btnTimeIn_Click(object sender, EventArgs e)
         {
-            //var attendance = new Attendance()
-            //{
-                
-            //}
+            var selectedEmployeeId = GetEmployeeIdFromComboBox();
+
+            var attendanceToday = mainForm.AttendanceRepository.GetAttendancesByDate();
+
+            if (attendanceToday.Where(a => a.EmployeeId == selectedEmployeeId && a.TimeInDate.Date == DateTime.Now.Date).Any())
+            {
+                MessageBox.Show("There is a pending time in!");
+            }
+            else
+            {
+                var attendance = new Attendance()
+                {
+                    EmployeeId = selectedEmployeeId,
+                    TimeInDate = DateTime.Now,
+                };
+                mainForm.AttendanceRepository.TimeInEmployee(attendance);
+                MessageBox.Show("Time in successful!");
+            }
+            
+        }
+        private void btnTimeOut_Click(object sender, EventArgs e)
+        {
+
+        }
+        private int GetEmployeeIdFromComboBox()
+        {
+            var selectedEmployee = comboEmployees.SelectedItem.ToString();
+            var branchId = selectedEmployee.Split('-')[0].Trim();
+            return int.Parse(branchId);
         }
 
         

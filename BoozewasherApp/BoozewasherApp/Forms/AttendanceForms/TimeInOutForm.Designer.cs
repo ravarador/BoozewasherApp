@@ -84,6 +84,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
             this.btnTimeOut.TabIndex = 3;
             this.btnTimeOut.Text = "Time Out";
             this.btnTimeOut.UseVisualStyleBackColor = false;
+            this.btnTimeOut.Click += new System.EventHandler(this.btnTimeOut_Click);
             // 
             // panel1
             // 
@@ -135,6 +136,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "TimeInOutForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TimeInOutForm";
             this.Load += new System.EventHandler(this.TimeInOutForm_Load);
             this.panel1.ResumeLayout(false);

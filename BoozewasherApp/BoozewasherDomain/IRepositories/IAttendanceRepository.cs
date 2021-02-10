@@ -11,6 +11,6 @@ namespace BoozewasherDomain.IRepositories
     {
         void TimeInEmployee(Attendance attendance);
         void TimeOutEmployee(Attendance attendance);
-        List<Attendance> GetAttendancesByDate(Attendance attendance);
+        List<Attendance> GetAttendancesByDate();
     }
 }

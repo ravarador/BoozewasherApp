@@ -41,10 +41,11 @@ namespace BoozewasherApp.Forms.AttendanceForms
         {
             var selectedEmployeeId = GetEmployeeIdFromComboBox();
 
-            var attendanceToday = mainForm.AttendanceRepository.GetAttendancesByDate();
+            var attendanceToday = mainForm.AttendanceRepository.GetAttendancesByDate().Where(a => a.EmployeeId == selectedEmployeeId &&
+                                                                                                  a.TimeInDate.Date == DateTime.Now.Date &&
+                                                                                                  a.TimeOutDate == null);
 
-            if (attendanceToday.Where(a => a.EmployeeId == selectedEmployeeId &&
-                                           a.TimeInDate.Date == DateTime.Now.Date).Any())
+            if (attendanceToday.Any())
             {
                 MessageBox.Show("There is a pending time in!");
             }

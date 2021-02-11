@@ -424,7 +424,6 @@
   <ItemGroup>
     <None Include="Resources\booze_logo.jpg" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\directions_car_white_36x36.png" />
   </ItemGroup>

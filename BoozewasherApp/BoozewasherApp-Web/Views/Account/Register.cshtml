@@ -10,10 +10,10 @@
     @Html.AntiForgeryToken()
     <hr />
     @Html.ValidationSummary(true, "Please fill up Requirements")
-    <div class="form-group">
+    <div class=" form-group has-danger">
         @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control is -invalid" })
         </div>
     </div>
     <div class="form-group">

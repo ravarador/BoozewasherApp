@@ -35,29 +35,36 @@
 
     <div class="form-group">
         @Html.LabelFor(i => i.Item.Expense)
-        @Html.TextBoxFor(i => i.Item.Expense, "{0:#.#}", new { @class = "form-control" })
-       
-    </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> PHP </span>
+            </div>
+            @Html.TextBoxFor(i => i.Item.Expense, "{0:#.#}", new { @class = "form-control" })
+            <div class="input-group-append">
+                <span class="input-group-text"> .00 </span>
+            </div>
+        </div>
+        </div>
 
-    <div class="form-group">
-        @Html.LabelFor(t => t.Item.BranchId)
+        <div class="form-group">
+            @Html.LabelFor(t => t.Item.BranchId)
+            <p></p>
+            @Html.DropDownListFor(t => t.Item.BranchId, new SelectList(Model.Branches, "Id", "Name"), "Select Branch", new { @class = "custom-select" })
+
+        </div>
+
+        <div class="checkbox">
+            <label>
+                @Html.CheckBoxFor(i => i.Item.IsEmpty) Is Empty
+            </label>
+        </div>
+
         <p></p>
-        @Html.DropDownListFor(t => t.Item.BranchId, new SelectList(Model.Branches, "Id", "Name"), "Select Branch", new { @class = "custom-select" })
-       
-    </div>
+        @Html.HiddenFor(i => i.Item.Id)
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-primary"> Save </button>
 
-    <div class="checkbox">
-        <label>
-            @Html.CheckBoxFor(i => i.Item.IsEmpty) Is Empty
-        </label>
-    </div>
-
-    <p></p>
-    @Html.HiddenFor(i => i.Item.Id)
-    @Html.AntiForgeryToken()
-    <button type="submit" class="btn btn-primary"> Save </button>
-
-}
-@section	scripts	{
-    @Scripts.Render("~/bundles/jqueryval")
-}
+        }
+        @section	scripts	{
+            @Scripts.Render("~/bundles/jqueryval")
+        }

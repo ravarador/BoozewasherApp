@@ -22,14 +22,22 @@
 
     <div class="form-group">
         @Html.LabelFor(s => s.Service.Expense)
-        @Html.TextBoxFor(s => s.Service.Expense, new { @class = "form-control" })
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> PHP </span>
+            </div>
+            @Html.TextBoxFor(s => s.Service.Expense, new { @class = "form-control" })
+            <div class="input-group-append">
+                <span class="input-group-text"> .00 </span>
+            </div>
+        </div>
     </div>
-    <p></p>
-    @Html.HiddenFor(s => s.Service.Id)
-    @Html.AntiForgeryToken()
-    <button type="submit" class="btn btn-primary"> Save </button>
-}
-@section	scripts	{
-    @Scripts.Render("~/bundles/jqueryval")
-}
+        <p></p>
+        @Html.HiddenFor(s => s.Service.Id)
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-primary"> Save </button>
+        }
+        @section	scripts	{
+            @Scripts.Render("~/bundles/jqueryval")
+        }
 

@@ -50,15 +50,23 @@
 
     <div class="form-group">
         @Html.LabelFor(t => t.Cost)
-        @Html.TextBoxFor(t => t.Cost, "{0:#.#}", new { @class = "form-control" })
-    </div>
-    <p></p>
-    @Html.HiddenFor(t => t.Id)
-    @Html.AntiForgeryToken()
-    <button type="submit" class="btn btn-primary"> Save </button>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> PHP </span>
+            </div>
+            @Html.TextBoxFor(t => t.Cost, "{0:#.#}", new { @class = "form-control" })
+            <div class="input-group-append">
+                <span class="input-group-text"> .00 </span>
+            </div>
+        </div>
+        </div>
+        <p></p>
+        @Html.HiddenFor(t => t.Id)
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-primary"> Save </button>
 
-}
-@section	scripts	{
-    @Scripts.Render("~/bundles/jqueryval")
-}
+        }
+        @section	scripts	{
+            @Scripts.Render("~/bundles/jqueryval")
+        }
 

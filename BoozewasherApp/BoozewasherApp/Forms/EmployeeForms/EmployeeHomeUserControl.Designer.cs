@@ -39,7 +39,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.label3 = new System.Windows.Forms.Label();
             this.btnViewAttendance = new System.Windows.Forms.Button();
             this.btnTimeInOut = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.presentEmployeesFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -61,7 +61,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(26, 18);
+            this.panel1.Location = new System.Drawing.Point(16, 18);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(228, 112);
             this.panel1.TabIndex = 3;
@@ -69,7 +69,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // panel2
             // 
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(260, 18);
+            this.panel2.Location = new System.Drawing.Point(255, 18);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(228, 112);
             this.panel2.TabIndex = 4;
@@ -120,39 +120,43 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // btnViewAttendance
             // 
             this.btnViewAttendance.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAttendance.Location = new System.Drawing.Point(728, 327);
+            this.btnViewAttendance.Location = new System.Drawing.Point(744, 327);
             this.btnViewAttendance.Name = "btnViewAttendance";
-            this.btnViewAttendance.Size = new System.Drawing.Size(228, 93);
+            this.btnViewAttendance.Size = new System.Drawing.Size(212, 93);
             this.btnViewAttendance.TabIndex = 7;
             this.btnViewAttendance.Text = "View Attendance";
             this.btnViewAttendance.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnViewAttendance.UseVisualStyleBackColor = true;
+            this.btnViewAttendance.Click += new System.EventHandler(this.btnViewAttendance_Click);
             // 
             // btnTimeInOut
             // 
             this.btnTimeInOut.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimeInOut.Location = new System.Drawing.Point(728, 426);
+            this.btnTimeInOut.Location = new System.Drawing.Point(744, 426);
             this.btnTimeInOut.Name = "btnTimeInOut";
-            this.btnTimeInOut.Size = new System.Drawing.Size(228, 93);
+            this.btnTimeInOut.Size = new System.Drawing.Size(212, 93);
             this.btnTimeInOut.TabIndex = 8;
             this.btnTimeInOut.Text = "Time In / Time Out";
             this.btnTimeInOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTimeInOut.UseVisualStyleBackColor = true;
             this.btnTimeInOut.Click += new System.EventHandler(this.btnTimeInOut_Click);
             // 
-            // flowLayoutPanel1
+            // presentEmployeesFlowLayoutPanel
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(26, 136);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(696, 383);
-            this.flowLayoutPanel1.TabIndex = 9;
+            this.presentEmployeesFlowLayoutPanel.AutoScroll = true;
+            this.presentEmployeesFlowLayoutPanel.BackColor = System.Drawing.Color.Gray;
+            this.presentEmployeesFlowLayoutPanel.Location = new System.Drawing.Point(16, 239);
+            this.presentEmployeesFlowLayoutPanel.Name = "presentEmployeesFlowLayoutPanel";
+            this.presentEmployeesFlowLayoutPanel.Size = new System.Drawing.Size(722, 280);
+            this.presentEmployeesFlowLayoutPanel.TabIndex = 9;
+            this.presentEmployeesFlowLayoutPanel.WrapContents = false;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(728, 136);
+            this.panel5.Location = new System.Drawing.Point(744, 136);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(228, 185);
+            this.panel5.Size = new System.Drawing.Size(212, 185);
             this.panel5.TabIndex = 10;
             // 
             // label5
@@ -169,7 +173,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.presentEmployeesFlowLayoutPanel);
             this.Controls.Add(this.btnTimeInOut);
             this.Controls.Add(this.btnViewAttendance);
             this.Controls.Add(this.panel4);
@@ -199,7 +203,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnViewAttendance;
         private System.Windows.Forms.Button btnTimeInOut;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel presentEmployeesFlowLayoutPanel;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label5;
     }

@@ -25,5 +25,11 @@ namespace BoozewasherApp.Forms.EmployeeForms
             timeInTimeOutForm.mainForm = mainForm;
             timeInTimeOutForm.ShowDialog();
         }
+
+        private void btnViewAttendance_Click(object sender, EventArgs e)
+        {
+            var presentEmployeeUserControl = new PresentEmployeeUserControl();
+            presentEmployeesFlowLayoutPanel.Controls.Add(presentEmployeeUserControl);
+        }
     }
 }

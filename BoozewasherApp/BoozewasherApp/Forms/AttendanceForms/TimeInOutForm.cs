@@ -30,11 +30,12 @@ namespace BoozewasherApp.Forms.AttendanceForms
         private void btnTimeIn_Click(object sender, EventArgs e)
         {
             TimeIn();
-            
+            mainForm.LoadPresentEmployeeFlowLayoutPanel();
         }
         private void btnTimeOut_Click(object sender, EventArgs e)
         {
             TimeOut();
+            mainForm.LoadPresentEmployeeFlowLayoutPanel();
         }
         private void btnClose_Click(object sender, EventArgs e)
         {

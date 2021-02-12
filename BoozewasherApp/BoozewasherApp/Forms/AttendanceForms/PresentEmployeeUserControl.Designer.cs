@@ -117,6 +117,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
             this.btnTimeOut.TabIndex = 7;
             this.btnTimeOut.Text = "Time Out";
             this.btnTimeOut.UseVisualStyleBackColor = false;
+            this.btnTimeOut.Click += new System.EventHandler(this.btnTimeOut_Click);
             // 
             // PresentEmployeeUserControl
             // 

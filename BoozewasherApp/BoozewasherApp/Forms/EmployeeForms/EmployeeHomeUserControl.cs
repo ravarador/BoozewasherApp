@@ -43,6 +43,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
                 var presentEmployeeUserControl = new PresentEmployeeUserControl(employee.EmployeeId, 
                                                                                 employee.TimeInDate, 
                                                                                 $"{employee.Employee.FirstName} {employee.Employee.MiddleName} {employee.Employee.LastName}");
+                presentEmployeeUserControl.mainForm = mainForm;
 
                 presentEmployeesFlowLayoutPanel.Controls.Add(presentEmployeeUserControl);
             }

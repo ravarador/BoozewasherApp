@@ -60,7 +60,7 @@ namespace BoozewasherApp.Forms
         {
             tabControl1.SelectedIndex = (int)TabControlEnums.Employees;
             employeeHomeUserControl1.mainForm = this;
-            employeeHomeUserControl1.LoadPresentEmployeeFlowLayoutPanel();
+            LoadPresentEmployeeFlowLayoutPanel();
             ShowHideEmployeeUserControls(isHomeEmployee: true);
         }
 
@@ -340,6 +340,11 @@ namespace BoozewasherApp.Forms
             LoginForm.Show();
         }
 
-        
+        #region Private/public methods
+        public void LoadPresentEmployeeFlowLayoutPanel()
+        {
+            employeeHomeUserControl1.LoadPresentEmployeeFlowLayoutPanel();
+        }
+        #endregion
     }
 }

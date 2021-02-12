@@ -43,7 +43,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 162);
+            this.label1.Location = new System.Drawing.Point(70, 137);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 16);
             this.label1.TabIndex = 0;
@@ -53,7 +53,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
             // 
             this.lblTimeInTime.AutoSize = true;
             this.lblTimeInTime.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeInTime.Location = new System.Drawing.Point(10, 178);
+            this.lblTimeInTime.Location = new System.Drawing.Point(84, 153);
             this.lblTimeInTime.Name = "lblTimeInTime";
             this.lblTimeInTime.Size = new System.Drawing.Size(70, 19);
             this.lblTimeInTime.TabIndex = 1;
@@ -61,18 +61,17 @@ namespace BoozewasherApp.Forms.AttendanceForms
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(10, 213);
+            this.lblName.Location = new System.Drawing.Point(10, 188);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(122, 19);
+            this.lblName.Size = new System.Drawing.Size(144, 44);
             this.lblName.TabIndex = 3;
-            this.lblName.Text = "Juan Dela Cruz";
+            this.lblName.Text = "The Quick Brown Fox Jumps Over ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 197);
+            this.label4.Location = new System.Drawing.Point(11, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 16);
             this.label4.TabIndex = 2;
@@ -82,7 +81,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
             // 
             this.pictureBox1.Location = new System.Drawing.Point(14, 14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 110);
+            this.pictureBox1.Size = new System.Drawing.Size(140, 109);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -90,7 +89,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
             // 
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.Location = new System.Drawing.Point(10, 143);
+            this.lblId.Location = new System.Drawing.Point(10, 153);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(18, 19);
             this.lblId.TabIndex = 6;
@@ -99,7 +98,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 127);
+            this.label6.Location = new System.Drawing.Point(11, 137);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(21, 16);
             this.label6.TabIndex = 5;

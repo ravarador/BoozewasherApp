@@ -75,7 +75,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lblTotalEmployees);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -107,7 +107,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.lblPresentEmployees);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -148,7 +148,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.lblAbsentEmployees);
             this.panel3.Controls.Add(this.pictureBox4);
@@ -189,7 +189,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.lblLateEmployees);
             this.panel4.Controls.Add(this.pictureBox3);
@@ -261,7 +261,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // presentEmployeesFlowLayoutPanel
             // 
             this.presentEmployeesFlowLayoutPanel.AutoScroll = true;
-            this.presentEmployeesFlowLayoutPanel.BackColor = System.Drawing.Color.Black;
+            this.presentEmployeesFlowLayoutPanel.BackColor = System.Drawing.Color.White;
             this.presentEmployeesFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.presentEmployeesFlowLayoutPanel.Location = new System.Drawing.Point(22, 136);
             this.presentEmployeesFlowLayoutPanel.Name = "presentEmployeesFlowLayoutPanel";
@@ -270,7 +270,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BackColor = System.Drawing.Color.Gainsboro;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.lblClock);
             this.panel5.Controls.Add(this.label5);
@@ -308,7 +308,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.presentEmployeesFlowLayoutPanel);
             this.Controls.Add(this.btnTimeInOut);

@@ -37,6 +37,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
 
             var presentEmployees = mainForm.AttendanceRepository.GetAttendancesByDate().Where(a => a.TimeInDate.Date == DateTime.Now.Date &&
                                                                                                    a.TimeOutDate == null);
+            lblPresentEmployees.Text = presentEmployees.Count().ToString();
 
             foreach (var employee in presentEmployees)
             {

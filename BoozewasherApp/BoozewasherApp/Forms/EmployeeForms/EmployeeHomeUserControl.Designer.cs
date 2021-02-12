@@ -29,30 +29,30 @@ namespace BoozewasherApp.Forms.EmployeeForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTotalEmployees = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblPresentEmployees = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblAbsentEmployees = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblLateEmployees = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnViewAttendance = new System.Windows.Forms.Button();
             this.btnTimeInOut = new System.Windows.Forms.Button();
             this.presentEmployeesFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.lblTotalEmployees = new System.Windows.Forms.Label();
-            this.lblPresentEmployees = new System.Windows.Forms.Label();
-            this.lblLateEmployees = new System.Windows.Forms.Label();
-            this.lblAbsentEmployees = new System.Windows.Forms.Label();
+            this.timerForClock = new System.Windows.Forms.Timer(this.components);
+            this.lblClock = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -62,9 +62,6 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -78,6 +75,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lblTotalEmployees);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -86,6 +84,16 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(228, 112);
             this.panel1.TabIndex = 3;
+            // 
+            // lblTotalEmployees
+            // 
+            this.lblTotalEmployees.Font = new System.Drawing.Font("Gadugi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalEmployees.Location = new System.Drawing.Point(3, 58);
+            this.lblTotalEmployees.Name = "lblTotalEmployees";
+            this.lblTotalEmployees.Size = new System.Drawing.Size(220, 31);
+            this.lblTotalEmployees.TabIndex = 12;
+            this.lblTotalEmployees.Text = "6";
+            this.lblTotalEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -99,6 +107,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.lblPresentEmployees);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -107,6 +116,16 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(228, 112);
             this.panel2.TabIndex = 4;
+            // 
+            // lblPresentEmployees
+            // 
+            this.lblPresentEmployees.Font = new System.Drawing.Font("Gadugi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPresentEmployees.Location = new System.Drawing.Point(3, 58);
+            this.lblPresentEmployees.Name = "lblPresentEmployees";
+            this.lblPresentEmployees.Size = new System.Drawing.Size(220, 31);
+            this.lblPresentEmployees.TabIndex = 13;
+            this.lblPresentEmployees.Text = "6";
+            this.lblPresentEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
@@ -129,6 +148,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.lblAbsentEmployees);
             this.panel3.Controls.Add(this.pictureBox4);
@@ -137,6 +157,16 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(228, 112);
             this.panel3.TabIndex = 5;
+            // 
+            // lblAbsentEmployees
+            // 
+            this.lblAbsentEmployees.Font = new System.Drawing.Font("Gadugi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAbsentEmployees.Location = new System.Drawing.Point(3, 58);
+            this.lblAbsentEmployees.Name = "lblAbsentEmployees";
+            this.lblAbsentEmployees.Size = new System.Drawing.Size(220, 31);
+            this.lblAbsentEmployees.TabIndex = 13;
+            this.lblAbsentEmployees.Text = "0";
+            this.lblAbsentEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox4
             // 
@@ -159,6 +189,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.lblLateEmployees);
             this.panel4.Controls.Add(this.pictureBox3);
@@ -167,6 +198,16 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(228, 112);
             this.panel4.TabIndex = 6;
+            // 
+            // lblLateEmployees
+            // 
+            this.lblLateEmployees.Font = new System.Drawing.Font("Gadugi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLateEmployees.Location = new System.Drawing.Point(0, 58);
+            this.lblLateEmployees.Name = "lblLateEmployees";
+            this.lblLateEmployees.Size = new System.Drawing.Size(220, 31);
+            this.lblLateEmployees.TabIndex = 13;
+            this.lblLateEmployees.Text = "0";
+            this.lblLateEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox3
             // 
@@ -189,6 +230,9 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // 
             // btnViewAttendance
             // 
+            this.btnViewAttendance.BackColor = System.Drawing.Color.White;
+            this.btnViewAttendance.BackgroundImage = global::BoozewasherApp.Properties.Resources.library_books_black_36x36;
+            this.btnViewAttendance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnViewAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewAttendance.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewAttendance.Location = new System.Drawing.Point(734, 327);
@@ -197,11 +241,12 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.btnViewAttendance.TabIndex = 7;
             this.btnViewAttendance.Text = "View Attendance";
             this.btnViewAttendance.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnViewAttendance.UseVisualStyleBackColor = true;
+            this.btnViewAttendance.UseVisualStyleBackColor = false;
             this.btnViewAttendance.Click += new System.EventHandler(this.btnViewAttendance_Click);
             // 
             // btnTimeInOut
             // 
+            this.btnTimeInOut.BackColor = System.Drawing.Color.White;
             this.btnTimeInOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimeInOut.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimeInOut.Location = new System.Drawing.Point(734, 426);
@@ -210,13 +255,13 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.btnTimeInOut.TabIndex = 8;
             this.btnTimeInOut.Text = "Time In / Time Out";
             this.btnTimeInOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnTimeInOut.UseVisualStyleBackColor = true;
+            this.btnTimeInOut.UseVisualStyleBackColor = false;
             this.btnTimeInOut.Click += new System.EventHandler(this.btnTimeInOut_Click);
             // 
             // presentEmployeesFlowLayoutPanel
             // 
             this.presentEmployeesFlowLayoutPanel.AutoScroll = true;
-            this.presentEmployeesFlowLayoutPanel.BackColor = System.Drawing.Color.Gray;
+            this.presentEmployeesFlowLayoutPanel.BackColor = System.Drawing.Color.Black;
             this.presentEmployeesFlowLayoutPanel.Location = new System.Drawing.Point(22, 136);
             this.presentEmployeesFlowLayoutPanel.Name = "presentEmployeesFlowLayoutPanel";
             this.presentEmployeesFlowLayoutPanel.Size = new System.Drawing.Size(706, 383);
@@ -225,23 +270,14 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.pictureBox5);
+            this.panel5.Controls.Add(this.lblClock);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Location = new System.Drawing.Point(734, 136);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(228, 185);
             this.panel5.TabIndex = 10;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::BoozewasherApp.Properties.Resources._51418;
-            this.pictureBox5.Location = new System.Drawing.Point(119, 11);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(100, 68);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
             // 
             // label5
             // 
@@ -250,73 +286,29 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 47);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Employees Absent";
+            this.label5.Text = "Digital Clock";
             // 
-            // pictureBox6
+            // timerForClock
             // 
-            this.pictureBox6.Image = global::BoozewasherApp.Properties.Resources.R70f7bc532dccef271ddd6609c74994da;
-            this.pictureBox6.Location = new System.Drawing.Point(808, 339);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(66, 55);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
+            this.timerForClock.Interval = 50;
+            this.timerForClock.Tick += new System.EventHandler(this.timerForClock_Tick);
             // 
-            // pictureBox7
+            // lblClock
             // 
-            this.pictureBox7.Image = global::BoozewasherApp.Properties.Resources.R2eb43fa9c771c52bf6ab1d5b852487ce;
-            this.pictureBox7.Location = new System.Drawing.Point(808, 438);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(66, 55);
-            this.pictureBox7.TabIndex = 14;
-            this.pictureBox7.TabStop = false;
-            // 
-            // lblTotalEmployees
-            // 
-            this.lblTotalEmployees.Font = new System.Drawing.Font("Gadugi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalEmployees.Location = new System.Drawing.Point(3, 58);
-            this.lblTotalEmployees.Name = "lblTotalEmployees";
-            this.lblTotalEmployees.Size = new System.Drawing.Size(220, 31);
-            this.lblTotalEmployees.TabIndex = 12;
-            this.lblTotalEmployees.Text = "6";
-            this.lblTotalEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblPresentEmployees
-            // 
-            this.lblPresentEmployees.Font = new System.Drawing.Font("Gadugi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPresentEmployees.Location = new System.Drawing.Point(3, 58);
-            this.lblPresentEmployees.Name = "lblPresentEmployees";
-            this.lblPresentEmployees.Size = new System.Drawing.Size(220, 31);
-            this.lblPresentEmployees.TabIndex = 13;
-            this.lblPresentEmployees.Text = "6";
-            this.lblPresentEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblLateEmployees
-            // 
-            this.lblLateEmployees.Font = new System.Drawing.Font("Gadugi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLateEmployees.Location = new System.Drawing.Point(0, 58);
-            this.lblLateEmployees.Name = "lblLateEmployees";
-            this.lblLateEmployees.Size = new System.Drawing.Size(220, 31);
-            this.lblLateEmployees.TabIndex = 13;
-            this.lblLateEmployees.Text = "0";
-            this.lblLateEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblAbsentEmployees
-            // 
-            this.lblAbsentEmployees.Font = new System.Drawing.Font("Gadugi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAbsentEmployees.Location = new System.Drawing.Point(3, 58);
-            this.lblAbsentEmployees.Name = "lblAbsentEmployees";
-            this.lblAbsentEmployees.Size = new System.Drawing.Size(220, 31);
-            this.lblAbsentEmployees.TabIndex = 13;
-            this.lblAbsentEmployees.Text = "0";
-            this.lblAbsentEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblClock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblClock.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClock.Location = new System.Drawing.Point(3, 73);
+            this.lblClock.Name = "lblClock";
+            this.lblClock.Size = new System.Drawing.Size(224, 57);
+            this.lblClock.TabIndex = 14;
+            this.lblClock.Text = "hh:mm ";
+            this.lblClock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // EmployeeHomeUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.presentEmployeesFlowLayoutPanel);
             this.Controls.Add(this.btnTimeInOut);
@@ -336,9 +328,6 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -362,12 +351,11 @@ namespace BoozewasherApp.Forms.EmployeeForms
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label lblTotalEmployees;
         private System.Windows.Forms.Label lblPresentEmployees;
         private System.Windows.Forms.Label lblAbsentEmployees;
         private System.Windows.Forms.Label lblLateEmployees;
+        private System.Windows.Forms.Label lblClock;
+        private System.Windows.Forms.Timer timerForClock;
     }
 }

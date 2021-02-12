@@ -30,7 +30,14 @@ namespace BoozewasherApp.Forms.EmployeeForms
         {
             
         }
-
+        private void timerForClock_Tick(object sender, EventArgs e)
+        {
+            lblClock.Text = DateTime.Now.ToString("hh:mm:ss tt");
+        }
+        public void LoadClock()
+        {
+            timerForClock.Start();
+        }
         public void LoadPresentEmployeeFlowLayoutPanel()
         {
             presentEmployeesFlowLayoutPanel.Controls.Clear();
@@ -49,5 +56,7 @@ namespace BoozewasherApp.Forms.EmployeeForms
                 presentEmployeesFlowLayoutPanel.Controls.Add(presentEmployeeUserControl);
             }
         }
+
+        
     }
 }

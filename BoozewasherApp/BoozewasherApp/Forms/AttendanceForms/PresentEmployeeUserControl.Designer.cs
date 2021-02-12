@@ -30,11 +30,11 @@ namespace BoozewasherApp.Forms.AttendanceForms
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTimeInTime = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnTimeOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,25 +49,25 @@ namespace BoozewasherApp.Forms.AttendanceForms
             this.label1.TabIndex = 0;
             this.label1.Text = "Time In Time: ";
             // 
-            // label2
+            // lblTimeInTime
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 178);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "9:30 AM";
+            this.lblTimeInTime.AutoSize = true;
+            this.lblTimeInTime.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeInTime.Location = new System.Drawing.Point(10, 178);
+            this.lblTimeInTime.Name = "lblTimeInTime";
+            this.lblTimeInTime.Size = new System.Drawing.Size(70, 19);
+            this.lblTimeInTime.TabIndex = 1;
+            this.lblTimeInTime.Text = "9:30 AM";
             // 
-            // label3
+            // lblName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 213);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 19);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Juan Dela Cruz";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(10, 213);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(122, 19);
+            this.lblName.TabIndex = 3;
+            this.lblName.Text = "Juan Dela Cruz";
             // 
             // label4
             // 
@@ -86,15 +86,15 @@ namespace BoozewasherApp.Forms.AttendanceForms
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // label5
+            // lblId
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(10, 143);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(18, 19);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "1";
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(10, 143);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(18, 19);
+            this.lblId.TabIndex = 6;
+            this.lblId.Text = "1";
             // 
             // label6
             // 
@@ -119,22 +119,22 @@ namespace BoozewasherApp.Forms.AttendanceForms
             this.btnTimeOut.Text = "Time Out";
             this.btnTimeOut.UseVisualStyleBackColor = false;
             // 
-            // PresentEmployee
+            // PresentEmployeeUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnTimeOut);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTimeInTime);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "PresentEmployee";
+            this.Name = "PresentEmployeeUserControl";
             this.Size = new System.Drawing.Size(171, 266);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -145,11 +145,11 @@ namespace BoozewasherApp.Forms.AttendanceForms
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTimeInTime;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnTimeOut;
     }

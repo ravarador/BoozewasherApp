@@ -118,43 +118,61 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="local_car_wash_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\local_car_wash_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="directions_car_white_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\directions_car_white_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="close_white_12x12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close_white_12x12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="booze_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\booze_logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close_white_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_white_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="51418" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\51418.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="assessment_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\assessment_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="directions_car_white_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\directions_car_white_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="library_books_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\library_books_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ConnectionString" xml:space="preserve">
     <value>https://localhost:44382/</value>
-  </data>
-  <data name="close_white_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close_white_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="today_white_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\today_white_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="library_books_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\library_books_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="local_car_wash_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\local_car_wash_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="booze_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\booze_logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="picture_as_pdf_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\picture_as_pdf_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="home_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="51209" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\51209.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="supervisor_account_black_192x192" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\supervisor_account_black_192x1921.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="group_black_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\group_black_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R70f7bc532dccef271ddd6609c74994da" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R70f7bc532dccef271ddd6609c74994da.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_454415" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_454415.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R2eb43fa9c771c52bf6ab1d5b852487ce" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R2eb43fa9c771c52bf6ab1d5b852487ce.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

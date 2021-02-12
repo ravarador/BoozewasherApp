@@ -424,7 +424,6 @@
   <ItemGroup>
     <None Include="Resources\booze_logo.jpg" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\directions_car_white_36x36.png" />
   </ItemGroup>
@@ -457,6 +456,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\group_black_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supervisor_account_black_192x1921.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\51209.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\51418.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_454415.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R70f7bc532dccef271ddd6609c74994da.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R2eb43fa9c771c52bf6ab1d5b852487ce.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

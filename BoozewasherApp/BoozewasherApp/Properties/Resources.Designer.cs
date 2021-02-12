@@ -63,6 +63,26 @@ namespace BoozewasherApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _51209 {
+            get {
+                object obj = ResourceManager.GetObject("51209", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _51418 {
+            get {
+                object obj = ResourceManager.GetObject("51418", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap assessment_black_36x36 {
             get {
                 object obj = ResourceManager.GetObject("assessment_black_36x36", resourceCulture);
@@ -142,6 +162,16 @@ namespace BoozewasherApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap img_454415 {
+            get {
+                object obj = ResourceManager.GetObject("img_454415", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap library_books_black_36x36 {
             get {
                 object obj = ResourceManager.GetObject("library_books_black_36x36", resourceCulture);
@@ -172,9 +202,39 @@ namespace BoozewasherApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap R2eb43fa9c771c52bf6ab1d5b852487ce {
+            get {
+                object obj = ResourceManager.GetObject("R2eb43fa9c771c52bf6ab1d5b852487ce", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R70f7bc532dccef271ddd6609c74994da {
+            get {
+                object obj = ResourceManager.GetObject("R70f7bc532dccef271ddd6609c74994da", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap settings_black_36x36 {
             get {
                 object obj = ResourceManager.GetObject("settings_black_36x36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap supervisor_account_black_192x192 {
+            get {
+                object obj = ResourceManager.GetObject("supervisor_account_black_192x192", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

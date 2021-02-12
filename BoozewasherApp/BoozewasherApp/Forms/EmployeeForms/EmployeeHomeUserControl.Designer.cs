@@ -50,9 +50,9 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.btnTimeInOut = new System.Windows.Forms.Button();
             this.presentEmployeesFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lblClock = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.timerForClock = new System.Windows.Forms.Timer(this.components);
-            this.lblClock = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -262,11 +262,11 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // 
             this.presentEmployeesFlowLayoutPanel.AutoScroll = true;
             this.presentEmployeesFlowLayoutPanel.BackColor = System.Drawing.Color.Black;
+            this.presentEmployeesFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.presentEmployeesFlowLayoutPanel.Location = new System.Drawing.Point(22, 136);
             this.presentEmployeesFlowLayoutPanel.Name = "presentEmployeesFlowLayoutPanel";
             this.presentEmployeesFlowLayoutPanel.Size = new System.Drawing.Size(706, 383);
             this.presentEmployeesFlowLayoutPanel.TabIndex = 9;
-            this.presentEmployeesFlowLayoutPanel.WrapContents = false;
             // 
             // panel5
             // 
@@ -278,6 +278,17 @@ namespace BoozewasherApp.Forms.EmployeeForms
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(228, 185);
             this.panel5.TabIndex = 10;
+            // 
+            // lblClock
+            // 
+            this.lblClock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblClock.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClock.Location = new System.Drawing.Point(3, 73);
+            this.lblClock.Name = "lblClock";
+            this.lblClock.Size = new System.Drawing.Size(224, 57);
+            this.lblClock.TabIndex = 14;
+            this.lblClock.Text = "hh:mm ";
+            this.lblClock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -292,17 +303,6 @@ namespace BoozewasherApp.Forms.EmployeeForms
             // 
             this.timerForClock.Interval = 50;
             this.timerForClock.Tick += new System.EventHandler(this.timerForClock_Tick);
-            // 
-            // lblClock
-            // 
-            this.lblClock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblClock.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClock.Location = new System.Drawing.Point(3, 73);
-            this.lblClock.Name = "lblClock";
-            this.lblClock.Size = new System.Drawing.Size(224, 57);
-            this.lblClock.TabIndex = 14;
-            this.lblClock.Text = "hh:mm ";
-            this.lblClock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // EmployeeHomeUserControl
             // 

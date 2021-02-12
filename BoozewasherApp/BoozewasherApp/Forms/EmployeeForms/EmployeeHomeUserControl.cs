@@ -28,7 +28,10 @@ namespace BoozewasherApp.Forms.EmployeeForms
 
         private void btnViewAttendance_Click(object sender, EventArgs e)
         {
-            
+            var presentEmployeeUserControl = new PresentEmployeeUserControl(1, DateTime.Now, "TEST");
+            presentEmployeeUserControl.mainForm = mainForm;
+
+            presentEmployeesFlowLayoutPanel.Controls.Add(presentEmployeeUserControl);
         }
         private void timerForClock_Tick(object sender, EventArgs e)
         {

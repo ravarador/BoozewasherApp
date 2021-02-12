@@ -59,7 +59,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
             // 
             // btnTimeIn
             // 
-            this.btnTimeIn.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnTimeIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnTimeIn.FlatAppearance.BorderSize = 0;
             this.btnTimeIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimeIn.Location = new System.Drawing.Point(47, 129);
@@ -73,7 +73,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
             // 
             // btnTimeOut
             // 
-            this.btnTimeOut.BackColor = System.Drawing.Color.DarkRed;
+            this.btnTimeOut.BackColor = System.Drawing.Color.Maroon;
             this.btnTimeOut.FlatAppearance.BorderSize = 0;
             this.btnTimeOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimeOut.ForeColor = System.Drawing.Color.White;
@@ -126,7 +126,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(419, 218);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnTimeOut);

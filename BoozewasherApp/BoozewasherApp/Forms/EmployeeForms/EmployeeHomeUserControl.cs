@@ -31,5 +31,16 @@ namespace BoozewasherApp.Forms.EmployeeForms
             var presentEmployeeUserControl = new PresentEmployeeUserControl();
             presentEmployeesFlowLayoutPanel.Controls.Add(presentEmployeeUserControl);
         }
+
+        public void LoadPresentEmployeeFlowLayoutPanel()
+        {
+            var presentEmployees = mainForm.AttendanceRepository.GetAttendancesByDate().Where(a => a.TimeInDate.Date == DateTime.Now.Date &&
+                                                                                                   a.TimeOutDate == null);
+
+            foreach (var employee in presentEmployees)
+            {
+
+            }
+        }
     }
 }

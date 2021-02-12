@@ -36,6 +36,10 @@ namespace BoozewasherApp.Forms.AttendanceForms
         {
             TimeOut();
         }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         #region Private/public methods
         private void TimeIn()
         {
@@ -93,5 +97,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
         }
 
         #endregion
+
+        
     }
 }

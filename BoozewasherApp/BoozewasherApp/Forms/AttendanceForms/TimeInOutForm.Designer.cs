@@ -109,6 +109,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
             this.btnClose.Size = new System.Drawing.Size(33, 39);
             this.btnClose.TabIndex = 7;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label3
             // 

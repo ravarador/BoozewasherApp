@@ -134,7 +134,7 @@ namespace BoozewasherApp.Forms.AttendanceForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnTimeOut);
             this.Controls.Add(this.lblName);

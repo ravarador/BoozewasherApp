@@ -40,8 +40,8 @@
             this.btnPreview = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.grpboxDateRange.SuspendLayout();
             this.grpboxDate.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -175,17 +175,6 @@
             this.panel1.Size = new System.Drawing.Size(467, 35);
             this.panel1.TabIndex = 6;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(9, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 19);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Report Selector";
-            // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -200,10 +189,22 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(9, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 19);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Report Selector";
+            // 
             // SummaryReportSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(467, 384);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnPrint);

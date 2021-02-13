@@ -46,7 +46,8 @@ namespace BoozewasherApp.Forms.EmployeeForms
             presentEmployeesFlowLayoutPanel.Controls.Clear();
 
             var presentEmployees = mainForm.AttendanceRepository.GetAttendancesByDate().Where(a => a.TimeInDate.Date == DateTime.Now.Date &&
-                                                                                                   a.TimeOutDate == null);
+                                                                                                   a.TimeOutDate == null &&
+                                                                                                   a.Employee.BranchId == mainForm.UserInformation.BranchId);
             lblPresentEmployees.Text = presentEmployees.Count().ToString();
 
             foreach (var employee in presentEmployees)

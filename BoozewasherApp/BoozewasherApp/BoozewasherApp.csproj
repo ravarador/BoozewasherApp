@@ -205,6 +205,12 @@
     <Compile Include="Forms\ServiceForms\UpdateServiceUserControl.Designer.cs">
       <DependentUpon>UpdateServiceUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SettingForms\SettingHomeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingForms\SettingHomeUserControl.Designer.cs">
+      <DependentUpon>SettingHomeUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SummaryForms\SummaryChart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -340,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceForms\UpdateServiceUserControl.resx">
       <DependentUpon>UpdateServiceUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SettingForms\SettingHomeUserControl.resx">
+      <DependentUpon>SettingHomeUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SummaryForms\SummaryChart.resx">
       <DependentUpon>SummaryChart.cs</DependentUpon>

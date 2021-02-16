@@ -5,13 +5,12 @@
     {
     @Html.AntiForgeryToken()
 
-<ul class="nav navbar-nav navbar-right navbar-dark bg-dark">
-    <li class="nav-item dropdown navbar-dark bg-dark">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Settings </a>
-        <div class="dropdown-menu navbar-dark bg-dark fon">
-            <a> @Html.ActionLink("Hello " + User.Identity.Name + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" }) </a>
-            <div class="dropdown-divider"></div>
-            <a href="javascript:document.getElementById('logoutForm').submit()"> Log off </a>
+<ul class="nav navbar-nav navbar-right navbar-dark bg-primary">
+    <li class="dropdown navbar-dark bg-primary">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuLink" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Settings </a>
+        <div class="dropdown-menu navbar-light bg-light" aria-labelledby="dropdownMenuLink" >
+            <a class="dropdown-item" href="@Url.Action("Index", "Manage")"> User Profile </a>
+            <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()"> Log off </a>
         </div>
     </li>
 </ul>
@@ -19,10 +18,10 @@
 }
 else
 {
-<ul class="nav navbar-nav navbar-right navbar-dark bg-dark">
-    <li class="nav-item dropdown navbar-dark bg-dark">
+<ul class="nav navbar-nav navbar-right navbar-dark bg-primary">
+    <li class="nav-item dropdown navbar-dark bg-primary">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Settings </a>
-        <div class="dropdown-menu navbar-dark bg-dark">
+        <div class="dropdown-menu navbar-light bg-light">
             <a> @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" }) </a>
             <div class="dropdown-divider"></div>
             <a>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" }) </a>

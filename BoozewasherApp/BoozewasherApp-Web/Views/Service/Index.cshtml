@@ -4,9 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <p></p>
-<h1>Services</h1>
-<p></p>
-@Html.ActionLink("New Service", "New", "Service", new { @class = "btn btn-outline-primary" })
+<h1>Services @Html.ActionLink("New Service", "New", "Service", new { @class = "btn btn-outline-primary float-right"}) </h1>
 
 <p></p>
 <table id="services" class="table table-bordered table-hover">
@@ -56,20 +54,20 @@
             });
         });
 
-            $("#services").on("click", ".js-delete", function () {
-                var button = $(this);
+        $("#services").on("click", ".js-delete", function () {
+            var button = $(this);
 
-                bootbox.confirm("Would you like to delete this service?", function (result) {
-                    if (result) {
-                        $.ajax({
-                            url: "API/Services/DeleteService/" + button.attr("data-service-id"),
-                            method: "DELETE",
-                            success: function () {
-                                button.parents("tr").remove();
-                            }
-                        });
-                    }
-                });
+            bootbox.confirm("Would you like to delete this service?", function (result) {
+                if (result) {
+                    $.ajax({
+                        url: "API/Services/DeleteService/" + button.attr("data-service-id"),
+                        method: "DELETE",
+                        success: function () {
+                            button.parents("tr").remove();
+                        }
+                    });
+                }
             });
+        });
     </script>
 }

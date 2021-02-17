@@ -3,10 +3,12 @@
     ViewBag.Title = "Index";
 }
 <p></p>
-<h1>Branches</h1>
+<h1>
+    Branches @Html.ActionLink("New Branches", "New", "Branch", new { @class = "btn btn-outline-primary float-right" })
+    <p></p>
+</h1>
 <p></p>
-@Html.ActionLink("New Branches", "New", "Branch", new { @class = "btn btn-outline-primary" })
-<p></p>
+
 <table id="branches" class="table table-bordered table-hover">
     <thead>
         <tr>

@@ -4,11 +4,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <p></p>
-<h1>Items</h1>
+<h1>Items @Html.ActionLink("New Item", "New", "Item", new { @class = "btn btn-outline-primary float-right" })</h1>
 <p></p>
-@Html.ActionLink("New Item", "New", "Item", new { @class = "btn btn-outline-primary" })
 
-<p></p>
+
 <table id="items" class="table table-bordered table-hover">
     <thead>
         <tr>

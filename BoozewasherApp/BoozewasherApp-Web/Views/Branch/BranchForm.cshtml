@@ -3,28 +3,31 @@
     ViewBag.Title = "BranchForm";
 }
 <p></p>
-<h2>Branch Form</h2>
 <p></p>
 @using (Html.BeginForm("Save", "Branch"))
 {
     @Html.ValidationSummary(true, "Please fill up requirements");
 
-    <div class="form-group">
+    <div class="jumbotron">
+        <h1 class="display-4"> Branch Form </h1>
+        <p></p>
+
         @Html.LabelFor(b => b.Branch.Name)
         @Html.TextBoxFor(b => b.Branch.Name, new { @class = "form-control" })
-       
-    </div>
+        <p></p>
 
-    <div class="form-group">
         @Html.LabelFor(b => b.Branch.Address)
         @Html.TextBoxFor(b => b.Branch.Address, new { @class = "form-control" })
+        <p></p>
+
+        <button type="submit" class="btn btn-outline-primary"> Save </button>
        
     </div>
 
     <p></p>
     @Html.HiddenFor(b => b.Branch.Id)
     @Html.AntiForgeryToken()
-    <button type="submit" class="btn btn-outline-primary"> Save </button>
+   
 
 }
 @section scripts{

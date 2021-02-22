@@ -4,39 +4,32 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <p></p>
-<h2>Vehicle Form</h2>
 <p></p>
 @using (Html.BeginForm("Save", "Vehicle"))
 {
     @Html.ValidationSummary(true, "Please fill up requirements");
 
-    <div class="form-group">
+    <div class="jumbotron">
+        <h1 class="display-4"> Vehicle Form </h1>
         @Html.LabelFor(v => v.Vehicle.Type)
         @Html.TextBoxFor(v => v.Vehicle.Type, new { @class = "form-control" })
-       
-    </div>
-
-    <div class="form-group">
+        <p></p>
         @Html.LabelFor(v => v.Vehicle.Description)
         @Html.TextBoxFor(v => v.Vehicle.Description, new { @class = "form-control" })
-       
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(v => v.Vehicle.Brand)
+        <p></p>
+         @Html.LabelFor(v => v.Vehicle.Brand)
         @Html.TextBoxFor(v => v.Vehicle.Brand, new { @class = "form-control" })
-     </div>  
-
-    <div class="form-group">
+        <p></p>
         @Html.LabelFor(v => v.Vehicle.Model)
         @Html.TextBoxFor(v => v.Vehicle.Model, new { @class = "form-control" })
-       
+        <p></p>
+        <button type="submit" class="btn btn-outline-primary"> Save </button>
     </div>
 
     <p></p>
     @Html.HiddenFor(v => v.Vehicle.Id)
     @Html.AntiForgeryToken()
-    <button type="submit" class="btn btn-outline-primary"> Save </button>
+    
 
 }
 @section scripts{

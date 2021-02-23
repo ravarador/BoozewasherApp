@@ -4,51 +4,38 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <p></p>
-<h2>@Model.Title</h2>
-
+<p></p>
 @using (Html.BeginForm("Save", "Transaction"))
 {
     @Html.ValidationSummary(true, "Please fill up requirements");
 
     <p></p>
-    @Html.LabelFor(t => t.VehicleId)
-    <div class="input-group mb-3">
-        @Html.TextBoxFor(t => t.VehicleId, "{0:#.#}", new { @class = "form-control" })
-        <div class="input-group-append">
-            @Html.ActionLink("Vehicle Lookup", "VehicleLookup", "Transaction", new { @class = "btn btn-outline-primary" })
+    <div class="jumbotron">
+        <h1 class="display-4"> Transaction Form </h1>
+        @Html.LabelFor(t => t.VehicleId)
+        <div class="input-group mb-3">
+            @Html.TextBoxFor(t => t.VehicleId, "{0:#.#}", new { @class = "form-control" })
+            <div class="input-group-append">
+                @Html.ActionLink("Vehicle Lookup", "VehicleLookup", "Transaction", new { @class = "btn btn-outline-primary" })
+            </div>
         </div>
-    </div>
-
-    <p></p>
-    @Html.LabelFor(t => t.ItemId)
-    <div class="input-group mb-3">
-        @Html.TextBoxFor(t => t.ItemId, "{0:#.#}", new { @class = "form-control" })
-        <div class="input-group-append">
-            @Html.ActionLink("Item Lookup", "ItemLookup", "Transaction", new { @class = "btn btn-outline-primary" })
+        <p></p>
+        @Html.LabelFor(t => t.ItemId)
+        <div class="input-group mb-3">
+            @Html.TextBoxFor(t => t.ItemId, "{0:#.#}", new { @class = "form-control" })
+            <div class="input-group-append">
+                @Html.ActionLink("Item Lookup", "ItemLookup", "Transaction", new { @class = "btn btn-outline-primary" })
+            </div>
         </div>
-    </div>
-
-    <div class="form-group">
+        <p></p>
         @Html.LabelFor(t => t.ServiceId)
         <p></p>
         @Html.DropDownListFor(t => t.ServiceId, new SelectList(Model.Services, "Id", "Type"), "Select Service Type", new { @class = "custom-select" })
-    </div>
-
-    <div class="form-group">
+        <p></p>
         @Html.LabelFor(t => t.BranchId)
         <p></p>
         @Html.DropDownListFor(t => t.BranchId, new SelectList(Model.Branches, "Id", "Name"), "Select Branch", new { @class = "custom-select" })
-       
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(t => t.PlateNumber)
-        @Html.TextBoxFor(t => t.PlateNumber, new { @class = "form-control" })
-      
-
-    </div>
-
-    <div class="form-group">
+        <p></p>
         @Html.LabelFor(t => t.Cost)
         <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -59,14 +46,15 @@
                 <span class="input-group-text"> .00 </span>
             </div>
         </div>
-        </div>
+        <p></p>
+        <button type="submit" class="btn btn-outline-primary"> Save </button>
         <p></p>
         @Html.HiddenFor(t => t.Id)
         @Html.AntiForgeryToken()
-        <button type="submit" class="btn btn-outline-primary"> Save </button>
-
-        }
-        @section	scripts	{
-            @Scripts.Render("~/bundles/jqueryval")
-        }
+        
+    </div>
+ }
+ @section	scripts	{
+ @Scripts.Render("~/bundles/jqueryval")
+ }
 

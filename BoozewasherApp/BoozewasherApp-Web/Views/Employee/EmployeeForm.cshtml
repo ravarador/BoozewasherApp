@@ -3,71 +3,48 @@
     ViewBag.Title = "EmployeeForm";
 }
 <p></p>
-<h2>New Employee</h2>
-<p></p>
 
 @using (Html.BeginForm("Save", "Employee"))
 {
     @Html.ValidationSummary(true, "Please fill up requirements");
 
-    <div class="form-group">
+    <div class="jumbotron">
+        <h1 class="display-4"> Employee Form </h1>
         @Html.LabelFor(e => e.Employee.FirstName)
         @Html.TextBoxFor(e => e.Employee.FirstName, new { @class = "form-control" })
-       
-    </div>
-
-    <div class="form-group">
+        <p></p>
         @Html.LabelFor(e => e.Employee.MiddleName)
         @Html.TextBoxFor(e => e.Employee.MiddleName, new { @class = "form-control" })
-      
-    </div>
-
-    <div class="form-group">
+        <p></p>
         @Html.LabelFor(e => e.Employee.LastName)
         @Html.TextBoxFor(e => e.Employee.LastName, new { @class = "form-control" })
-    
-    </div>
-
-    <div class="form-group">
+        <p></p>
         @Html.LabelFor(e => e.Employee.Address)
         @Html.TextBoxFor(e => e.Employee.Address, new { @class = "form-control" })
-       
-    </div>
-
-    <div class="form-group">
+        <p></p>
         @Html.LabelFor(e => e.Employee.Birthdate)
         @Html.TextBoxFor(e => e.Employee.Birthdate, new { @class = "form-control" })
-       
-    </div>
-
-    <div class="form-group">
+        <p></p>
         @Html.LabelFor(e => e.Employee.TIN)
         @Html.TextBoxFor(e => e.Employee.TIN, new { @class = "form-control" })
-       
-    </div>
-
-    <div class="form-group">
+        <p></p>
         @Html.LabelFor(e => e.Employee.Email)
         @Html.TextBoxFor(e => e.Employee.Email, new { @class = "form-control" })
-       
-    </div>
-
-    <div class="form-group">
+        <p></p>
         @Html.LabelFor(e => e.Employee.ContactNo)
         @Html.TextBoxFor(e => e.Employee.ContactNo, new { @class = "form-control" })
-       
-    </div>
-
-    <div class="form-group">
+        <p></p>
         @Html.LabelFor(e => e.Employee.BranchId)
         <p></p>
         @Html.DropDownListFor(e => e.Employee.BranchId, new SelectList(Model.Branches, "Id", "Name"), "Select Branch Name", new { @class = "custom-select" })
-       
+        <p></p>
+        <button type="submit" class="btn btn-outline-primary"> Save </button>
     </div>
+
     <p></p>
     @Html.HiddenFor(e => e.Employee.Id)
     @Html.AntiForgeryToken()
-    <button type="submit" class="btn btn-outline-primary"> Save </button>
+    
 
 }
 @section scripts{

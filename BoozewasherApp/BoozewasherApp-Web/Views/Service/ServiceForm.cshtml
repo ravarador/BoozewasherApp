@@ -10,6 +10,7 @@
     @Html.ValidationSummary(true, "Please fill up requirements");
     <div class="jumbotron">
         <h1 class="display-4"> Service Form </h1>
+         <hr />
         @Html.LabelFor(s => s.Service.Type)
         @Html.TextBoxFor(s => s.Service.Type, new { @class = "form-control" })
         <p></p>

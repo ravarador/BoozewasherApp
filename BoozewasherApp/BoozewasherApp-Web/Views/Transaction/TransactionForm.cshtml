@@ -12,6 +12,7 @@
     <p></p>
     <div class="jumbotron">
         <h1 class="display-4"> Transaction Form </h1>
+        <hr />
         @Html.LabelFor(t => t.VehicleId)
         <div class="input-group mb-3">
             @Html.TextBoxFor(t => t.VehicleId, "{0:#.#}", new { @class = "form-control" })
@@ -51,7 +52,7 @@
         <p></p>
         @Html.HiddenFor(t => t.Id)
         @Html.AntiForgeryToken()
-        
+
     </div>
  }
  @section	scripts	{

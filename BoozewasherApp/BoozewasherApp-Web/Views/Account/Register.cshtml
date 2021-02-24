@@ -11,6 +11,7 @@
     @Html.ValidationSummary(true, "Please fill up Requirements")
     <div class="jumbotron">
         <h1 class="display-4"> Register </h1>
+         <hr />
         @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control is -invalid" })

@@ -29,6 +29,10 @@
             </div>
         </div>
         <p></p>
+        @Html.LabelFor(t => t.PlateNumber)
+        @Html.TextBoxFor(t => t.PlateNumber, new { @class = "form-control" })
+        <p></p>
+
         @Html.LabelFor(t => t.ServiceId)
         <p></p>
         @Html.DropDownListFor(t => t.ServiceId, new SelectList(Model.Services, "Id", "Type"), "Select Service Type", new { @class = "custom-select" })

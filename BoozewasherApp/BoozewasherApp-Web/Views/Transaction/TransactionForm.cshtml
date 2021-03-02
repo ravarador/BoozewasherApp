@@ -21,9 +21,9 @@
             </div>
         </div>
         <p></p>
-        @Html.LabelFor(t => t.ItemId)
+        @Html.LabelFor(t => t.ItemsList)
         <div class="input-group mb-3">
-            @Html.TextBoxFor(t => t.ItemId, "{0:#.#}", new { @class = "form-control" })
+            @Html.TextBoxFor(t => t.ItemsList, "{0:#.#}", new { @class = "form-control" })
             <div class="input-group-append">
                 @Html.ActionLink("Item Lookup", "ItemLookup", "Transaction", new { @class = "btn btn-outline-primary" })
             </div>

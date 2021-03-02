@@ -91,6 +91,7 @@ namespace BoozewasherApp_Web.Controllers
                 transactionInDB.VehicleId = transaction.VehicleId;
                 transactionInDB.ServiceId = transaction.ServiceId;
                 transactionInDB.BranchId = transaction.BranchId;
+                transactionInDB.ItemsList = transaction.ItemsList;
                 transactionInDB.PlateNumber = transaction.PlateNumber;
                 transactionInDB.Cost = transaction.Cost;
             }
@@ -143,7 +144,7 @@ namespace BoozewasherApp_Web.Controllers
 
             var viewModel = new TransactionFormViewModel
             {
-                ItemId = Convert.ToInt32(TempData["itemId"]),
+                //ItemsList = (TempData["itemId"]).ToString(),
                 VehicleId = id,
                 Branches = _context.Branches.ToList(),
                 Services = _context.Services.ToList()
@@ -157,7 +158,7 @@ namespace BoozewasherApp_Web.Controllers
         {
             var item = _context.Items.SingleOrDefault(i => i.Id == id);
 
-            TempData["itemId"] = id;
+            //TempData["itemId"] = id;
 
             if (item == null)
                 return HttpNotFound();
@@ -165,7 +166,7 @@ namespace BoozewasherApp_Web.Controllers
             var viewModel = new TransactionFormViewModel
             {
                 VehicleId = Convert.ToInt32(TempData["vehicleId"]),
-                ItemId = id,
+                ItemsList = id.ToString(),
                 Branches = _context.Branches.ToList(),
                 Services = _context.Services.ToList()
             };

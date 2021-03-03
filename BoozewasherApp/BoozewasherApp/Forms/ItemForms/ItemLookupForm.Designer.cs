@@ -121,7 +121,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.Controls.Add(this.dgvItem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ItemLookupForm";
-            this.Text = "ItemLookupForm";
+            this.Text = "Item Lookup Form";
             this.Load += new System.EventHandler(this.ItemLookupForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).EndInit();
             this.ResumeLayout(false);

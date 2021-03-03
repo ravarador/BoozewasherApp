@@ -663,11 +663,11 @@
     <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\Employee\EmployeeForm.cshtml" />
     <Content Include="Views\Employee\ReadOnlyIndex.cshtml" />
+    <Content Include="Views\Attendance\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\AddService\" />
-    <Folder Include="Views\Attendance\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />

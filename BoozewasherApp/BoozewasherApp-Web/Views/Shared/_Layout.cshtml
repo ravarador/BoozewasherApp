@@ -11,20 +11,42 @@
 </head>
 <body>
     <div class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <div class="navbar-header">
-
-                @Html.ActionLink("Boozewasher", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Services", "Index", "Service", new { area = "" }, new { @class = "navbar-brand", @style = "font-size:small;"})
-                @Html.ActionLink("Vehicles", "Index", "Vehicle", new { area = "" }, new { @class = "navbar-brand", @style = "font-size:small;" })
-                @Html.ActionLink("Items", "Index", "Item", new { area = "" }, new { @class = "navbar-brand", @style = "font-size:small;" })
-                @Html.ActionLink("Transactions", "Index", "Transaction", new { area = "" }, new { @class = "navbar-brand", @style = "font-size:small;" })
-                @Html.ActionLink("Branches", "Index", "Branch", new { area = "" }, new { @class = "navbar-brand", @style = "font-size:small;" })
-                @Html.ActionLink("Employees", "Index", "Employee", new { area = "" }, new { @class = "navbar-brand", @style = "font-size:small;" })
+            <div class="container">
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav navbar-right navbar-dark bg-primary">
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="@Url.Action("Index", "Home")"> Boozewasher </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index", "Service")"> Services </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index", "Vehicle")"> Vehicles </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index", "Item")"> Item </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index", "Transaction")"> Transactions </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index", "Branch")"> Branches </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Employees </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="@Url.Action("Index", "Employee")"> Employees </a>
+                                <a class="dropdown-item" href="@Url.Action("Index", "Attendance")"> View Attendance </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                   @Html.Partial("_LoginPartial")
             </div>
-                @Html.Partial("_LoginPartial")
         </div>
-    </div>
+
+    
+
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -33,7 +55,7 @@
         </footer>
     </div>
 
-  
+
     @Scripts.Render("~/bundles/lib")
     @RenderSection("scripts", required: false)
 </body>

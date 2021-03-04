@@ -13,5 +13,9 @@ namespace BoozewasherApp_Web.Controllers
         {
             return View();
         }
+        public ActionResult TimeIn()
+        {
+            return View();
+        }
     }
 }

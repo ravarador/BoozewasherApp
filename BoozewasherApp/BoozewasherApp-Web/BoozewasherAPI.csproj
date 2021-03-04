@@ -256,6 +256,7 @@
     <Compile Include="Models\ContextModel\Employee.cs" />
     <Compile Include="Models\ContextModel\Item.cs" />
     <Compile Include="Models\ContextModel\RoleName.cs" />
+    <Compile Include="Models\Dtos\AttendanceDto.cs" />
     <Compile Include="Models\Dtos\AuthenticationMessageDto.cs" />
     <Compile Include="Models\Dtos\BranchDto.cs" />
     <Compile Include="Models\Dtos\ItemDto.cs" />

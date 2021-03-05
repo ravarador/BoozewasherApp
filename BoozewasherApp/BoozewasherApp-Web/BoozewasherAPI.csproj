@@ -289,6 +289,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ViewModels\Attendances\AttendanceFormViewModel.cs" />
+    <Compile Include="Models\ViewModels\Attendances\AttendanceViewModel.cs" />
     <Compile Include="Models\ViewModels\Branches\BranchFormViewModel.cs" />
     <Compile Include="Models\ViewModels\Branches\BranchViewModel.cs" />
     <Compile Include="Models\ViewModels\Employees\EmployeeFormViewModel.cs" />

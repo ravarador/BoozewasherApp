@@ -15,4 +15,3 @@ namespace BoozewasherApp_Web.Models.ViewModels.Attendances
         public int EmployeeId { get; set; }
     }
 }
-}

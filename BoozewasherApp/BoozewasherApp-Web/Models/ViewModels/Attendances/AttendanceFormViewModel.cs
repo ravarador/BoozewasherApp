@@ -8,16 +8,11 @@ namespace BoozewasherApp_Web.Models.ViewModels.Attendances
 {
     public class AttendanceFormViewModel
     {
-        public Attendance Attendance { get; set; }
-        public string Title
-        {
-            get
-            {
-                if (Attendance != null && Attendance.Id != 0)
-                    return "Edit Attendance";
-
-                return "New Attendance";
-            }
-        }
+        public int Id { get; set; }
+        public DateTime TimeInDate { get; set; }
+        public DateTime? TimeOutDate { get; set; }
+        public Employee Employee { get; set; }
+        public int EmployeeId { get; set; }
+        
     }
 }

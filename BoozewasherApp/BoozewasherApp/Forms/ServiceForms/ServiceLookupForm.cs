@@ -1,4 +1,5 @@
-﻿using BoozewasherDomain.IRepositories;
+﻿using BoozewasherDomain.Dtos;
+using BoozewasherDomain.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,30 +14,46 @@ namespace BoozewasherApp.Forms.ServiceForms
 {
     public partial class ServiceLookupForm : Form
     {
-        private IServiceRepository ServiceRepository { get; set; }
+        public MainForm mainForm { get; set; }
         public int? SelectedServiceIdForLookup { get; set; }
-        public ServiceLookupForm(IServiceRepository serviceRepository)
+        public ServiceLookupForm()
         {
             InitializeComponent();
-            ServiceRepository = serviceRepository;
         }
 
         private void ServiceLookupForm_Load(object sender, EventArgs e)
         {
             LoadDgvService();
         }
-
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchServices();
+        }
         private void dgvService_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             SelectedServiceIdForLookup = (int)dgvService.SelectedRows[0].Cells[0].Value;
 
             this.Close();
         }
+
         #region Private Methods
+        private void SearchServices()
+        {
+            var services = mainForm.ServiceRepository.GetServicesBySearchParameter(new SearchDto
+            {
+                BranchId = mainForm.UserInformation.BranchId,
+                SearchBy = comboSearchBy.SelectedItem.ToString(),
+                SearchText = txtboxSearchText.Text
+            });
+
+            dgvService.DataSource = services;
+        }
         private void LoadDgvService()
         {
-            dgvService.DataSource = ServiceRepository.GetAllServices();
+            dgvService.DataSource = mainForm.ServiceRepository.GetAllServices();
         }
         #endregion
+
+        
     }
 }

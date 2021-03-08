@@ -56,13 +56,14 @@ namespace BoozewasherApp.Forms.ServiceForms
         #region Private/public Methods
         private void SearchServices()
         {
-            var vehicles = mainForm.ServiceRepository.GetServicesBySearchParameter(new SearchDto
+            var services = mainForm.ServiceRepository.GetServicesBySearchParameter(new SearchDto
             {
                 BranchId = mainForm.UserInformation.BranchId,
                 SearchBy = comboSearchBy.SelectedItem.ToString(),
                 SearchText = txtboxSearchText.Text
             });
-            dgvServices.DataSource = vehicles;
+
+            dgvServices.DataSource = services;
         }
         private void DeleteService()
         {

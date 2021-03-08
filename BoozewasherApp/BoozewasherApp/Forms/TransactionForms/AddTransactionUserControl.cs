@@ -95,7 +95,8 @@ namespace BoozewasherApp.Forms.TransactionForms
 
         private void OpenServiceLookupForm()
         {
-            var serviceLookupForm = new ServiceLookupForm(mainForm.ServiceRepository);
+            var serviceLookupForm = new ServiceLookupForm();
+            serviceLookupForm.mainForm = mainForm;
             serviceLookupForm.ShowDialog();
             txtboxService.Text = serviceLookupForm.SelectedServiceIdForLookup.ToString();
         }

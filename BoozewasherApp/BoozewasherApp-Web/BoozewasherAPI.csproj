@@ -289,6 +289,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ViewModels\Attendances\AttendanceFormViewModel.cs" />
+    <Compile Include="Models\ViewModels\Attendances\AttendanceViewModel.cs" />
     <Compile Include="Models\ViewModels\Branches\BranchFormViewModel.cs" />
     <Compile Include="Models\ViewModels\Branches\BranchViewModel.cs" />
     <Compile Include="Models\ViewModels\Employees\EmployeeFormViewModel.cs" />
@@ -666,6 +667,7 @@
     <Content Include="Views\Employee\EmployeeForm.cshtml" />
     <Content Include="Views\Employee\ReadOnlyIndex.cshtml" />
     <Content Include="Views\Attendance\Index.cshtml" />
+    <Content Include="Views\Attendance\TimeIn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

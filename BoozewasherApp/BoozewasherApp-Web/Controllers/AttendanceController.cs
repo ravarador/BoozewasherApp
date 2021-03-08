@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BoozewasherApp_Web.Models.ViewModels.Attendances;
+using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,7 +17,13 @@ namespace BoozewasherApp_Web.Controllers
         }
         public ActionResult TimeIn()
         {
-            return View();
+            var userId = User.Identity.GetUserId();
+            var viewModel = new AttendanceFormViewModel
+            {
+                TimeInDate = DateTime.Now,
+                EmployeeId = (Convert.ToInt32(userId))
+            };
+            return View(viewModel);
         }
     }
 }

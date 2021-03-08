@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BoozewasherDomain.Entities;
+using BoozewasherDomain.Dtos;
 
 namespace BoozewasherApp.Forms.ItemForms
 {
@@ -28,7 +29,10 @@ namespace BoozewasherApp.Forms.ItemForms
         {
             LoadDgvItem();
         }
-
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchItems();
+        }
         private void dgvItem_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             SelectedItemIdForLookup = (int)dgvItem.SelectedRows[0].Cells[0].Value;
@@ -49,10 +53,23 @@ namespace BoozewasherApp.Forms.ItemForms
         }
 
         #region Private Methods
+        private void SearchItems()
+        {
+            var items = mainForm.ItemRepository.GetItemsBySearchParameter(new SearchDto
+            {
+                BranchId = mainForm.UserInformation.BranchId,
+                SearchBy = comboSearchBy.SelectedItem.ToString(),
+                SearchText = txtboxSearchText.Text
+            });
+
+            dgvItem.DataSource = items;
+        }
         private void LoadDgvItem()
         {
             dgvItem.DataSource = mainForm.ItemRepository.GetItemsByBranchId(mainForm.UserInformation.BranchId);
         }
         #endregion
+
+        
     }
 }

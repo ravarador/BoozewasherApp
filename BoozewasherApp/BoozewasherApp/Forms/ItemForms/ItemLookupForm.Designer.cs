@@ -30,11 +30,11 @@ namespace BoozewasherApp.Forms.ItemForms
         private void InitializeComponent()
         {
             this.dgvItem = new System.Windows.Forms.DataGridView();
-            this.comboOrderBy = new System.Windows.Forms.ComboBox();
-            this.btnSort = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtboxOrderBy = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtboxSearchText = new System.Windows.Forms.TextBox();
+            this.comboSearchBy = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,58 +56,68 @@ namespace BoozewasherApp.Forms.ItemForms
             this.dgvItem.TabIndex = 1;
             this.dgvItem.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItem_CellDoubleClick);
             // 
-            // comboOrderBy
+            // btnSearch
             // 
-            this.comboOrderBy.FormattingEnabled = true;
-            this.comboOrderBy.Location = new System.Drawing.Point(66, 40);
-            this.comboOrderBy.Name = "comboOrderBy";
-            this.comboOrderBy.Size = new System.Drawing.Size(161, 21);
-            this.comboOrderBy.TabIndex = 23;
-            // 
-            // btnSort
-            // 
-            this.btnSort.Location = new System.Drawing.Point(383, 39);
-            this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(101, 23);
-            this.btnSort.TabIndex = 21;
-            this.btnSort.Text = "Sort Items";
-            this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSearch.Location = new System.Drawing.Point(428, 49);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(101, 23);
+            this.btnSearch.TabIndex = 21;
+            this.btnSearch.Text = "Search Items";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 25);
+            this.label2.Location = new System.Drawing.Point(254, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Order by: ";
-            // 
-            // txtboxOrderBy
-            // 
-            this.txtboxOrderBy.Location = new System.Drawing.Point(233, 41);
-            this.txtboxOrderBy.Name = "txtboxOrderBy";
-            this.txtboxOrderBy.Size = new System.Drawing.Size(144, 20);
-            this.txtboxOrderBy.TabIndex = 19;
+            this.label2.Text = "Search by";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(233, 25);
+            this.label1.Location = new System.Drawing.Point(468, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Search by";
+            this.label1.Text = "Search text";
+            // 
+            // txtboxSearchText
+            // 
+            this.txtboxSearchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxSearchText.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxSearchText.Location = new System.Drawing.Point(315, 25);
+            this.txtboxSearchText.Name = "txtboxSearchText";
+            this.txtboxSearchText.Size = new System.Drawing.Size(214, 20);
+            this.txtboxSearchText.TabIndex = 26;
+            // 
+            // comboSearchBy
+            // 
+            this.comboSearchBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboSearchBy.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboSearchBy.FormattingEnabled = true;
+            this.comboSearchBy.Items.AddRange(new object[] {
+            "Name",
+            "Description",
+            "Barcode",
+            "BranchName"});
+            this.comboSearchBy.Location = new System.Drawing.Point(107, 24);
+            this.comboSearchBy.Name = "comboSearchBy";
+            this.comboSearchBy.Size = new System.Drawing.Size(202, 24);
+            this.comboSearchBy.TabIndex = 25;
             // 
             // ItemLookupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 618);
+            this.Controls.Add(this.txtboxSearchText);
+            this.Controls.Add(this.comboSearchBy);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboOrderBy);
-            this.Controls.Add(this.btnSort);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtboxOrderBy);
             this.Controls.Add(this.dgvItem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ItemLookupForm";
@@ -122,10 +132,10 @@ namespace BoozewasherApp.Forms.ItemForms
         #endregion
 
         private System.Windows.Forms.DataGridView dgvItem;
-        private System.Windows.Forms.ComboBox comboOrderBy;
-        private System.Windows.Forms.Button btnSort;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtboxOrderBy;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtboxSearchText;
+        private System.Windows.Forms.ComboBox comboSearchBy;
     }
 }

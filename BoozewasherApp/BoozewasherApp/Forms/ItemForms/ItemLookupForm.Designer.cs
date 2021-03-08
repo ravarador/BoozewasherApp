@@ -31,13 +31,10 @@ namespace BoozewasherApp.Forms.ItemForms
         {
             this.dgvItem = new System.Windows.Forms.DataGridView();
             this.comboOrderBy = new System.Windows.Forms.ComboBox();
-            this.comboFilterBy = new System.Windows.Forms.ComboBox();
             this.btnSort = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtboxOrderBy = new System.Windows.Forms.TextBox();
-            this.btnFilter = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtboxFilterBy = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,22 +59,14 @@ namespace BoozewasherApp.Forms.ItemForms
             // comboOrderBy
             // 
             this.comboOrderBy.FormattingEnabled = true;
-            this.comboOrderBy.Location = new System.Drawing.Point(83, 51);
+            this.comboOrderBy.Location = new System.Drawing.Point(66, 40);
             this.comboOrderBy.Name = "comboOrderBy";
             this.comboOrderBy.Size = new System.Drawing.Size(161, 21);
             this.comboOrderBy.TabIndex = 23;
             // 
-            // comboFilterBy
-            // 
-            this.comboFilterBy.FormattingEnabled = true;
-            this.comboFilterBy.Location = new System.Drawing.Point(83, 25);
-            this.comboFilterBy.Name = "comboFilterBy";
-            this.comboFilterBy.Size = new System.Drawing.Size(161, 21);
-            this.comboFilterBy.TabIndex = 22;
-            // 
             // btnSort
             // 
-            this.btnSort.Location = new System.Drawing.Point(400, 50);
+            this.btnSort.Location = new System.Drawing.Point(383, 39);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(101, 23);
             this.btnSort.TabIndex = 21;
@@ -87,7 +76,7 @@ namespace BoozewasherApp.Forms.ItemForms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 55);
+            this.label2.Location = new System.Drawing.Point(63, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 20;
@@ -95,49 +84,30 @@ namespace BoozewasherApp.Forms.ItemForms
             // 
             // txtboxOrderBy
             // 
-            this.txtboxOrderBy.Location = new System.Drawing.Point(250, 52);
+            this.txtboxOrderBy.Location = new System.Drawing.Point(233, 41);
             this.txtboxOrderBy.Name = "txtboxOrderBy";
             this.txtboxOrderBy.Size = new System.Drawing.Size(144, 20);
             this.txtboxOrderBy.TabIndex = 19;
             // 
-            // btnFilter
-            // 
-            this.btnFilter.Location = new System.Drawing.Point(400, 23);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(101, 23);
-            this.btnFilter.TabIndex = 18;
-            this.btnFilter.Text = "Filter Items";
-            this.btnFilter.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 28);
+            this.label1.Location = new System.Drawing.Point(233, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Filter By: ";
-            // 
-            // txtboxFilterBy
-            // 
-            this.txtboxFilterBy.Location = new System.Drawing.Point(250, 25);
-            this.txtboxFilterBy.Name = "txtboxFilterBy";
-            this.txtboxFilterBy.Size = new System.Drawing.Size(144, 20);
-            this.txtboxFilterBy.TabIndex = 16;
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Search by";
             // 
             // ItemLookupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 618);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.comboOrderBy);
-            this.Controls.Add(this.comboFilterBy);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtboxOrderBy);
-            this.Controls.Add(this.btnFilter);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtboxFilterBy);
             this.Controls.Add(this.dgvItem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ItemLookupForm";
@@ -153,12 +123,9 @@ namespace BoozewasherApp.Forms.ItemForms
 
         private System.Windows.Forms.DataGridView dgvItem;
         private System.Windows.Forms.ComboBox comboOrderBy;
-        private System.Windows.Forms.ComboBox comboFilterBy;
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtboxOrderBy;
-        private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtboxFilterBy;
     }
 }

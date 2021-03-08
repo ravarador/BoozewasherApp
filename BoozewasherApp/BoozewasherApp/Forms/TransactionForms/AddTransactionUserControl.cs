@@ -108,7 +108,8 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         private void OpenItemLookupForm()
         {
-            var itemLookupForm = new ItemLookupForm(mainForm);
+            var itemLookupForm = new ItemLookupForm();
+            itemLookupForm.mainForm = mainForm;
             itemLookupForm.ShowDialog();
 
             if (string.IsNullOrEmpty(ItemsListInForm))

@@ -15,14 +15,12 @@ namespace BoozewasherApp.Forms.ItemForms
 {
     public partial class ItemLookupForm : Form
     {
-        private MainForm mainForm { get; set; }
+        public MainForm mainForm { get; set; }
         public int SelectedItemIdForLookup { get; set; }
         public Item SelectedItem { get; set; }
-        public ItemLookupForm(MainForm MainForm)
+        public ItemLookupForm()
         {
             InitializeComponent();
-            mainForm = MainForm;
-
         }
 
         private void ItemLookupForm_Load(object sender, EventArgs e)
@@ -37,16 +35,16 @@ namespace BoozewasherApp.Forms.ItemForms
         {
             SelectedItemIdForLookup = (int)dgvItem.SelectedRows[0].Cells[0].Value;
 
-
             SelectedItem = new Item
             {
+                BranchId = mainForm.UserInformation.BranchId,
                 Id = (int)dgvItem.SelectedRows[0].Cells[0].Value,
                 Name = dgvItem.SelectedRows[0].Cells[1].Value.ToString(),
                 Description = dgvItem.SelectedRows[0].Cells[2].Value.ToString(),
                 Barcode = dgvItem.SelectedRows[0].Cells[3].Value.ToString(),
                 IsEmpty = (bool)dgvItem.SelectedRows[0].Cells[4].Value,
                 UsageCount = (int)dgvItem.SelectedRows[0].Cells[5].Value,
-                Expense = (decimal)dgvItem.SelectedRows[0].Cells[6].Value
+                Expense = (decimal)dgvItem.SelectedRows[0].Cells[6].Value,
             };
 
             this.Close();

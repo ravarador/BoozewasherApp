@@ -101,8 +101,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.comboSearchBy.Items.AddRange(new object[] {
             "Name",
             "Description",
-            "Barcode",
-            "BranchName"});
+            "Barcode"});
             this.comboSearchBy.Location = new System.Drawing.Point(107, 24);
             this.comboSearchBy.Name = "comboSearchBy";
             this.comboSearchBy.Size = new System.Drawing.Size(202, 24);

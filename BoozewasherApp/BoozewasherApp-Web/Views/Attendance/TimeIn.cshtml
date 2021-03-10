@@ -4,7 +4,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<p></p>
-<div class="jumbotron">
-    <h1 class="display-4"> Hello,</h1>
-</div>
+@using Microsoft.AspNet.Identity
+
+@using (Html.BeginForm("TimeIn", "Attendance"))
+{
+    <p></p>
+    <div class="jumbotron">
+        <h1>@Html.ActionLink("Hello, " + User.Identity.GetUserName(), "Index", "Attendance")</h1>
+    </div>
+}
+@Html.AntiForgeryToken()
+
+

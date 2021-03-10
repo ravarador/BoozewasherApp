@@ -11,6 +11,16 @@
     <p></p>
     <div class="jumbotron">
         <h1>@Html.ActionLink("Hello, " + User.Identity.GetUserName(), "Index", "Attendance")</h1>
+        <p></p>
+        <hr />
+        @Html.LabelFor(t => t.TimeInDate)
+    <fieldset>
+        <input class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here..." readonly="">
+    </fieldset>
+        <p></p>
+        @Html.LabelFor(t => t.Employee)
+        @Html.TextBoxFor(t => t.Employee.FirstName, new { @class = "form-control " })
+        <p></p>
     </div>
 }
 @Html.AntiForgeryToken()

@@ -31,13 +31,13 @@ namespace BoozewasherApp.Forms.ItemForms
         {
             this.label15 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtboxSearchText = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.comboSearchBy = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgvItems = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,17 @@ namespace BoozewasherApp.Forms.ItemForms
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(983, 214);
             this.panel7.TabIndex = 48;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(314, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Search Text:";
             // 
             // btnSearch
             // 
@@ -109,8 +120,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.comboSearchBy.Items.AddRange(new object[] {
             "Name",
             "Description",
-            "Barcode",
-            "BranchName"});
+            "Barcode"});
             this.comboSearchBy.Location = new System.Drawing.Point(398, 23);
             this.comboSearchBy.Name = "comboSearchBy";
             this.comboSearchBy.Size = new System.Drawing.Size(275, 24);
@@ -154,17 +164,6 @@ namespace BoozewasherApp.Forms.ItemForms
             this.dgvItems.Size = new System.Drawing.Size(983, 294);
             this.dgvItems.TabIndex = 9;
             this.dgvItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItems_CellClick);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(314, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Search Text:";
             // 
             // DeleteItemUserControl
             // 

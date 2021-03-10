@@ -141,7 +141,8 @@ namespace BoozewasherApp.Forms.TransactionForms
         }
         private void OpenVehicleLookupForm()
         {
-            var vehicleLookupForm = new VehicleLookupForm(mainForm.VehicleRepository);
+            var vehicleLookupForm = new VehicleLookupForm();
+            vehicleLookupForm.mainForm = mainForm;
             vehicleLookupForm.ShowDialog();
             txtboxVehicle.Text = vehicleLookupForm.SelectedVehicleIdForLookup.ToString();
         }

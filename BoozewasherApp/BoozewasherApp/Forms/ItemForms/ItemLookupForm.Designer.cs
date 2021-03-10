@@ -62,7 +62,7 @@ namespace BoozewasherApp.Forms.ItemForms
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(101, 23);
             this.btnSearch.TabIndex = 21;
-            this.btnSearch.Text = "Search Items";
+            this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 

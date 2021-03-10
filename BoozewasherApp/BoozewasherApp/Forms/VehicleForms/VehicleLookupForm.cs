@@ -1,4 +1,5 @@
-﻿using BoozewasherDomain.IRepositories;
+﻿using BoozewasherDomain.Dtos;
+using BoozewasherDomain.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,12 +14,11 @@ namespace BoozewasherApp.Forms.VehicleForms
 {
     public partial class VehicleLookupForm : Form
     {
-        private IVehicleRepository VehicleRepository { get; set; }
+        public MainForm mainForm { get; set; }
         public int? SelectedVehicleIdForLookup { get; set; }
-        public VehicleLookupForm(IVehicleRepository vehicleRepository)
+        public VehicleLookupForm()
         {
             InitializeComponent();
-            VehicleRepository = vehicleRepository;
         }
 
         private void VehicleLookupForm_Load(object sender, EventArgs e)
@@ -32,11 +32,29 @@ namespace BoozewasherApp.Forms.VehicleForms
 
             this.Close();
         }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchVehicles();
+        }
+
         #region Private Methods
+        private void SearchVehicles()
+        {
+            var vehicles = mainForm.VehicleRepository.GetVehiclesBySearchParameter(new SearchDto
+            {
+                BranchId = mainForm.UserInformation.BranchId,
+                SearchBy = comboSearchBy.SelectedItem.ToString(),
+                SearchText = txtboxSearchText.Text
+            });
+
+            dgvVehicle.DataSource = vehicles;
+        }
         private void LoadDgvVehicle()
         {
-            dgvVehicle.DataSource = VehicleRepository.GetAllVehicles();
+            dgvVehicle.DataSource = mainForm.VehicleRepository.GetAllVehicles();
         }
         #endregion
+
+
     }
 }

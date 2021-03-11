@@ -8,19 +8,17 @@
 
 @using (Html.BeginForm("TimeIn", "Attendance"))
 {
-    <p></p>
+    @*<p></p>
     <div class="jumbotron">
         <h1>@Html.ActionLink("Hello, " + User.Identity.GetUserName(), "Index", "Attendance")</h1>
         <p></p>
         <hr />
         @Html.LabelFor(t => t.TimeInDate)
-        <fieldset>
-            <input class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here..." readonly="">
-        </fieldset>
+        @Html.TextBoxFor(t => t.TimeInDate, new { @class = "form-control " })
         <p></p>
-        @Html.LabelFor(t => t.Employee)
-        @Html.TextBoxFor(t => t.Employee.FirstName, new { @class = "form-control " })
+        @Html.LabelFor(t => t.EmployeeId)
+        @Html.TextBoxFor(t => t.EmployeeId, new { @class = "form-control " })
         <p></p>
-    </div>
+    </div>*@
 }
 @Html.AntiForgeryToken()

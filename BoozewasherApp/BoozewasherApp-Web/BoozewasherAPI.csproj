@@ -667,7 +667,7 @@
     <Content Include="Views\Employee\EmployeeForm.cshtml" />
     <Content Include="Views\Employee\ReadOnlyIndex.cshtml" />
     <Content Include="Views\Attendance\Index.cshtml" />
-    <Content Include="Views\Attendance\TimeIn.cshtml" />
+    <Content Include="Views\Attendance\TimeInForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

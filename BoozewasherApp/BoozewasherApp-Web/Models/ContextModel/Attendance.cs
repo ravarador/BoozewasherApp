@@ -20,4 +20,6 @@ namespace BoozewasherApp_Web.Models.ContextModel
         [Display(Name = "Employee ID")]
         public int EmployeeId { get; set; }
     }
+
+    
 }

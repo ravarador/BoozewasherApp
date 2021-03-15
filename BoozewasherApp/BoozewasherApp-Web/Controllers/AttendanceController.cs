@@ -17,13 +17,13 @@ namespace BoozewasherApp_Web.Controllers
             return View();
         }
 
-        public ActionResult TimeIn()
+        public ActionResult TimeIn(Attendance attendance)
         {
-            var userId = User.Identity.GetUserName();
 
             var viewmodel = new AttendanceFormViewModel
             {
-               Attendance = new Attendance()
+                TimeInDate = DateTime.Now,
+                EmployeeId = attendance.EmployeeId
             };
 
             return View("TimeInForm", viewmodel);

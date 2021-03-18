@@ -6,7 +6,7 @@
 
 @using Microsoft.AspNet.Identity
 
-@using (Html.BeginForm("Index", "Attendance"))
+@using (Html.BeginForm("Save", "Attendance"))
 {
     <p></p>
     <div class="jumbotron">
@@ -18,9 +18,11 @@
         <p></p>
         @Html.LabelFor(t => t.EmployeeId)
         @Html.TextBoxFor(t => t.EmployeeId, "{0:#.#}", new { @class = "form-control " })
+
+        @Html.AntiForgeryToken()
         <p></p>
         <button type="submit" class="btn btn-outline-primary"> Save </button>
         <p></p>
     </div>
 }
-@Html.AntiForgeryToken()
+

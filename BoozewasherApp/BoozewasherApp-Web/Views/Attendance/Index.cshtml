@@ -1,26 +1,47 @@
-﻿
+﻿@model IEnumerable<BoozewasherApp_Web.Models.ContextModel.Attendance>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <p></p>
 <p></p>
-<div class="jumbotron">
-    <h1 class="display-4">Attendance</h1>
-    <h1>@Html.ActionLink("Time In", "TimeIn", "Attendance", new { @class = "btn btn-outline-primary float-right"})</h1>
-    <p></p>
-    <table id="items" class="table table-bordered table-hover">
+<h1> Attendance @Html.ActionLink("Time In", "TimeIn", "Attendance", new { @class = "btn btn-outline-primary float-right" })</h1>
+<p></p>
+<table id="attendances" class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th>Employee</th>
+            <th>Employee Id</th>
             <th>Time In</th>
             <th>Timeout</th>
         </tr>
     </thead>
     <tbody>
     </tbody>
-    </table>
-</div>
+</table>
 
+@section scripts
+{
+    <script>
 
+        $(document).ready(function () {
+            $("#attendances").DataTable({
+                ajax: {
+                    url: "/API/Attendances/GetAttendancesByDate",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "Employee.Id"
+                    },
+                    {
+                        data: "TimeInDate"
+                    },
+                    {
+                        data: "TimeOutDate"
+                    }
+                ]
+            });
+        });
+    </script>
+}
 

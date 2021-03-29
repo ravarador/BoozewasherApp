@@ -13,5 +13,6 @@ namespace BoozewasherApp_Web.Models.ContextModel
         public const string CanManageTransactions = ("CanManageTransactions");
         public const string CanManageBranches = ("CanManageBranches");
         public const string CanManageEmployees = ("CanManageEmployees");
+        public const string CanManageAttendances = ("CanManageAttendances");
     }
 }

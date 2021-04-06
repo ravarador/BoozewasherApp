@@ -59,6 +59,8 @@ namespace BoozewasherApp_Web.Controllers
 
             return RedirectToAction("Index", "Attendance");
         }
+
+        
     }
 
  }

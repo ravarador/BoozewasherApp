@@ -7,12 +7,14 @@
 <p></p>
 <h1> Attendance @Html.ActionLink("Time In", "TimeIn", "Attendance", new { @class = "btn btn-outline-primary float-right" })</h1>
 <p></p>
+
+
 <table id="attendances" class="table table-bordered table-hover">
     <thead>
         <tr>
             <th>Employee Id</th>
             <th>Time In</th>
-            <th>Timeout</th>
+            <th class="text-center">Timeout</th>
         </tr>
     </thead>
     <tbody>
@@ -37,7 +39,11 @@
                         data: "TimeInDate"
                     },
                     {
-                        data: "TimeOutDate"
+                        data: "TimeOutDate",
+                        className: "text-center",
+                        render: function (data) {
+                            return "<button class=' btn btn-outline-primary js-timeout' data-attendance-id=" + data + "> Timeout </button>";
+                        }
                     }
                 ]
             });
